@@ -146,7 +146,7 @@ label start:
 
     label prologom3:
 
-        show gatovaldo withAle
+        show gatovaldo withale
 
         g "Bem, dito isso, conheçam tambem Alessandra Mallet."
         
