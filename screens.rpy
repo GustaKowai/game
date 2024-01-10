@@ -506,16 +506,16 @@ style game_menu_outer_frame:
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 460
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 90
     right_margin 30
     top_margin 15
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 580
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
