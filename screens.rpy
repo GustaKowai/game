@@ -289,7 +289,7 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
-        if main_menu:
+        if renpy.get_screen("main_menu"):
             xalign 0.95
             yalign 0.2
         else:

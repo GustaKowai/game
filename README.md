@@ -21,6 +21,7 @@ Objetivos em andamento:
   - Correções para as primeiras missões (Em revisão)
 - Programação:
   - Sistema de afeição
+  - arrumar o menu
 
 Em breve:
 
