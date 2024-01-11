@@ -1,10 +1,22 @@
 ﻿# The script of the game goes in this file.
+#transicoes:
+
+define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
+define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
+define jogador1 = True
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
 define e = Character("Eileen")
 define g = Character("Gatovaldo")
+
+#Define os valores padroes de confianca para cada jogador
+
+define azulAlessandra = 0
+define laranjaAlessandra = 0
+define azulKatarina = 0
+define larankaKatarina = 0
 
 # The game starts here.
 
@@ -30,14 +42,22 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
+    show screen char_name_screen([nome1])
+
     show gatovaldo default
 
     # These display lines of dialogue.
     # -------------Prologo-----------------
 
+    azul "Olá"
+
+    laranja "Olá"
+
     g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
 
     g "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
+
+    show screen char_name_screen([nome2])
 
     g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
     menu:
@@ -175,6 +195,7 @@ label start:
         menu:
 
             "Meus pesames pela sua tia-avó":
+                $ jogador1 = False ##Depois fazer isso para ser a troca de jogadores. Igual fez na versão web
                 jump prologoa5
 
             "Animais falantes não são normais hoje em dia?":
@@ -247,6 +268,10 @@ label start:
         label d1kat1:
 
             scene bg recepcao
+            if jogador1:
+                with fadeA
+            else:
+                with fadeL
 
             "*Você entra em uma sala de recepção com uma decoração atípica*"
         

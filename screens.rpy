@@ -1623,3 +1623,9 @@ style slider_slider:
 #                     return Katarina
 #                 textbutton "Para o Atelier da Alessandra"
 #                     return 
+screen char_name_screen(message, okay=Return(True), cancel=Return(False)):
+    frame:
+        xalign 0.0 ypos 50
+        vbox:
+            text "Jogador: [message]"
+ 
