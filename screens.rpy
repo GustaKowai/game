@@ -290,8 +290,8 @@ screen navigation():
     vbox:
         style_prefix "navigation"
         if main_menu:
-            xalign 0.75
-            yalign 0.9
+            xalign 0.95
+            yalign 0.2
         else:
             xoffset 60
             yalign 0.5
@@ -510,12 +510,12 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 90
+    left_margin 60
     right_margin 30
     top_margin 15
 
 style game_menu_viewport:
-    xsize 580
+    xsize 900
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -1611,3 +1611,15 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+########  screens extras #######
+# screen mapa_screen():
+#     frame:
+#         xalign 0.5
+#         yalign 0.5
+#         vbox:
+#             text "Escolha para onde deseja ir:"
+#                 textbutton "Para o escritório da Katarina"
+#                     return Katarina
+#                 textbutton "Para o Atelier da Alessandra"
+#                     return 

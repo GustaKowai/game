@@ -16,6 +16,16 @@ label start:
 
     scene bg quartel
 
+    "Antes de começarmos..."
+    python:
+        nome1 = renpy.input("Qual o nome do jogador azul?")
+        nome1 = nome1.strip() or "Azul"
+        nome2 = renpy.input("Qual o nome do jogador laranja?")
+        nome2 = nome2.strip() or "Laranja"
+
+    define azul = Character("[nome1]",color="#1338BE")
+    define laranja = Character("[nome2]",color="#f56300")
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -23,14 +33,16 @@ label start:
     show gatovaldo default
 
     # These display lines of dialogue.
+    # -------------Prologo-----------------
 
-    g "Saudações, (nome 1) e (nome2),  espero poder contar com vocês nessa."
+    g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
 
     g "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
 
     g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
-
     menu:
+
+
 
         "Como isso sequer pode ser calculado?":
             jump prologoa1
@@ -65,14 +77,14 @@ label start:
 
     label prologob1:
 
-        g "Sim! impressionante como minha posição permite impressionar meus subordinados com números que nem fazem sentido para humanos"
+        g "Sim! Impressionante como minha posição permite impressionar meus subordinados com números que nem fazem sentido para humanos"
         jump prologom1
 
     label prologom1:
 
         show gatovaldo feliz
 
-        g "vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado, eu normalmente desisto deles antes que isso aconteça, mas não dessa vez!"
+        g "Vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado, {size=-10}eu normalmente desisto deles antes que isso aconteça{/size}, mas não dessa vez!"
     
     menu:
 
@@ -86,9 +98,9 @@ label start:
 
         show gatovaldo serio
 
-        g "Vocês não acreditam no meu potencial, né ? Só porque eu sou um gatinho fofinho? Meu QI é maior do que o de TODAS as gerações de vocês dois JUNTAS!"
+        g "Vocês não acreditam no meu potencial, né ? Só porque eu sou um gatinho fofinho? Meu QI é maior do que o de {size=+10}TODAS{/size} as gerações de vocês dois {size=+10}JUNTAS!{/size}"
 
-        g  "vou provar que estão errados."
+        g  "{cps=*0.2}Vou provar que estão errados.{/cps}"
         jump prologom2
     
     label prologob3:
@@ -116,7 +128,7 @@ label start:
 
         show gatovaldo default
 
-        g "Aliás, ela se voluntariou a participar do movimento após as sanções que o governo impos aos seus produtos... Vocês devem imaginar o porquê."
+        g "Aliás, ela se voluntariou a participar do movimento após as sanções que o governo impôs aos seus produtos... {p}Vocês devem imaginar o porquê."
 
     menu:
 
@@ -154,9 +166,7 @@ label start:
 
         g "Presumiram que ela tivesse morrido, mas aparentemente esqueceram de procurá-la no seu ateliê!"
 
-        g "Acontece que minha tia-avó já fez morada no forro de lá"
-
-        g "hoje ela está em um lugar melhor..."
+        g "Acontece que minha tia-avó já fez morada no forro de lá, {w} hoje ela está em um lugar melhor..."
 
         g "Em uma noite chuvosa e melancólica a nostalgia acabou me levando ao seu covil, e lá estava ela, desenhando uma roupa super estilosa como se nada tivesse acontecido"
 
@@ -223,6 +233,37 @@ label start:
             hide gatovaldo
 
             "* ele vira as costas e sai da sala, vocês dois se encaram confusos e se perguntam \"que diabos de ditado foi esse?\"*"
+
+        menu:
+
+            "Para o escritório da Katarina":
+                jump d1kat1
+
+            "Para o Atelier da Alessandra":
+                jump d1ale1
+
+    # ------------Dia 1---------------
+        label d1kat1:
+
+            scene bg recepcao
+
+            "*Você entra em uma sala de recepção com uma decoração atípica*"
+        
+            "*Há uma parede cheia de cabeças de animais empalhados, com os olhos trocados por pedras preciosas*"
+        
+            "*Em um balcão extravagante, próximo a duas espingardas rosas cruzadas entre o símbolo da marca de rações de katarina*"
+        
+            "*Uma simpática recepcionista te atende*"
+
+            show claudia default
+
+            "Boa tarde! Como posso te ajudar?"
+
+
+            
+    #-----------Katarina--------------
+        label d1ale1:
+    #----------Alessandra-------------
 
     # This ends the game.
 
