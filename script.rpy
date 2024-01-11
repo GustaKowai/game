@@ -226,7 +226,7 @@ label start:
 
             show gatovaldo feliz
 
-            g "\"Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos\"" 
+            g "{i}\"Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos\"{/i}" 
             
             g "Eu, claramente, sou Deus e vocês são os meus soldados mais bobinhos, mas eu gosto de vocês, e confio em vocês, agora, se me permitem, preciso me esconder dentro de algum sofá."
 
@@ -243,6 +243,7 @@ label start:
                 jump d1ale1
 
     # ------------Dia 1---------------
+    #-----------Katarina--------------
         label d1kat1:
 
             scene bg recepcao
@@ -261,9 +262,9 @@ label start:
 
 
             
-    #-----------Katarina--------------
-        label d1ale1:
     #----------Alessandra-------------
+        label d1ale1:
+    
 
     # This ends the game.
 
