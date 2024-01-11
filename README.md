@@ -4,6 +4,12 @@ Visual Novel Multiplayer desenvolvido por um grupo dentro do grupo de extensão 
 O projeto começou em JS e agora foi transferido para o Ren'Py!
 Alguns objetivos foram alterados devido a essa transferência, porém acreditamos que agora o desenvolvimento será ainda mais rápido!
 
+Objetivos concluídos na última semana:
+  - Transferencia do jogo para o Ren'Py
+  - Prólogo transferido
+  - Separação dos jogadores em player 1 e 2
+  - Adição de uma tela para os jogadores poderem escrever seus nomes
+
 Objetivos em andamento:
 
 - Arte:
@@ -14,8 +20,7 @@ Objetivos em andamento:
   - Segunda missão com cada uma das personagens (60% Katarina 2)
   - Correções para as primeiras missões (Em revisão)
 - Programação:
-  - Separação dos jogadores em player 1 e 2
-  - Adição de uma tela para os jogadores poderem escrever seus nomes
+  - Sistema de afeição
 
 Em breve:
 
@@ -27,7 +32,6 @@ Em breve:
 - História:
   - Pelo menos 5 missões com cada personagem
 - Programação:
-  - Sistema de afeição
   - Efeito visual/sonoro para diferenciar escolhas boas/ruins
 
 Planos futuros:
