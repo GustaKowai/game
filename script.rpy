@@ -3,7 +3,8 @@
 
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
-define jogador1 = True
+default jogador1 = True ##Jogador azul = true, jogador laranja = False
+default JogadorAtivo = 5 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -11,13 +12,22 @@ define jogador1 = True
 define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo")
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}')
+define c = Character("Claudia")
+
+#Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
+define character.k = Character("Katarina Kabrera")
+default k.azul = 0
+default k.laranja = 0
+define character.a = Character("Alessandra Mallet")
+default a.azul = 0
+default a.laranja = 0
 
 #Define os valores padroes de confianca para cada jogador
 
-define azulAlessandra = 0
-define laranjaAlessandra = 0
-define azulKatarina = 0
-define larankaKatarina = 0
+# define azulAlessandra = 0
+# define laranjaAlessandra = 0
+# define azulKatarina = 0
+# define larankaKatarina = 0
 
 # The game starts here.
 
@@ -39,37 +49,48 @@ label start:
     define azul = Character("[nome1]",color="#1338BE",what_prefix='{color=#1338BE}', what_suffix='{/color}')
     define laranja = Character("[nome2]",color="#f56300",what_prefix='{color=#f56300}', what_suffix='{/color}')
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "Quem irá ser o primeiro a jogar?{w} Recomendamos uma conversa amigável para decidir, porém vocês podem usar de maneiras diferentes."
 
-    show screen char_name_screen([nome1])
+    "Só por favor, precisamos de ambos os jogadores vivos para dar continuidade"
+
+    menu:
+        "[nome1] começa":
+            $jogador1 = True
+            show screen char_name_screen([nome1])
+            jump jogadorAzul
+        
+        "[nome2] começa":
+            $jogador1 = False
+            show screen char_name_screen([nome2])
+            jump jogadorLaranja
+
+    
 
     show gatovaldo default
 
     # These display lines of dialogue.
     # -------------Prologo-----------------
+    label jogadorAzul:
+        azul "Olá, eu começo."
+        jump prologo0
+    label jogadorLaranja:
+        laranja "Olá, eu começo."
+        jump prologo0
 
-    azul "Olá"
+    label prologo0:
 
-    laranja "Olá"
+        g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
 
-    g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
+        g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
 
-    g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
+        g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
+        menu:
 
-    show screen char_name_screen([nome2])
+            "Como isso sequer pode ser calculado?":
+                jump prologoa1
 
-    g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
-    menu:
-
-
-
-        "Como isso sequer pode ser calculado?":
-            jump prologoa1
-
-        "Uau!":
-            jump prologob1
+            "Uau!":
+                jump prologob1
     
     label prologoa1:
 
@@ -100,7 +121,7 @@ label start:
         jump prologom1
 
     label prologom1:
-
+        g "A proposito, a afeição de vocês é [a.azul] e [a.laranja]"
         g @feliz "Vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado, {size=-10}eu normalmente desisto deles antes que isso aconteça{/size}, mas não dessa vez!"
     
     menu:
@@ -176,7 +197,6 @@ label start:
         menu:
 
             "Meus pesames pela sua tia-avó":
-                $ jogador1 = False ##Depois fazer isso para ser a troca de jogadores. Igual fez na versão web
                 jump prologoa5
 
             "Animais falantes não são normais hoje em dia?":
@@ -268,6 +288,19 @@ label start:
         label d1ale1:
     
 
+#------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
+
+            # if jogador1:
+            #     $a.azul += JogadorAtivo
+            # else:
+            #     $a.laranja += JogadorAtivo
+
+#------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Katarina:
+
+            # if jogador1:
+            #     $k.azul += JogadorAtivo
+            # else:
+            #     $k.laranja += JogadorAtivo
     # This ends the game.
 
     return
