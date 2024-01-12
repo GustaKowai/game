@@ -43,7 +43,7 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
+    play music "abandoned.ogg"  volume 2.0
     scene bg quartel
 
     "Antes de começarmos..."
@@ -273,6 +273,7 @@ label start:
     # ------------Dia 1---------------
     #-----------Katarina--------------
         label d1kat1:
+            play music "escritorio.mp3"
 
             $ katDay1 = False
 
@@ -302,7 +303,7 @@ label start:
                 "Vai se foder":
                     $ JogadorAtivo += -5
                     jump finalkat1
-                    
+
         label finalkat1:
 
             if jogador1:
@@ -322,7 +323,7 @@ label start:
 
     #----------Troca de jogador--------
         label whereToGo:
-
+            play music "abandoned.ogg" volume 2.0
             scene bg quartel
             with dissolve
 
@@ -348,14 +349,13 @@ label start:
 
     #-----------Troca de Dia-----------
         label changeDay:
-
+            
+            play music "abandoned.ogg" volume 2.0
             scene bg quartel
             with Fade(0.5, 1.0, 0.5)
 
             "É melhor descansarem durante a noite..."
-            "A pontuação de vocês hoje foi:"
-            "[nome1]: [k.azul],[a.azul]"
-            "[nome2]: [k.laranja],[a.laranja]"
+            "A pontuação de vocês hoje foi:{p=0.1}[nome1]: [k.azul],[a.azul]{p=0.1}[nome2]: [k.laranja],[a.laranja]"
 
             if day1:
                 $ day2 = True
@@ -378,5 +378,52 @@ label start:
             # else:
             #     $k.laranja += JogadorAtivo
     # This ends the game.
+
+    return
+
+image splash = "splash.png"
+image splash1 = "splash/1.png"
+image splash2 = "splash/2.png"
+image splash3 = "splash/3.png"
+image splash4 = "splash/4.png"
+image splash5 = "splash/5.png"
+image splash6 = "splash/6.png"
+
+label splashscreen:
+    scene black
+    with Pause(1)
+    play music "windleaves.wav"
+
+    play sound "honk.ogg"
+    show text "GAMSo apresenta..." with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    play sound "honk.ogg"
+    show splash5 with dissolve
+    with Pause(0.1)
+
+    play sound "honk.ogg"
+    show splash3 with dissolve
+    with Pause(0.1)
+    
+    play sound "honk.ogg"
+    show splash4
+    with Dissolve(1)
+    
+    play sound "honk.ogg"
+    show splash1 with dissolve
+    with Pause(1)
+    
+    play sound "honk.ogg"
+    show splash6 with dissolve
+    with Pause(1.5)
+    stop music fadeout 1.5
+
+    scene black with dissolve
+    with Pause(1)
+
 
     return
