@@ -1,6 +1,25 @@
 ﻿# The script of the game goes in this file.
 #transicoes:
 
+init python:
+    def low_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
+    def mid_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
+    def high_beep(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip.ogg", channel="sound", loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="sound")
+
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
@@ -17,7 +36,7 @@ default day2 = False
 # name of the character.
 
 define e = Character("Eileen")
-define g = Character("Gatovaldo", image="gatovaldo")
+define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}')
 define c = Character("Claudia", image="claudia")
 
