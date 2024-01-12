@@ -44,7 +44,7 @@ define c = Character("Claudia", image="claudia", callback = low_beep)
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
 default k.laranja = 0
-define character.a = Character("Alessandra Mallet", image="alessandra" callback = low_beep)
+define character.a = Character("Alessandra Mallet", image="alessandra", callback = low_beep)
 default a.azul = 0
 default a.laranja = 0
 
@@ -281,7 +281,7 @@ label start:
 
             hide gatovaldo
 
-            n "* ele vira as costas e sai da sala, vocês dois se encaram confusos e se perguntam \"que diabos de ditado foi esse?\"*"
+            n " ele vira as costas e sai da sala, vocês dois se encaram confusos e se perguntam \"que diabos de ditado foi esse?\""
 
             jump whereToGo
 
@@ -350,7 +350,9 @@ label start:
             scene bg quartel
             with dissolve
 
-            "E agora, para onde vamos?"
+            if katDay1 or aleDay1:
+
+                "E agora, para onde vamos?"
 
             if jogador1:
                 $ jogador1 = False
@@ -378,7 +380,7 @@ label start:
             with Fade(0.5, 1.0, 0.5)
 
             "É melhor descansarem durante a noite..."
-            "A pontuação de vocês hoje foi:{p=0.1}[nome1]: [k.azul],[a.azul]{p=0.1}[nome2]: [k.laranja],[a.laranja]"
+            #"A pontuação de vocês hoje foi:{p=0.1}[nome1]: [k.azul],[a.azul]{p=0.1}[nome2]: [k.laranja],[a.laranja]"
 
             if day1:
                 $ day2 = True
@@ -386,7 +388,17 @@ label start:
                 $ aleDay2 = True
                 $ day1 = False
 
-            jump whereToGo 
+                jump demoFinal
+
+        label demoFinal:
+            "Vocês terminaram a demo! Espero que tenham se divertido."
+
+            "Para saberem, [nome1] fez \n[k.azul] de x pontos disponíveis com a Katarina \n e [a.azul] de x pontos disponíveis com a Alessandra"
+
+            
+            "E [nome2] fez \n[k.laranja] de x pontos disponíveis com a Katarina \n e [a.laranja] de x pontos disponíveis com a Alessandra"
+
+            "Espero que tenham se divertido, em breve teremos mais missões."
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
 
             # if jogador1:
