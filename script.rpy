@@ -12,7 +12,7 @@ default JogadorAtivo = 5 #Variavel usada para captar os pontos da missão, ao fi
 define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo")
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}')
-define c = Character("Claudia")
+define c = Character("Claudia", image="claudia")
 
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera")
@@ -280,8 +280,7 @@ label start:
 
             show claudia default
 
-            "Boa tarde! Como posso te ajudar?"
-
+            c "Boa tarde! Como posso te ajudar?"
 
             
     #----------Alessandra-------------

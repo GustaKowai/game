@@ -290,8 +290,8 @@ screen navigation():
     vbox:
         style_prefix "navigation"
         if renpy.get_screen("main_menu"):
-            xalign 0.95
-            yalign 0.2
+            xalign 0.75
+            yalign 0.85
         else:
             xoffset 60
             yalign 0.5
@@ -510,12 +510,12 @@ style game_menu_navigation_frame:
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
+    left_margin 30
     right_margin 30
     top_margin 15
 
 style game_menu_viewport:
-    xsize 900
+    xsize 1300
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
