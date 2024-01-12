@@ -9,6 +9,7 @@ Objetivos concluídos na última semana:
   - Prólogo transferido
   - Separação dos jogadores em player 1 e 2
   - Adição de uma tela para os jogadores poderem escrever seus nomes
+  - arrumar o menu
 
 Objetivos em andamento:
 
@@ -21,7 +22,6 @@ Objetivos em andamento:
   - Correções para as primeiras missões (Em revisão)
 - Programação:
   - Sistema de afeição
-  - arrumar o menu
 
 Em breve:
 
@@ -49,7 +49,6 @@ Planos futuros:
   - Inventário
   - Sistema para aleatorizar quem é o traidor no início da run
   - Sistema para escolha de gênero do jogador
-  - Separar melhor as funções em arquivos distintos.
 
 Responsáveis:
 

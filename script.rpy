@@ -4,8 +4,15 @@
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
-default JogadorAtivo = 5 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
+default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
 
+## Variáveis dos dias ##
+default aleDay1 = True
+default katDay1 = True
+default aleDay2 = False
+default katDay2 = False
+default day1 = True
+default day2 = False
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -66,7 +73,7 @@ label start:
 
     
 
-    show gatovaldo default
+    
 
     # These display lines of dialogue.
     # -------------Prologo-----------------
@@ -78,6 +85,8 @@ label start:
         jump prologo0
 
     label prologo0:
+
+        show gatovaldo default
 
         g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
 
@@ -121,7 +130,6 @@ label start:
         jump prologom1
 
     label prologom1:
-        g "A proposito, a afeição de vocês é [a.azul] e [a.laranja]"
         g @feliz "Vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado, {size=-10}eu normalmente desisto deles antes que isso aconteça{/size}, mas não dessa vez!"
     
     menu:
@@ -252,6 +260,8 @@ label start:
 
             n "* ele vira as costas e sai da sala, vocês dois se encaram confusos e se perguntam \"que diabos de ditado foi esse?\"*"
 
+            jump whereToGo
+
         menu:
 
             "Para o escritório da Katarina":
@@ -263,6 +273,8 @@ label start:
     # ------------Dia 1---------------
     #-----------Katarina--------------
         label d1kat1:
+
+            $ katDay1 = False
 
             scene bg recepcao
             if jogador1:
@@ -282,11 +294,76 @@ label start:
 
             c "Boa tarde! Como posso te ajudar?"
 
+            menu:
+                "Katarina?":
+                    $ JogadorAtivo += 5
+                    jump finalkat1
+
+                "Vai se foder":
+                    $ JogadorAtivo += -5
+                    jump finalkat1
+                    
+        label finalkat1:
+
+            if jogador1:
+                $ k.azul += JogadorAtivo
+            else:
+                $ k.laranja += JogadorAtivo
+
+            jump whereToGo
+
             
     #----------Alessandra-------------
         label d1ale1:
+
+            $ aleDay1 = False
     
 
+
+    #----------Troca de jogador--------
+        label whereToGo:
+
+            scene bg quartel
+            with dissolve
+
+            "E agora, para onde vamos?"
+
+            if jogador1:
+                $ jogador1 = False
+                show screen char_name_screen([nome2])
+            else:
+                $ jogador1 = True
+                show screen char_name_screen([nome1])
+
+
+            menu:
+
+                "Para o escritório da Katarina" if katDay1:
+                    jump d1kat1
+
+                "Para o Atelier da Alessandra" if aleDay1:
+                    jump d1ale1
+            
+            jump changeDay                                    
+
+    #-----------Troca de Dia-----------
+        label changeDay:
+
+            scene bg quartel
+            with Fade(0.5, 1.0, 0.5)
+
+            "É melhor descansarem durante a noite..."
+            "A pontuação de vocês hoje foi:"
+            "[nome1]: [k.azul],[a.azul]"
+            "[nome2]: [k.laranja],[a.laranja]"
+
+            if day1:
+                $ day2 = True
+                $ katDay2 = True
+                $ aleDay2 = True
+                $ day1 = False
+
+            jump whereToGo 
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
 
             # if jogador1:
