@@ -10,6 +10,9 @@ Objetivos concluídos na última semana:
   - Separação dos jogadores em player 1 e 2
   - Adição de uma tela para os jogadores poderem escrever seus nomes
   - arrumar o menu
+  - Sistema de afeição
+  - Musica adicionada (ainda é placeholder)
+  - som de bip nas falas
 
 Objetivos em andamento:
 
@@ -21,7 +24,7 @@ Objetivos em andamento:
   - Segunda missão com cada uma das personagens (60% Katarina 2)
   - Correções para as primeiras missões (Em revisão)
 - Programação:
-  - Sistema de afeição
+  - Achievements
 
 Em breve:
 
