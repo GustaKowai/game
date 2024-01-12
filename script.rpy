@@ -38,13 +38,13 @@ default day2 = False
 define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}')
-define c = Character("Claudia", image="claudia")
+define c = Character("Claudia", image="claudia", callback = low_beep)
 
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
-define character.k = Character("Katarina Kabrera")
+define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
 default k.laranja = 0
-define character.a = Character("Alessandra Mallet")
+define character.a = Character("Alessandra Mallet", image="alessandra" callback = low_beep)
 default a.azul = 0
 default a.laranja = 0
 
@@ -124,7 +124,7 @@ label start:
 
         g "É algo que vai além da compreensão da pequena mente humana de vocês..."
 
-        g "mas, basicamente, essa porcentagem representa  a quantidade de ovelhas que eu conto antes de dormir enquanto penso no assunto. "
+        g "...mas, basicamente, essa porcentagem representa  a quantidade de ovelhas que eu conto antes de dormir enquanto penso no assunto. "
     menu:
 
         "Caramba, você conta ovelhinhas e pensa sobre a revolução ao mesmo tempo?":
@@ -135,7 +135,7 @@ label start:
 
     label prologoa2:
 
-        g "sim, para os gatos isso é um grande sinal de que você se importa com algo, a hora da soneca é algo sagrado, fazer qualquer outra coisa se não contar ovelhinhas quando você está prestes a dormir demonstra um grandíssimo interesse por aquilo"
+        g "Sim, para os gatos isso é um grande sinal de que você se importa com algo, a hora da soneca é algo sagrado, fazer qualquer outra coisa se não contar ovelhinhas quando você está prestes a dormir demonstra um grandíssimo interesse por aquilo"
         jump prologom1
 
     label prologob2:
@@ -160,7 +160,7 @@ label start:
             jump prologob3
 
     label prologoa3:
-
+        with hpunch
         g serio "Vocês não acreditam no meu potencial, né ? Só porque eu sou um gatinho fofinho? Meu QI é maior do que o de {size=+10}TODAS{/size} as gerações de vocês dois {size=+10}JUNTAS!{/size}"
 
         g  "{cps=*0.2}Vou provar que estão errados.{/cps}"
@@ -242,7 +242,11 @@ label start:
 
             g "Claro que não!"
 
-            g @serio "Aquele rato desgramento nem fala direito, o arrombadinho usa um sintetizador, poucos sabem da minha existência, até onde sabem ele foi o único afetado pelo experimento."
+            g @serio "Aquele rato desgramento nem fala direito, o arrombadinho usa um sintetizador,"
+            
+            show gatovaldo feliz
+
+            extend "poucos sabem da minha existência, até onde sabem ele foi o único afetado pelo experimento."
             jump prologom4
 
         label prologom4:
