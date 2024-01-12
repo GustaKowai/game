@@ -37,7 +37,7 @@ default day2 = False
 
 define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
-define n = Character("", what_prefix='{i}*', what_suffix='*{/i}')
+define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low_beep)
 define c = Character("Claudia", image="claudia", callback = low_beep)
 
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
@@ -65,7 +65,7 @@ label start:
     play music "abandoned.ogg"  volume 2.0
     scene bg quartel
 
-    "Antes de começarmos..."
+    n "Antes de começarmos..."
     python:
         nome1 = renpy.input("Qual o nome do jogador azul?")
         nome1 = nome1.strip() or "Azul"
