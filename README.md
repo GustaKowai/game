@@ -13,13 +13,13 @@ Objetivos concluídos na última semana:
   - Sistema de afeição
   - Musica adicionada (ainda é placeholder)
   - som de bip nas falas
+  - Mais expressões para a Alessandra (Concluído)
 
 Objetivos em andamento:
 
 - Arte:
   - Cláudia
   - CG de algumas cenas
-  - Mais expressões para a Alessandra (Concluído)
 - História
   - Segunda missão com cada uma das personagens (60% Katarina 2)
   - Correções para as primeiras missões (Em revisão)

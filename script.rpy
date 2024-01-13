@@ -32,6 +32,12 @@ default aleDay2 = False
 default katDay2 = False
 default day1 = True
 default day2 = False
+
+##Variáveis de achievements##
+
+default doppelganger = False
+default gamsoGamer = False
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -71,7 +77,22 @@ label start:
         nome1 = nome1.strip() or "Azul"
         nome2 = renpy.input("Qual o nome do jogador laranja?")
         nome2 = nome2.strip() or "Laranja"
+    if nome1 == nome2:
+        n "Vocês estão de brincadeira comigo? {p} Por favor, escolha um nome melhor."
+        python:
+            nome2 = renpy.input("Qual o nome do jogador laranja?")
+            nome2 = nome2.strip() or "Laranja"
+    if nome1 == nome2:
+        with vpunch
+        n "Ok!{w} Vocês que se virem para saber quem é quem!"
+        $ doppelganger = True
+        $ renpy.notify("Doppelganger")
 
+    if nome1 == "GAMSo" or nome2 == "GAMSo":
+        play sound "honk.ogg"
+        "HONK"
+        $ gamsoGamer = True
+        $ renpy.notify("GAMSo Gamer")
     define azul = Character("[nome1]",color="#1338BE",what_prefix='{color=#1338BE}', what_suffix='{/color}')
     define laranja = Character("[nome2]",color="#f56300",what_prefix='{color=#f56300}', what_suffix='{/color}')
 
@@ -294,7 +315,7 @@ label start:
                 jump d1ale1
 
     # ------------Dia 1---------------
-    #-----------Katarina--------------
+    # ----------Katarina--------------
         label d1kat1:
             play music "escritorio.mp3"
 
@@ -337,12 +358,15 @@ label start:
             jump whereToGo
 
             
-    #----------Alessandra-------------
+    # ----------Alessandra-------------
         label d1ale1:
 
             $ aleDay1 = False
-    
 
+
+    ####################################
+    #--------------FIM-----------------#
+    ####################################
 
     #----------Troca de jogador--------
         label whereToGo:
