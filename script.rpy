@@ -340,12 +340,198 @@ label start:
             c "Boa tarde! Como posso te ajudar?"
 
             menu:
-                "Katarina?":
+                "Katarina.":
                     $ JogadorAtivo += 5
-                    jump finalkat1
+                    jump k1a1
 
-                "Vai se foder":
+                "Boa tarde, a senhorita Katarina encontra-se no recinto?":
                     $ JogadorAtivo += -5
+                    jump k1b1
+        label k1a1:
+
+            c "KATARINA!"
+
+            n "*A recepcionista grita, mas não obtem nenhuma resposta*"
+
+            c "Peço perdão, só um instante, ela provavelmente deve estar em uma reunião importante"
+
+            n "*Ela disca um número, mas aparentemente não obtem resposta*"
+
+            c "Certo..."
+
+            n "*A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'ATAQUE NUCLEAR'*"
+
+            n "*As luzes começam a piscar em vermelho e um som de alarme começa a tocar*."
+
+            c "Ela deve aparecer a qualquer instante!"
+
+            n "*A porta do escritório abre escancaradamente*"
+
+            show katarina brava
+
+            k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO CLAUDIA, NÃO AGUENTO MAIS ESPERAR"
+
+            c "Senhorita katarina! essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
+
+            show katarina feliz
+
+            k "Ah! você faz parte do movimento, o gatovaldo me disse que apareceria."
+
+            k "Claúdia, sempre que algum esquisito assim aparecer por aqui pode liberar direto para a minha sala"
+
+            k "faz parte de uma nova terapia que estou experimentando"
+
+            show katarina default
+
+            k "Me acompanhe, meu querido, temos trabalho a fazer."
+
+            n "*Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa*"
+
+            show katarina smirk
+
+            k "Você parece espantado, gostou do meu cantinho? descobri quem era o bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
+
+            k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estava vendo, ele acabou ficando uns 2 meses trancado aqui, mas no fim o resultado foi espetacular!"
+
+            show katarina default
+
+            k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê, minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas"
+
+            n "*Você se lembra de uma aberração gastronômica sendo mencionada anteriormente...*"
+
+            n "*...coitado dele*"
+
+            show katarina feliz
+
+            k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa, mas ele achou melhor não, fiquei muito frustrada, vou ser franca contigo, entrei na revolução para explodir coisas!"
+
+            show katarina brava
+
+            k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? fala sério! eu quero mais é explodir tudo mesmo"
+
+            show katarina smirk
+
+            k "Antes de sair, a gente precisa se conhecer um pouco, pra começar, qual é seu nome?"
+
+            n "*Você diz o seu nome, ela então começa a digitar e ler algumas coisas no computador dela*"
+
+            show katarina default
+
+            k "Huuum... certo, já te conheço, sua vez, me faz uma pergunta"
+
+            menu:
+                "Você pesquisou informações minhas na internet?":
+                    jump k1a2
+                "O que são aquelas cabeças empalhadas com joias no lugar dos olhos?":
+                    jump k1b2       
+        label k1b1:
+
+            c "Ela está sim! se não se importa em esperar um pouco, ela está em sua sessão diária de Post-Generic-Slovenian-Punk-Rock."
+
+            c "Enquanto isso, aceita um chá de camomila fervido em sangue de carneiro? é uma bebida típica sueca."
+
+            n "*Ela não aguarda por uma resposta e te serve uma xicará de um líquido viscoso esquisito..."
+
+            n "*Você definitivamente não quer tomar isso*"
+
+            c "Ah! já ia me esquecendo, com licença, preciso acender o incenso do dia, você sabe, para atrair boas energias"
+
+            n "*Ela se dirige a um armário rústico e começa a procurar em uma gaveta*"
+
+            c "Lavanda, orvalho do amanhecer, lírios holandeses, não... hoje é terça, cade o de terça? aqui! te achei, moshpit do slipknot!"
+
+            n "*Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente, você nem imaginava que seria possível perceber isso olfativamente*"
+
+            n "*A porta do escritório abre escancaradamente*"
+
+            show katarina irritada
+
+            k "Claudia, mosh pit do slipknot agora é o incenso de quinta, você não viu as alterações que eu te mandei por email?"
+
+            c "Senhorita katarita! peço perdão, não acontecerá novamente, já irei providenciar o incenso diário correto. ah, aliás, essa pessoa veio te procurar, ela recusou o chá sueco, eu te avisei que capim-limão ornava melhor."
+
+            show katarina feliz
+
+            k "Ah! você faz parte do movimento, o gatovaldo me disse que apareceria."
+
+            k "Claúdia, sempre que algum esquisito assim aparecer por aqui pode liberar direto para a minha sala"
+
+            k "faz parte de uma nova terapia que estou experimentando"
+
+            show katarina default
+
+            k "Me acompanhe, meu querido, temos trabalho a fazer."
+
+            n "*Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa*"
+
+            show katarina smirk
+
+            k "Você parece espantado, gostou do meu cantinho? descobri quem era o bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
+
+            k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estava vendo, ele acabou ficando uns 2 meses trancado aqui, mas no fim o resultado foi espetacular!"
+
+            show katarina default
+
+            k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê, minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas"
+
+            n "*Você se lembra de uma aberração gastronômica sendo mencionada anteriormente...*"
+
+            n "*...coitado dele*"
+
+            show katarina feliz
+
+            k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa, mas ele achou melhor não, fiquei muito frustrada, vou ser franca contigo, entrei na revolução para explodir coisas!"
+
+            show katarina brava
+
+            k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? fala sério! eu quero mais é explodir tudo mesmo"
+
+            show katarina smirk
+
+            k "Antes de sair, a gente precisa se conhecer um pouco, pra começar, qual é seu nome?"
+
+            n "*Você diz o seu nome, ela então começa a digitar e ler algumas coisas no computador dela*"
+
+            show katarina default
+
+            k "Huuum... certo, já te conheço, sua vez, me faz uma pergunta"
+
+            menu:
+                "Você pesquisou informações minhas na internet?":
+                    jump k1a2
+                "O que são aquelas cabeças empalhadas com joias no lugar dos olhos?":
+                    jump k1b2
+        label k1a2:
+
+            show katarina default
+
+            k "Na realidade não, só pesquisei o significado do seu nome, isso já basta pra mim."
+
+            k "Acho que já podemos ir, eu vou dirigindo!"
+
+            menu:
+                "Ir para a missão":
+                    jump finalkat1
+        label k1b2:
+
+            show katarina feliz
+
+            k "Não se preocupe, elas são falsas, menos a do jacaré, a do leão, a do urso..."
+
+            n "*Ela diz mais alguns nomes*"
+
+            n "*Aparentemente no máximo umas 3 delas são falsas*"
+
+            show katarina triste
+
+            k "Eram do meu pai, eu as herdei quando ele morreu, assim como as joias, apenas uni as duas coisas..."
+
+            show katarina feliz
+
+            k "Acho que já podemos ir, eu vou dirigindo!"
+
+            menu:
+                "Ir para a missão":
                     jump finalkat1
 
         label finalkat1:
@@ -391,7 +577,7 @@ label start:
                 "Para o escritório da Katarina" if katDay1:
                     jump d1kat1
 
-                "Para o Atelier da Alessandra" if aleDay1:
+                "Para o Ateliê da Alessandra" if aleDay1:
                     jump d1ale1
             
             jump changeDay                                    
