@@ -335,17 +335,15 @@ label start:
         
             "*Uma simpática recepcionista te atende*"
 
-            show claudia default
+            show claudia default at left
 
             c "Boa tarde! Como posso te ajudar?"
 
             menu:
                 "Katarina.":
-                    $ JogadorAtivo += 5
                     jump k1a1
 
                 "Boa tarde, a senhorita Katarina encontra-se no recinto?":
-                    $ JogadorAtivo += -5
                     jump k1b1
         label k1a1:
 
@@ -367,11 +365,14 @@ label start:
 
             n "*A porta do escritório abre escancaradamente*"
 
-            show katarina brava
+            show katarina brava at right
+            with moveinright
 
             k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO CLAUDIA, NÃO AGUENTO MAIS ESPERAR"
 
-            c "Senhorita katarina! essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
+            show claudia default
+
+            c  "Senhorita katarina! essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
 
             show katarina feliz
 
@@ -381,52 +382,11 @@ label start:
 
             k "faz parte de uma nova terapia que estou experimentando"
 
-            show katarina default
+            jump k1m1
 
-            k "Me acompanhe, meu querido, temos trabalho a fazer."
+            label k1b1:
 
-            n "*Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa*"
-
-            show katarina smirk
-
-            k "Você parece espantado, gostou do meu cantinho? descobri quem era o bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
-
-            k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estava vendo, ele acabou ficando uns 2 meses trancado aqui, mas no fim o resultado foi espetacular!"
-
-            show katarina default
-
-            k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê, minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas"
-
-            n "*Você se lembra de uma aberração gastronômica sendo mencionada anteriormente...*"
-
-            n "*...coitado dele*"
-
-            show katarina feliz
-
-            k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa, mas ele achou melhor não, fiquei muito frustrada, vou ser franca contigo, entrei na revolução para explodir coisas!"
-
-            show katarina brava
-
-            k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? fala sério! eu quero mais é explodir tudo mesmo"
-
-            show katarina smirk
-
-            k "Antes de sair, a gente precisa se conhecer um pouco, pra começar, qual é seu nome?"
-
-            n "*Você diz o seu nome, ela então começa a digitar e ler algumas coisas no computador dela*"
-
-            show katarina default
-
-            k "Huuum... certo, já te conheço, sua vez, me faz uma pergunta"
-
-            menu:
-                "Você pesquisou informações minhas na internet?":
-                    jump k1a2
-                "O que são aquelas cabeças empalhadas com joias no lugar dos olhos?":
-                    jump k1b2       
-        label k1b1:
-
-            c "Ela está sim! se não se importa em esperar um pouco, ela está em sua sessão diária de Post-Generic-Slovenian-Punk-Rock."
+            c @default "Ela está sim! se não se importa em esperar um pouco, ela está em sua sessão diária de Post-Generic-Slovenian-Punk-Rock."
 
             c "Enquanto isso, aceita um chá de camomila fervido em sangue de carneiro? é uma bebida típica sueca."
 
@@ -444,7 +404,8 @@ label start:
 
             n "*A porta do escritório abre escancaradamente*"
 
-            show katarina irritada
+            show katarina irritada at right
+            with moveinright
 
             k "Claudia, mosh pit do slipknot agora é o incenso de quinta, você não viu as alterações que eu te mandei por email?"
 
@@ -460,7 +421,17 @@ label start:
 
             show katarina default
 
+        label k1m1:
+
             k "Me acompanhe, meu querido, temos trabalho a fazer."
+            
+            show bg escritorio
+            hide claudia
+            hide katarina
+            with pushleft
+
+            show katarina default at center
+            with moveinleft
 
             n "*Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa*"
 
@@ -490,7 +461,12 @@ label start:
 
             k "Antes de sair, a gente precisa se conhecer um pouco, pra começar, qual é seu nome?"
 
-            n "*Você diz o seu nome, ela então começa a digitar e ler algumas coisas no computador dela*"
+            if jogador1:
+                azul "Me chamo [nome1]" 
+            else:
+                laranja "Me chamo [nome2]"
+
+            n "*Após dizer seu nome, ela começa a digitar e ler algumas coisas no computador dela*"
 
             show katarina default
 
@@ -500,7 +476,8 @@ label start:
                 "Você pesquisou informações minhas na internet?":
                     jump k1a2
                 "O que são aquelas cabeças empalhadas com joias no lugar dos olhos?":
-                    jump k1b2
+                    jump k1b2       
+
         label k1a2:
 
             show katarina default
