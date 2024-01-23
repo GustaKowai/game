@@ -15,11 +15,14 @@ Objetivos concluídos na semana 09/01-16/01:
   - som de bip nas falas
   - Mais expressões para a Alessandra
 
-Objetivos concluídos na última semana:
+Objetivos concluídos na semana 17/01-23/01:
   - Adicionado o efeito de sirene (ainda sem som) para a cena do botão de ataque nuclear
   - Redimensionamento das sprites e backgrounds
   - Segunda missão da Katarina pronta
   - Missão da Katarina 40% transferida para o RenPy
+
+Objetivos concluídos essa semana:
+  - 
 
 Objetivos em andamento:
 
