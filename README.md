@@ -25,12 +25,13 @@ Objetivos em andamento:
 
 - Arte:
   - Cláudia
-  - CG de algumas cenas
+  - CG de algumas cenas (Pelo menos uma)
 - História
   - Segunda missão com cada uma das personagens (Alessandra 2)
   - Correções e transferência para renpy das primeiras missões (Em revisão)
 - Programação:
   - Achievements
+  - Efeitos sonoros
 
 Em breve:
 
