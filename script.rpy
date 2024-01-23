@@ -20,15 +20,17 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
+
+#Efeito de luz de sirene
 transform siren_tint:
     matrixcolor TintMatrix("f00")
     linear 2.0 matrixcolor TintMatrix("fff")
     linear 2.0 matrixcolor TintMatrix("f00")
     repeat
 
-define gatodissolve = ImageDissolve("transicao.png", 2.0, ramplen=128, reverse=True)
-define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
-define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
+define gatodissolve = ImageDissolve("transicao.png", 2.0, ramplen=128, reverse=True) #Transição de gatinho
+define fadeA = Fade(0.2,0.2,0.2,color="#1338BE") #Trasição para o início do jogador azul
+define fadeL = Fade(0.2,0.2,0.2,color="#f56300") #Trasição para o início do jogador laranja
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
 default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
 
@@ -378,15 +380,16 @@ label start:
             n "*A porta do escritório abre escancaradamente*"
 
             show katarina brava at right
+            show katarina brava at siren_tint()
             with moveinright
 
             k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO CLAUDIA, NÃO AGUENTO MAIS ESPERAR"
 
-            show claudia default
+            show claudia default at siren_tint()
 
             c  "Senhorita katarina! essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
 
-            show katarina feliz
+            show katarina feliz at siren_tint()
 
             k "Ah! você faz parte do movimento, o gatovaldo me disse que apareceria."
 
@@ -467,11 +470,15 @@ label start:
 
             show katarina feliz
 
-            k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa, mas ele achou melhor não, fiquei muito frustrada, vou ser franca contigo, entrei na revolução para explodir coisas!"
+            k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa..."
+            
+            show katarina meh
+
+            k "...mas ele achou melhor não, fiquei muito frustrada, vou ser franca contigo, entrei na revolução para explodir coisas!"
 
             show katarina brava
 
-            k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? fala sério! eu quero mais é explodir tudo mesmo"
+            k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? Fala sério! Eu quero mais é explodir tudo mesmo"
 
             show katarina smirk
 
