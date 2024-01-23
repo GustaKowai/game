@@ -18,14 +18,17 @@ Objetivos concluídos na semana 09/01-16/01:
 Objetivos concluídos na última semana:
   - Adicionado o efeito de sirene (ainda sem som) para a cena do botão de ataque nuclear
   - Redimensionamento das sprites e backgrounds
+  - Segunda missão da Katarina pronta
+  - Missão da Katarina 40% transferida para o RenPy
+
 Objetivos em andamento:
 
 - Arte:
   - Cláudia
   - CG de algumas cenas
 - História
-  - Segunda missão com cada uma das personagens (60% Katarina 2)
-  - Correções para as primeiras missões (Em revisão)
+  - Segunda missão com cada uma das personagens (Alessandra 2)
+  - Correções e transferência para renpy das primeiras missões (Em revisão)
 - Programação:
   - Achievements
 

@@ -334,7 +334,6 @@ label start:
                 with fadeA
             else:
                 with fadeL
-
             "*Você entra em uma sala de recepção com uma decoração atípica*"
         
             "*Há uma parede cheia de cabeças de animais empalhados, com os olhos trocados por pedras preciosas*"
@@ -415,6 +414,8 @@ label start:
 
             n "*Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente, você nem imaginava que seria possível perceber isso olfativamente*"
 
+            with hpunch
+
             n "*A porta do escritório abre escancaradamente*"
 
             show katarina irritada at right
@@ -422,17 +423,19 @@ label start:
 
             k "Claudia, mosh pit do slipknot agora é o incenso de quinta, você não viu as alterações que eu te mandei por email?"
 
-            c "Senhorita katarita! peço perdão, não acontecerá novamente, já irei providenciar o incenso diário correto. ah, aliás, essa pessoa veio te procurar, ela recusou o chá sueco, eu te avisei que capim-limão ornava melhor."
+            c "Senhorita katarita! Peço perdão, não acontecerá novamente, já irei providenciar o incenso diário correto." 
+            
+            c"Ah, aliás, essa pessoa veio te procurar, ela recusou o chá sueco, eu te avisei que capim-limão ornava melhor."
 
             show katarina feliz
 
-            k "Ah! você faz parte do movimento, o gatovaldo me disse que apareceria."
+            k "Ah! Você faz parte do movimento, o Gatovaldo me disse que apareceria."
 
             k "Claúdia, sempre que algum esquisito assim aparecer por aqui pode liberar direto para a minha sala"
 
-            k "faz parte de uma nova terapia que estou experimentando"
+            k "Faz parte de uma nova terapia que estou experimentando"
 
-            show katarina default
+            jump k1m1
 
         label k1m1:
 
