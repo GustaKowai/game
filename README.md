@@ -4,7 +4,7 @@ Visual Novel Multiplayer desenvolvido por um grupo dentro do grupo de extensão 
 O projeto começou em JS e agora foi transferido para o Ren'Py!
 Alguns objetivos foram alterados devido a essa transferência, porém acreditamos que agora o desenvolvimento será ainda mais rápido!
 
-Objetivos concluídos na última semana:
+Objetivos concluídos na semana 09/01-16/01:
   - Transferencia do jogo para o Ren'Py
   - Prólogo transferido
   - Separação dos jogadores em player 1 e 2
@@ -13,8 +13,11 @@ Objetivos concluídos na última semana:
   - Sistema de afeição
   - Musica adicionada (ainda é placeholder)
   - som de bip nas falas
-  - Mais expressões para a Alessandra (Concluído)
+  - Mais expressões para a Alessandra
 
+Objetivos concluídos na última semana:
+  - Adicionado o efeito de sirene (ainda sem som) para a cena do botão de ataque nuclear
+  - Redimensionamento das sprites e backgrounds
 Objetivos em andamento:
 
 - Arte:

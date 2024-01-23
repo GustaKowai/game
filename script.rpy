@@ -20,6 +20,13 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
+transform siren_tint:
+    matrixcolor TintMatrix("f00")
+    linear 2.0 matrixcolor TintMatrix("fff")
+    linear 2.0 matrixcolor TintMatrix("f00")
+    repeat
+
+define gatodissolve = ImageDissolve("transicao.png", 2.0, ramplen=128, reverse=True)
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE")
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300")
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
@@ -72,6 +79,7 @@ label start:
     scene bg quartel
 
     n "Antes de começarmos..."
+
     python:
         nome1 = renpy.input("Qual o nome do jogador azul?")
         nome1 = nome1.strip() or "Azul"
@@ -336,6 +344,7 @@ label start:
             "*Uma simpática recepcionista te atende*"
 
             show claudia default at left
+            with dissolve
 
             c "Boa tarde! Como posso te ajudar?"
 
@@ -359,9 +368,13 @@ label start:
 
             n "*A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'ATAQUE NUCLEAR'*"
 
+            show bg recepcao at siren_tint()
+
             n "*As luzes começam a piscar em vermelho e um som de alarme começa a tocar*."
 
             c "Ela deve aparecer a qualquer instante!"
+
+            with hpunch
 
             n "*A porta do escritório abre escancaradamente*"
 
@@ -425,10 +438,10 @@ label start:
 
             k "Me acompanhe, meu querido, temos trabalho a fazer."
             
-            show bg escritorio
+            scene bg escritorio
             hide claudia
             hide katarina
-            with pushleft
+            with gatodissolve
 
             show katarina default at center
             with moveinleft
