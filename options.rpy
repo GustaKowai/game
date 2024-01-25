@@ -51,6 +51,11 @@ define config.has_music = True
 define config.has_voice = True
 
 
+####### Create a new channel for sounds
+init python:
+
+    renpy.music.register_channel("textSound", "sfx") 
+
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 

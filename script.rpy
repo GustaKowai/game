@@ -4,21 +4,21 @@
 init python:
     def low_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="sound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="textSound")
 
     def mid_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="sound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="textSound")
 
     def high_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="sound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True)
         elif event == "slow_done" or event == "end":
-            renpy.music.stop(channel="sound")
+            renpy.music.stop(channel="textSound")
 
 
 #Efeito de luz de sirene
@@ -327,7 +327,7 @@ label start:
     # ------------Dia 1---------------
     # ----------Katarina--------------
         label d1kat1:
-            play music "escritorio.mp3"
+            play music "escritorio.mp3" volume 0.5
 
             $ katDay1 = False
 
@@ -370,6 +370,8 @@ label start:
             n "*A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'ATAQUE NUCLEAR'*"
 
             show bg recepcao at siren_tint()
+            
+            play sound "alarm.wav" loop
 
             n "*As luzes começam a piscar em vermelho e um som de alarme começa a tocar*."
 
@@ -377,8 +379,10 @@ label start:
 
             with hpunch
 
-            n "*A porta do escritório abre escancaradamente*"
+            play sound "doorOpen.ogg"
 
+            n "*A porta do escritório abre escancaradamente*"
+           
             show katarina brava at right
             show katarina brava at siren_tint()
             with moveinright
@@ -418,6 +422,8 @@ label start:
             n "*Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente, você nem imaginava que seria possível perceber isso olfativamente*"
 
             with hpunch
+
+            play sound "doorOpen.ogg"
 
             n "*A porta do escritório abre escancaradamente*"
 
