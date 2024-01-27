@@ -33,6 +33,7 @@ define fadeA = Fade(0.2,0.2,0.2,color="#1338BE") #Trasição para o início do j
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300") #Trasição para o início do jogador laranja
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
 default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
+default alguem = False
 
 ## Variáveis dos dias ##
 default aleDay1 = True
@@ -54,7 +55,8 @@ define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low_beep)
 define c = Character("Claudia", image="claudia", callback = low_beep)
-
+define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
+define gar = Character("Garçom", image="garcom", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
@@ -552,9 +554,177 @@ label start:
             
     # ----------Alessandra-------------
         label d1ale1:
+            play music "atelier.mp3" volume 0.5
 
             $ aleDay1 = False
 
+            scene bg atelie
+            if jogador1:
+                with fadeA
+            else:
+                with fadeL
+            
+            n "Você chega em um prédio antigo, em um bairro estranho da cidade, ele ao mesmo tempo parece confortante e assustador, ao passar pela entrada, um sininho toca em cima de você"
+
+            menu:
+                "Tem alguém ai?":
+                    $ alguem = True
+                    jump a1a
+                "Alessandra?":
+                    jump a1a1
+        
+        label a1a:
+            n "Silêncio"
+
+            menu:
+                "Alessandra?":
+                    jump a1a1
+                "Senhorita Mallet?":
+                    jump a1a1
+        label a1a1:
+            n "Você sente algo estranho, como se estivesse sendo observado."
+            n "Quando decide olhar para trás..."
+
+            if alguem:
+                "Nunca diga \"Tem alguém ai?\", já assisti filmes de terror o suficiente." 
+                "{cps=*0.2}Trás má sorte. {/cps}"
+            
+            show alessandra default
+            with moveinbottom
+
+            if alguem:
+                a "To zoando!"
+
+            a "Eae cara, estamos preparados para a missão?"
+
+            a "Só aguardar aqui fora, o transporte já já chega."
+
+            a "Engraçado que você nem percebeu que eu estava escondida atrás da porta quando entrou, gosto de assustar as pessoas as vezes, é engraçado."
+
+            a "Sabe, as vezes tudo que a gente precisa é de um pouco de emoção, vivemos nossas vidas monótonas repetindo o mesmo ciclo dia após dia, é bom as vezes ter um motivo maior para se preocupar com a sua própria vida"
+
+            a "Aposto que você se assustou de verdade, olha a minha cara de louca! To branca igual um vampiro.{w} Não saia desse lugar há anos e quando saia era para comprar miojo ou energético de madrugada no mercadinho 24 horas." 
+            
+            a "Minha sorte é que a minha fama não chegou aqui nas periferias, ser reconhecida nunca foi um problema aqui, esse é o lugar perfeito"
+
+            n "Uma limousine estaciona em frente ao atelie, e por um momento você se questiona se está vestido adequadamente"
+            
+            n "Alessandra mexe no vestido dela em algo que você não consegue decifrar" 
+            
+            show alessandra feliz
+
+            n "De repente, partes do look que estavam escondidas se revelam e ela fica com uma aparencia mais ousada, amedrontadora e claro, estilosa, {w}agora você tem certeza que não está vestido adequadamente para a ocasião"
+
+            a "Vamos! Parece que o Giuseppe já chegou"
+
+            menu:
+                "Você tem algo adequado para eu me vestir?":
+                    jump a1a2
+                "A gente não ia só se encontrar com um informante em um local público?":
+                    jump a1b2
+
+        label a1a2:
+
+            a "Ah sim, claro!"
+
+            show alessandra default at offscreenright
+            with moveoutright
+
+            n "Ela entra no atelie... {nw}"
+            
+            show alessandra default at center
+            with moveinright
+            
+            extend "E volta com um vestido tie-dye"
+
+            a "Está na moda."
+
+            n "Você veste o vestido e não se sente na moda..."
+
+            n "Mas já que ela diz..."
+
+            jump a1m1
+        
+        label a1b2:
+
+            a "Sim! no restaurante de luxo com a reserva mais disputada da cidade, você não tem noção de quantos celulares ligando ao mesmo tempo eu precisei para conseguir isso!"
+
+            jump a1m1
+        
+        label a1m1:
+
+            a "Bom! agora vamos!"
+
+            n "Vocês entram na limousine, ela leva vocês até um bairro de alta classe" 
+            
+            scene bg restaurante
+            with gatodissolve
+            
+            n "e para em frente a um estabelecimento que se parece com um palácio"
+
+            show alessandra feliz
+
+            a "Chegamos! bem vindo ao Ardórsia"
+
+            n "Ao entrar no restaurante, vocês são direcionados a uma mesa um pouco afastada, há uma mulher loira se apresentando em um pequeno palco"
+
+            show alessandra brava
+
+            a "Droga, pensava que a Taylor Swift seria amanhã, nosso amigo traficante escolheu um péssimo dia para o encontro"
+
+            a "O gatinho te passou o briefing da missão? A gente está aqui para trocar esse diamante do jared leto em uma tecnologia importada extremamente letal." 
+            
+            a "Basicamente ela é capaz de transformar qualquer coisa em tofu, e não sei se você sabe, mas ratos odeiam tofu." 
+            
+            a "Não é queijo de verdade."
+
+            menu:
+                "Jared Leto?":
+                    jump a1a3
+                "Taylor Swift?":
+                    jump a1b3
+
+        label a1a3:
+
+            a "É, poxa, ele já fez parte de um visual que eu desenhei para ele, aquele cara da banda 30 minuto para o fim do mundo ou sei lá o que, é o que daremos em troca pela arma"
+            jump a1m2
+
+        label a1b3:
+            a "Hoje é sexta, pensei que colocariam alguém de mais prestígio tipo o calcinha preta."
+            jump a1m2
+
+        label a1m2:
+
+            n "Você prefere não questionar, isso já tem sido uma noite bem estranha"
+
+            a "O quão desrespeitoso seria pedir a comida antes do nosso querido colega chegar? estou faminta."
+
+            menu:
+                "Ele provavelmente não está nem ai para a comida":
+                    jump a1a4
+                "Seria extremamente desrespeitoso e você com certeza acabaria com o nosso plano inteirinho por conta dessa sua atitude egoísta":
+                    jump a1b4
+                "*Chamar o garçom* Eu não me importo.":
+                    jump a1c4
+
+        label a1a4:
+
+            n "Ela chama o garçom"
+
+            #show garcom at left
+
+            gar "Pois não?"
+
+            jump finalale1
+
+        label finalale1:
+
+            if jogador1:
+                $ a.azul += JogadorAtivo
+            else:
+                $ a.laranja += JogadorAtivo
+
+            jump whereToGo
 
     ####################################
     #--------------FIM-----------------#
