@@ -113,12 +113,12 @@ label start:
     menu:
         "[nome1] começa":
             $jogador1 = True
-            show screen char_name_screen([nome1])
+            show screen char_name_screen([nome1],[jogador1])
             jump jogadorAzul
         
         "[nome2] começa":
             $jogador1 = False
-            show screen char_name_screen([nome2])
+            show screen char_name_screen([nome2],[jogador1])
             jump jogadorLaranja
 
     
@@ -572,10 +572,10 @@ label start:
 
             if jogador1:
                 $ jogador1 = False
-                show screen char_name_screen([nome2])
+                show screen char_name_screen([nome2],[jogador1])
             else:
                 $ jogador1 = True
-                show screen char_name_screen([nome1])
+                show screen char_name_screen([nome1],[jogador1])
 
 
             menu:

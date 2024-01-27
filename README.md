@@ -22,7 +22,7 @@ Objetivos concluídos na semana 17/01-23/01:
   - Missão da Katarina 40% transferida para o RenPy
 
 Objetivos concluídos essa semana:
-  - 
+  - Efeitos sonoros
 
 Objetivos em andamento:
 
@@ -34,7 +34,6 @@ Objetivos em andamento:
   - Correções e transferência para renpy das primeiras missões (Em revisão)
 - Programação:
   - Achievements
-  - Efeitos sonoros
 
 Em breve:
 
