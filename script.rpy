@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 #transicoes:
 
 init python:
@@ -544,6 +544,9 @@ label start:
 
         label missaokat1:
 
+            scene bg deserto
+            with gatodissolve
+
             n "Vocês dirigem até uma estrada deserta, não há nada além de um posto de gasolina abandonado e uma grande torre de telefone nas redondezas"
             show katarina irritada
             k "Que calor da porra, ainda bem que eu vim preparada"
@@ -580,9 +583,9 @@ label start:
             n "Você percebe que aquilo na realidade era água, e não entende o porquê de ela usar garrafas de vodka ao invés de garrafas térmicas, parece estar bem quente"
 
             menu:
-                "Qual é a vantagem de carregar garrafas de vidro contigo?"
+                "Qual é a vantagem de carregar garrafas de vidro contigo?":
                     jump k1a4
-                "Se jogar numa panela da pra fazer um miojo"
+                "Se jogar numa panela da pra fazer um miojo":
                     jump k1b4
 
         label k1a4:
@@ -616,6 +619,9 @@ label start:
             k "Ou talvez o gatovaldo só queria tomar um sorvetinho e não estava sabendo pedir, então, caso ele esteja errado, pelo menos sairemos daqui com picolés!"
 
             k "Mas antes, bora naquele posto de gasolina abandonado e depois a gente sobe naquela torre telefonica pra ter uma visão melhor dos arredores e começar a se preparar"
+
+            show bg posto
+            with gatodissolve
 
             n "Vocês andam até o posto de gasolina abandonado..."
 
@@ -826,7 +832,14 @@ label start:
 
         label k1m4:
 
-            n "Vocês vão até a torre e começam a subir nela, ela parece instável, mas a confiança e animação de katarina te passa uma segurança inexplicávelapós chegarem a uma certa altura, vocês se sentam na beirada, e percebem que definitivamente não há mais nada por perto além dessa torre e daquele posto de gasolina"
+            show katarina feliz
+
+            n "Vocês vão até a torre e começam a subir nela ela parece instável, mas a confiança e animação de katarina te passa uma segurança inexplicável" 
+            
+            show bg caixadagua
+            with gatodissolve
+
+            n "após chegarem a uma certa altura, vocês se sentam na beirada, e percebem que definitivamente não há mais nada por perto além dessa torre e daquele posto de gasolina"
 
             k "É... parece que a gente ta bem isolado aqui mesmo, mas vai ser bom para ver quando o caminhão estiver chegando, bora fazer alguma coisa enquanto isso, abre o terceiro bolso da minha mochila ai e pega alguma coisa"
 
@@ -949,7 +962,7 @@ label start:
 
             k "Você é dos meus, infelizmente esse posto ai já tá desativado há um bom tempo."
 
-            n "Mas deria daora se ele explodisse"
+            n "Mas seria daora se ele explodisse"
 
             jump k1m5
 
@@ -991,6 +1004,9 @@ label start:
 
             n "Vocês descem a torre, a escada é bem precária, você tem a sensação de quase morte ao pisar em um degrau e ele quebrar"
 
+            show bg deserto
+            with gatodissolve
+
             show katarina default
 
             k  "Olha, é o seguinte, eu sei que eu sou uma das financiadoras disso daqui, e que você provavelmente questiona muito as minhas decisões e não confia em mim, mas eu peço, deixa que eu lido com isso daqui, siga o meu plano."
@@ -1007,7 +1023,9 @@ label start:
 
             show katarina smirk
 
-            k "Se ele acelerar e passar por cima de você, teremos certeza que eles trabalham para o governo e estão preparados para lidar com emboscadas, se ele parar para te ajudar, a gente vai saber que ele provavelmente é só um motorista inocente, você irá dizer que é uma pegadinha, e tudo ficará certo, pode ser?"
+            k "Se ele acelerar e passar por cima de você, teremos certeza que eles trabalham para o governo e estão preparados para lidar com emboscadas"
+
+            k "Se ele parar para te ajudar, a gente vai saber que ele provavelmente é só um motorista inocente, você irá dizer que é uma pegadinha, e tudo ficará certo, pode ser?"
 
             menu:
                 "Me sinto feliz de morrer pela causa!":
@@ -1037,6 +1055,8 @@ label start:
 
             n "Você sente que não tem outra alternativa a não ser a confiar nela, flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção"
 
+            hide katarina
+
             n "Então você vai, deita na rodovia, e espalha o ketchup porcamente na sua perna, só uma pessoa muito ingênua mesmo cairia nisso"
 
             n "O caminhão se aproxima cada vez mais, você sente um frio na espinha, mas começa a gritar por ajuda, sua atuação é terrível, nem a alma mais inocente da terra seria capaz de acreditar nisso"
@@ -1046,6 +1066,8 @@ label start:
             n "Ele para"
 
             n "Um senhorzinho muito fofo sai da cabine"
+
+            show vovo default at left
 
             vo "Meu Deus! você está bem? o que houve?"
             
@@ -1073,7 +1095,7 @@ label start:
 
             n "Você vê katarina chegando de mansinho com um rifle e usando uma bandana na cara"
 
-            show katarina brava
+            show katarina brava at right
 
             k "Mãos ao alto velhote!"
 
@@ -1151,7 +1173,7 @@ label start:
 
             menu:
                 "Continuar para a próxima missão":
-                    jump finalka1
+                    jump finalkat1
 
         label finalkat1:
 
@@ -1258,7 +1280,7 @@ label start:
         
         label a1b2:
 
-            a "Sim! no restaurante de luxo com a reserva mais disputada da cidade, você não tem noção de quantos celulares ligando ao mesmo tempo eu precisei para conseguir isso!"
+            a "Sim! No restaurante de luxo com a reserva mais disputada da cidade, você não tem noção de quantos celulares ligando ao mesmo tempo eu precisei para conseguir isso!"
 
             jump a1m1
         
@@ -1271,11 +1293,11 @@ label start:
             scene bg restaurante
             with gatodissolve
             
-            n "e para em frente a um estabelecimento que se parece com um palácio"
+            n "E para em frente a um estabelecimento que se parece com um palácio"
 
             show alessandra feliz
 
-            a "Chegamos! bem vindo ao Ardórsia"
+            a "Chegamos! Bem vindo ao Ardórsia"
 
             n "Ao entrar no restaurante, vocês são direcionados a uma mesa um pouco afastada, há uma mulher loira se apresentando em um pequeno palco"
 
@@ -1308,7 +1330,9 @@ label start:
 
             n "Você prefere não questionar, isso já tem sido uma noite bem estranha"
 
-            a "O quão desrespeitoso seria pedir a comida antes do nosso querido colega chegar? estou faminta."
+            show alessandra default
+
+            a "O quão desrespeitoso seria pedir a comida antes do nosso querido colega chegar? Estou faminta."
 
             menu:
                 "Ele provavelmente não está nem ai para a comida":
@@ -1322,9 +1346,191 @@ label start:
 
             n "Ela chama o garçom"
 
-            #show garcom at left
+            show garcom default at left
 
             gar "Pois não?"
+
+            a "Gostaria de um frango picatta com uma salada ao lado, para ele pode ser a mesma coisa"
+
+            hide garcom
+            with moveoutleft
+
+            jump a1m3
+            
+        label a1b4:
+
+            a "Você me faz lembrar o motivo de eu ter me isolado, conviver com pessoas é difícil quando elas pouco se importam em tratar os outros com o mínimo de respeito, mas quer saber? Eu to cagando!"
+
+            jump a1a4
+
+        label a1c4:
+
+            n "O garçom se aproxima da mesa"
+
+            show garcom default at left
+
+            gar "Pois não?"
+
+            n "Você faz o pedido para a mesa, mas não tem a menor ideia do que está pedindo, é um menu complexo"
+
+            hide garcom
+            with moveoutleft
+
+            jump a1m3
+            
+        label a1m3:
+
+
+            show alessandra brava at center
+
+            a "Que tédio"
+
+            a "Lugares como esse me fazem lembrar do motivo de eu ter sumido dos holofotes, cheio de pessoas mesquinhas, que se acham superiores por simplesmente terem conseguido uma reserva."
+
+            a "Eu vou ser bem sincera, a comida daqui nem é a melhor da cidade, e não estou dizendo que prefiro fast food ou um prato feito, existem lugares chiques que preparam pratos muito melhores e que tem um atendimento incomparavel ao daqui." 
+            
+            a "mas por algum motivo essa bodega aqui recebe todo o holofote" 
+            
+            a "Se não tivesse sido a escolha pessoal do nosso colega eu teria outras 20 melhores opções de restaurantes para escolher"
+
+            show alessandra default
+
+            a "Mas, já que estamos aqui, aguardemos..."
+
+            menu:
+                "Vamos jogar verdade ou desafio enquanto isso":
+                    jump a1a5
+                "Vamos pedir uma música":
+                    jump a1b5
+
+        label a1a5:
+
+            a "Verdade ou desafio? Pelo amor, eu te desafio a ir até aquele garçom ali e falar que ele está servindo horrores"
+            
+            menu:
+                "Aceitar":
+                    jump a1a6
+                "Recusar":
+                    jump a1b6
+            
+
+
+        label a1b5:
+
+            a "Ótima ideia!"
+            
+            n "*Ela pega um papel e uma caneta e começa a escrever alguma coisa*"
+            
+            a "Toma! Leva isso para ela"
+
+            n "Você leva o papel para a mulher no palco, ela lê e sai correndo chorando"
+
+            show alessandra feliz
+
+            a "Kkkkkk boa! Meus ouvidos já estavam se cansando"
+
+            menu:
+                "O que estava escrito?":
+                    jump a1a8
+                
+                "Por que você não gosta dela?":
+                    jump a1b8
+
+        label a1a6:
+
+            hide alessandra
+
+            show garcom default
+
+            n "Você vai até o garçom..."
+
+            n "Vocês dois se olham em silêncio por alguns segundos"
+
+            if jogador1:
+                azul "Você está servindo horrores"
+            else:
+                laranja "Você está servindo horrores"
+
+            n "Ele não parece entender"
+
+            gar "Críticas favor encaminhar à gerencia."
+
+            hide garcom
+            with moveoutleft
+
+            n "Ele sai andando em passos rápidos enxugando lágrimas nos olhos disfarçadamente"
+
+            show alessandra surpresa
+
+            a "Ué?? o que aconteceu? Você não falou que ele estava bem vestido?"
+
+            a "Amei o uniforme do pessoal daqui, não entendi como alguém poderia se magoar com um elogio"
+
+            a "Mas tudo bem, você fez o desafio, agora eu te conto uma verdade, é assim que funciona né?"
+
+            a "Vamos lá... {w} É... "
+
+            a "sei lá, {w}eu tenho medo de ficar sozinha..."
+
+            show alessandra triste
+
+            a "..."
+
+            n "Vocês ficam em silêncio por alguns segundos"
+
+            jump a1m4
+
+        label a1b6:
+
+            a "Haha, eu ganhei então, né?"
+
+            a "Agora você tem que me contar uma verdade sobre você"
+
+            menu:
+                "Eu tenho medo de tubarões":
+                    jump a1a7
+                "Eu já quebrei os meus dois braços e minhas duas pernas":
+                    jump a1b7
+                "Estou com o aluguel atrasado":
+                    jump a1c7
+                "Secretamente eu gosto dos filmes do Adam Sandler":
+                    jump a1d7
+
+        label a1a7:
+
+            a "E quem não tem? Bobinho... Esses bichos foram criados para fazer as pessoas borrarem as calças."
+
+            n "Ela não sabe que você perdeu os seus pais em um ataque de tubarão dois anos atrás"
+
+            jump a1m4
+
+        label a1b7:
+
+            a "Nossa, você está mais remendado do que muitas roupas com que trabalhei, espero que isso não venha a nos atrapalhar."
+
+            n "Você se arrepende de ter revelado isso"
+
+            jump a1m4
+
+        label a1c7:
+
+            a "Que pena, quando tudo isso acabar você pode vir morar comigo." 
+            
+            a "Eu te arrumo um cantinho no depósito do ateliê para você dormir, só leva o colchão e o repelente de insetos."
+
+            n "Você prefere dormir na rua"
+
+            jump a1m4
+
+        label a1d7:
+
+            a "Acho que essa foi a pior coisa que você poderia ter me contado"
+
+            n "Ainda bem que ela não sabe que o seu filme favorito dele é 'Cada Um Tem a Gêmea Que Merece'"
+
+            jump a1m4
+
+        
 
             jump finalale1
 
