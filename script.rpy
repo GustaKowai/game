@@ -57,6 +57,7 @@ define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low
 define c = Character("Claudia", image="claudia", callback = low_beep)
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
 define gar = Character("Garçom", image="garcom", callback = low_beep)
+define traf = Character("traficante", image="traficante", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
@@ -1546,7 +1547,50 @@ label start:
 
             a "Eita, acho que ele chegou"
 
+            n "Você olha para trás, e vê um homem parrudo, amedrontador, usando roupas formais, de óculos escuros, se aproximando da mesa de vocês"
+
+            a "A gente ta fudido, olha o tamanho desse cara"
+
+            n "Ele se aproxima em passos pesados"
+
+            show alessandra medo1
+
+            a "Eu vou para o banheiro e você lida com isso, tudo bem?"
+
+            n "Alessandra está suando frio, ela parece muito nervosa, ele está cada vez mais perto"
+
+            show alessandra medo2
+
+            a "Cara, por que eu fui me meter nisso? {w} Aquilo é uma arma?{w} Eu vou desmaiar"
         
+            n "Ele chega até a mesa de vocês e..."
+
+            n "Ele passa reto"
+
+            show alessandra surpresa
+
+            a "..."
+
+            show alessandra feliz
+
+            a "Ah, acho que era o segurança..."
+
+            traf "Oieeeee"
+
+            show alessandra confusa
+
+            a "O que foi isso?"
+
+            traf "Oieeee"
+
+            a "De onde está vindo isso??"
+
+            n "Você percebe que, enquanto se distraiam e cagavam nas calças, uma pessoa de estatura baixa usando roupas rosas sentou-se à mesa com vocês"
+
+            show traficante default at left
+            show alessandra confusa at right
+
+
 
             jump finalale1
 

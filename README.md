@@ -23,6 +23,9 @@ Objetivos concluídos na semana 17/01-23/01:
 
 Objetivos concluídos essa semana:
   - Efeitos sonoros
+  - Missão da katarina 100% transferida
+  - Missão da Alessandra 40% transferida
+  - Nome dos jogadores agora aparecem nas cores dos jogadores
 
 Objetivos em andamento:
 
