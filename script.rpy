@@ -988,7 +988,7 @@ label start:
 
         label k1d11:
 
-            show katarina defaul
+            show katarina default
 
             n "Você simplesmente não atira"
 
@@ -1357,8 +1357,11 @@ label start:
 
             n "Ela chama o garçom"
 
+            show alessandra default at right
+            with move
             show garcom default at left
-
+            with moveinleft
+            
             gar "Pois não?"
 
             a "Gostaria de um frango picatta com uma salada ao lado, para ele pode ser a mesma coisa"
@@ -1378,7 +1381,10 @@ label start:
 
             n "O garçom se aproxima da mesa"
 
+            show alessandra default at right
+            with move
             show garcom default at left
+            with moveinleft
 
             gar "Pois não?"
 
@@ -1393,6 +1399,7 @@ label start:
 
 
             show alessandra brava at center
+            with move
 
             a "Que tédio"
 
@@ -1467,7 +1474,7 @@ label start:
             gar "Críticas favor encaminhar à gerencia."
 
             hide garcom
-            with moveoutleft
+            with moveoutright
 
             n "Ele sai andando em passos rápidos enxugando lágrimas nos olhos disfarçadamente"
 
@@ -1587,9 +1594,12 @@ label start:
 
             n "Você percebe que, enquanto se distraiam e cagavam nas calças, uma pessoa de estatura baixa usando roupas rosas sentou-se à mesa com vocês"
 
+            show alessandra default at right
+            with move
             show traficante default at left
-            show alessandra confusa at right
+            
 
+            traf "Oiee"
 
 
             jump finalale1
@@ -1616,9 +1626,9 @@ label start:
             play music "abandoned.ogg" volume 2.0
             scene bg quartel
             with dissolve
-
+            $ JogadorAtivo = 0
             if katDay1 or aleDay1:
-
+                
                 "E agora, para onde vamos?"
 
             if jogador1:
