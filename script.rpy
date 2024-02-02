@@ -341,9 +341,6 @@ label start:
             scene bg quartel
             with gatodissolve
             $ JogadorAtivo = 0
-            if katDay1 or aleDay1:
-                
-                "E agora, para onde vamos?"
 
             if jogador1:
                 $ jogador1 = False
@@ -352,6 +349,12 @@ label start:
                 $ jogador1 = True
                 show screen char_name_screen([nome1],[jogador1])
 
+            if katDay1 or aleDay1:
+
+                if jogador1:
+                    "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"
+                else:
+                    "E agora {color=#F56300}[nome2]{/color}, para onde vamos?"
 
             menu:
 
@@ -389,14 +392,17 @@ label start:
     ###########################################################################################################################
 
         label demoFinal:
-            "Vocês terminaram a demo! Espero que tenham se divertido."
 
-            "Para saberem, [nome1] fez \n[k.azul] de x pontos disponíveis com a Katarina \n e [a.azul] de x pontos disponíveis com a Alessandra"
+            show gatovaldo default
+
+            g "Vocês terminaram a demo! Espero que tenham se divertido."
+
+            g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de x pontos disponíveis com a Katarina \ne [a.azul] de x pontos disponíveis com a Alessandra"
 
             
-            "E [nome2] fez \n[k.laranja] de x pontos disponíveis com a Katarina \n e [a.laranja] de x pontos disponíveis com a Alessandra"
+            g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de x pontos disponíveis com a Katarina \ne [a.laranja] de x pontos disponíveis com a Alessandra"
 
-            "Espero que tenham se divertido, em breve teremos mais missões."
+            g "Espero que tenham se divertido, em breve teremos mais missões."
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
 
             # if jogador1:

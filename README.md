@@ -34,7 +34,8 @@ Objetivos concluídos na semana 24/01-30/01:
 Objetivos concluídos essa semana:
 
 - Separação dos scripts por personagem (talvez façamos por dia também?)
-- História da alessandra passada até o d10
+- História da alessandra passada completa.
+- Correções menores
 
 Objetivos em andamento:
 
@@ -47,6 +48,7 @@ Objetivos em andamento:
   - Correções e transferência para renpy das primeiras missões (Em revisão)
 - Programação:
   - Achievements
+  - Definir as pontuações para as escolhas
 
 Em breve:
 

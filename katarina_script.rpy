@@ -482,17 +482,24 @@ label k1m7:
     vo "A-aqui o troco"
     show katarina confusa
     k "Troco? desde quando picolés são tão baratos assim? ah quer saber, pode ficar, pelo susto, vai"
+
+    hide vovo
+    with moveoutleft
+
     n "O senhor entra de volta no caminhão, e sai acelerado"
-    show katarina brava
-    k "Logo o de baunilha... que sabor mais sem graça... é, bem, ele está limpo, precisamos analisar a nossa próxima hipótese"
+
+    show katarina brava at center
+    with move
+
+    k "Logo o de baunilha... Que sabor mais sem graça... É, bem, ele está limpo, precisamos analisar a nossa próxima hipótese"
     menu:
         "Você mandou bem!":
             jump k1a14
-        "É... acho que você precisa tomar um pouco mais de cuidado ao lidar com civis...":
+        "É... Acho que você precisa tomar um pouco mais de cuidado ao lidar com civis...":
             jump k1b14
 label k1a14:
     show katarina smirk
-    k "Ah, eu sei né! falei poxa, confia em mim!"
+    k "Ah, eu sei né! Falei poxa, confia em mim!"
     jump k1m8
 label k1b14:
     show katarina smirk
@@ -503,11 +510,15 @@ label k1b14:
 label k1m8:
     n "Vocês voltam até o carro, o picolé já está quase derretido, o calor está insuportável"
     show katarina feliz
-    k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim, tenho um problema em conviver com estranhos, quem sabe eu não te conto mais sobre o meu pai,eu sei que está curioso"
+    k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
+    
+    show katarina smirk
+
+    extend "Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
     n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar o carro, vocês partem"
-    menu:
-        "Continuar para a próxima missão":
-            jump finalkat1
+
+    jump finalkat1
+
 label finalkat1:
     if jogador1:
         $ k.azul += JogadorAtivo

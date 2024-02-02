@@ -550,7 +550,7 @@ label a1a10:
     with move
 
     show traficante default at left
-    with moveinright
+    with moveinleft
 
     traf "Ta na mão!"
 
@@ -725,10 +725,280 @@ label a1c10:
         "*Oferecer o tofu a ela*":
             jump a1b13
 
+label a1d10:
+
+    show alessandra default
+
+    a "Aquele gato vagabundo deve estar dormindo, mas vale a pena a tentativa"
+
+    n "Ela pega o celular e começa a discar um número"
+
+    show alessandra triste
+
+    a "Ele não vai atender"
+
+    g "Miau?"
+
+    show alessandra default
+
+    a "General?"
+
+    g "Sim?"
+
+    a "Temos um problema..."
+
+    n "Ela explica a situação para ele"
+
+    a "Entendo... Irei fazer isso então"
+
+    n "Ela desliga o telefone"
+
+    show alessandra feliz
+
+    a "Ele é um gênio!"
+
+    n "Ela vira de volta ao traficante"
+
+    show alessandra brava
+
+    a "Escuta só, seu merdinha, você não sabe com quem você está lidando, o nosso combinado foi o diamante pela a arma, e vai ser isso que a gente irá trocar,{w} o que você fez ou não fez de extra nessa arma simplesmente não interessa!" 
+    a "Então vamos fazer o seguinte,{w} ou você sai desse restaurante com o seu diamante e a gente sai com a nossa arma,{w} ou ninguém sai daqui."
+    
+    show alessandra feliz
+
+    a "O que você me diz?"
+
+    n "Ele começa a suar frio"
+
+    traf "T-ta bom..."
+
+    n "Ele passa a arma por debaixo da mesa"
+
+    show alessandra brava
+
+    a "Acho bom!"
+
+    n "Ela desliza o diamante para ele"
+
+    traf "..."
+
+    show alessandra default
+
+    a "..."
+
+    n "Os dois ficam em silêncio por alguns segundos"
+
+    traf "B-b-bom, acho que é melhor eu ir indo haha..."
+
+    show alessandra brava
+
+    a "{size=+5}Grrrrrrrr{/size}"
+
+    n "Ela começa a rosnar"
+
+    traf "O-ok, t-tchauzinho!"
+
+    hide traficante
+    with moveoutleft
+
+    n "Ele levanta apressado e sai correndo"
+
+    show alessandra default at center
+    with move
+
+    a "Ufa! Isso foi tenso"
+
+    menu:
+        "Você acabou de rosnar?":
+            jump a1a14
+        "Que porra foi essa?":
+            jump a1a14
+
+
 label a1a11:
+
+    show alessandra default
+
+    a "Ah, eu sinceramente não ligava nem um pouco pra isso,"
+
+    show alessandra brava
+
+    extend "o que mais me deixa transtornada é ter que usar essa coisa aqui que ele chama de roupa, que visual terrível!"
+
+    jump a1m5
+
+
+label a1b11:
+
+    show alessandra triste
+
+    a "Está tudo bem, foi o preço necessário, foi alto, mas fizemos o que foi preciso."
+
+    jump a1m5
+
+label a1a12:
+
+    show alessandra feliz
+
+    a "Agradeço pela sua modéstia, mas você também ajudou nisso, mandamos bem!"
+
+    jump a1m5
+
+label a1b12:
+
+    show alessandra default
+
+    a "Eu nunca duvidei que seriamos uma ótima dupla"
+
+    n "Ela está claramente mentindo."
+
+    jump a1m5
+
+label a1a13:
+
+    n "Você pega o tofu da cadeira e devora ele em uma mordida só"
+
+    hide traficante
+
+    n "Tem gosto de tofu"
+
+    show alessandra surpresa
+
+    a "Espera, {size=+5}VOCÊ ACABOU DE COMER O NOSSO TRAFICANTE?{p} MEU PLANO ERA TENTAR DESENVOLVER UMA TECNOLOGIA REVERSA PARA TRAZER ELE DE VOLTA!{/size}"
+    a "{size=+5}AGORA SOMOS ASSASSINOS!!!!{w} E VOCÊ É UM{/size}{size=+15} CANIBAL!!!{/size}"
+    
+    show alessandra feliz
+
+    a "Brincadeirinha, era só um pedaço de tofu kkkkkkk"
+
+    jump a1m5
+
+label a1b13:
+
+    n "Você oferece o tofu a ela"
+
+    show alessandra feliz
+
+    a "Obrigado! vou guardar de recordação"
+
+    n "Ela chama o garçom"
+
+    show garcom default at left
+    with moveinleft
+
+    show alessandra default at right
+    with move
+
+    a "Com licença, poderia me trazer uma embalagem para eu levar isso aqui para a viagem?"
+
+    gar "Mas é claro!"
+
+    hide garcom
+    with moveoutleft
+
+    show alessandra feliz at center
+    with move
+
+    a "É assim que se faz"
+
+    jump a1m5
+
+label a1a14:
+
+    a "Foi o que o gatovaldo me indicou! intimidar e rosnar, ele diz que para ele sempre funciona"
+
+    jump a1m5
+
+label a1m5:
+
+    show garcom default at left
+    with moveinleft
+
+    n "O garçom chega com o pedido de vocês"
+
+    gar "Boa noite, aqui está."
+
+    hide garcom
+    with moveoutleft
+
+    show alessandra feliz
+
+    a "Caraca, uau, isso aqui parece estar muito gostoso"
+
+    n "A comida realmente parece estar muito boa"
+
+    menu:
+        "Pedir para ela experimentar primeiro":
+            jump a1a15
+        "Experimentar primeiro":
+            jump a1b15
+
+
+label a1a15:
+
+    a "Com todo o prazer!"
+
+    jump a1m6
+
+label a1b15:
+
+    n "Você experimenta o prato... Ele está muito gostoso!"
+
+    a "Hummm... Parece que está bom mesmo, minha vez!"
+
+    jump a1m6
+
+label a1m6:
+
+    n "Ela da uma garfada e fica paralisada"
+
+    show alessandra assustada
+
+    menu:
+        "Está tudo bem?":
+            jump a1a16
+        "O que foi? Viu um fantasma?":
+            jump a1b16
+ 
+label a1a16:
+
+    a "Não, não está tudo bem, precisamos sair daqui agora,{w} tem alguma coisa de estranho nessa comida, acho que estamos sendo observados"
+
+    menu:
+        "O que?":
+            jump a1a17
+        "Mas como??":
+            jump a1a17
+
+label a1b17:
+
+    a "Você não entenderia, mas sim, parece que estou lidando com um fantasma, a gente precisa sair daqui, rápido."
+
+    menu:
+        "O que?":
+            jump a1a17
+        "Mas como??":
+            jump a1a17
+
+label a1a17:
+
+    show alessandra medo1
+
+    a "Essa comida tem o mesmo gosto da comida do lugar em que me mantiveram presa por todos esses anos."
+
+    a "Você não sabia disso, e não pode contar a ninguém, agora, precisamos sair, depois conversaremos mais sobre isso."
+
+    n "Ela levanta da cadeira, deixa umas notas de dinheiro na mesa, puxa você pelo ombro, e vocês saem do restaurante"
+
+    hide alessandra
+    with moveoutright
+
+    n "Você está confuso, mas ela parece ter um bom motivo para estar assustada"
 
 
     jump finalale1
+
+
 label finalale1:
     if jogador1:
         $ a.azul += JogadorAtivo
