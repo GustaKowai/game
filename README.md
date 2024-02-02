@@ -23,13 +23,17 @@ Objetivos concluídos na semana 17/01-23/01:
 - Segunda missão da Katarina pronta
 - Missão da Katarina 40% transferida para o RenPy
 
-Objetivos concluídos essa semana:
+Objetivos concluídos na semana 24/01-30/01:
 
 - Efeitos sonoros
 - Missão da katarina 100% transferida
 - Missão da Alessandra 40% transferida
 - Nome dos jogadores agora aparecem nas cores dos jogadores
 - Placeholder para os NPCs colocados
+
+Objetivos concluídos essa semana:
+
+-
 
 Objetivos em andamento:
 
