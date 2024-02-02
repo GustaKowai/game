@@ -33,13 +33,15 @@ Objetivos concluídos na semana 24/01-30/01:
 
 Objetivos concluídos essa semana:
 
--
+- Separação dos scripts por personagem (talvez façamos por dia também?)
+- História da alessandra passada até o d10
 
 Objetivos em andamento:
 
 - Arte:
   - Cláudia
   - CG de algumas cenas (Pelo menos uma)
+  - Alessandra confura e smirk (Pedido)
 - História
   - Segunda missão com cada uma das personagens (Alessandra 2)
   - Correções e transferência para renpy das primeiras missões (Em revisão)

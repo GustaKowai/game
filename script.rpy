@@ -31,6 +31,7 @@ transform siren_tint:
 define gatodissolve = ImageDissolve("transicao.png", 2.0, ramplen=128, reverse=True) #Transição de gatinho
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE") #Trasição para o início do jogador azul
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300") #Trasição para o início do jogador laranja
+define flashbulb = Fade(0.1, 0.0, 0.5, color="#fff")
 default jogador1 = True ##Jogador azul = true, jogador laranja = False
 default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
 default alguem = False
@@ -338,7 +339,7 @@ label start:
         label whereToGo:
             play music "abandoned.ogg" volume 2.0
             scene bg quartel
-            with dissolve
+            with gatodissolve
             $ JogadorAtivo = 0
             if katDay1 or aleDay1:
                 
