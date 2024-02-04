@@ -79,7 +79,7 @@ Planos futuros:
 
 Responsáveis:
 
-Arte: Ayla Yorinori Nishino
+Arte: Ayla Yorinori Nishino!
 
 Roteiro: João Arthur Miguel Ribeiro
 
