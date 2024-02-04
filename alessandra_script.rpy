@@ -61,7 +61,7 @@ label a1a1:
     n "Uma limousine estaciona em frente ao atelie, e por um momento você se questiona se está vestido adequadamente" 
     n "Alessandra mexe no vestido dela em algo que você não consegue decifrar" 
     
-    show alessandra feliz
+    show alessandra smirk
 
     n "De repente, partes do look que estavam escondidas se revelam e ela fica com uma aparencia mais ousada, amedrontadora e claro, estilosa, {w}agora você tem certeza que não está vestido adequadamente para a ocasião"
 
@@ -111,7 +111,7 @@ label a1m1:
     
     n "E para em frente a um estabelecimento que se parece com um palácio"
 
-    show alessandra feliz
+    show alessandra default
     
     a "Chegamos! Bem vindo ao Ardórsia"
     
@@ -244,7 +244,7 @@ label a1b5:
 
     n "Você leva o papel para a mulher no palco, ela lê e sai correndo chorando"
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Kkkkkk boa! Meus ouvidos já estavam se cansando"
 
@@ -402,7 +402,7 @@ label a1c9:
 
 label a1d9:
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Ok, você é bem inocente mesmo, fico feliz por não ter deixado na cara."
 
@@ -460,7 +460,7 @@ label a1m4:
     
     traf "Vocês são que são alessandra e-"
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "SIM! É a gente, você não sabe como é bom fazer négocios com você!"
 
@@ -504,7 +504,7 @@ label a1m4:
 label a1a10:
     a "O que de mais valioso eu poderia dar pra ele? Esse vestido que foi usado pela beyonce no concerto em Munique na Alemanha em 2008? Ele nunca iria aceit-"
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Espera, ótima ideia!"
 
@@ -535,7 +535,7 @@ label a1a10:
     hide traficante
     with moveoutleft
 
-    show alessandra feliz at center
+    show alessandra smirk at center
     with move
 
     n "Ele se retira da mesa e vai até um lugar um pouco afastado para realizar uma ligação"
@@ -590,7 +590,7 @@ label a1b10:
 
     a "Agora você falou a minha língua, e se a gente disser que..."
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Já sei!"
 
@@ -626,7 +626,7 @@ label a1b10:
 
     a "Eu pensei que ele não fosse descobrir... Como?"
 
-    show alessandra feliz
+    show alessandra confusa
 
     n "Ela te dá uma piscadinha sutil"
 
@@ -637,6 +637,8 @@ label a1b10:
     traf "M-muito obrigado"
 
     n "Eles realizam a troca entre a arma e o diamante"
+
+    show alessandra feliz
 
     a "Esplêndido!{p} Foi um prazer realizar negócios com vocês, bye bye!"
 
@@ -682,7 +684,7 @@ label a1c10:
 
     traf "Não! Digo, não sei? Só to tentando te entender"
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Me empresta isso aqui, vou transformar aquele cara sozinho ali em tofu, se ninguém perceber e a gente não for preso o diamante é todo seu."
 
@@ -753,7 +755,7 @@ label a1d10:
 
     n "Ela desliga o telefone"
 
-    show alessandra feliz
+    show alessandra smirk
 
     a "Ele é um gênio!"
 
@@ -764,7 +766,7 @@ label a1d10:
     a "Escuta só, seu merdinha, você não sabe com quem você está lidando, o nosso combinado foi o diamante pela a arma, e vai ser isso que a gente irá trocar,{w} o que você fez ou não fez de extra nessa arma simplesmente não interessa!" 
     a "Então vamos fazer o seguinte,{w} ou você sai desse restaurante com o seu diamante e a gente sai com a nossa arma,{w} ou ninguém sai daqui."
     
-    show alessandra feliz
+    show alessandra smirk
 
     a "O que você me diz?"
 
@@ -896,7 +898,7 @@ label a1b13:
     hide garcom
     with moveoutleft
 
-    show alessandra feliz at center
+    show alessandra smirk at center
     with move
 
     a "É assim que se faz"
