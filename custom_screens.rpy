@@ -8,14 +8,14 @@ style char_name2_style:
 
 screen char_name_screen(message, jogador, okay=Return(True), cancel=Return(False)):
     if jogador1:
-        add "jogador1.png"
+        #add "jogador1.png"
         vbox:
             style "char_name1_style"
             xalign 0.04
-            text "Jogador: [message]" 
+            text "{color=#1338BE}Jogador: [message]{/color}" 
     else:
-        add "jogador2.png"
+        #add "jogador2.png"
         vbox:
             style "char_name2_style"
             xalign 0.04
-            text "Jogador: [message]"
+            text "{color=#f56300}Jogador: [message]{/color}"

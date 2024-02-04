@@ -5,35 +5,50 @@ O projeto começou em JS e agora foi transferido para o Ren'Py!
 Alguns objetivos foram alterados devido a essa transferência, porém acreditamos que agora o desenvolvimento será ainda mais rápido!
 
 Objetivos concluídos na semana 09/01-16/01:
-  - Transferencia do jogo para o Ren'Py
-  - Prólogo transferido
-  - Separação dos jogadores em player 1 e 2
-  - Adição de uma tela para os jogadores poderem escrever seus nomes
-  - arrumar o menu
-  - Sistema de afeição
-  - Musica adicionada (ainda é placeholder)
-  - som de bip nas falas
-  - Mais expressões para a Alessandra
+
+- Transferencia do jogo para o Ren'Py
+- Prólogo transferido
+- Separação dos jogadores em player 1 e 2
+- Adição de uma tela para os jogadores poderem escrever seus nomes
+- arrumar o menu
+- Sistema de afeição
+- Musica adicionada (ainda é placeholder)
+- som de bip nas falas
+- Mais expressões para a Alessandra
 
 Objetivos concluídos na semana 17/01-23/01:
-  - Adicionado o efeito de sirene (ainda sem som) para a cena do botão de ataque nuclear
-  - Redimensionamento das sprites e backgrounds
-  - Segunda missão da Katarina pronta
-  - Missão da Katarina 40% transferida para o RenPy
+
+- Adicionado o efeito de sirene (ainda sem som) para a cena do botão de ataque nuclear
+- Redimensionamento das sprites e backgrounds
+- Segunda missão da Katarina pronta
+- Missão da Katarina 40% transferida para o RenPy
+
+Objetivos concluídos na semana 24/01-30/01:
+
+- Efeitos sonoros
+- Missão da katarina 100% transferida
+- Missão da Alessandra 40% transferida
+- Nome dos jogadores agora aparecem nas cores dos jogadores
+- Placeholder para os NPCs colocados
 
 Objetivos concluídos essa semana:
-  - Efeitos sonoros
+
+- Separação dos scripts por personagem (talvez façamos por dia também?)
+- História da alessandra passada completa.
+- Correções menores
 
 Objetivos em andamento:
 
 - Arte:
   - Cláudia
   - CG de algumas cenas (Pelo menos uma)
+  - Alessandra confura e smirk (Pedido)
 - História
   - Segunda missão com cada uma das personagens (Alessandra 2)
   - Correções e transferência para renpy das primeiras missões (Em revisão)
 - Programação:
   - Achievements
+  - Definir as pontuações para as escolhas
 
 Em breve:
 
