@@ -43,7 +43,7 @@ label a1a1:
     n "Quando decide olhar para trás..."
 
     if alguem:
-        "Nunca diga \"Tem alguém ai?\", já assisti filmes de terror o suficiente." 
+        "Nunca diga \"Tem alguém ai?\".{w} Já assisti filmes de terror o suficiente." 
         "{cps=*0.2}Trás má sorte. {/cps}"
     
     show alessandra default
@@ -53,9 +53,10 @@ label a1a1:
         a "To zoando!"
     a "Eae cara, estamos preparados para a missão?"
     a "Só aguardar aqui fora, o transporte já já chega."
-    a "Engraçado que você nem percebeu que eu estava escondida atrás da porta quando entrou, gosto de assustar as pessoas as vezes, é engraçado."
-    a "Sabe, as vezes tudo que a gente precisa é de um pouco de emoção, vivemos nossas vidas monótonas repetindo o mesmo ciclo dia após dia, é bom as vezes ter um motivo maior para se preocupar com a sua própria vida"
-    a "Aposto que você se assustou de verdade, olha a minha cara de louca! To branca igual um vampiro.{w} Não saia desse lugar há anos e quando saia era para comprar miojo ou energético de madrugada no mercadinho 24 horas."  
+    a "Engraçado que você nem percebeu que eu estava escondida atrás da porta quando entrou.{w} Gosto de assustar as pessoas as vezes, é engraçado."
+    a "Sabe, as vezes tudo que a gente precisa é de um pouco de emoção. Vivemos nossas vidas monótonas repetindo o mesmo ciclo dia após dia..."
+    a "É bom as vezes ter um motivo maior para se preocupar com a sua própria vida"
+    a "Aposto que você se assustou de verdade, olha a minha cara de louca! To branca igual um vampiro.{w} Não saía desse lugar há anos e quando saía era para comprar miojo ou energético de madrugada no mercadinho 24 horas."  
     a "Minha sorte é que a minha fama não chegou aqui nas periferias, ser reconhecida nunca foi um problema aqui, esse é o lugar perfeito"
 
     n "Uma limousine estaciona em frente ao atelie, e por um momento você se questiona se está vestido adequadamente" 
@@ -103,13 +104,15 @@ label a1b2:
 
 label a1m1:
 
-    a "Bom! agora vamos!"
+    a "Bom! Agora vamos!"
 
     n "Vocês entram na limousine, ela leva vocês até um bairro de alta classe" 
     
     scene bg restaurante
     with gatodissolve
-    
+    play music "restaurante.mp3" volume 0.5
+
+
     n "E para em frente a um estabelecimento que se parece com um palácio"
 
     show alessandra default
@@ -120,7 +123,7 @@ label a1m1:
     show alessandra brava
     
     a "Droga, pensava que a Taylor Swift seria amanhã, nosso amigo traficante escolheu um péssimo dia para o encontro"
-    a "O gatinho te passou o briefing da missão? A gente está aqui para trocar esse diamante do jared leto em uma tecnologia importada extremamente letal."
+    a "O gatinho te passou o briefing da missão? A gente está aqui para trocar esse diamante do Jared Leto em uma tecnologia importada extremamente letal."
     a "Basicamente ela é capaz de transformar qualquer coisa em tofu, e não sei se você sabe, mas ratos odeiam tofu."
     a "Não é queijo de verdade."
 
@@ -132,7 +135,7 @@ label a1m1:
 
 label a1a3:
 
-    a "É, poxa, ele já fez parte de um visual que eu desenhei para ele, aquele cara da banda 30 minuto para o fim do mundo ou sei lá o que, é o que daremos em troca pela arma"
+    a "É, poxa, ele já fez parte de um visual que eu desenhei para ele. Aquele cara da banda 30 minuto para o fim do mundo ou sei lá o que, é o que daremos em troca pela arma"
 
     jump a1m2
 
@@ -183,6 +186,8 @@ label a1a4:
     
 label a1b4:
 
+    show alessandra brava
+
     a "Você me faz lembrar o motivo de eu ter me isolado, conviver com pessoas é difícil quando elas pouco se importam em tratar os outros com o mínimo de respeito, mas quer saber? Eu to cagando!"
 
     jump a1a4
@@ -214,8 +219,9 @@ label a1m3:
 
     a "Que tédio"
     a "Lugares como esse me fazem lembrar do motivo de eu ter sumido dos holofotes, cheio de pessoas mesquinhas, que se acham superiores por simplesmente terem conseguido uma reserva."
-    a "Eu vou ser bem sincera, a comida daqui nem é a melhor da cidade, e não estou dizendo que prefiro fast food ou um prato feito, existem lugares chiques que preparam pratos muito melhores e que tem um atendimento incomparavel ao daqui." 
-    a "mas por algum motivo essa bodega aqui recebe todo o holofote"     
+    a "Eu vou ser bem sincera, a comida daqui nem é a melhor da cidade." 
+    a "Não estou dizendo que prefiro fast food ou um prato feito, existem lugares chiques que preparam pratos muito melhores e que tem um atendimento incomparavel ao daqui..." 
+    a "...mas por algum motivo essa bodega aqui recebe todo o holofote"     
     a "Se não tivesse sido a escolha pessoal do nosso colega eu teria outras 20 melhores opções de restaurantes para escolher"
 
     show alessandra default
@@ -325,6 +331,8 @@ label a1b6:
 
 label a1a7:
 
+    show alessandra feliz
+
     a "E quem não tem? Bobinho... Esses bichos foram criados para fazer as pessoas borrarem as calças."
 
     n "Ela não sabe que você perdeu os seus pais em um ataque de tubarão dois anos atrás"
@@ -332,6 +340,8 @@ label a1a7:
     jump a1m4
 
 label a1b7:
+
+    show alessandra surpresa
 
     a "Nossa, você está mais remendado do que muitas roupas com que trabalhei, espero que isso não venha a nos atrapalhar."
 
@@ -341,7 +351,12 @@ label a1b7:
 
 label a1c7:
 
+    show alessandra default
+
     a "Que pena, quando tudo isso acabar você pode vir morar comigo."     
+
+    show alessandra smirk
+
     a "Eu te arrumo um cantinho no depósito do ateliê para você dormir, só leva o colchão e o repelente de insetos."
 
     n "Você prefere dormir na rua"
@@ -350,6 +365,8 @@ label a1c7:
 
 label a1d7:
 
+    show alessandra brava
+
     a "Acho que essa foi a pior coisa que você poderia ter me contado"
 
     n "Ainda bem que ela não sabe que o seu filme favorito dele é 'Cada Um Tem a Gêmea Que Merece'"
@@ -357,11 +374,16 @@ label a1d7:
     jump a1m4
 
 label a1a8:
+
+    show alessandra default
+
     a "Era 'famous' do Kanye West, não tenho a menor ideia do que rolou entre eles so sei que essa musica aí não significa coisa boa para ela não"
 
     jump a1c8
 
 label a1b8:
+
+    show alessandra brava
 
     a "Muitas das minhas inimigas eram fãs dela, isso é algo para se prestar atenção em uma pessoa, tome cuidado."
 
@@ -492,11 +514,11 @@ label a1m4:
 
     show alessandra brava
 
-    a "O que? isso não é justo, a gente está com o seu diamante aqui, esse foi o combinado"
+    a "O que? Isso não é justo, a gente está com o seu diamante aqui, esse foi o combinado"
 
     n "Ele parece empolgado com o diamante"
 
-    traf "Ela agora apaga memórias em um raio de 20 metros, você transforma um prato em tofu, boom! Ele nunca existiu."
+    traf "Ela agora apaga memórias em um raio de 20 metros, você transforma um prato em tofu e boom! Ele nunca existiu."
     traf "Um ente querido, um pet, qualquer coisa!"
     traf "'Por que tem um tofu nessa coleira? Não sei, mas parece delicioso!'"
     traf "É o que uma madame irá pensar quando você transformar o lulu da pomerânia dela em queijo de soja.{w} Então sim, o preço subiu."
@@ -741,6 +763,8 @@ label a1c10:
 
     n "Ela atira nele."
     n "Por um momento, você se questiona por que tem um tofu na cadeira com vocês"
+
+    show alessandra confusa
     
     a "Espera... Isso realmente aconteceu?"
 
@@ -927,6 +951,8 @@ label a1b13:
 
     hide garcom
     with moveoutleft
+    hide traficante
+    with moveoutleft
 
     show alessandra smirk at center
     with move
@@ -1022,9 +1048,9 @@ label a1a17:
 
     a "Essa comida tem o mesmo gosto da comida do lugar em que me mantiveram presa por todos esses anos."
 
-    a "Você não sabia disso, e não pode contar a ninguém, agora, precisamos sair, depois conversaremos mais sobre isso."
+    a "Você não sabia disso e não pode contar a ninguém,{w} agora, precisamos sair, depois conversaremos mais sobre isso."
 
-    n "Ela levanta da cadeira, deixa umas notas de dinheiro na mesa, puxa você pelo ombro, e vocês saem do restaurante"
+    n "Ela levanta da cadeira, deixa umas notas de dinheiro na mesa, puxa você pelo ombro e vocês saem do restaurante"
 
     hide alessandra
     with moveoutright

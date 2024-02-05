@@ -36,7 +36,7 @@ Objetivos concluídos essa semana:
 - Separação dos scripts por personagem (talvez façamos por dia também?)
 - História da alessandra passada completa.
 - Correções menores
-- Alessandra confusa e smirk
+- Sprites para Alessandra confusa e smirk
 - Definir as pontuações para as escolhas
 - Segunda missão da Alessandra
 - Correções e transferência para renpy das primeiras missões

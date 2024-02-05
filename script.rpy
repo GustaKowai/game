@@ -58,7 +58,7 @@ define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low
 define c = Character("Claudia", image="claudia", callback = low_beep)
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
 define gar = Character("Garçom", image="garcom", callback = low_beep)
-define traf = Character("traficante", image="traficante", callback = low_beep)
+define traf = Character("Traficante", image="traficante", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0

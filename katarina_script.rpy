@@ -14,13 +14,13 @@ label d1kat1:
         with fadeA
     else:
         with fadeL
-    "*Você entra em uma sala de recepção com uma decoração atípica*"
+    n "*Você entra em uma sala de recepção com uma decoração atípica"
 
-    "*Há uma parede cheia de cabeças de animais empalhados, com os olhos trocados por pedras preciosas*"
+    n "Há uma parede cheia de cabeças de animais empalhados, com os olhos trocados por pedras preciosas"
 
-    "*Em um balcão extravagante, próximo a duas espingardas rosas cruzadas entre o símbolo da marca de rações de katarina*"
+    n "Em um balcão extravagante, próximo a duas espingardas rosas cruzadas entre o símbolo da marca de rações de katarina"
 
-    "*Uma simpática recepcionista te atende*"
+    n "Uma simpática recepcionista te atende"
     show claudia default at left
     with dissolve
     c "Boa tarde! Como posso te ajudar?"
@@ -31,26 +31,26 @@ label d1kat1:
             jump k1b1
 label k1a1:
     c "KATARINA!"
-    n "*A recepcionista grita, mas não obtem nenhuma resposta*"
+    n "A recepcionista grita, mas não obtem nenhuma resposta"
     c "Peço perdão, só um instante, ela provavelmente deve estar em uma reunião importante"
-    n "*Ela disca um número, mas aparentemente não obtem resposta*"
+    n "Ela disca um número, mas aparentemente não obtem resposta"
     c "Certo..."
-    n "*A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'ATAQUE NUCLEAR'*"
+    n "A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'ATAQUE NUCLEAR'"
     show bg recepcao at siren_tint()
     
     play sound "alarm.wav" loop
-    n "*As luzes começam a piscar em vermelho e um som de alarme começa a tocar*."
+    n "As luzes começam a piscar em vermelho e um som de alarme começa a tocar."
     c "Ela deve aparecer a qualquer instante!"
     with hpunch
     play sound "doorOpen.ogg"
-    n "*A porta do escritório abre escancaradamente*"
+    n "A porta do escritório abre escancaradamente"
    
     show katarina brava at right
     show katarina brava at siren_tint()
     with moveinright
     k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO CLAUDIA, NÃO AGUENTO MAIS ESPERAR"
     show claudia default at siren_tint()
-    c  "Senhorita katarina! essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
+    c  "Senhorita katarina! Essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
     show katarina feliz at siren_tint()
     k "Ah! você faz parte do movimento, o gatovaldo me disse que apareceria."
     k "Claúdia, sempre que algum esquisito assim aparecer por aqui pode liberar direto para a minha sala"
@@ -59,15 +59,15 @@ label k1a1:
     label k1b1:
     c @default "Ela está sim! se não se importa em esperar um pouco, ela está em sua sessão diária de Post-Generic-Slovenian-Punk-Rock."
     c "Enquanto isso, aceita um chá de camomila fervido em sangue de carneiro? é uma bebida típica sueca."
-    n "*Ela não aguarda por uma resposta e te serve uma xicará de um líquido viscoso esquisito..."
-    n "*Você definitivamente não quer tomar isso*"
+    n "Ela não aguarda por uma resposta e te serve uma xicará de um líquido viscoso esquisito..."
+    n "Você definitivamente não quer tomar isso"
     c "Ah! já ia me esquecendo, com licença, preciso acender o incenso do dia, você sabe, para atrair boas energias"
-    n "*Ela se dirige a um armário rústico e começa a procurar em uma gaveta*"
+    n "Ela se dirige a um armário rústico e começa a procurar em uma gaveta"
     c "Lavanda, orvalho do amanhecer, lírios holandeses, não... hoje é terça, cade o de terça? aqui! te achei, moshpit do slipknot!"
-    n "*Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente, você nem imaginava que seria possível perceber isso olfativamente*"
+    n "Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente, você nem imaginava que seria possível perceber isso olfativamente"
     with hpunch
     play sound "doorOpen.ogg"
-    n "*A porta do escritório abre escancaradamente*"
+    n "A porta do escritório abre escancaradamente"
     show katarina irritada at right
     with moveinright
     k "Claudia, mosh pit do slipknot agora é o incenso de quinta, você não viu as alterações que eu te mandei por email?"
@@ -88,14 +88,14 @@ label k1m1:
     with gatodissolve
     show katarina default at center
     with moveinleft
-    n "*Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa*"
+    n "Você acompanha katarina até o seu escritório, ele é recheado de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa"
     show katarina smirk
-    k "Você parece espantado, gostou do meu cantinho? descobri quem era o bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
-    k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estava vendo, ele acabou ficando uns 2 meses trancado aqui, mas no fim o resultado foi espetacular!"
+    k "Você parece espantado, gostou do meu cantinho? Descobri quem era o bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
+    k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estava vendo, ele acabou ficando uns 2 meses trancado aqui,{w} mas no fim o resultado foi espetacular!"
     show katarina default
-    k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê, minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas"
-    n "*Você se lembra de uma aberração gastronômica sendo mencionada anteriormente...*"
-    n "*...coitado dele*"
+    k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê...{w} Minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas."
+    n "Você se lembra de uma aberração gastronômica sendo mencionada anteriormente..."
+    n "...coitado dele"
     show katarina feliz
     k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa..."
     
@@ -104,14 +104,14 @@ label k1m1:
     show katarina brava
     k "Aquela ratazana imunda acha que pode simplesmente acabar com uma das minhas fontes de renda e ainda deixar milhares de gatinhos por ai com fome? Fala sério! Eu quero mais é explodir tudo mesmo"
     show katarina smirk
-    k "Antes de sair, a gente precisa se conhecer um pouco, pra começar, qual é seu nome?"
+    k "Antes de sair, a gente precisa se conhecer um pouco. Para começar, qual é seu nome?"
     if jogador1:
         azul "Me chamo [nome1]" 
     else:
         laranja "Me chamo [nome2]"
     n "*Após dizer seu nome, ela começa a digitar e ler algumas coisas no computador dela*"
     show katarina default
-    k "Huuum... certo, já te conheço, sua vez, me faz uma pergunta"
+    k "Huuum... Certo, já te conheço.{w} Sua vez, me faz uma pergunta"
     menu:
         "Você pesquisou informações minhas na internet?":
             jump k1a2
@@ -131,7 +131,7 @@ label k1b2:
     n "Ela diz mais alguns nomes"
     n "Aparentemente no máximo umas 3 delas são falsas"
     show katarina triste
-    k "Eram do meu pai, eu as herdei quando ele morreu, assim como as joias, apenas uni as duas coisas..."
+    k "Eram do meu pai. Eu as herdei quando ele morreu, assim como as joias. Apenas uni as duas coisas..."
     show katarina feliz
     k "Acho que já podemos ir, eu vou dirigindo!"
     menu:
@@ -141,6 +141,7 @@ label k1b2:
 label missaokat1:
     scene bg deserto
     with gatodissolve
+    play music "deserto.mp3" volume 0.5
     n "Vocês dirigem até uma estrada deserta, não há nada além de um posto de gasolina abandonado e uma grande torre de telefone nas redondezas"
     show katarina irritada
     k "Que calor da porra, ainda bem que eu vim preparada"
@@ -175,18 +176,18 @@ label k1b3:
 label k1a4:
     
     show katarina feliz
-    k "Nunca se sabe quando você irá precisar de uma arma improvisada, e além disso, você já quebrou uma garrafa para uma briga de bar? é super divertido"
+    k "Nunca se sabe quando você irá precisar de uma arma improvisada, e além disso, você já quebrou uma garrafa para uma briga de bar? É super divertido"
     
     jump k1m2
 label k1b4:
     show katarina feliz
-    k "Sim! se to no inferno vou logo abraçar o capeta, minha bebida favorita do inverno é milkshake."
+    k "Sim! Se to no inferno vou logo abraçar o capeta.{p} Minha bebida favorita do inverno é milkshake."
     jump k1m2
 label k1m2: 
     show katarina default
     k "Bem, acho que a gente ainda tem um tempo"
     k "Aliás, acho que você não deve ter a menor ideia do que a gente está fazendo aqui"
-    k "Basicamente, teu chefe, o gato falante, está desconfiando de uma empresa de sorvetes, ele acha que ela está realizando tráfico ilegal de queijos para a sede do governo"
+    k "Basicamente teu chefe, o gato falante, está desconfiando de uma empresa de sorvetes.{p}Ele acha que ela está realizando tráfico ilegal de queijos para a sede do governo"
     k "Você sabe, estamos sendo governados por um rato, deve ser mais barato traficar do que lidar com todos os trâmites legais e impostos para a importação desses queijos chiques para cá"
     k "Ou talvez o gatovaldo só queria tomar um sorvetinho e não estava sabendo pedir, então, caso ele esteja errado, pelo menos sairemos daqui com picolés!"
     k "Mas antes, bora naquele posto de gasolina abandonado e depois a gente sobe naquela torre telefonica pra ter uma visão melhor dos arredores e começar a se preparar"
@@ -258,10 +259,9 @@ label k1a6:
 label k1b6:
     n "Você coloca ela no pote, ela entra sem resistir"
     show katarina muitofeliz
-    k "CARALHO, QUE FODA, É UMA DEMONIUS DOSINFERNUS, nunca tinha visto uma dessa espécie, muito obrigada! vou levar ela para o meu zoológico particular."
+    k "CARALHO, QUE FODA, É UMA DEMONIUS DOSINFERNUS, nunca tinha visto uma dessa espécie, muito obrigada! Vou levar ela para o meu zoológico particular."
     show katarina default
     k "Enfim, bora entrar nessa loja conveniente"
-    n "Vocês entram na loja, parece ter algumas coisas para explorar"
     n "Vocês entram na loja, parece ter algumas coisas para explorar"
     menu:
         "Procurar nas prateleiras":
@@ -274,7 +274,7 @@ label k1b6:
             jump k1d7
 label k1a7:
     $ JogadorAtivo += 1
-    n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido, ele venceu há 2 anos"
+    n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{p}Ele venceu há 2 anos"
     k "Eai, algo que preste?"
     show katarina muitofeliz
     k "Caralho! esse era edição limitada, valeu!"
@@ -290,7 +290,7 @@ label k1c7:
     $ JogadorAtivo += 0
     n "Você procura por coisas no banheiro..."
     n "Parece que alguém recentemente deu um uso a ele"
-    n "Você se arrepende de sua escolha*"
+    n "Você se arrepende de sua escolha"
     k "Eai, algo que preste?"
     show katarina smirk
     "Pelo seu silêncio, julgo que coisa boa não foi"
@@ -305,7 +305,7 @@ label k1d7:
 label k1m3:
     show katarina triste
     k "Bom, eu achei isso aqui"
-    n "Ela te mostra uma revista, na capa, você vê uma garota usando rosa com o seu pai, o título é: sucesso entre os felinos! pai e filha revelam alguns dos segredos  dos petiscos mais cobiçados pelos gatunos"
+    n "Ela te mostra uma revista, na capa, você vê uma garota usando rosa com o seu pai, o título é: \"Sucesso entre os felinos! Pai e filha revelam alguns dos segredos  dos petiscos mais cobiçados pelos gatunos\""
     k "Eu até que gostava dele."
     k "Na realidade, eu gostava dele, mas era jovem demais para entender isso."
     k "Eu perdi mais do que um braço naquele atentado"
@@ -317,20 +317,21 @@ label k1m3:
             jump k1b8
 label k1a8:
     show katarina irritada
-    k "Não quero falar sobre isso no momento, acho que já ta na hora da gente se preparar"
+    k "Não quero falar sobre isso no momento,{p}acho que já ta na hora da gente se preparar"
     jump k1m4
 label k1b8:
     show katarina triste
-    k "É... obrigado, bora ir se preparar agora"
+    k "É... obrigado.{p}Bora ir se preparar agora"
     jump k1m4
 label k1m4:
     show katarina feliz
-    n "Vocês vão até a torre e começam a subir nela ela parece instável, mas a confiança e animação de katarina te passa uma segurança inexplicável" 
+    n "Vocês vão até a torre e começam a subir nela.{w} Ela parece instável, mas a confiança e animação de katarina te passa uma segurança inexplicável" 
     
     show bg caixadagua
     with gatodissolve
-    n "após chegarem a uma certa altura, vocês se sentam na beirada, e percebem que definitivamente não há mais nada por perto além dessa torre e daquele posto de gasolina"
-    k "É... parece que a gente ta bem isolado aqui mesmo, mas vai ser bom para ver quando o caminhão estiver chegando, bora fazer alguma coisa enquanto isso, abre o terceiro bolso da minha mochila ai e pega alguma coisa"
+    n "Após chegarem a uma certa altura, vocês se sentam na beirada, e percebem que definitivamente não há mais nada por perto além dessa torre e daquele posto de gasolina"
+    k "É... Parece que a gente ta bem isolado aqui mesmo, mas vai ser bom para ver quando o caminhão estiver chegando." 
+    k "Bora fazer alguma coisa enquanto isso.{p}Abre o terceiro bolso da minha mochila ai e pega alguma coisa"
     menu:
         "Pegar tabuleiro de xadrez":
             jump k1a9
@@ -420,28 +421,28 @@ label k1d11:
     show katarina default
     n "Você simplesmente não atira"
     show katarina smirk
-    k "Ahh, então você é um pacifistinha? tudo bem, nada contra, tenho até amigos que são..."
+    k "Ahh, então você é um pacifistinha? Tudo bem, nada contra,{w} tenho até amigos que são..."
     jump k1m5
 label k1m5:
     n "Um som de veículo começa a ser ouvido na distância"
     show katarina surpresa
-    k "Espera! acho que é o nosso caminhão se aproximando"
+    k "Espera!{w} Acho que é o nosso caminhão se aproximando"
     n "Você observa um caminhão de sorvete se aproximando"
     show katarina feliz
-    k "É isso mesmo! bora descer"
-    n "Vocês descem a torre, a escada é bem precária, você tem a sensação de quase morte ao pisar em um degrau e ele quebrar"
+    k "É isso mesmo! Bora descer"
+    n "Vocês descem a torre. A escada é bem precária e você tem a sensação de quase morte ao pisar em um degrau e ele quebrar"
     show bg deserto
     with gatodissolve
     show katarina default
     k  "Olha, é o seguinte, eu sei que eu sou uma das financiadoras disso daqui, e que você provavelmente questiona muito as minhas decisões e não confia em mim, mas eu peço, deixa que eu lido com isso daqui, siga o meu plano."
     n "Ela abre a mochila, e te dá uma garrafa de ketchup"
-    k "Você sabe o que fazer"
-    n "Você não sabe o que fazer"
+    k "Você sabe o que fazer."
+    n "Você não sabe o que fazer."
     show katarina feliz
-    k "Ok, vejo na sua cara que você não sabe o que fazer, vai lá na estrada, deita, e joga bastante ketchup na sua perna e perto dela, você vai chorar e gritar de dor, pedindo por ajuda"
+    k "Ok, vejo na sua cara que você não sabe o que fazer. {w}Vai lá na estrada, deita e joga bastante ketchup na sua perna e perto dela, você vai chorar e gritar de dor, pedindo por ajuda"
     show katarina smirk
     k "Se ele acelerar e passar por cima de você, teremos certeza que eles trabalham para o governo e estão preparados para lidar com emboscadas"
-    k "Se ele parar para te ajudar, a gente vai saber que ele provavelmente é só um motorista inocente, você irá dizer que é uma pegadinha, e tudo ficará certo, pode ser?"
+    k "Se ele parar para te ajudar, a gente vai saber que ele provavelmente é só um motorista inocente, você irá dizer que é uma pegadinha e tudo ficará certo, pode ser?"
     menu:
         "Me sinto feliz de morrer pela causa!":
             $ JogadorAtivo += 1
@@ -452,17 +453,17 @@ label k1m5:
 label k1a12:
     
     show katarina smirk
-    k "Sempre desconfiei que você fosse meio biruta, mas não, não irei deixar você morrer, se ele acelerar eu acerto um tiro no meio da testa dele e você sai correndo, tenho uma boa mira"
+    k "Sempre desconfiei que você fosse meio biruta, mas não, não irei deixar você morrer. Se ele acelerar eu acerto um tiro no meio da testa dele e você sai correndo, tenho uma boa mira"
     jump k1m6
 label k1b12:
     show katarina surpresa
     k "Claro que não! Só estava zoando com a sua cara, eu dou um jeito pra ele não fazer isso, mas fique preparada para correr caso precise"
     jump k1m6
 label k1m6:
-    n "Você sente que não tem outra alternativa a não ser a confiar nela, flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção"
+    n "Você sente que não tem outra alternativa a não ser a confiar nela. Flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção"
     hide katarina
-    n "Então você vai, deita na rodovia, e espalha o ketchup porcamente na sua perna, só uma pessoa muito ingênua mesmo cairia nisso"
-    n "O caminhão se aproxima cada vez mais, você sente um frio na espinha, mas começa a gritar por ajuda, sua atuação é terrível, nem a alma mais inocente da terra seria capaz de acreditar nisso"
+    n "Então você vai, deita na rodovia, e espalha o ketchup porcamente na sua perna.{w} só uma pessoa muito ingênua mesmo cairia nisso"
+    n "O caminhão se aproxima cada vez mais, você sente um frio na espinha mas começa a gritar por ajuda, sua atuação é terrível, nem a alma mais inocente da terra seria capaz de acreditar nisso"
     n "Ele chega a uma distância consideravelmente perto de ti... {w} ele se aproxima...{w} e de repente..."
     n "Ele para"
     n "Um senhorzinho muito fofo sai da cabine"
@@ -483,7 +484,7 @@ label k1b13:
     jump k1m7
 label k1m7:
     n "Você percebe que ele genuinamente acredita em ti e está evitando olhar para a sua perna"
-    n "Você vê katarina chegando de mansinho com um rifle e usando uma bandana na cara"
+    n "Você vê Katarina chegando de mansinho com um rifle e usando uma bandana na cara"
     show katarina brava at right
     k "Mãos ao alto velhote!"
     vo "Mas o que"
@@ -493,16 +494,16 @@ label k1m7:
     k "To te zoando!"
     n "Ela abaixa a arma"
     k "É só uma pegadinha para o meu canal do youtube!"
-    vo "Ah.. haha.. entendi... por favor me deixem ir eu tenho familia"
+    vo "Ah.. Haha.. Entendi... Por favor me deixem ir eu tenho familia..."
     n "Ele ainda está bem assustado"
-    k "Calma! toma aqui"
+    k "Calma! Toma aqui"
     n "Ela tira um maço de dinheiro da mochila"
     k "Me vê três picolés!"
     vo "C-claro, s-s-só preciso pegar eles ali na p-parte de trás"
     n "Vocês vão até a parte de trás do caminhão, ele entra, e sai com três picolés de baunilha"
     vo "A-aqui o troco"
     show katarina confusa
-    k "Troco? desde quando picolés são tão baratos assim? ah quer saber, pode ficar, pelo susto, vai"
+    k "Troco? Desde quando picolés são tão baratos assim? Ah quer saber, pode ficar...{p}Pelo susto, vai"
 
     hide vovo
     with moveoutleft
@@ -537,8 +538,8 @@ label k1m8:
     
     show katarina smirk
 
-    extend "Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
-    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar o carro, vocês partem"
+    extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
+    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar o carro.{p} Vocês partem"
 
     jump finalkat1
 
