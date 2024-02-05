@@ -69,6 +69,7 @@ label a1a1:
 
     menu:
         "Você tem algo adequado para eu me vestir?":
+            $ JogadorAtivo += 1
             jump a1a2
         "A gente não ia só se encontrar com um informante em um local público?":
             jump a1b2
@@ -151,10 +152,13 @@ label a1m2:
 
     menu:
         "Ele provavelmente não está nem ai para a comida":
+            $ JogadorAtivo += 1
             jump a1a4
         "Seria extremamente desrespeitoso e você com certeza acabaria com o nosso plano inteirinho por conta dessa sua atitude egoísta":
+            $ JogadorAtivo += -1
             jump a1b4
         "*Chamar o garçom* Eu não me importo.":
+            $ JogadorAtivo += 2
             jump a1c4
 
 label a1a4:
@@ -220,8 +224,10 @@ label a1m3:
 
     menu:
         "Vamos jogar verdade ou desafio enquanto isso":
+            $ JogadorAtivo += 0
             jump a1a5
         "Vamos pedir uma música":
+            $ JogadorAtivo += 0
             jump a1b5
 
 label a1a5:
@@ -230,8 +236,10 @@ label a1a5:
     
     menu:
         "Aceitar":
+            $ JogadorAtivo += 2
             jump a1a6
         "Recusar":
+            $ JogadorAtivo += 0
             jump a1b6
     
 label a1b5:
@@ -250,9 +258,11 @@ label a1b5:
 
     menu:
         "O que estava escrito?":
+            $ JogadorAtivo += 1
             jump a1a8
         
         "Por que você não gosta dela?":
+            $ JogadorAtivo += 0
             jump a1b8
 
 label a1a6:
@@ -301,12 +311,16 @@ label a1b6:
 
     menu:
         "Eu tenho medo de tubarões":
+            $ JogadorAtivo += 0
             jump a1a7
         "Eu já quebrei os meus dois braços e minhas duas pernas":
+            $ JogadorAtivo += -1
             jump a1b7
         "Estou com o aluguel atrasado":
+            $ JogadorAtivo += 0
             jump a1c7
         "Secretamente eu gosto dos filmes do Adam Sandler":
+            $ JogadorAtivo += -2
             jump a1d7
 
 label a1a7:
@@ -364,12 +378,16 @@ label a1c8:
 
     menu:
         "My Chemical Romance":
+            $ JogadorAtivo += 0
             jump a1a9
         "Ivete sangalo":
+            $ JogadorAtivo += -1
             jump a1b9
         "Barões da pisadinha":
+            $ JogadorAtivo += 2
             jump a1c9
         "One direction":
+            $ JogadorAtivo += 1
             jump a1d9
 
 label a1a9:
@@ -493,12 +511,16 @@ label a1m4:
 
     menu:
         "De mais algo valioso para ele":
+            $ JogadorAtivo += -1
             jump a1a10
         "Invente uma mentira":
+            $ JogadorAtivo += 1
             jump a1b10
         "Vamos transformar ele em tofu":
+            $ JogadorAtivo += 1
             jump a1c10
         "Contate o gatovaldo":
+            $ JogadorAtivo += 1
             jump a1d10
 
 label a1a10:
@@ -580,8 +602,10 @@ label a1a10:
 
     menu:
         "Sinto muito pelo seu vestido":
+            $ JogadorAtivo += 0
             jump a1a11
         "Sinto muito pelas roupas que você está vestindo":
+            $ JogadorAtivo += 1
             jump a1b11
 
 label a1b10:
@@ -660,8 +684,10 @@ label a1b10:
 
     menu:
         "Você mandou bem!":
+            $ JogadorAtivo += 1
             jump a1a12
         "Mandamos bem!":
+            $ JogadorAtivo += 0
             jump a1b12
 
 label a1c10:
@@ -723,8 +749,10 @@ label a1c10:
 
     menu:
         "*Comer o tofu que está na cadeira do seu lado*":
+            $ JogadorAtivo += 0
             jump a1a13
         "*Oferecer o tofu a ela*":
+            $ JogadorAtivo += 1
             jump a1b13
 
 label a1d10:
@@ -812,8 +840,10 @@ label a1d10:
 
     menu:
         "Você acabou de rosnar?":
+            $ JogadorAtivo += 1
             jump a1a14
         "Que porra foi essa?":
+            $ JogadorAtivo += 0
             jump a1a14
 
 
@@ -931,8 +961,10 @@ label a1m5:
 
     menu:
         "Pedir para ela experimentar primeiro":
+            $ JogadorAtivo += 1
             jump a1a15
         "Experimentar primeiro":
+            $ JogadorAtivo += 0
             jump a1b15
 
 
@@ -958,8 +990,10 @@ label a1m6:
 
     menu:
         "Está tudo bem?":
+            $ JogadorAtivo += 1
             jump a1a16
         "O que foi? Viu um fantasma?":
+            $ JogadorAtivo += 0
             jump a1b16
  
 label a1a16:

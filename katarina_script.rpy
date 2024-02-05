@@ -123,6 +123,7 @@ label k1a2:
     k "Acho que já podemos ir, eu vou dirigindo!"
     menu:
         "Ir para a missão":
+            $ JogadorAtivo += 0
             jump missaokat1
 label k1b2:
     show katarina feliz
@@ -135,6 +136,7 @@ label k1b2:
     k "Acho que já podemos ir, eu vou dirigindo!"
     menu:
         "Ir para a missão":
+            $ JogadorAtivo += 1
             jump missaokat1
 label missaokat1:
     scene bg deserto
@@ -145,8 +147,10 @@ label missaokat1:
     n "Ela tira uma garrafa de vodka da mochila"
     menu:
         "Você não deveria fazer isso em uma missão":
+            $ JogadorAtivo += 0
             jump k1a3
         "Me dá um pouco?":
+            $ JogadorAtivo += 1
             jump k1b3
 label k1a3:
     show katarina confusa
@@ -196,6 +200,7 @@ label k1m2:
     n "Katarina vira de costas para você, tem uma tarântula enorme nela"
     menu:
         "AHHH (matar a aranha)":
+            $ JogadorAtivo += -2
             jump k1a5
         "er... tem uma tarântula enorme nas suas costas":
             jump k1b5
@@ -227,8 +232,10 @@ label k1b5:
     n "Você abre o segundo bolso, tem um pote de vidro, um desodorante aerosol e um isqueiro"
     menu:
         "Tacar fogo na aranha":
+            $ JogadorAtivo += -1
             jump k1a6
         "Colocar ela no pote":
+            $ JogadorAtivo += +2
             jump k1b6
 label k1a6:
     n "FUUUUSH"
@@ -266,19 +273,21 @@ label k1b6:
         "Procurar no escritório":
             jump k1d7
 label k1a7:
+    $ JogadorAtivo += 1
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido, ele venceu há 2 anos"
     k "Eai, algo que preste?"
     show katarina muitofeliz
     k "Caralho! esse era edição limitada, valeu!"
     jump k1m3
 label k1b7:
-    
+    $ JogadorAtivo += 1
     n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da maquina registradora"
     k "Eai, algo que preste?"
     show katarina feliz
     "Que massa, mais uma pro meu arsenal."
     jump k1m3
 label k1c7:
+    $ JogadorAtivo += 0
     n "Você procura por coisas no banheiro..."
     n "Parece que alguém recentemente deu um uso a ele"
     n "Você se arrepende de sua escolha*"
@@ -287,6 +296,7 @@ label k1c7:
     "Pelo seu silêncio, julgo que coisa boa não foi"
     jump k1m3
 label k1d7:
+    $ JogadorAtivo += 1
     n "Você procura por coisas no escritório, e acha um dvd antigo de um filme de terror trash norueguês"
     k "Eai, algo que preste?"
     show katarina feliz
@@ -303,6 +313,7 @@ label k1m3:
         "Atentado?":
             jump k1a8
         "Meus sentimentos...":
+            $ JogadorAtivo += 1
             jump k1b8
 label k1a8:
     show katarina irritada
@@ -324,6 +335,7 @@ label k1m4:
         "Pegar tabuleiro de xadrez":
             jump k1a9
         "Pegar garrafa de vodka":
+            $ JogadorAtivo += 1
             jump k1b9
         "Pegar rifle de precisão":
             jump k1c9
@@ -335,8 +347,10 @@ label k1a9:
     n "Ela abre o tabuleiro, dentro dele há uma coleção de mini pingas"
     menu:
         "Pegar uma":
+            $ JogadorAtivo += 1
             jump k1a10
         "Recusar":
+            $ JogadorAtivo += -1
             jump k1b10
 label k1b9:
     show katarina feliz
@@ -354,12 +368,16 @@ label k1c9:
     n "Você observa pela mira, e avista algumas coisas"
     menu:
         "Atirar em um urubu voando":
+            $ JogadorAtivo += 1
             jump k1a11
         "Atirar no posto de gasolina":
+            $ JogadorAtivo += 1
             jump k1b11
         "Atirar em um animal morto":
+            $ JogadorAtivo += 2
             jump k1c11
         "Não atirar":
+            $ JogadorAtivo += 0
             jump k1d11
 label k1a10:
     show katarina feliz
@@ -396,6 +414,7 @@ label k1c11:
     show katarina default
     n "Você atira em uma carcaça de coiote na distância"
     show katarina feliz
+    a "Woow, não estava prestando atenção, você matou aquele bicho? Muito foda!"
     jump k1m5
 label k1d11:
     show katarina default
@@ -425,8 +444,10 @@ label k1m5:
     k "Se ele parar para te ajudar, a gente vai saber que ele provavelmente é só um motorista inocente, você irá dizer que é uma pegadinha, e tudo ficará certo, pode ser?"
     menu:
         "Me sinto feliz de morrer pela causa!":
+            $ JogadorAtivo += 1
             jump k1a12
         "Você quer me usar como um sacrifício humano?":
+            $ JogadorAtivo += -1
             jump k1b12
 label k1a12:
     
@@ -435,7 +456,7 @@ label k1a12:
     jump k1m6
 label k1b12:
     show katarina surpresa
-    k "Claro que não! só estava zoando com a sua cara, eu dou um jeito pra ele não fazer isso, mas fique preparada para correr caso precise"
+    k "Claro que não! Só estava zoando com a sua cara, eu dou um jeito pra ele não fazer isso, mas fique preparada para correr caso precise"
     jump k1m6
 label k1m6:
     n "Você sente que não tem outra alternativa a não ser a confiar nela, flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção"
@@ -494,8 +515,10 @@ label k1m7:
     k "Logo o de baunilha... Que sabor mais sem graça... É, bem, ele está limpo, precisamos analisar a nossa próxima hipótese"
     menu:
         "Você mandou bem!":
+            $ JogadorAtivo += 1
             jump k1a14
         "É... Acho que você precisa tomar um pouco mais de cuidado ao lidar com civis...":
+            $ JogadorAtivo += -1
             jump k1b14
 label k1a14:
     show katarina smirk

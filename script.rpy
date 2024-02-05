@@ -397,10 +397,10 @@ label start:
 
             g "Vocês terminaram a demo! Espero que tenham se divertido."
 
-            g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de x pontos disponíveis com a Katarina \ne [a.azul] de x pontos disponíveis com a Alessandra"
+            g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de 10 pontos disponíveis com a Katarina \ne [a.azul] de 10 pontos disponíveis com a Alessandra"
 
             
-            g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de x pontos disponíveis com a Katarina \ne [a.laranja] de x pontos disponíveis com a Alessandra"
+            g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 10 pontos disponíveis com a Katarina \ne [a.laranja] de 10 pontos disponíveis com a Alessandra"
 
             g "Espero que tenham se divertido, em breve teremos mais missões."
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
