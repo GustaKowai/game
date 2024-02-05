@@ -36,19 +36,21 @@ Objetivos concluídos essa semana:
 - Separação dos scripts por personagem (talvez façamos por dia também?)
 - História da alessandra passada completa.
 - Correções menores
+- Alessandra confusa e smirk
+- Definir as pontuações para as escolhas
+- Segunda missão da Alessandra
+- Correções e transferência para renpy das primeiras missões
+- Sprite do traficante refinado
 
 Objetivos em andamento:
 
 - Arte:
   - Cláudia
   - CG de algumas cenas (Pelo menos uma)
-  - Alessandra confura e smirk (Pedido)
 - História
-  - Segunda missão com cada uma das personagens (Alessandra 2)
-  - Correções e transferência para renpy das primeiras missões (Em revisão)
+  - História secreta
 - Programação:
   - Achievements
-  - Definir as pontuações para as escolhas
 
 Em breve:
 
