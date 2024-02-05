@@ -1032,7 +1032,7 @@ label a1a16:
         "Mas como??":
             jump a1a17
 
-label a1b17:
+label a1b16:
 
     a "Você não entenderia, mas sim, parece que estou lidando com um fantasma, a gente precisa sair daqui, rápido."
 
