@@ -31,7 +31,7 @@ Objetivos concluídos na semana 24/01-30/01:
 - Nome dos jogadores agora aparecem nas cores dos jogadores
 - Placeholder para os NPCs colocados
 
-Objetivos concluídos essa semana:
+Objetivos concluídos na semana de 31/01-06/02:
 
 - Separação dos scripts por personagem (talvez façamos por dia também?)
 - História da alessandra passada completa.
@@ -42,15 +42,28 @@ Objetivos concluídos essa semana:
 - Correções e transferência para renpy das primeiras missões
 - Sprite do traficante refinado
 
+Objetivos concluídos essa semana:
+
+- 
+
 Objetivos em andamento:
 
 - Arte:
-  - Cláudia
+  - Cláudia default
+  - Cláudia brava
+  - Katarina com máscara de Halloween
+  - Zé
+  - Katarina segurando uma arma
+  - Alessandra com capacete de moto
   - CG de algumas cenas (Pelo menos uma)
+  - atendente do banco
+  - padre
 - História
   - História secreta
 - Programação:
   - Achievements
+  - Investigação na parte noturna
+  - Cassino
 
 Em breve:
 
