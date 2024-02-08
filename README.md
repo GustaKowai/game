@@ -4,6 +4,11 @@ Visual Novel Multiplayer desenvolvido por um grupo dentro do grupo de extensão 
 O projeto começou em JS e agora foi transferido para o Ren'Py!
 Alguns objetivos foram alterados devido a essa transferência, porém acreditamos que agora o desenvolvimento será ainda mais rápido!
 
+Puclicado no Itch.io!
+
+[Jogue aqui](https://gustakowai.itch.io/vnm)
+
+
 Objetivos concluídos na semana 09/01-16/01:
 
 - Transferencia do jogo para o Ren'Py
