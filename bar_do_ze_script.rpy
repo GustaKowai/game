@@ -1,0 +1,2 @@
+label barDoZe:
+    jump changeDay

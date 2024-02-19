@@ -39,6 +39,8 @@ default alguem = False
 ## Variáveis dos dias ##
 default aleDay1 = True
 default katDay1 = True
+default aleDay1inv = True
+default katDay1inv = True
 default aleDay2 = False
 default katDay2 = False
 default day1 = True
@@ -364,7 +366,7 @@ label start:
                 "Para o Ateliê da Alessandra" if aleDay1:
                     jump d1ale1
             
-            jump changeDay                                    
+            jump investigacao                                    
 
     ########################################################################################################################### 
     #######################################-----------Troca de Dia-----------##################################################
