@@ -49,7 +49,7 @@ Objetivos concluídos na semana de 31/01-06/02:
 
 Objetivos concluídos essa semana:
 
-- 
+- Início da parte noturna
 
 Objetivos em andamento:
 
