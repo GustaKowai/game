@@ -88,6 +88,10 @@ label start:
 
     n "Antes de começarmos..."
 
+
+    #Inicia o minigame do tiro. Ficará aqui enquanto eu não souber onde colocar.
+    #jump start_minigame
+
     python:
         nome1 = renpy.input("Qual o nome do jogador azul?")
         nome1 = nome1.strip() or "Azul"
@@ -422,6 +426,20 @@ label start:
 
     return
 
+
+label acertou:
+    show gatovaldo default
+
+    g "Você acertou o tiro!"
+
+    jump start
+
+label errou:
+    show gatovaldo serio
+
+    g "Você errou o tiro!"
+
+    jump start
 
 ########################################################################################################################### 
 ############################### -------------Splashcreen------------------################################################# 

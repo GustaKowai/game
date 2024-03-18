@@ -114,9 +114,9 @@
                 }
             },
             {
-                "scope": "renpy.meta.color.#133",
+                "scope": "renpy.meta.color.#f56300",
                 "settings": {
-                    "foreground": "#133"
+                    "foreground": "#f56300"
                 }
             },
             {
@@ -126,15 +126,27 @@
                 }
             },
             {
+                "scope": "renpy.meta.color.#133",
+                "settings": {
+                    "foreground": "#133"
+                }
+            },
+            {
                 "scope": "renpy.meta.color.#ff6000",
                 "settings": {
                     "foreground": "#ff6000"
                 }
             },
             {
-                "scope": "renpy.meta.color.#f56300",
+                "scope": "renpy.meta.color.#1e8e00",
                 "settings": {
-                    "foreground": "#f56300"
+                    "foreground": "#1e8e00"
+                }
+            },
+            {
+                "scope": "renpy.meta.color.#950000",
+                "settings": {
+                    "foreground": "#950000"
                 }
             }
         ]
