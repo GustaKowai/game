@@ -61,6 +61,7 @@ define c = Character("Claudia", image="claudia", callback = low_beep)
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
 define gar = Character("Garçom", image="garcom", callback = low_beep)
 define traf = Character("Traficante", image="traficante", callback = low_beep)
+define ate = Character("Atendente", image="atendente", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
@@ -80,9 +81,7 @@ default a.laranja = 0
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    
     play music "abandoned.ogg"  volume 2.0
     scene bg quartel
 
@@ -369,8 +368,15 @@ label start:
 
                 "Para o Ateliê da Alessandra" if aleDay1:
                     jump d1ale1
+
+                "Para o escritório da Katarina" if katDay2:
+                    jump d2kat1
+                
+                "Para o Ateliê da Alessandra" if aleDay2:
+                    jump d2ale1
             
-            jump investigacao                                    
+            #jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+            jump changeDay                                    
 
     ########################################################################################################################### 
     #######################################-----------Troca de Dia-----------##################################################
@@ -382,8 +388,14 @@ label start:
             scene bg quartel
             with Fade(0.5, 1.0, 0.5)
 
-            "É melhor descansarem durante a noite..."
+            "É melhor descansarem durante o resto da noite..."
             #"A pontuação de vocês hoje foi:{p=0.1}[nome1]: [k.azul],[a.azul]{p=0.1}[nome2]: [k.laranja],[a.laranja]"
+
+            if (k.azul+a.azul >= k.laranja+a.laranja):
+                $ jogador1 = False
+            if (k.azul+a.azul <= k.laranja+a.laranja):
+                $ jogador1 = True
+            #determina quem jogou melhor e coloca ele para jogar primeiro no dia seguinte
 
             if day1:
                 $ day2 = True
@@ -391,7 +403,9 @@ label start:
                 $ aleDay2 = True
                 $ day1 = False
 
-                jump demoFinal
+            jump whereToGo
+
+                #jump demoFinal
 
     ########################################################################################################################### 
     #######################################----------Final da Demo-----------##################################################

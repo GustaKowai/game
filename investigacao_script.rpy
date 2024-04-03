@@ -10,7 +10,8 @@ label investigacao:
     play music "abandoned.ogg" volume 2.0
     scene bg quartel
     with gatodissolve
-    default energia = 6
+    default energia = 4
+    $ energia = 4
     if day1 == True and katDay1inv == True and aleDay1inv == True:
         n "Agora durante a noite vocês terão a chance de investigar um pouco mais sobre nossas novatas."
         n "Para isso vocês terão um sistema de Energia, que é mostrado na parte superior direita da tela"
@@ -24,9 +25,11 @@ label investigacao:
     if jogador1:
         $ jogador1 = False
         show screen char_name_screen([nome2],[jogador1])
+        show screen energy_screen([energia],[jogador1])
     else:
         $ jogador1 = True
         show screen char_name_screen([nome1],[jogador1])
+        show screen energy_screen([energia],[jogador1])
     if katDay1inv or aleDay1inv:
         if jogador1:
             "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"
@@ -35,17 +38,20 @@ label investigacao:
     menu:
         "Para o escritório da Katarina" if katDay1inv:
             jump d1kat1inv
-        "Para o Ateliê da Alessandra" if katDay1inv:
+        "Para o Ateliê da Alessandra" if aleDay1inv:
             jump d1ale1inv
     
+    hide screen energy_screen
     jump barDoZe
 
     ##################---Investigações---######################
 
     label d1kat1inv:
         $ katDay1inv = False
+        scene bg escritorio
 
-        if energia >= 0:
+        if energia > 0:
+            show screen energy_screen([energia],[jogador1])
 
             if jogador1:
                 azul "Onde irei investigar?"
@@ -53,7 +59,7 @@ label investigacao:
                 laranja "Onde irei investigar?"
 
             menu:
-                "Lugar 1" if lugar1true:
+                "Planta Carnívora" if lugar1true:
                     $ energia -= 1
                     jump lugar1
                 "Lugar 2" if lugar2true:
@@ -83,26 +89,26 @@ label investigacao:
     
     label lugar2:
         $ lugar2true = False
-        "Você investiga o lugar 1"
+        "Você investiga o lugar 2"
         jump d1kat1inv
     
     label lugar3:
         $ lugar3true = False
-        "Você investiga o lugar 1"
+        "Você investiga o lugar 3"
         jump d1kat1inv
     
     label lugar4:
         $ lugar4true = False
-        "Você investiga o lugar 1"
+        "Você investiga o lugar 4"
         jump d1kat1inv
     
     label lugar5:
         $ lugar5true = False
-        "Você investiga o lugar 1"
+        "Você investiga o lugar 5"
         jump d1kat1inv
     
     label lugar6:
         $ lugar6true = False
-        "Você investiga o lugar 1"
+        "Você investiga o lugar 6"
         jump d1kat1inv
     

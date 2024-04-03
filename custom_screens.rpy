@@ -19,3 +19,15 @@ screen char_name_screen(message, jogador, okay=Return(True), cancel=Return(False
             style "char_name2_style"
             xalign 0.04
             text "{color=#f56300}Jogador: [message]{/color}"
+
+screen energy_screen(message, jogador, okay=Return(True), cancel=Return(False)):
+    if jogador1:
+        vbox:
+            style "char_name1_style"
+            xpos 1000
+            text "{color=#1338BE}Energy: [message]{/color}"
+    else:
+        vbox:
+            style "char_name2_style"
+            xpos 1000
+            text "{color=#f56300}Energy: [message]{/color}"

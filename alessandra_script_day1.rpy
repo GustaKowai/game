@@ -538,7 +538,7 @@ label a1m4:
         "Invente uma mentira":
             $ JogadorAtivo += 1
             jump a1b10
-        "Vamos transformar ele em tofu":
+        "Devemos tomar medidas drásticas":
             $ JogadorAtivo += 1
             jump a1c10
         "Contate o gatovaldo":

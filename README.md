@@ -47,9 +47,17 @@ Objetivos concluídos na semana de 31/01-06/02:
 - Correções e transferência para renpy das primeiras missões
 - Sprite do traficante refinado
 
-Objetivos concluídos essa semana:
+Objetivos concluídos na semana de 07/02-13/02:
 
 - Início da parte noturna
+
+Objetivos concluídos na semana de 26/04-02/04:
+
+- História do dia 3 da Katarina completa.
+
+Objetivos concluídos na semana de 03/04-09/04:
+
+- Jogador com melhor pontuação começa no dia seguinte.
 
 Objetivos em andamento:
 
@@ -65,10 +73,12 @@ Objetivos em andamento:
   - padre
 - História
   - História secreta
+  - Terceiro dia da Alessandra
 - Programação:
   - Achievements
   - Investigação na parte noturna
   - Cassino
+  - Sistema de tiro
 
 Em breve:
 
@@ -82,7 +92,7 @@ Em breve:
 - Programação:
   - Efeito visual/sonoro para diferenciar escolhas boas/ruins
 
-Planos futuros:
+Planos Abandonados:
 
 - Arte:
   - Roupas diferentes para diferentes situações
