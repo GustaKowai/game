@@ -54,7 +54,7 @@ label k2m1:
     scene bg escritorio
     with gatodissolve
 
-    show katarina feliz
+    show katarina mascarada
     k "Eaeeee!"
     n "Katarina está usando uma máscara de filme de terror"
     k "Bora pedir doces ou travessuras?"
@@ -68,12 +68,10 @@ label k2m1:
             jump k2b2
 
 label k2a2:
-    show katarina confusa
     k "Ué, mas estamos!"
     jump k2m2
 
 label k2b2:
-    show katarina smirk
     k "Bora"
     jump k2m2
 
@@ -85,7 +83,7 @@ label k2m2:
 
     scene bg banco
     with gatodissolve
-    show katarina default
+    show katarina mascarada
     #play music "banco.mp3" volume 0.5
 
     k "Acho que é aqui, o gatovaldo mandou essa caixa para o escritório hoje de manhã, eu estava fumando lá fora e acabei recebendo isso, a pobre da Cláudia não teve nem a chance de fazer o trabalho de recepcionista dela."
@@ -109,7 +107,7 @@ label k2m2:
     k "Ótimo, isso não deve demorar."
     n "Ela se dirige até o caixa"
     k "Boa tarde, gostaria de-"
-    show katarina default at right
+    show katarina mascarada at right
     show atendente default at left
     ate "Tira uma senha."
     k "O que?"
@@ -267,7 +265,7 @@ label k2m8:
     k "Vamos dar o fora."
     n "Vocês saem da sala do cofre e vão até a recepção"
     scene bg banco
-    show katarina default
+    show katarina mascarada
     k "Eu não acredito que a gente passou por essa vergonha pra não ter NADA aqui"
     menu:
         "Vergonha?":
@@ -284,7 +282,7 @@ label k2b9:
     jump k2m9
 label k2m9:
     ate "Ei!"
-    show katarina default at right
+    show katarina mascarada at right
     show atendente at left
     n "Chuk-Chuk"
     n "A recepcionista do banco está com uma espingarda apontada para vocês"
