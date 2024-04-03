@@ -8,7 +8,6 @@ Puclicado no Itch.io!
 
 [Jogue aqui](https://gustakowai.itch.io/vnm)
 
-
 Objetivos concluídos na semana 09/01-16/01:
 
 - Transferencia do jogo para o Ren'Py
@@ -58,6 +57,8 @@ Objetivos concluídos na semana de 26/04-02/04:
 Objetivos concluídos na semana de 03/04-09/04:
 
 - Jogador com melhor pontuação começa no dia seguinte.
+- Energia na parte da investigação é visível
+- Dia 2 da Katarina implementado.
 
 Objetivos em andamento:
 

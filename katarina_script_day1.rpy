@@ -14,7 +14,7 @@ label d1kat1:
         with fadeA
     else:
         with fadeL
-    n "*Você entra em uma sala de recepção com uma decoração atípica"
+    n "Você entra em uma sala de recepção com uma decoração atípica"
 
     n "Há uma parede cheia de cabeças de animais empalhados, com os olhos trocados por pedras preciosas"
 
