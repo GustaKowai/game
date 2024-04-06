@@ -42,7 +42,7 @@ label k2a1:
     c "Valentines day!!"
     jump k2m1
     
-label a2b1:
+label k2b1:
     c "Eu sei... {w}Mas nunca é o suficiente, sempre pode ser melhor!{p}Eu gosto de deixar as coisas o mais real possível"
     c "Teias falsas? Pra quê? Se eu posso ter minhas próprias aranhas mortais fazendo as suas teias aqui!"
     n "Você começa a se preocupar sobre os 3 esqueletos espalhados pela recepção"
