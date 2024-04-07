@@ -59,6 +59,7 @@ Objetivos concluídos na semana de 03/04-09/04:
 - Jogador com melhor pontuação começa no dia seguinte.
 - Energia na parte da investigação é visível
 - Dia 2 da Katarina implementado.
+- Dia 2 da Alessandra implementado.
 
 Objetivos em andamento:
 
@@ -69,9 +70,11 @@ Objetivos em andamento:
   - Zé
   - Katarina segurando uma arma
   - Alessandra com capacete de moto
+  - Alessandra com duas metralhadoras, uma em cada mão e uma cara de psicopata (opcional)
   - CG de algumas cenas (Pelo menos uma)
   - atendente do banco
   - padre
+  - padre com o braço decepado
 - História
   - História secreta
   - Terceiro dia da Alessandra

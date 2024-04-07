@@ -185,8 +185,11 @@ label a2m5:
     n "Vocês montam na moto"
     a "Ah, se alguem brecar a gente você faz o favor de pedir para redirecionaram a palavra ao Danran?"
     menu:
-        "O que?"
-        "Danran?"
+        "O que?":
+            jump a2m11
+        "Danran?":
+            jump a2m11
+label a2m11:
     a "Danrandan danrandan danran"
     n "Ela começa a imitar o som da moto e saí cantando pneu e dando grau"
     scene bg igreja
@@ -199,9 +202,11 @@ label a2m5:
     a "Me acompanhe, acho que a missa já começou"
     n "Vocês estão diante de uma grande igreja imponente, sua arquitetura remete ao goticismo"
     n "Todas as casas ao redor de vocês são extremamente antigas e muitas delas estão abandonadas"
+    show alessandra assustada
     a "Isso aqui é bem sinistro"
     n "Vocês abrem a porta da igreja"
     show bg igrejadentro
+    show alessandra default
     n "Ela é imensa por dentro"
     n "O padre estava no meio de um sermão, as cadeiras estão praticamente lotadas"
     n "Ele para imediatamente de falar e todas as pessoas que estão lá olham em conjunto para vocês"
@@ -259,6 +264,8 @@ label a2a9:
     n "Ele parece estar gritando também"
     show alessandra assustada
     a "CORRE!!"
+    hide padre
+    show alessandra medo1 at center
     n "Vocês começam a correr, a igreja inteira começa a perseguir vocês"
     a "EU FALEI, AINDA BEM QUE A GENTE VEIO DE MOTO"
     n "Vocês montam na moto"
@@ -344,8 +351,12 @@ label a2c13:
     n "Você olha para trás, há apenas fumaça"
     n "Aparentemente a igreja inteira foi dizimada"
     menu:
-        "O que foi isso?"
-        "Quem fez isso?"
+        "O que foi isso?":
+            jump a2m12
+        "Quem fez isso?":
+            jump a2m12
+
+label a2m12:
     show alessandra brava
     a "Tenho meus contatos, caso o Gatovaldo pergunte, diga que foi necessário"
     show alessandra feliz
@@ -353,5 +364,344 @@ label a2c13:
     n "*Vocês voltam para a base*"
     jump finalale1
 
+label a2b9:
+    padre "CORRETO!"
+    n "O padre grita"
+    n "Todos os fiéis gritam amém"
+    jump a2m7
 
-    
+label a2a10:
+    n "O padre começa a te encarar"
+    n "Você sente que algo terrível está prestes a acontecer"
+    padre "Errado!"
+    padre "Nós somos cordeiros, se lembra?"
+    n "Todos os fiéis gritam amém"
+    jump a2m7
+
+label a2b11:
+    n "O padre olha confuso para ti"
+    n "Os fiéis olham confusos para ti"
+    padre "Somos nós, você quer dizer?"
+    padre "Errado!"
+    padre "Nós somos cordeiros, se lembra?"
+    n "Todos os fiéis gritam amém"
+    jump a2m7
+
+label a2m7:
+    n "Alessandra olha assustada para você"
+    a "O QUE FOI ISSO?"
+    a "Eles estão agindo de uma forma muito estranha, a gente precisa sair daqui agora, a gente não pode virar oferenda de ritual!"
+    padre "Cordeirinhos, agora chegou a hora mais importante, a que todos estavamos aguardando, hora da nossa comunhão!"
+    n "Os fiéis começam a gritar amém muito animados"
+    padre "Se organizem, em filas, sem tumulto, como da última vez."
+    padre "Não queremos perder outros fiéis pisoteados, queremos?"
+    n "A igreja repete um 'não' em um tom triste"
+    padre "Descanse em paz, Kenny."
+    padre "Bem, se organizem em filas"
+    n "Todos levantam e começam a formar filas"
+    hide padre
+    show alessandra default at center
+    a "E agora? o que a gente faz?"
+    menu:
+        "Vamos entrar na fila":
+            jump a2a14
+        "Vamos dar o fora daqui agora":
+            jump a2b14
+label a2a14:
+    show alessandra surpresa
+    a "VOCÊ ESTÁ MALUCO?"
+    a "Eles vão drogar a gente!"
+    show alessandra medo1
+    a "Eu não posso morrer aqui."
+    n "Você entra na fila"
+    a "Droga!"
+    jump a2m8
+label a2b14:
+    show alessandra smirk
+    a "Ótima ideia!"
+    n "Vocês começam a andar na direção oposta das pessoas"
+    n "Elas olham com uma cara estranha para vocês"
+    show alessandra surpresa at right
+    show padre default at center
+    padre "Não tão cedo, cordeirinhos"
+    n "O padre toca no seu ombro"
+    padre "Vocês não vão querer perder a comunhão, vão?"
+    n "Vocês parecem não ter escolha"
+    jump a2m8
+
+label a2m8:
+    hide padre
+    show alessandra medo1 at center
+    n "A fila começa a andar"
+    a "A gente não pode morrer aqui..."
+    a "Eles vão colocar um parasita na nossa cabeça..."
+    show alessandra medo2
+    a "Onde é que eu fui me enfiar..."
+    menu:
+        "Calma!":
+            jump a2a15
+        "Pelo menos morreremos pela causa":
+            jump a2b15
+label a2a15:
+    a "Estou tentando, mas a situação não ajuda!"
+    jump a2m9
+label a2b15:
+    a "Ah, sim, claro, isso não exclui o fato de que seremos lobotomizados e que vai doer muito!"
+    jump a2m9
+
+label a2m9:
+    n "Enfim chega a vez de vocês"
+    show alessandra medo1
+    n "A pessoa responsável pela comunhão pega uma rodela de algo, molha no vinho e te entrega"
+    n "Você fecha os olhos e come a rodela misteriosa"
+    n "Tem gosto de queijo"
+    n "Você olha para Alessandra"
+    n "Ela olha para você"
+    a "Meu. Deus."
+    show alessandra medo2
+    n "Ela puxa você pelo braço"
+    a "Mas era claro! Como a gente não descobriu antes!"
+    menu:
+        "Eles são ratos!":
+            jump a2a16
+        "É um culto de sommeliers de queijo!":
+            jump a2b16
+label a2a16:
+    a "SIM! A gente precisa sair daqui agora"
+    jump a2m10
+label a2b16:
+    a "Não! Eles são ratos!"
+    jump a2m10
+
+label a2m10:
+    a "Esssas pessoas estão sendo controladas por ratos, talvez como um parasita, não sei, mas há ratos dentro delas!"
+    a "O gatovaldo estava certo, tem algo de muito errado com isso aqui, precisamos contar para ele"
+    n "Vocês andam em direção a saída, mas alguém para na frente da porta"
+    hide alessandra
+    show padre default
+    padre "Vejo que vocês já tomaram a comunhão, mas preciso ter certeza disso, abram a boca, por favor!"
+    n "Ele pega uma lanterna"
+    n "Alessandra olha para você"
+    menu:
+        "Chutar os ovos do padre":
+            jump a2a17
+        "Imitar um gato bravo":
+            jump a2b17
+label a2a17:
+    n "Você chuta os ovos do padre"
+    n "Ele emite sons de dor que parecidos com o de um rato"
+    n "Seu pé também dói, você bateu em um pedaço de lata"
+    padre "{size=+10}POR QUE QUE ELES PRECISAVAM FAZER OS NERVOS CAUSAREM DORES TÃO REAIS{/size}"
+    show padre default at left
+    show alessandra medo2 at right
+    a "CORRE!!!"
+    hide padre
+    show alessandra medo2 at center
+    n "Vocês correm até a moto"
+    show bg igreja
+    n "O padre está agonizando de dor no chão, os fiéis parecem estar preocupados de mais com a comunhão"
+    show alessandra feliz
+    a "Essa notícia será bombástica! Bora voltar!"
+    n "Vocês voltam para a base"
+    jump finalale1
+
+label a2b17:
+    n "Você emite sons de gato bravo"
+    n "São incrivelmente realistas,{w} você vê muitos vídeos de gato"
+    n "O padre parece assustado, ele abre caminho"
+    hide padre
+    show alessandra surpresa at center
+    a "FUNCIONOU! Eles realmente são ratos"
+    n "Vocês saem correndo até a moto"
+    show bg igreja
+    show alessandra feliz
+    a "Essa notícia será bombástica! Bora voltar!"
+    n "Vocês voltam para a base"
+    jump finalale1
+
+label a2a11:
+    n "Você profere tais palavras incompreensiveis"
+    n "O padre te olha estarrecido"
+    n "Uma fumaça começa a sair pelos seus ouvidos"
+    n "De repente, ele abre a boca e um rato sai de dentro dela, ele corre sem pestanejar"
+    hide padre
+    n "Até que..."
+    n "Free bird começa a tocar"
+    n "Todos na igreja começam a lutar contra si mesmos"
+    show alessandra assustada at center
+    a "CUIDADO!"
+    n "Alessandra te empurra"
+    n "Um candelabro estava voando na sua direção"
+    a "A gente precisa sair daqui!"
+    n "Vocês olham para a saída, há uma idosa batendo de uma forma extremamente performativa e violenta com a sua bengala em um homem"
+    a "Talvez não seja uma boa ideia ir para lá"
+    menu:
+        "Vamos pelas janelas":
+            jump a2a18
+        "Vamos pela porta dos fundos":
+            jump a2b18
+        "Vamos lutar!":
+            jump a2c18
+label a2a18:
+    n "Vocês correm até as janelas"
+    n "No caminho, passam por diversas pessoas lutando como se tivessem perdido o controle delas mesmas"
+    show alessandra surpresa
+    a "Seja lá o que você tenha dito, parece que tiltou bastante essas pessoas"
+    a "Na realidade, acredito que nao são pessoas."
+    n "Katarina aponta para uma mulher que acabou de arrancar a cabeça de um coroinha com um pedaço de um banco"
+    n "Há fios debaixo da cabeça dele, um rato sai correndo de dentro de sua boca"
+    show alessandra assustada
+    a "Estão formando uma legião de pessoas controladas por ratos!"
+    a "Precisamos contar sobre isso para o Gatovaldo, corre!"
+    n "Vocês chegam até uma janela, é um mosaico muito bonito e provavelmente muito antigo"
+    n "Alessandra taca uma pedra nela sem pensar duas vezes"
+    a "Me dá um pezinho!"
+    n "Você ajuda ela a subir"
+    n "Quando você está subindo, uma pessoa/robô/rato agarra a sua perma e começa a tentar roer ela"
+    menu:
+        "Dar um chutão":
+            jump a2a19
+        "Pedir ajuda":
+            jump a2b19
+label a2a19:
+    n "Você dá um chutão na cabeça dela, que reclama fazendo um som de rato"
+    a "Não temos tempo para espancar essas criaturas, bora!"
+    jump a2m13
+label a2b19:
+    n "Alessandra dá um chutão na cabeça dela"
+    show alessandra brava
+    a "Você poderia ter feito isso"
+    jump a2m13
+label a2m13:
+    show bg igreja
+    n "Vocês correm até a moto, vários ratos estão saindo de dentro da igreja"
+    a "Provavelmente aquela frase confusa do caralho deu um pane no sistema deles"
+    a "Vamos dar o fora daqui!"
+    n "Vocês voltam para a base"
+    jump finalale1
+
+label a2b18:
+    n "Vocês correm até a porta dos fundos"
+    n "Quando chegam, há um homem com um bastão de baseball virado de costas para vocês"
+    show alessandra default
+    a "É... Senhor?"
+    n "Ele encara Alessandra e diz:{p}JUDITE?"
+    n "Ele parte para cima dela"
+    show alessandra brava
+    a "EU NÃO SOU ESSA AÍ NÃO"
+    menu:
+        "Tentar fazer ele tropeçar":
+            jump a2a20
+        "Tentar bater nele":
+            jump a2b20
+label a2a20:
+    n "Você estica a perna para tentar fazer ele tropeçar"
+    n "Ele estava correndo igual um cachorro louco, portanto de fato tropeça na sua perna"
+    n "Ele cai de cara no chão, um ratinho sai correndo de dentro da sua boca"
+    show alessandra confusa
+    a "Quando eu achei que já não dava para ficar mais estranho..."
+    jump a2m14
+label a2b20:
+    n "Você tenta dar um socão nele, mas erra feio"
+    n "Erra rude"
+    n "Alessandra desvia da tacada de basebal e dá um golpe de karatê nas costas dele, que cai duro"
+    n "Um ratinho sai correndo de dentro da sua boca"
+    menu:
+        "Onde aprendeu isso?":
+            jump a2a21
+        "Acabou com ele!":
+            jump a2b21
+label a2a21:
+    a "Fiz aulas, ué!"
+    jump a2m14
+label a2b21:
+    show alessandra smirk
+    a "Eu sempre acabo."
+    jump a2m14
+
+label a2m14:
+    n "Vocês abrem a porta e dão a volta"
+    show bg igreja
+    n "Vocês correm até a moto, vários ratos estão saindo de dentro da igreja"
+    a "Provavelmente aquela frase confusa do caralho deu um pane no sistema deles"
+    a "Vamos dar o fora daqui!"
+    n "Vocês voltam para a base"
+    jump finalale1
+
+label a2c18:
+    show alessandra brava
+    a "Aff, eu tava querendo quardar isso aqui para depois!"
+    n "Alessandra tira duas submetralhadores de um compartimento secreto de seu vestido"
+    show alessandra smirk
+    a "A gente conseguiria fazer isso do jeito stealth, mas você que escolheu!"
+    n "Ela começa a metralhar todo mundo ao redor dela"
+    a "Toma, pega isso!"
+    n "Ela joga um martelo para você"
+    n "Tem alguns robôs vindo na sua direção"
+    menu:
+        "Fugir":
+            jump a2a22
+        "Martelar":
+            jump a2b22
+label a2a22:
+    n "Você sai correndo para uma área mais limpa, eles continuam perseguindo você"
+    menu:
+        "Continuar fugindo":
+            jump a2a23
+        "Martelar":
+            jump a2b22
+label a2a23:
+    n "Você continua fugindo deles, mas se encontra encurralado"
+    menu:
+        "Pedir Ajuda":
+            jump a2a24
+        "Martelar":
+            jump a2b22
+label a2a24:
+    n "Você grita por Alessandra"
+    a "Não posso agora"
+    n "Ela ainda está metralhando alguns robôs"
+    a "Eu te dei um martelo, poxa, martele esses filhos da puta"
+    n "Você não vê outra saída"
+    jump a2b22
+
+label a2b22:
+    menu:
+        "Arremessar o martelo":
+            jump a2a25
+        "Bonk":
+            jump a2b25
+        "Girar o martelo":
+            jump a2c25
+        "Martelar o dedinho":
+            jump a2d25
+label a2a25:
+    n "Você aremessa o martelo na cabeça de um deles, que cai no chão"
+    n "Um ratinho atordoado sai correndo"
+    jump a2m15
+label a2b25:
+    n "Você levanta os braços e dá uma martelada com toda a sua força na cabeça de um deles"
+    n "Você sente o metal amassar"
+    n "Quando ele cai, nenhum ratinho sai de sua boca"
+    jump a2m15
+label a2c25:
+    n "Você sai girando o martelo e derruba vários deles"
+    n "Vários ratinhos saem correndo"
+    jump a2m15
+label a2d25:
+    n "Você martela o dedinho do pé de um deles"
+    n "Um ratinho é ejetado pela boca e cai lentamente de paraquedas no chão, ele sai correndo após isso"
+    n "Você repete o processo, vários ratos caem de paraquedas"
+    jump a2m15
+
+label a2m15:
+    show alessandra smirk
+    a "Uau, você realmente se virou ein! "
+    n "Diz Alessandra, sentada em uma pilha de corpos de lata"
+    a "Acho que a gente acabou com todos eles"
+    n "Ela acabou com todos eles, você acabou com uns 5, no máximo"
+    show alessandra default
+    a "Bem, precisamos reportar tudo o que aconteceu ao gatovaldo, bora."
+    show bg igreja
+    n "Vocês dois saem da igreja, montam na moto, e partem para a base"
+    jump finalale1
