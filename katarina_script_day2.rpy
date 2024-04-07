@@ -91,11 +91,12 @@ label k2m2:
     k "Mas enfim, não entendi muito bem, preferi abrir junto contigo"
     n "Ela pega uma caixa no banco de trás e abre"
     n "Tem um bolo enfeitado com corações, nele está escrito \"Fubanga\" em uma letra romântica"
+
     k "Que? {w}Que porra é essa? {w}Quem ele pensa que é para me chamar de fuba- fugan- fubanda sei lá que porra é essa! Mas deve ser ruim!"
     k "Aaaargh!"
     n "Ela dá um soco no bolo"
     k "Espera..."
-    k "Tem alguma coisa aqui dentro..."
+    k "Tem alguma coisa aqui dentro..."  
     n "Ela tira um saco plástico de dentro dele"
     k "Espera, isso é... UMA ARMA??"
     n "Definitivamente é uma arma"
@@ -103,6 +104,7 @@ label k2m2:
     k "Ele sabe que eu já tenho dezenas dessa"
     k "Bem, isso fica comigo, nunca é demais."
     k "Agora bora pra essa chatisse."
+    show bg bancodentro
     n "Vocês dois entram no banco, ele está vazio"
     k "Ótimo, isso não deve demorar."
     n "Ela se dirige até o caixa"
@@ -182,6 +184,7 @@ label k2m4:
     n "A Atendente vai até ele e começa a digitar uma senha"
     ate "Não me culpem por isso, nem sei o que vocês estão fazendo aqui."
     n "Ela abre o cofre"
+    show bg cofreaberto
     n "Ele está vazio"
     ate "Nós estamos falidos! Como vocês não perceberam isso?"
     k "Mas..."
@@ -264,7 +267,7 @@ label k2b8:
 label k2m8:
     k "Vamos dar o fora."
     n "Vocês saem da sala do cofre e vão até a recepção"
-    scene bg banco
+    scene bg bancodentro
     show katarina mascarada
     k "Eu não acredito que a gente passou por essa vergonha pra não ter NADA aqui"
     menu:
