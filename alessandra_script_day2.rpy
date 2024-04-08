@@ -192,6 +192,7 @@ label a2m5:
 label a2m11:
     a "Danrandan danrandan danran"
     n "Ela começa a imitar o som da moto e saí cantando pneu e dando grau"
+    play music "church.mp3" volume 0.5
     scene bg igreja
     n "Após uma viagem assustadora e de algumas experiências de quase morte em sinais vermelhos, vocês chegam ao destino"
     show alessandra capacete
@@ -268,7 +269,10 @@ label a2a9:
     show alessandra medo1 at center
     n "Vocês começam a correr, a igreja inteira começa a perseguir vocês"
     a "EU FALEI, AINDA BEM QUE A GENTE VEIO DE MOTO"
+    show alessandra capacete
     n "Vocês montam na moto"
+    play sound "moto.mp3"
+    play music "dejavunointro.mp3" volume 1.0
     show bg igrejamoto
     a "LIGA PRO DANRAN, O CELULAR TA NO MEU BOLSO"
     menu:
@@ -277,7 +281,6 @@ label a2a9:
         "*Segurar firme*":
             jump a2b12
 label a2a12:
-    show alessandra brava
     a "É SÉRIO!!"
     jump a2m6
 label a2b12:
@@ -346,8 +349,9 @@ label a2c13:
     a "HAHA, boa!"
     n "Ela acelera"
     a "Se prepara, vai exp-"
-    n "BOOOM"
+    play sound "explosion.ogg"
     show bg fumaca
+    with explosion
     n "Você olha para trás, há apenas fumaça"
     n "Aparentemente a igreja inteira foi dizimada"
     menu:
@@ -524,9 +528,9 @@ label a2a11:
     n "O padre te olha estarrecido"
     n "Uma fumaça começa a sair pelos seus ouvidos"
     n "De repente, ele abre a boca e um rato sai de dentro dela, ele corre sem pestanejar"
+    play music "freebirdnointro.mp3" volume 1.0
     hide padre
     n "Até que..."
-    n "Free bird começa a tocar"
     n "Todos na igreja começam a lutar contra si mesmos"
     show alessandra assustada at center
     a "CUIDADO!"
