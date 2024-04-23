@@ -61,6 +61,10 @@ Objetivos concluídos na semana de 03/04-09/04:
 - Dia 2 da Katarina implementado.
 - Dia 2 da Alessandra implementado.
 
+Objetivos da semana:
+
+- Corrigido bug da Mudança de dia 2-3
+
 Objetivos em andamento:
 
 - Arte:
@@ -84,7 +88,28 @@ Objetivos em andamento:
   - Investigação na parte noturna
   - Cassino
   - Sistema de tiro
-
+- Sons e Música:
+  - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
+    - Sirene
+    - Explosão
+    - Sons da fala dos personagens (se possível mudar um pouco os sons para cada personagem ter um próprio)
+    - Som de partida de moto (talvez)
+  - Músicas de fundo:
+    - Main Menu
+    - Quartel da Revolução
+    - Missões Katarina:
+      - Escritório
+      - Recepção (talvez seja a mesma do escritório ou algo bem parecido?)
+      - Deserto (tem 3 áreas, o deserto base, o posto abandonado e o topo da caixa de água.)
+      - Banco (tem 3 áreas, a externa, a recepção e o cofre)
+      - Floresta
+    - Missões Alessandra:
+      - Atelier
+      - Restaurante
+      - Igreja Externo
+      - Igreja Interno
+      - Cidade (tem a cidade e o beco)
+      - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazedo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
 Em breve:
 
 - Arte:
@@ -119,3 +144,5 @@ Arte: Ayla Yorinori Nishino!
 Roteiro: João Arthur Miguel Ribeiro
 
 Programação: [Gustavo M. Gregorio](https://github.com/gustakowai)
+
+Sons e música: Ronan Antonio Pereira Junior e Leonardo Malinvemi
