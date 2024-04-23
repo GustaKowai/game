@@ -64,7 +64,8 @@ Objetivos concluídos na semana de 03/04-09/04:
 Objetivos da semana:
 
 - Corrigido bug da Mudança de dia 2-3
-
+- Sistema de tiro
+- UI
 Objetivos em andamento:
 
 - Arte:
@@ -81,13 +82,12 @@ Objetivos em andamento:
   - padre
   - padre com o braço decepado
 - História
-  - História secreta
+  - História secreta (talvez)
   - Terceiro dia da Alessandra
 - Programação:
   - Achievements
   - Investigação na parte noturna
-  - Cassino
-  - Sistema de tiro
+  - Cassino (talvez)
 - Sons e Música:
   - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
     - Sirene
@@ -106,8 +106,7 @@ Objetivos em andamento:
     - Missões Alessandra:
       - Atelier
       - Restaurante
-      - Igreja Externo
-      - Igreja Interno
+      - Igreja (tem 2 áreas, interna e externa)
       - Cidade (tem a cidade e o beco)
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazedo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
 Em breve:
