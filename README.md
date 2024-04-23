@@ -66,6 +66,7 @@ Objetivos em andamento:
 - Arte:
   - Cláudia default
   - Cláudia brava
+  - Cláudia triste
   - Katarina com máscara de Halloween
   - Zé
   - Katarina segurando uma arma

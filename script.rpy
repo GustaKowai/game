@@ -37,6 +37,13 @@ default jogador1 = True ##Jogador azul = true, jogador laranja = False
 default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
 default alguem = False
 
+#Variáveis para o jogo de tiro:
+default tirosNecessarios = 0
+default a8 = False
+default b8 = False
+default c8 = False
+default d8 = False
+
 ## Variáveis dos dias ##
 default aleDay1 = True
 default katDay1 = True
@@ -46,6 +53,9 @@ default aleDay2 = False
 default katDay2 = False
 default day1 = True
 default day2 = False
+default day3 = False
+default aleDay3 = False
+default katDay3 = False
 
 ##Variáveis de achievements##
 
@@ -377,6 +387,12 @@ label start:
                 
                 "Para o Ateliê da Alessandra" if aleDay2:
                     jump d2ale1
+
+                "Para o escritório da Katarina" if katDay3:
+                    jump d3kat1
+                
+                "Para o Ateliê da Alessandra" if aleDay3:
+                    jump d3ale1
             
             #jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
             jump changeDay                                    
@@ -400,11 +416,22 @@ label start:
                 $ jogador1 = True
             #determina quem jogou melhor e coloca ele para jogar primeiro no dia seguinte
 
+            if day2:
+                $ day3 = True
+                $ katDay3 = True
+                $ aleDay3 = True
+                $ day2 = False
+
             if day1:
                 $ day2 = True
                 $ katDay2 = True
                 $ aleDay2 = True
                 $ day1 = False
+
+            #"As variáveis atuais são:" 
+            #"day1[day1], day2[day2], day3[day3]" 
+            #"katDay1[katDay1], katDay2[katDay2], katDay3[katDay3]"
+            #"aleDay1[aleDay1], aleDay2[aleDay2], aleDay3[aleDay3]"
 
             jump whereToGo
 
@@ -442,21 +469,6 @@ label start:
     # This ends the game.
 
     return
-
-
-label acertou:
-    show gatovaldo default
-
-    g "Você acertou o tiro!"
-
-    jump start
-
-label errou:
-    show gatovaldo serio
-
-    g "Você errou o tiro!"
-
-    jump start
 
 ########################################################################################################################### 
 ############################### -------------Splashcreen------------------################################################# 
