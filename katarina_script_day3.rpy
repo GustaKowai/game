@@ -26,6 +26,7 @@ label d3kat1:
 label k3a1:
   n "Você parte em disparada e dá uma ombrada violenta na porta do escritório, que abre sem muita dificuldade"
   scene bg escritorio
+  show smoke
   show katarina surpresa at right
   show claudia default at left
   n "Katarina e Claudia olham assustadas para você"
@@ -57,6 +58,7 @@ label k3b1:
   n "Katarina abre a porta para você"
   scene bg escritorio
   show katarina feliz
+  show smoke
   k "Chegou bem na hora!"
   show katarina feliz at right with move
   show claudia default at left
@@ -103,6 +105,8 @@ label k3m1:
 label k3a4:
   k "Sabia que poderia contar com você!"
   k "Enfim, bora lá"
+  scene bg carro
+  show katarina default
   k "Então, onde é o lugar que você disse que conhecia?"
   menu:
     "Passar a localização de um açougue caro":
@@ -117,6 +121,8 @@ label k3b4:
   c "Pode levar alguns para a viagem"
   n "Você pega alguns, quase não faz diferença"
   k "Enfim, bora lá"
+  scene bg carro
+  show katarina default
   n "Vocês vão até o carro, Katarina começa a dirigir"
   jump k3m3
 
@@ -195,6 +201,30 @@ label k3m5:
     "Vamos atirar nos patos":
       jump k3d8
 
+  label acertou:
+    if a8:
+      jump k3a8acertou 
+    if b8:
+      jump k3b8acertou 
+    if c8_2:
+      jump k3c8acertou2
+    if c8:
+      jump k3c8acertou 
+    if d8:
+      jump k3d8pontos 
+    
+    
+
+  label errou:
+    if a8:
+      jump k3a8errou 
+    if b8:
+      jump k3b8errou 
+    if c8:
+      jump k3c8errou 
+    if d8:
+      jump k3d8pontos 
+
 label k3a8:
   $ a8 = True
   k "Cervo, certo, ótima escolha"
@@ -207,43 +237,28 @@ label k3a8:
   k "Bem, agora se concentra"
   n "Você mira no cervo"
   hide katarina
-  $ tirosNecessarios = 2
+  image cervo = "cervo.png"
+  image cervo center = Image("cervo.png")
+  show cervo center
+  $ tirosNecessarios = 0
   jump start_minigame
 
-  label acertou:
-    if a8:
-      jump k3a8acertou 
-    if b8:
-      jump k3b8acertou 
-    if c8:
-      jump k3c8acertou 
-    if d8:
-      jump k3d8acertou 
-    
-    
-
-  label errou:
-    if a8:
-      jump k3a8errou 
-    if b8:
-      jump k3b8errou 
-    if c8:
-      jump k3c8errou 
-    if d8:
-      jump k3d8errou 
     
     
 label k3a8acertou:
+  hide cervo with morte
   n "Você atira no cervo"
   n "Ele cai"
   show katarina smirk
   k "Nada mal! Você tem o espírito."
   n "Vocês vão até o corpo"
   k @surpresa "O pobrezinho nem sentiu, extremamente preciso, meus parabéns."
-  k default "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  k @default "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
 
 
 label k3a8errou:
+  hide cervo with moveoutleft
   n "Você atira no cervo"
   n "Ele corre"
   show katarina default
@@ -252,3 +267,190 @@ label k3a8errou:
   n "Katarina finaliza ele"
   k @triste "Não tem problema, azar de principiante."
   k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3b8:
+  $ b8 = True
+  k @feliz "Coelhos! Certo, vou precisar te ajudar nessa, os bichinhos são pequenos, quanto mais, melhor"
+  k "O meu conselho é: Tente não fazer muito estrago, olha o tamanho dessa bala e olha o tamanho deles, não se esquece que a gente vai precisar da carne"
+  k @triste "Sempre tive dó dos coelhos, eles me lembram muito animais domésticos"
+  k "Uma vez eu e meu pai fomos acampar, em um lugar um tanto quanto isolado, um dia a gente acordou e o nosso carro simplesmente não estava lá"
+  k "Provavelmente alguns delinquentes por algum motivo passaram por lá e roubaram ele, tivemos sorte que não fizeram nada com a gente"
+  k "A maioria do nosso estoque de comida estava lá, a gente precisou andar um longo caminho até acharmos um sinal de civiliação"
+  k @smirk "Você não sabe o quanto eu me alegrei por termos tido a sorte de encontrar coelhos pelo caminho"
+  k "Desde então eu passei a vê-los de outra forma, a carne bem temperadinha é uma delícia, acredite em mim!"
+  k "Bem, agora se concentra"
+  hide katarina
+  $ tirosNecessarios = 0
+  image coelho = "coelho.png"
+  image coelho center = Image("coelho.png", yalign=0.3, xalign=0.48)
+  show coelho center
+  jump start_minigame
+
+label k3b8acertou:
+  hide coelho with morte
+  show katarina default
+  n "Você atira no coelho"
+  n "Ele cai"
+  n "Katarina dá 3 tiros"
+  k "Vamos lá conferir"
+  n "Vocês vão até os coelhos, Katarina pega os 3 que ela acertou"
+  n "Você pega o seu"
+  k @feliz "Foi um bom tiro, 4 coelhos deve ser suficiente."
+  k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3b8errou:
+  hide coelho  with morte
+  show katarina default
+  n "Você atira no coelho"
+  n "Katarina dá 3 tiros"
+  k "Vamos lá conferir"
+  n "Vocês vão até os coelhos, Katarina pega os 3 que ela acertou"
+  n "Você pega o seu"
+  n "Você mal consegue reconhecer que aquilo é um coelho"
+  k @meh "É... Vamos deixar esse daqui, 3 devem servir."
+  k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3c8:
+  $ c8 = True
+  k @surpresa "O URSO?{w} Maluquice."
+  k @smirk "Amo Maluquice!"
+  k "Esse vai ser difícil, vamos precisar concentrar esforços, mas vai dar bastante carne!"
+  k "A gente tinha um tapete de urso gigantesco na sala, a minha mãe odiava, dizia que era difícil de limpar"
+  k "Eu sempre achei meio mórbido também, não via sentido naquilo"
+  k "Um dia resolvi questionar o meu pai, ele me explicou que não havia nada de errado em guardar recordações de momentos difíceis"
+  k "Ele dizia que a gente precisava se lembrar das adversidades para que pudessemos nos fortalecer quando outras piores surgissem"
+  k "\"Por isso cicatrizes impõem respeito\""
+  k "Ele tinha uma enorme na barriga, causada por aquele mesmo urso."
+  k "Bem, agora se concentra"
+  n "Você mira no urso"
+  hide katarina
+  $ tirosNecessarios = 0
+  show urso default
+  k "Esse pode ser difícil, não vacila!"
+  jump start_minigame
+
+label k3c8acertou:
+  $ c8_2 = True
+  n "Você e Katarina atiram no urso"
+  show urso bravo with morte
+  n "Ele solta um rugido"
+  k "Acertamos! Mas não acabou, se prepara para mais"
+  jump start_minigame
+
+label k3c8acertou2:
+  hide urso with morte
+  n "Você e Katarina atiram de novo"
+  n "O urso cai"
+  show katarina default
+  k "Boa! Vamos lá, mas cuidado, talvez ainda não tenha sido suficiente"
+  n "Vocês vão até o urso, ele está vivo ainda, porém sem forças"
+  k @triste "Pobrezinho, a gente acabou com ele"
+  k "Olhando pelo lado bom, garantimos mais uns 4 churrascos!"
+  n "Katarina finaliza ele, ela é bastante cuidadosa"
+  k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3c8errou:
+  n "Você e Katarina atiram"
+  hide urso with moveoutleft
+  n "Ele solta um rugido e foge"
+  k @brava "Droga! Acho que não foi suficiente, a gente não é nem louco de ir atrás dele agora"
+  k "Talvez a gente possa caçar outra coisa..."
+  n "Katarina olha ao redor, e percebe que não há mais nenhum animal"
+  k @brava "É... Eles devem ter se assustado com os tiros"
+  k "..."
+  k "Quer saber?"
+  k @triste "Vamos de açougue mesmo, para começar, eu nem mesmo deveria ter te colocado nessa situação"
+  n "Ela parece desapontada, mas você não sabe exatamente com o que"
+  k "Bora, a Cláudia já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3d8:
+  $ d8 = True
+  k @surpresa "Patos?{p} Tudo bem, alvos difíceis entretanto, assim que a gente abater o primeiro os outros vão começar a voar"
+  k "Vamos precisar acertá-los no ar, não vai ser um problema para mim, mas vou me impressionar bastante se você conseguir"
+  k "Eu jogava um joguinho de atirar em patos quando eu era menor"
+  k "Queria muito fazer aquilo para valer, atirar em patos de verdade"
+  k "Quando disse que queria caçar ao meu pai, ele me levou para atirar em um cervo, acho que eu deveria ter me explicado melhor"
+  k "De qualquer maneira, esqueci completamente dessa ideia depois disso, acho que nunca tive outra oportunidade assim"
+  k "Pelo menos não com patos selvagens."
+  k "Se prepara, vamos precisar de agilidade."
+  n "Katarina atira no primeiro pato"
+  k "Vai!"
+  hide katarina
+  image pato = "pato.png"
+  image pato center = Image("pato.png")
+  show pato center
+  $ tirosNecessarios = 3
+  jump start_minigame
+
+label k3d8pontos:
+  hide pato with moveoutleft
+  n "Vocês terminam de atirar nos patos"
+  show katarina default
+  k "Vamos lá conferir, acho que peguei uns 4."
+  n "Vocês vão conferir"
+  n "Você acertou [fable_minigame_score]"
+  if fable_minigame_score == 0:
+    k @surpresa "Nenhum? Achei que até você conseguiria pelo menos um."
+  if fable_minigame_score == 1:
+    k @meh "É... fez sua parte"
+  if fable_minigame_score == 2:
+    k @smirk "Nada mal!"
+  if fable_minigame_score == 3:
+    k @smirk "Você tem jeito nisso."
+  if fable_minigame_score == 4:
+    k @feliz "Uau! Mandamos bem!"
+  k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  jump k3m6
+
+label k3m6:
+  scene bg carro
+  show katarina default
+  n "Vocês entram no carro, Katarina para por um instante, olhando para o horizonte"
+  k "O que você faria se tivesse uma máquina do tempo?"
+  menu:
+      "Eu venderia ela":
+        jump k3a9
+      "Iria para o passado":
+        jump k3b9
+      "Iria para o futuro":
+        jump k3c9
+
+label k3a9:
+  k "Certamente daria uma grana"
+  k "Eu já tenho o bastante...{w} Eu voltaria para algum momento no meu passado."
+  k "Acho que sob nenhuma circunstância eu seria capaz de evitar tudo o que aconteceu"
+  n "Ela aperta o volante"
+  k @triste "Então eu voltaria para um momento feliz"
+  k "E viveria ele mais uma vez"
+  show katarina smirk
+  n  "Ela dá um sorriso, e parte para o escritório"
+  jump finalkat1
+
+label k3b9:
+  k "É, acho que é o que a maioria das pessoas deve responder."
+  k "Vivemos de arrependimentos, abraçariamos qualquer chance de mudar algo que nos causa sofrimento."
+  k "A dor me fez quem eu sou, não sei se eu mudaria algo"
+  n "Ela aperta o volante"
+  k "Mas com certeza seria para o passado que eu voltaria, de qualquer forma, eram tempos mais felizes"
+  show katarina smirk
+  n "Ela dá um sorriso, e parte para o escritório"
+  jump finalkat1
+
+label k3c9:
+  k "Interessante, eu acho que nunca cogitei isso"
+  k "Há tanto para se lembrar no passado e para se preocupar no presente"
+  k "Eu tenho um pouco de medo do futuro, ele é incerto"
+  k "Então eu voltaria para o passado, talvez seria confortante, poder viver sem incertezas."
+  k @triste "Mesmo que nada pudesse ser feito..."
+  n "Ela aperta o volante"
+  k "Eram tempos mais simples."
+  show katarina smirk
+  n "Ela dá um sorriso, e parte para o escritório"
+  jump finalkat1
+  
+

@@ -88,6 +88,7 @@ label a1a2:
     with moveinright
     
     extend "E volta com um vestido tie-dye"
+    $ vestidotiedye = False
 
     a "Está na moda."
     
@@ -610,6 +611,8 @@ label a1a10:
 
     n "Eles vão até o banheiro e trocam de roupa"
 
+    $ vestidorosa = True
+
     traf "Magnifico! Bom, tchauzinho!"
 
     n "Ele sai do restaurante feliz"
@@ -936,6 +939,7 @@ label a1b13:
     show alessandra feliz
 
     a "Obrigado! vou guardar de recordação"
+    $ tofu = True
 
     n "Ela chama o garçom"
 

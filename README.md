@@ -72,6 +72,7 @@ Objetivos em andamento:
   - Cláudia default
   - Cláudia brava
   - Cláudia triste
+  - Katarina com um sorriso triste
   - Katarina com máscara de Halloween
   - Zé
   - Katarina segurando uma arma

@@ -28,7 +28,16 @@ transform siren_tint:
     linear 2.0 matrixcolor TintMatrix("f00")
     repeat
 
+transform smokespin:
+    xpos 0.5
+    ypos 0.5
+    linear 4 rotate 360 # take 1 second to rotate 360 degrees
+    rotate 0 # reset position counter
+    repeat
+image smoke = SnowBlossom(At("smoke.png", smokespin), count=1000, yspeed=(-200, -5))
+
 define gatodissolve = ImageDissolve("transicao.png", 2.0, ramplen=128, reverse=True) #Transição de gatinho
+define morte = Fade(0.2,0,0,color="#fc0505")
 define fadeA = Fade(0.2,0.2,0.2,color="#1338BE") #Trasição para o início do jogador azul
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300") #Trasição para o início do jogador laranja
 define flashbulb = Fade(0.1, 0.0, 0.5, color="#fff")
@@ -42,7 +51,15 @@ default tirosNecessarios = 0
 default a8 = False
 default b8 = False
 default c8 = False
+default c8_2 = False
 default d8 = False
+
+#Variáveis da investigação:
+default xadrez = True
+default rifle = False
+default vestidotiedye = True
+default tofu = False
+default vestidorosa = False
 
 ## Variáveis dos dias ##
 default aleDay1 = True
@@ -64,7 +81,7 @@ default gamsoGamer = False
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
+define pag = Character(' ', kind=nvl, color="#c8c8ff")
 define e = Character("Eileen")
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
 define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low_beep)
@@ -75,6 +92,7 @@ define traf = Character("Traficante", image="traficante", callback = low_beep)
 define ate = Character("Atendente", image="atendente", callback = low_beep)
 define rdj = Character("Robert Downey Jr.", image="rbj", callback = low_beep)
 define padre = Character("Padre", image="padre", callback = low_beep)
+define urso = Character("Urso", image="urso", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
 default k.azul = 0
@@ -394,7 +412,7 @@ label start:
                 "Para o Ateliê da Alessandra" if aleDay3:
                     jump d3ale1
             
-            #jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+            jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
             jump changeDay                                    
 
     ########################################################################################################################### 

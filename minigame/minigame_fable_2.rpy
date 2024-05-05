@@ -9,7 +9,7 @@ init:
         align(0.5,1.22)
         rotate frp
 screen fable_2_minigame:
-    add "minigame/Fable_bar.png" align(0.5,0.5)
+    # add "minigame/Fable_bar.png" align(0.5,0.5)
     add "minigame/Fable_point.png" at fable_point_move(fable_minigame_bar)
     text "Pressione a barra de espaço para atirar" align(0.5,0.1)
     text "[fable_minigame_score]" align(0.5,0.2)
@@ -22,11 +22,11 @@ screen fable_2_minigame:
                 if fable_minigame_score < tirosNecessarios:
                     action [SetVariable("fable_minigame_score", fable_minigame_score + 1), SetVariable("fable_you_press_button", fable_you_press_button + 1), Show("you_press_button_good")]
                 else:
-                    action Jump("end_minigame")
+                    action [SetVariable("fable_minigame_score", fable_minigame_score + 1), Jump("end_minigame")]
             elif fable_you_press_button == 1:
                 action SetVariable("fable_minigame_score", fable_minigame_score + 0)
     else:
-        key "K_SPACE" action [SetVariable("fable_minigame_score", 0), Show("you_press_button_bad"), Jump("errou")]
+        key "K_SPACE" action [Jump("errou")]
 
 screen fable_timer_left:
     timer 0.0001 repeat True action [If(fable_minigame_bar >= -90, SetVariable("fable_minigame_bar", fable_minigame_bar - 1)),If(fable_minigame_bar == -90, Hide("fable_timer_left"), Show("fable_timer_right")), If(fable_minigame_bar == -90, SetVariable("fable_you_press_button", 0))]

@@ -344,6 +344,7 @@ label k1m4:
 label k1a9:
     
     show katarina feliz
+    $ xadrez = False
     k "Ótima escolha!"
     n "Ela abre o tabuleiro, dentro dele há uma coleção de mini pingas"
     menu:
@@ -365,6 +366,7 @@ label k1b9:
     jump k1m5
 label k1c9:
     show katarina default
+    $ rifle =  True
     k "Não sei se vai ter muito o que fazer com isso aqui, mas bora tentar, toma, ve se você acha alguma coisa"
     n "Você observa pela mira, e avista algumas coisas"
     menu:
@@ -378,6 +380,7 @@ label k1c9:
             $ JogadorAtivo += 2
             jump k1c11
         "Não atirar":
+            $ rifle = False
             $ JogadorAtivo += 0
             jump k1d11
 label k1a10:
