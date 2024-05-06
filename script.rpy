@@ -31,7 +31,7 @@ transform siren_tint:
 transform smokespin:
     xpos 0.5
     ypos 0.5
-    linear 4 rotate 360 # take 1 second to rotate 360 degrees
+    linear 5 rotate 360 # take 1 second to rotate 360 degrees
     rotate 0 # reset position counter
     repeat
 image smoke = SnowBlossom(At("smoke.png", smokespin), count=1000, yspeed=(-200, -5))
