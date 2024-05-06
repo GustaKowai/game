@@ -91,7 +91,7 @@ define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
 define gar = Character("Garçom", image="garcom", callback = low_beep)
 define traf = Character("Traficante", image="traficante", callback = low_beep)
 define ate = Character("Atendente", image="atendente", callback = low_beep)
-define rdj = Character("Robert Downey Jr.", image="rbj", callback = low_beep)
+define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep)
 define padre = Character("Padre", image="padre", callback = low_beep)
 define urso = Character("Urso", image="urso", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja

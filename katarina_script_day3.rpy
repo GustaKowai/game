@@ -57,8 +57,8 @@ label k3b1:
   k "Pera aí!"
   n "Katarina abre a porta para você"
   scene bg escritorio
-  show katarina feliz
   show smoke
+  show katarina feliz
   k "Chegou bem na hora!"
   show katarina feliz at right with move
   show claudia default at left
