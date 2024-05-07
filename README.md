@@ -61,20 +61,29 @@ Objetivos concluídos na semana de 03/04-09/04:
 - Dia 2 da Katarina implementado.
 - Dia 2 da Alessandra implementado.
 
-Objetivos da semana:
+Objetivos concluidos na semanade 16/04-23/04:
 
 - Corrigido bug da Mudança de dia 2-3
 - Sistema de tiro
 - UI
+- Arte da Cláudia
+
+Objetivos concluidos na semanade 24/04-07/05:
+
+- Terceiro dia da Katarina totalmente implementado
+- Personagens agora tem animação de piscar
+- Investigação noturna do primeiro dia
+- Música da Intro e do Main Menu
+- Alguns efeitos visuais foram adicionados
+
 Objetivos em andamento:
 
 - Arte:
-  - Cláudia default
   - Cláudia brava
   - Cláudia triste
   - Katarina com um sorriso triste
   - Katarina com máscara de Halloween
-  - Zé
+  - Zé (em pausa)
   - Katarina segurando uma arma
   - Alessandra com capacete de moto
   - Alessandra com duas metralhadoras, uma em cada mão e uma cara de psicopata (opcional)
@@ -83,12 +92,12 @@ Objetivos em andamento:
   - padre
   - padre com o braço decepado
 - História
-  - História secreta (talvez)
+  - História secreta (opcional)
   - Terceiro dia da Alessandra
 - Programação:
   - Achievements
-  - Investigação na parte noturna
-  - Cassino (talvez)
+  - Investigação na parte noturna dos dias 2 e 3
+  - Cassino (em pausa)
 - Sons e Música:
   - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
     - Sirene
