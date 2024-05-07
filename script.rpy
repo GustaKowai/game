@@ -83,16 +83,16 @@ default gamsoGamer = False
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 define pag = Character(' ', kind=nvl, color="#c8c8ff")
-define e = Character("Eileen")
-define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep)
-define n = Character("", what_prefix='{i}*', what_suffix='*{/i}', callback = low_beep)
-define c = Character("Claudia", image="claudia", callback = low_beep)
-define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep)
-define gar = Character("Garçom", image="garcom", callback = low_beep)
-define traf = Character("Traficante", image="traficante", callback = low_beep)
-define ate = Character("Atendente", image="atendente", callback = low_beep)
-define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep)
-define padre = Character("Padre", image="padre", callback = low_beep)
+define e = Character("Eileen", what_prefix='"', what_suffix='"')
+define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep, what_prefix='"', what_suffix='"')
+define n = Character("", callback = low_beep)
+define c = Character("Claudia", image="claudia", callback = low_beep, what_prefix='"', what_suffix='"')
+define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep, what_prefix='"', what_suffix='"')
+define gar = Character("Garçom", image="garcom", callback = low_beep, what_prefix='"', what_suffix='"')
+define traf = Character("Traficante", image="traficante", callback = low_beep, what_prefix='"', what_suffix='"')
+define ate = Character("Atendente", image="atendente", callback = low_beep, what_prefix='"', what_suffix='"')
+define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep, what_prefix='"', what_suffix='"')
+define padre = Character("Padre", image="padre", callback = low_beep, what_prefix='"', what_suffix='"')
 define urso = Character("Urso", image="urso", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
@@ -196,44 +196,44 @@ label start:
 
         g "É algo que vai além da compreensão da pequena mente humana de vocês..."
 
-        g "...mas, basicamente, essa porcentagem representa  a quantidade de ovelhas que eu conto antes de dormir enquanto penso no assunto. "
+        g "...Mas, basicamente, essa porcentagem representa a quantidade de ovelhas que eu conto antes de dormir enquanto penso no assunto. "
     menu:
 
         "Caramba, você conta ovelhinhas e pensa sobre a revolução ao mesmo tempo?":
             jump prologoa2
         
-        "86,4 ovelhas? o que seria essa \"0,4 ovelha\"?":
+        "86,4 ovelhas? O que seria essa \"0,4 ovelha\"?":
             jump prologob2
 
     label prologoa2:
 
-        g "Sim, para os gatos isso é um grande sinal de que você se importa com algo, a hora da soneca é algo sagrado, fazer qualquer outra coisa se não contar ovelhinhas quando você está prestes a dormir demonstra um grandíssimo interesse por aquilo"
+        g "Sim, para os gatos isso é um grande sinal de que você se importa com algo. A hora da soneca é algo sagrado, fazer qualquer outra coisa se não contar ovelhinhas quando você está prestes a dormir demonstra um grandíssimo interesse por aquilo."
         jump prologom1
 
     label prologob2:
 
-        g @serio "Nao queiram saber."
+        g @serio "Não queiram saber."
         jump prologom1
 
     label prologob1:
 
-        g "Sim! Impressionante como minha posição permite impressionar meus subordinados com números que nem fazem sentido para humanos"
+        g "Sim! Impressionante como minha posição permite impressionar meus subordinados com números que nem fazem sentido para humanos."
         jump prologom1
 
     label prologom1:
-        g @feliz "Vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado, {size=-10}eu normalmente desisto deles antes que isso aconteça{/size}, mas não dessa vez!"
+        g @feliz "Vocês ainda vão se surpreender ainda mais com a minha grandeza, meus planos nunca deram errado. {size=-10}Eu normalmente desisto deles antes que isso aconteça{/size}, mas não dessa vez!"
     
     menu:
 
         "Hum.... Ok?":
             jump prologoa3
 
-        "SIM CAPITÃO":
+        "SIM CAPITÃO!":
             jump prologob3
 
     label prologoa3:
         with hpunch
-        g serio "Vocês não acreditam no meu potencial, né ? Só porque eu sou um gatinho fofinho? Meu QI é maior do que o de {size=+10}TODAS{/size} as gerações de vocês dois {size=+10}JUNTAS!{/size}"
+        g serio "Vocês não acreditam no meu potencial, né? Só porque eu sou um gatinho fofinho? Meu QI é maior do que o de {size=+10}TODAS{/size} as gerações de vocês dois {size=+10}JUNTAS!{/size}"
 
         g  "{cps=*0.2}Vou provar que estão errados.{/cps}"
         jump prologom2
@@ -247,11 +247,11 @@ label start:
 
         g default "Enfim, como eu ia dizendo, tenho que apresentá-los às novatas da revolução:"
 
-        g withkat "Katarina Kabrera, herdeira, dona da maior produtora de rações para gatos do país"
+        g withkat "Katarina Kabrera, herdeira rica, dona da maior produtora de rações para gatos do país."
 
-        g "Ah, e tentem não se irritar, ela pode parecer descolada, mas continua sendo uma patricinha metida, e, como já devem imaginar, a sua participação na revolução é muito valiosa"
+        g "Ah, e tentem não se irritar, ela pode parecer descolada, mas continua sendo uma patricinha metida. E, como já devem imaginar, a sua participação na revolução é muito valiosa."
 
-        g @feliz "Se é que me entendem"
+        g @feliz "...Se é que me entendem."
 
         show gatovaldo default
 
@@ -267,21 +267,21 @@ label start:
 
     label prologoa4:
 
-        g @serio "Sim! É por isso que estamos aqui, e conto com vocês para tirar aquele bostinha do poder" 
+        g @serio "Sim! É por isso que estamos aqui, e conto com vocês para tirar aquele bostinha do poder." 
         jump prologom3
 
     label prologob4:
         
-        g "São tempos difíceis, mas não sinta dó de uma raça superior"
+        g "São tempos difíceis, mas não sinta dó de uma raça superior."
 
         g feliz "Aquele idiota não parou para pensar que diminuir as rações felinas e incentivar o crescimento da população de roedores apenas faria com que nós passássemos a come-lôs mais ainda!"
 
-        g "Muahahahahaha"
+        g "Muahahahahaha!"
         jump prologom3
 
     label prologom3:
 
-        g withale "Bem, dito isso, conheçam tambem Alessandra Mallet."
+        g withale "Bem, dito isso, conheçam também Alessandra Mallet."
         
         g "Talvez já tenham ouvido esse nome, uma grande estilista que entrou nas sombras um tempo atrás."
 
@@ -289,7 +289,7 @@ label start:
 
         g "Acontece que minha tia-avó já fez morada no forro de lá, {w} hoje ela está em um lugar melhor..."
 
-        g "Em uma noite chuvosa e melancólica a nostalgia acabou me levando ao seu covil, e lá estava ela, desenhando uma roupa super estilosa como se nada tivesse acontecido"
+        g "Em uma noite chuvosa e melancólica a nostalgia acabou me levando ao seu covil, e lá estava ela, desenhando uma roupa super estilosa como se nada tivesse acontecido."
 
         g "Falei com ela sobre o nosso movimento e ela aceitou participar, engraçado que não tenha questionado um gato falante e aceitado tudo numa boa, mas tudo bem!"
 
@@ -305,7 +305,7 @@ label start:
 
             g default "Mas ela não está morta!"
 
-            g "Em nenhum momento disse isso, aliás, ela foi quem mais cuidou de mim depois daquele fatídico acontecimento que me tornou assim"
+            g "Em nenhum momento disse isso, aliás, ela foi quem mais cuidou de mim depois daquele fatídico acontecimento que me tornou assim."
 
             g "Eu simplesmente aluguei uma cobertura para ela como agradecimento, é definitivamente um lugar melhor do que aquele forro."
             jump prologom4
@@ -318,42 +318,42 @@ label start:
             
             show gatovaldo feliz
 
-            extend "poucos sabem da minha existência, até onde sabem ele foi o único afetado pelo experimento."
+            extend "poucos sabem da minha existência, até onde sabem, ele foi o único afetado pelo experimento."
             jump prologom4
 
         label prologom4:
 
             show gatovaldo default
 
-            g "Enfim, preciso que interajam com elas, pois provavelmente serão suas parceiras de missão"
+            g "Enfim, preciso que interajam com elas, pois provavelmente serão suas parceiras de missão."
 
-            g "Elas de bom grado ofereceram seus locais de trabalho para que possamos usá-los como postos avançados da revolução, fiquem a vontade para visitarem lá quando quiserem"
+            g "Elas, de bom grado, ofereceram seus locais de trabalho para que possamos usá-los como postos avançados da revolução, fiquem a vontade para visitarem lá quando quiserem."
 
-            g "Vez ou outra também caso queiram falar comigo provavelmente estarei ou aqui resolvendo assuntos importantes ou no cassino do Zé me divertindo"
+            g "Vez ou outra também caso queiram falar comigo provavelmente estarei ou aqui resolvendo assuntos importantes. Ou no cassino do Zé me divertindo."
 
-            g "Fiquem a vontade para me procurar. "
+            g "Fiquem a vontade para me procurar."
 
             g "Ah, e só para deixar claro..."
 
             show gatovaldo serio
 
-            g "Não sei se confio muito nelas"
+            g "Não sei se confio muito nelas."
 
-            g "Então deixo na mão de vocês investigar se elas são quem realmente dizem ser"
+            g "Então deixo na mão de vocês investigar se elas são quem realmente dizem ser."
 
             show gatovaldo default
 
-            g "Como diz o ditado :"
+            g "Como diz o ditado:"
 
             show gatovaldo feliz
 
-            g "{i}\"Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos\"{/i}" 
+            g "{i}\"Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos.\"{/i}" 
             
             g "Eu, claramente, sou Deus e vocês são os meus soldados mais bobinhos, mas eu gosto de vocês, e confio em vocês, agora, se me permitem, preciso me esconder dentro de algum sofá."
 
             hide gatovaldo
 
-            n " ele vira as costas e sai da sala, vocês dois se encaram confusos e se perguntam \"que diabos de ditado foi esse?\""
+            n "Ele vira as costas e sai da sala. Vocês dois se encaram confusos e se perguntam: \"que diabos de ditado foi esse?\""
 
             jump whereToGo
 

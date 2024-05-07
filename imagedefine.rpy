@@ -223,3 +223,25 @@ image katarina confusa:
     "/images/Katarina Resize/Kconfusa (1).png"
     pause 3
     repeat
+
+
+## Claudia
+
+image claudia default:
+    "/images/Claudia Resize/Cdefault (1).png"
+    pause 1.5
+    "/images/Claudia Resize/Cdefault (2).png"
+    pause .05
+    "/images/Claudia Resize/Cdefault (3).png"
+    pause .07
+    "/images/Claudia Resize/Cdefault (2).png"
+    pause .05
+    "/images/Claudia Resize/Cdefault (1).png"
+    pause 4.3
+    repeat
+
+image claudia brava:
+    "/images/Claudia Resize/Cbrava (1).png"
+
+image claudia brava:
+    "/images/Claudia Resize/Cdefault (3).png"
