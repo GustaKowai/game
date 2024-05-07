@@ -104,3 +104,122 @@ image alessandra medo2:
     pause 3
     repeat
 
+
+
+
+## Katarina
+
+image katarina default:
+    "/images/Katarina Resize/Kdefault (1).png"
+    pause 2
+    "/images/Katarina Resize/Kdefault (2).png"
+    pause .05
+    "/images/Katarina Resize/Kdefault (3).png"
+    pause .07
+    "/images/Katarina Resize/Kdefault (2).png"
+    pause .05
+    "/images/Katarina Resize/Kdefault (1).png"
+    pause 3
+    repeat
+
+image katarina smirk:
+    "/images/Katarina Resize/Ksmirk (1).png"
+    pause 2
+    "/images/Katarina Resize/Ksmirk (2).png"
+    pause .05
+    "/images/Katarina Resize/Ksmirk (3).png"
+    pause .07
+    "/images/Katarina Resize/Ksmirk (2).png"
+    pause .05
+    "/images/Katarina Resize/Ksmirk (1).png"
+    pause 3
+    repeat
+
+image katarina brava:
+    "/images/Katarina Resize/Kbrava (1).png"
+    pause 2
+    "/images/Katarina Resize/Kbrava (2).png"
+    pause .05
+    "/images/Katarina Resize/Kbrava (3).png"
+    pause .07
+    "/images/Katarina Resize/Kbrava (2).png"
+    pause .05
+    "/images/Katarina Resize/Kbrava (1).png"
+    pause 3
+    repeat
+
+image katarina muitofeliz:
+    "/images/Katarina Resize/Kmuitofeliz (1).png"
+    pause .05
+    "/images/Katarina Resize/Kmuitofeliz (2).png"
+    pause .05
+    "/images/Katarina Resize/Kmuitofeliz (1).png"
+    pause .05
+    "/images/Katarina Resize/Kmuitofeliz (3).png"
+    pause 3
+    repeat
+
+image katarina irritada:
+    "/images/Katarina Resize/Kirritada (1).png"
+    pause 2
+    "/images/Katarina Resize/Kirritada (2).png"
+    pause .05
+    "/images/Katarina Resize/Kirritada (3).png"
+    pause .07
+    "/images/Katarina Resize/Kirritada (2).png"
+    pause .05
+    "/images/Katarina Resize/Kirritada (1).png"
+    pause 3
+    repeat
+
+image katarina meh:
+    "/images/Katarina Resize/Kmeh (1).png"
+    pause 2
+    "/images/Katarina Resize/Kmeh (2).png"
+    pause .05
+    "/images/Katarina Resize/Kmeh (3).png"
+    pause .07
+    "/images/Katarina Resize/Kmeh (2).png"
+    pause .05
+    "/images/Katarina Resize/Kmeh (1).png"
+    pause 3
+    repeat
+
+image katarina triste:
+    "/images/Katarina Resize/Ktriste (1).png"
+    pause 2
+    "/images/Katarina Resize/Ktriste (2).png"
+    pause .05
+    "/images/Katarina Resize/Ktriste (3).png"
+    pause .07
+    "/images/Katarina Resize/Ktriste (2).png"
+    pause .05
+    "/images/Katarina Resize/Ktriste (1).png"
+    pause 3
+    repeat
+
+image katarina surpresa:
+    "/images/Katarina Resize/Ksurpresa (1).png"
+    pause 2
+    "/images/Katarina Resize/Ksurpresa (2).png"
+    pause .05
+    "/images/Katarina Resize/Ksurpresa (3).png"
+    pause .07
+    "/images/Katarina Resize/Ksurpresa (2).png"
+    pause .05
+    "/images/Katarina Resize/Ksurpresa (1).png"
+    pause 3
+    repeat
+
+image katarina confusa:
+    "/images/Katarina Resize/Kconfusa (1).png"
+    pause 2
+    "/images/Katarina Resize/Kconfusa (2).png"
+    pause .05
+    "/images/Katarina Resize/Kconfusa (3).png"
+    pause .07
+    "/images/Katarina Resize/Kconfusa (2).png"
+    pause .05
+    "/images/Katarina Resize/Kconfusa (1).png"
+    pause 3
+    repeat
