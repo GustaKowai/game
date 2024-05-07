@@ -46,7 +46,7 @@ label k3a2:
   jump k3m1
 
 label k3b2:
-  k "A gente conhece os nossos limites, a cada 5 minutos damos uma puxada em um tanque de oxigêni"
+  k "A gente conhece os nossos limites, a cada 5 minutos damos uma puxada em um tanque de oxigênio"
   n "Você percebe que tem alguns tanques de oxigênio espalhados pela sala"
   c "Mal posso esperar para tirar o cheiro de carvão de tudo isso daqui quando a gente terminar!"
   n "Cláudia parece genuinamente empolgada com faxinas"
@@ -77,7 +77,7 @@ label k3a3:
   k "Claudia, por que a gente não fez isso em um lugar arejado?"
   c "Senhorita Kataria, você pediu especificamente para que o churrasco fosse realizado aqui den-"
   show katarina default
-  k "Tá bom Cláudia! Não importa, melhore na próxima!"
+  k "Tá bom, Cláudia! Não importa, melhore na próxima!"
   jump k3m1
 
 label k3b3:
