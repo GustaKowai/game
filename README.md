@@ -76,6 +76,11 @@ Objetivos concluidos na semanade 24/04-07/05:
 - Música da Intro e do Main Menu
 - Alguns efeitos visuais foram adicionados
 
+Objetivos concluidos na semanade 08/05-14/05:
+
+- Terceiro dia da Alessandra escrito
+- Katarina também tem a animação de piscar
+
 Objetivos em andamento:
 
 - Arte:
