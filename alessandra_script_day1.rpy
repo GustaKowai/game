@@ -21,7 +21,7 @@ label d1ale1:
     n "Você chega em um prédio antigo, em um bairro estranho da cidade. Ao mesmo tempo, ele parece confortante e assustador, e ao passar pela entrada, um sininho toca em cima de você."
 
     menu:
-        "Tem alguém ai?":
+        "Tem alguém aí?":
             $ alguem = True
             jump a1a
         "Alessandra?":
@@ -46,25 +46,36 @@ label a1a1:
         "Nunca diga \"Tem alguém aí?\".{w} Já assisti filmes de terror o suficiente." 
         "{cps=*0.2}Traz má sorte. {/cps}"
     
-    show alessandra default
+    show alessandra sorriso
     with moveinbottom
 
     if alguem:
         a "Tô zoando!"
     a "E aí cara, estamos preparados para a missão?"
+
+    show alessandra default with dissolve
     a "Só aguardar aqui fora, o transporte já já chega."
+
+    show alessandra smirk with dissolve
     a "Engraçado que você nem percebeu que eu estava escondida atrás da porta quando entrou.{w} Gosto de assustar as pessoas as vezes, é engraçado."
+
+    show alessandra default with dissolve
     a "Sabe, às vezes tudo que a gente precisa é de um pouco de emoção. Vivemos nossas vidas monótonas repetindo o mesmo ciclo dia após dia..."
     a "É bom ter um motivo maior para se preocupar com a sua própria vida."
+
+    show alessandra smirk with dissolve
     a "Aposto que você se assustou de verdade, olha a minha cara de louca! Tô branca igual um vampiro.{w} Não saía desse lugar há anos e quando saía era para comprar miojo ou energético de madrugada no mercadinho 24 horas."  
+
+    show alessandra default with dissolve
     a "Minha sorte é que a minha fama não chegou aqui nas periferias. Ser reconhecida nunca foi um problema aqui, esse é o lugar perfeito."
 
     n "Uma limousine estaciona em frente ao ateliê, e por um momento você se questiona se está vestido adequadamente." 
     n "Alessandra mexe no vestido dela em algo que você não consegue decifrar." 
     
-    show alessandra smirk
 
     n "De repente, partes do look que estavam escondidas se revelam e ela fica com uma aparência mais ousada, amedrontadora e claro, estilosa. {w}Agora você tem certeza que não está vestido adequadamente para a ocasião."
+
+    show alessandra smirk with dissolve
 
     a "Vamos! Parece que o Giuseppe já chegou."
 
@@ -79,7 +90,7 @@ label a1a2:
 
     a "Ah sim, claro!"
 
-    show alessandra default at offscreenright
+    show alessandra default at offscreenright 
     with moveoutright
 
     n "Ela entra no ateliê... {nw}"
@@ -90,6 +101,7 @@ label a1a2:
     extend "E volta com um vestido tie-dye."
     $ vestidotiedye = False
 
+    show alessandra sorriso with dissolve 
     a "Está na moda."
     
     n "Você veste o vestido e não se sente na moda."
@@ -99,33 +111,40 @@ label a1a2:
 
 label a1b2:
 
-    a "Sim! No restaurante de luxo com a reserva mais disputada da cidade, você não tem noção de quantos celulares ligando ao mesmo tempo eu precisei para conseguir isso!"
+    a "Sim! No restaurante de luxo com a reserva mais disputada da cidade."
+    
+    show alessandra eyeroll with dissolve 
+    a "Você não tem noção de quantos celulares ligando ao mesmo tempo eu precisei para conseguir isso!"
 
     jump a1m1
 
 label a1m1:
 
+    show alessandra default with dissolve 
     a "Bom! Agora vamos!"
 
-    n "Vocês entram na limousine, ela leva vocês até um bairro de alta classe." 
+    n "Vocês entram na limousine, e ela leva vocês até um bairro de alta classe." 
     
     scene bg restaurante
     with gatodissolve
     play music "restaurante.mp3" volume 0.5
 
-
     n "E para em frente a um estabelecimento que se parece com um palácio."
 
-    show alessandra default
+    show alessandra default with dissolve
     
     a "Chegamos! Bem vindo ao Ardórsia."
     
     n "Ao entrar no restaurante, vocês são direcionados a uma mesa um pouco afastada, há uma mulher loira se apresentando em um pequeno palco."
-    show alessandra brava
+    show alessandra eyeroll with dissolve
     
     a "Droga, pensava que a Taylor Swift seria amanhã, nosso amigo traficante escolheu um péssimo dia para o encontro."
+
+    show alessandra default with dissolve
     a "O gatinho te passou o briefing da missão? A gente está aqui para trocar esse diamante do Jared Leto por uma tecnologia importada extremamente letal."
     a "Basicamente ela é capaz de transformar qualquer coisa em tofu, e não sei se você sabe, mas ratos odeiam tofu."
+
+    show alessandra smirk with dissolve
     a "Não é queijo de verdade."
 
     menu:
@@ -136,12 +155,14 @@ label a1m1:
 
 label a1a3:
 
+    show alessandra default with dissolve
     a "É, poxa, ele já fez parte de um visual que eu desenhei para ele. Aquele cara da banda 30 minuto para o fim do mundo ou sei lá o que, é o que daremos em troca pela arma."
 
     jump a1m2
 
 label a1b3:
 
+    show alessandra triste with dissolve
     a "Hoje é sexta, pensei que colocariam alguém de mais prestígio tipo o calcinha preta."
 
     jump a1m2
@@ -150,7 +171,11 @@ label a1m2:
 
     n "Você prefere não questionar, isso já tem sido uma noite bem estranha."
 
-    show alessandra default
+    n "Alguns minutos se passam, e nada do traficante."
+
+    n "E você consegue perceber Alessandra ficando um pouco impaciente."
+
+    show alessandra triste with dissolve
 
     a "O quão desrespeitoso seria pedir a comida antes do nosso querido colega chegar? Estou faminta."
 
@@ -165,7 +190,11 @@ label a1m2:
             $ JogadorAtivo += 2
             jump a1c4
 
-label a1a4:
+label a1a4: 
+
+    show alessandra default with dissolve
+
+    a "Que bom que concorda."
 
     n "Ela chama o garçom."
 
@@ -186,10 +215,13 @@ label a1a4:
     jump a1m3
     
 label a1b4:
+    
+    show alessandra eyeroll with dissolve
 
-    show alessandra brava
-
-    a "Você me faz lembrar o motivo de eu ter me isolado, conviver com pessoas é difícil quando elas pouco se importam em tratar os outros com o mínimo de respeito. Mas quer saber? Eu tô cagando!"
+    a "Você me faz lembrar o motivo de eu ter me isolado, conviver com pessoas é difícil quando elas pouco se importam em tratar os outros com o mínimo de respeito."
+    
+    show alessandra default with dissolve
+    a "Mas quer saber? Eu tô cagando!"
 
     jump a1a4
 
@@ -215,17 +247,29 @@ label a1c4:
     
 label a1m3:
 
-    show alessandra brava at center
+    n "O garçom sai com seu pedido, mas vocês inevitavelmente voltam à espera."
+
+    show alessandra triste at center
     with move
 
     a "Que tédio..."
+
+    show alessandra seria with dissolve
     a "Lugares como esse me fazem lembrar do motivo de eu ter sumido dos holofotes, cheio de pessoas mesquinhas, que se acham superiores por simplesmente terem conseguido uma reserva."
+
+    show alessandra seria2 with dissolve
     a "Eu vou ser bem sincera, a comida daqui nem é a melhor da cidade." 
+
+    show alessandra seria with dissolve
     a "Não estou dizendo que prefiro fast food ou um prato feito, existem lugares chiques que preparam pratos muito melhores e que têm um atendimento incomparável ao daqui..." 
-    a "...mas por algum motivo essa bodega aqui recebe todo o holofote."     
+
+    show alessandra eyeroll with dissolve
+    a "...mas por algum motivo essa bodega aqui recebe todo o holofote."   
+
+    show alessandra triste with dissolve  
     a "Se não tivesse sido a escolha pessoal do nosso colega eu teria outras 20 melhores opções de restaurantes para escolher."
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Mas, já que estamos aqui, aguardemos..."
 
@@ -251,15 +295,17 @@ label a1a5:
     
 label a1b5:
 
+    show alessandra smirk with dissolve
     a "Ótima ideia!"
     
+    show alessandra default with dissolve
     n "Ela pega um papel e uma caneta e começa a escrever alguma coisa."
     
     a "Toma! Leva isso para ela."
 
-    n "Você leva o papel para a mulher no palco, ela lê e sai correndo chorando."
+    n "Você leva o papel para a mulher no palco. {w} Ela lê e sai correndo chorando."
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Boa! Meus ouvidos já estavam se cansando."
 
@@ -406,7 +452,7 @@ label a1c8:
         "Ivete Sangalo":
             $ JogadorAtivo += -1
             jump a1b9
-        "Barões da pisadinha":
+        "Barões da Pisadinha":
             $ JogadorAtivo += 2
             jump a1c9
         "One Direction":
@@ -435,9 +481,12 @@ label a1b9:
 
 label a1c9:
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
-    a "Droga! {w}Você é bom, acertou na mosca. {p}Vou tentar ser mais discreta, não posso ficar me entregando tanto assim."
+    a "Droga! {w}Você é bom, acertou na mosca."
+    
+    show alessandra triste with dissolve
+    a "Vou tentar ser mais discreta, não posso ficar me entregando tanto assim."
 
     jump a1m4
 
@@ -451,7 +500,7 @@ label a1d9:
 
 label a1m4:
 
-    show alessandra assustada
+    show alessandra assustada with dissolve
 
     a "Eita, acho que ele chegou."
 
@@ -461,30 +510,30 @@ label a1m4:
 
     n "Ele se aproxima em passos pesados."
 
-    show alessandra medo1
+    show alessandra medo1 with dissolve
 
     a "Eu vou para o banheiro e você lida com isso, tudo bem?"
 
     n "Alessandra está suando frio, ela parece muito nervosa. Ele está cada vez mais perto."
 
-    show alessandra medo2
+    show alessandra medo2 with dissolve
 
     a "Cara, por que eu fui me meter nisso? {w} Aquilo é uma arma?{w} Eu vou desmaiar..."
 
     n "Ele chega até a mesa de vocês e..."
     n "Ele passa reto."
 
-    show alessandra surpresa
+    show alessandra surpresa2 with dissolve
 
     a "..."
 
-    show alessandra feliz
+    show alessandra feliz with dissolve
 
     a "Ah, acho que era o segurança..."
 
     traf "Oiêêê."
 
-    show alessandra confusa
+    show alessandra confusa with dissolve
 
     a "O que foi isso?"
 
@@ -501,13 +550,17 @@ label a1m4:
     
     traf "Vocês são que são Alessandra e-"
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "SIM! É a gente, você não sabe como é bom fazer négocios com você!"
 
     n "Ela parece aliviada."
 
+    show alessandra default with dissolve
+
     traf "Okay. Bem. Vamos direto ao ponto."
+
+    n "O traficante recosta-se na cadeira e começa a falar em um tom sério."
     
     traf "Eu implementei algumas funções novas nessa belezinha..."
 
@@ -515,27 +568,36 @@ label a1m4:
 
     traf "...então o preço também subiu."
 
-    show alessandra brava
+    show alessandra surpresa2 with dissolve
+    pause 0.5
+    
+    show alessandra brava2 with dissolve
+    with hpunch
 
     a "O quê? Isso não é justo, a gente está com o seu diamante aqui! Esse foi o combinado!"
 
     n "Ele parece empolgado com o diamante."
 
-    traf "Ela agora apaga memórias em um raio de 20 metros! Você transforma algo em tofu e boom! Ele nunca existiu."
+    traf "Ela agora apaga memórias em um raio de 20 metros!"
+    traf "Você transforma algo em tofu e boom! {w}Ele nunca existiu."
     traf "Um ente querido, um pet, qualquer coisa!"
     traf "'Por que tem um tofu nessa coleira? Não sei, mas parece delicioso!'"
     traf "É o que uma madame irá pensar quando você transformar o lulu da pomerânia dela em queijo de soja.{w} Então sim, o preço subiu."
     
-    with hpunch
     
-    a "Droga! Tudo bem, preciso conversar com o meu associado primeiro. Um instante."
+    show alessandra eyeroll with dissolve
+    a "Droga! {w} Tudo bem, preciso conversar com o meu associado primeiro. Um instante."
 
     n "Ela vira para você e começa a cochichar."
 
+    hide traficante with dissolve
+    show alessandra brava2 at center 
+    with move
+    show alessandra brava2 at easeinzoom
     a "O que a gente vai fazer, porra?"
 
     menu:
-        "Dê mais algo valioso para ele.":
+        "Dê algo mais valioso para ele.":
             $ JogadorAtivo += -1
             jump a1a10
         "Invente uma mentira.":
@@ -550,16 +612,24 @@ label a1m4:
 
 label a1a10:
     a "O que de mais valioso eu poderia dar pra ele?"
+
+    show alessandra triste with dissolve
     
     a "Esse vestido que foi usado pela Beyoncé no concerto em Munique na Alemanha em 2008? Ele nunca iria aceit-"
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Espera, ótima ideia!"
 
+    show alessandra default at easeoutzoom
+
     n "Ela vira de volta ao traficante."
 
-    show alessandra default
+    show alessandra default at right
+    with move
+
+    show traficante default at left
+    with moveinleft
 
     a "Então, coleguinha, você gosta de divas pop, presumo eu."
 
@@ -577,22 +647,29 @@ label a1a10:
 
     traf "ESPERA, esse não é o vestido que a B-b-be-beyon-"
 
+    show alessandra smirk with dissolve
+
     a "Sim, querido, ele é. Pode pesquisar se sua memória estiver fraca."
 
-    traf "E... Eu preciso conversar com o meu assistente."
+    show alessandra default with dissolve
+
+    traf "Eu... Eu preciso conversar com o meu assistente."
 
     hide traficante
     with moveoutleft
 
-    show alessandra smirk at center
+    show alessandra default at center
     with move
 
     n "Ele se retira da mesa e vai até um lugar um pouco afastado para realizar uma ligação."
 
+    show alessandra smirk with dissolve
+
     a "Acho que a gente mandou bem!"
 
-    n "{size=+10}\"AAH!\"{/size}"
     with vpunch
+    n "{size=+10}\"AAH!\"{/size}"
+    
     n "Vocês ouvem do telefone dele."
 
     show alessandra default at right
@@ -605,12 +682,13 @@ label a1a10:
 
     traf "T-tudo bem, a arma é sua!{w} Mas eu preciso do diamante e do vestido agora!"
 
-    show alessandra brava
+    show alessandra surpresa2 with dissolve
 
     a "O que? E eu saio daqui como?"
 
     traf "Eu te empresto minhas roupas, mas quero de volta depois."
 
+    show alessandra eyeroll with dissolve
     a "Argh, tá bom..."
 
     n "Eles vão até o banheiro e trocam de roupa."
@@ -1018,7 +1096,7 @@ label a1b15:
 
 label a1m6:
 
-    n "Ela dá uma garfada e fica paralisada."
+    n "Ela dá uma garfada."
 
     show alessandra assustada
 

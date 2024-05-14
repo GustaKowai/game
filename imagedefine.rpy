@@ -49,6 +49,35 @@ image alessandra surpresa:
     "/images/Alessandra Resize/ASurpresa (2).png"
     pause .05
     "/images/Alessandra Resize/ASurpresa (1).png"
+    pause .07
+    "/images/Alessandra Resize/ASurpresa (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa (3).png"
+    pause .07
+    "/images/Alessandra Resize/ASurpresa (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa (1).png"
+    pause 3
+    repeat
+
+image alessandra surpresa2:
+    "/images/Alessandra Resize/ASurpresa2 (1).png"
+    pause 2
+    "/images/Alessandra Resize/ASurpresa2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa2 (3).png"
+    pause .07
+    "/images/Alessandra Resize/ASurpresa2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa2 (1).png"
+    pause .07
+    "/images/Alessandra Resize/ASurpresa2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa2 (3).png"
+    pause .07
+    "/images/Alessandra Resize/ASurpresa2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASurpresa2 (1).png"
     pause 3
     repeat
 
@@ -62,6 +91,19 @@ image alessandra brava:
     "/images/Alessandra Resize/ABrava (2).png"
     pause .05
     "/images/Alessandra Resize/ABrava (1).png"
+    pause 3
+    repeat
+
+image alessandra brava2:
+    "/images/Alessandra Resize/ABrava2 (1).png"
+    pause 2
+    "/images/Alessandra Resize/ABrava2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ABrava2 (3).png"
+    pause .07
+    "/images/Alessandra Resize/ABrava2 (2).png"
+    pause .05
+    "/images/Alessandra Resize/ABrava2 (1).png"
     pause 3
     repeat
 
@@ -104,6 +146,50 @@ image alessandra medo2:
     pause 3
     repeat
 
+image alessandra eyeroll:
+    "/images/Alessandra Resize/AEyeroll (1).png"
+    pause 2
+    "/images/Alessandra Resize/AEyeroll (2).png"
+    pause .05
+    "/images/Alessandra Resize/AEyeroll (3).png"
+    pause .07
+    "/images/Alessandra Resize/AEyeroll (2).png"
+    pause .05
+    "/images/Alessandra Resize/AEyeroll (1).png"
+    pause 3
+    repeat
+
+image alessandra seria:
+    "/images/Alessandra Resize/ASeria (1).png"
+    pause 2
+    "/images/Alessandra Resize/ASeria (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASeria (3).png"
+    pause .07
+    "/images/Alessandra Resize/ASeria (2).png"
+    pause .05
+    "/images/Alessandra Resize/ASeria (1).png"
+    pause 3
+    repeat
+
+image alessandra seria2:
+    "/images/Alessandra Resize/ASeria (3).png"
+
+image alessandra sorriso:
+    "/images/Alessandra Resize/ASorriso.png"
+
+image alessandra test:
+    "/images/Alessandra Resize/Atest (1).png"
+    pause 2
+    "/images/Alessandra Resize/Atest (2).png"
+    pause .05
+    "/images/Alessandra Resize/Atest (3).png"
+    pause .07
+    "/images/Alessandra Resize/Atest (2).png"
+    pause .05
+    "/images/Alessandra Resize/Atest (1).png"
+    pause 3
+    repeat
 
 
 
@@ -245,3 +331,44 @@ image claudia brava:
 
 image claudia brava:
     "/images/Claudia Resize/Cdefault (3).png"
+
+## Gatovaldo
+
+image gatovaldo default:
+    "/images/Gatovaldo Resize/Gdefault (1).png"
+    pause 4.1
+    "/images/Gatovaldo Resize/Gdefault (2).png"
+    pause .05
+    "/images/Gatovaldo Resize/Gdefault (1).png"
+    pause 3.2
+    repeat
+
+image gatovaldo feliz:
+    "/images/Gatovaldo Resize/Gfeliz (1).png"
+    pause 4.1
+    "/images/Gatovaldo Resize/Gfeliz (2).png"
+    pause .05
+    "/images/Gatovaldo Resize/Gfeliz (1).png"
+    pause 3.2
+    repeat
+
+image gatovaldo serio:
+    "/images/Gatovaldo Resize/Gserio (1).png"
+
+image gatovaldo withale:
+    "/images/Gatovaldo Resize/Gale (1).png"
+    pause 4.1
+    "/images/Gatovaldo Resize/Gale (2).png"
+    pause .05
+    "/images/Gatovaldo Resize/Gale (1).png"
+    pause 3.2
+    repeat
+
+image gatovaldo withkat:
+    "/images/Gatovaldo Resize/Gkat (1).png"
+    pause 4.1
+    "/images/Gatovaldo Resize/Gkat (2).png"
+    pause .05
+    "/images/Gatovaldo Resize/Gkat (1).png"
+    pause 3.2
+    repeat

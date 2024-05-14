@@ -28,6 +28,16 @@ transform siren_tint:
     linear 2.0 matrixcolor TintMatrix("f00")
     repeat
 
+#Efeito Zoom
+transform easeinzoom:
+    center
+    ease 0.7 zoom 1.5 yoffset 500
+
+transform easeoutzoom:
+    center
+    ease 0.7 zoom 1.0 yoffset 0
+
+
 #Efeito de fumaça
 transform smokespin:
     xpos 0.5
@@ -95,10 +105,10 @@ define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep, wh
 define padre = Character("Padre", image="padre", callback = low_beep, what_prefix='"', what_suffix='"')
 define urso = Character("Urso", image="urso", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
-define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep)
+define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep, what_prefix='"', what_suffix='"')
 default k.azul = 0
 default k.laranja = 0
-define character.a = Character("Alessandra Mallet", image="alessandra", callback = low_beep)
+define character.a = Character("Alessandra Mallet", image="alessandra", callback = low_beep, what_prefix='"', what_suffix='"')
 default a.azul = 0
 default a.laranja = 0
 
@@ -347,13 +357,13 @@ label start:
 
             show gatovaldo feliz
 
-            g "{i}\"Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos.\"{/i}" 
+            g "Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos." 
             
             g "Eu, claramente, sou Deus e vocês são os meus soldados mais bobinhos, mas eu gosto de vocês, e confio em vocês, agora, se me permitem, preciso me esconder dentro de algum sofá."
 
             hide gatovaldo
 
-            n "Ele vira as costas e sai da sala. Vocês dois se encaram confusos e se perguntam: \"que diabos de ditado foi esse?\""
+            n "Ele vira as costas e sai da sala. {w}Vocês dois se encaram confusos e se perguntam: \"que diabos de ditado foi esse?\""
 
             jump whereToGo
 
