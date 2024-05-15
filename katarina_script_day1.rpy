@@ -7,6 +7,8 @@
 ########################################################################################################################### 
 
 label d1kat1:
+    default escopeta = False
+
     play music "escritorio.mp3" volume 0.5
     $ katDay1 = False
     scene bg recepcao
@@ -270,6 +272,7 @@ label k1b6:
             jump k1a7
         "Procurar no caixa":
             jump k1b7
+            $ escopeta = True
         "Procurar no banheiro":
             jump k1c7
         "Procurar no escritório":
@@ -283,10 +286,11 @@ label k1a7:
     jump k1m3
 label k1b7:
     $ JogadorAtivo += 1
-    n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da maquina registradora"
+    n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da máquina registradora"
     k "Eai, algo que preste?"
     show katarina feliz
-    "Que massa, mais uma pro meu arsenal."
+    k "Que massa, mais uma pro meu arsenal."
+    k "Se não se importar, guarda ela contigo aí por enquanto, tô sem espaço"
     jump k1m3
 label k1c7:
     $ JogadorAtivo += 0
@@ -506,6 +510,14 @@ label k1m7:
     vo "Mas o que"
     k "Isso mesmo! mãos ao alto! isso é um assalto!"
     n "Ele paralisa, parece estar muito assustado"
+
+    menu:
+        "Você ouviu ela! *Apontar a escopeta para ele*" if escopeta:
+            jump k1a15
+            $ JogadorAtivo += 1
+        "*Não fazer nada*" if escopeta:
+            n "Você apenas deixa Katarina agir"
+
     show katarina feliz
     k "To te zoando!"
     n "Ela abaixa a arma"
@@ -548,16 +560,115 @@ label k1b14:
     jump k1m8
 
 label k1m8:
-    n "Vocês voltam até o carro, o picolé já está quase derretido, o calor está insuportável"
+    n "Vocês voltam até o carro, os picolés já estão quase derretidos, o calor está insuportável"
     show katarina feliz
     k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
     
     show katarina smirk
 
     extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
-    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar o carro.{p} Vocês partem"
+    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem"
 
     jump finalkat1
+
+label k1a15:
+    n "Katarina olha assustada para você, aparentemente ela não pretendia assaltar ele de verdade"
+    show katarina confusa
+    k "Mas..."
+    show katarina smirk
+    k "Pode ir abrindo o caminhão!"
+    n "De qualquer forma, ela parece ter gostado da sua atitude"
+    vo "Está bem! Está bem! só não me machuquem!
+    
+    menu:
+        "Investigar a cabine":
+            jump k1a16
+        "Investigar o baú":
+            jump k1b16
+    
+label k1a16:
+    n "Você prossegue para investigar a cabine, Katarina mantém o vovô de refém"
+    n "Parece uma cabine comum de caminhão, tem muitas coisas espalhadas pelos bancos e o porta-luvas está entreaberto"
+    show katarina default
+    k "Rápido aí, a estrada é deserta mas pode passar alguém a qualquer momento"
+    menu:
+        "Investigar o porta luvas":
+            jump k1a17
+        "Investigar os bancos":
+            jump k1b17
+
+label k1a17:
+    n "Você investiga o porta-luvas"
+    n "Você encontra..."
+    n "Luvas!"
+    menu:
+        "Achei umas luvas no... porta-luvas.":
+            k "O que? Quem que guarda luvas no porta-luvas? Você por acaso vai no coco bambu e pede coco ou bambu?"
+            n "Katarina diz ao vovô"
+            jump k1m9
+
+
+label k1b17:
+    n "Você investiga os bancos"
+    n "Há muitos papéis e embalagens de snacks"
+    n "Há muitas embalagens de Polenguinho"
+    menu:
+        "Tem umas embalagens de Polenguinho aqui no banco"
+            k "Polenguinho? Aquele queijo de bolso? Quem come esse tipo de coisa?"
+            n "Katarina diz ao vovô"
+            jump k1m9
+
+label k1b16:
+    n "Você prossegue para investigar o baú, Katarina mantém o vovô de refém"
+    n "É um baú refrigerado, há várias caixas de sorvete"
+    show katarina default
+    k "Procure onde ninguém procuraria! E seja rápido, a estrada é deserta, mas pode passar alguém a qualquer momento"
+    menu:
+        "Procurar no forro":
+            jump k1a18
+        "Procurar na sessão de sorvetes de queijo":
+            jump k1b18
+
+label k1a18:
+    n "Você procura por algo escondido no forro do baú"
+    n "Você encontra uma submetralhadora, uma máscara de gás e duas granadas de fumaça"
+    menu:
+        "Tem uma submetralhadora, uma máscara de gás, duas granadas de fumaça e um CD do Raça Negra":
+            k "Nenhum queijo?"
+            k "Que droga"
+            k "Espera, por que caralhos você tem um CD do Raça Negra escondido?"
+            n "Katarina diz ao vovô"
+            jump k1m9
+
+label k1b18:
+    n "Você procura por algo na sessão de sorvetes de queijo"
+    n "Você sabe que ninguém nunca chegaria perto daí"
+    n "Você abre um dos potes, parece normal a principio"
+    n "Você enfia a mão dentro dele, e tira um saco plástico de dentro dele"
+    n "Nele, há um exemplar de um queijo babilônico extremamente raro"
+    menu:
+        "Tem um queijo escondido no sorvete de queijo!":
+            k "Aha! Sabia! Se explica agora, velhote."
+            n "Katarina diz ao vovô"
+            jump k1m9
+
+label k1m9:
+    vo "É... é... é..."
+    n "Fumaça começa a sair dos ouvidos dele"
+    show katarina confusa 
+    k "Que porra é essa?"
+    n "O vovô cai, fazendo um grande barulho metálico com o impacto"
+    n "Um ratinho sai de sua boca e corre para o deserto"
+    k "..."
+    k "Isso realmente acabou de acontecer?"
+    k "Tá bom, colete as evidências, Gatovaldo vai gostar de saber disso"
+    k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão"
+    k "Mas agora a gente precisa dar o fora daqui"
+    n "Vocês pegam alguns picolés, já que ninguém está vendo"
+    jump k1m8
+
+
+
 
 label finalkat1:
     if jogador1:
