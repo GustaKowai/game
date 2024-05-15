@@ -522,8 +522,8 @@ label k1m7:
     k "To te zoando!"
     n "Ela abaixa a arma"
     k "É só uma pegadinha para o meu canal do youtube!"
-    vo "Ah.. Haha.. Entendi... Por favor me deixem ir eu tenho familia..."
-    n "Ele ainda está bem assustado"
+    vo "Ah.. Haha.. Entendi... Por favor me deixem ir eu tenho família..."
+    n "Ele ainda está bastante assustado"
     k "Calma! Toma aqui"
     n "Ela tira um maço de dinheiro da mochila"
     k "Me vê três picolés!"
@@ -604,7 +604,6 @@ label k1a17:
     menu:
         "Achei umas luvas no... porta-luvas.":
             k "O que? Quem que guarda luvas no porta-luvas? Você por acaso vai no coco bambu e pede coco ou bambu?"
-            n "Katarina diz ao vovô"
             jump k1m9
 
 
@@ -615,7 +614,6 @@ label k1b17:
     menu:
         "Tem umas embalagens de Polenguinho aqui no banco"
             k "Polenguinho? Aquele queijo de bolso? Quem come esse tipo de coisa?"
-            n "Katarina diz ao vovô"
             jump k1m9
 
 label k1b16:
@@ -637,7 +635,6 @@ label k1a18:
             k "Nenhum queijo?"
             k "Que droga"
             k "Espera, por que caralhos você tem um CD do Raça Negra escondido?"
-            n "Katarina diz ao vovô"
             jump k1m9
 
 label k1b18:
@@ -649,10 +646,10 @@ label k1b18:
     menu:
         "Tem um queijo escondido no sorvete de queijo!":
             k "Aha! Sabia! Se explica agora, velhote."
-            n "Katarina diz ao vovô"
             jump k1m9
 
 label k1m9:
+    n "Katarina diz ao vovô"
     vo "É... é... é..."
     n "Fumaça começa a sair dos ouvidos dele"
     show katarina confusa 
