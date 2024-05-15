@@ -287,6 +287,7 @@ label k1a7:
 label k1b7:
     $ JogadorAtivo += 1
     n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da máquina registradora"
+    $ escopeta = True
     k "Eai, algo que preste?"
     show katarina feliz
     k "Que massa, mais uma pro meu arsenal."
@@ -559,26 +560,16 @@ label k1b14:
     
     jump k1m8
 
-label k1m8:
-    n "Vocês voltam até o carro, os picolés já estão quase derretidos, o calor está insuportável"
-    show katarina feliz
-    k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
-    
-    show katarina smirk
-
-    extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
-    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem"
-
-    jump finalkat1
 
 label k1a15:
+    show katarina surpresa
     n "Katarina olha assustada para você, aparentemente ela não pretendia assaltar ele de verdade"
     show katarina confusa
     k "Mas..."
     show katarina smirk
     k "Pode ir abrindo o caminhão!"
     n "De qualquer forma, ela parece ter gostado da sua atitude"
-    vo "Está bem! Está bem! só não me machuquem!"
+    vo "Está bem! Está bem! Só não me machuquem!"
     
     menu:
         "Investigar a cabine":
@@ -603,7 +594,7 @@ label k1a17:
     n "Luvas!"
     menu:
         "Achei umas luvas no... porta-luvas.":
-            k "O que? Quem que guarda luvas no porta-luvas? Você por acaso vai no coco bambu e pede coco ou bambu?"
+            k brava "O que? Quem que guarda luvas no porta-luvas? Você por acaso vai no coco bambu e pede coco ou bambu?"
             jump k1m9
 
 
@@ -613,7 +604,7 @@ label k1b17:
     n "Há muitas embalagens de Polenguinho"
     menu:
         "Tem umas embalagens de Polenguinho aqui no banco":
-            k "Polenguinho? Aquele queijo de bolso? Quem come esse tipo de coisa?"
+            k surpresa "Polenguinho? Aquele queijo de bolso? Quem come esse tipo de coisa?"
             jump k1m9
 
 label k1b16:
@@ -632,9 +623,9 @@ label k1a18:
     n "Você encontra uma submetralhadora, uma máscara de gás e duas granadas de fumaça"
     menu:
         "Tem uma submetralhadora, uma máscara de gás, duas granadas de fumaça e um CD do Raça Negra":
-            k "Nenhum queijo?"
-            k "Que droga"
-            k "Espera, por que caralhos você tem um CD do Raça Negra escondido?"
+            k @surpresa "Nenhum queijo?"
+            k @irritada "Que droga"
+            k brava "Espera, por que caralhos você tem um CD do Raça Negra escondido?"
             jump k1m9
 
 label k1b18:
@@ -645,7 +636,7 @@ label k1b18:
     n "Nele, há um exemplar de um queijo babilônico extremamente raro"
     menu:
         "Tem um queijo escondido no sorvete de queijo!":
-            k "Aha! Sabia! Se explica agora, velhote."
+            k @smirk "Aha! Sabia! Se explica agora, velhote."
             jump k1m9
 
 label k1m9:
@@ -655,9 +646,12 @@ label k1m9:
     show katarina confusa 
     k "Que porra é essa?"
     n "O vovô cai, fazendo um grande barulho metálico com o impacto"
+    hide vovo with moveoutbottom
     n "Um ratinho sai de sua boca e corre para o deserto"
     k "..."
+    show katarina confusa at center with move
     k "Isso realmente acabou de acontecer?"
+    show katarina default
     k "Tá bom, colete as evidências, Gatovaldo vai gostar de saber disso"
     k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão"
     k "Mas agora a gente precisa dar o fora daqui"
@@ -665,6 +659,17 @@ label k1m9:
     jump k1m8
 
 
+label k1m8:
+    n "Vocês voltam até o carro, os picolés já estão quase derretidos, o calor está insuportável"
+    show katarina feliz
+    k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
+    
+    show katarina smirk
+
+    extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso"
+    n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem"
+
+    jump finalkat1
 
 
 label finalkat1:

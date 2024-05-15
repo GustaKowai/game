@@ -95,7 +95,7 @@ default gamsoGamer = False
 define pag = Character(' ', kind=nvl, color="#c8c8ff")
 define e = Character("Eileen", what_prefix='"', what_suffix='"')
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep, what_prefix='"', what_suffix='"')
-define n = Character("", callback = low_beep)
+define n = Character("", callback = low_beep, what_prefix='{i}', what_suffix='{/i}')
 define c = Character("Claudia", image="claudia", callback = low_beep, what_prefix='"', what_suffix='"')
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep, what_prefix='"', what_suffix='"')
 define gar = Character("Garçom", image="garcom", callback = low_beep, what_prefix='"', what_suffix='"')
