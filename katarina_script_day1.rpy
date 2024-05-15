@@ -39,6 +39,7 @@ label k1a1:
     c "Certo..."
     n "A recepcionista se levanta de sua cadeira e anda em direção a um grande botão vermelho escrito 'AMEAÇA NUCLEAR'"
     show bg recepcao at siren_tint()
+    show claudia default at siren_tint()
     
     play sound "alarm.wav" loop
     n "As luzes começam a piscar em vermelho e um som de alarme começa a tocar."
@@ -51,9 +52,8 @@ label k1a1:
     show katarina brava at siren_tint()
     with moveinright
     k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO, CLÁUDIA, 2 HORAS JÁ QUE EU PEDI"
-    show claudia default at siren_tint()
     c  "Senhorita Katarina! Essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
-    show katarina feliz at siren_tint()
+    show katarina feliz
     k "Ah! Você faz parte do movimento, o Gatovaldo me disse que apareceria."
     k "Claúdia, sempre que alguma pessoa esquisita assim aparecer por aqui pode liberar direto para a minha sala"
     k "Faz parte de uma nova terapia que estou experimentando"
