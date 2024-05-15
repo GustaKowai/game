@@ -513,9 +513,9 @@ image splash5 = "splash/5.png"
 image splash6 = "splash/6.png"
 
 label splashscreen:
+    play music "introMusic.ogg"
     scene black
     with Pause(1)
-    play music "windleaves.wav"
 
     play sound "honk.ogg"
     show text "GAMSo apresenta..." with dissolve

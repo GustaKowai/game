@@ -322,7 +322,7 @@ screen navigation():
 
         textbutton _("Sobre") action ShowMenu("about")
 
-        textbutton _("Galeria")
+        #textbutton _("Galeria")
         
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
