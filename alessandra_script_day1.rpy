@@ -516,7 +516,7 @@ label a1d9:
 
 
 label a1m7:
-    a "Sua vez agora, vou deixar escolher para mim."
+    a "Sua vez agora, vou deixar você escolher por mim."
 
     menu:
         "Verdade":
