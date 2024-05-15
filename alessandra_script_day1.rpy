@@ -293,7 +293,7 @@ label a1m3:
             $ JogadorAtivo += 0
             jump a1a5
         "Vamos pedir uma música.":
-            $ JogadorAtivo += 0
+            $ JogadorAtivo += 1
             jump a1b5
 
 label a1a5:
@@ -365,7 +365,7 @@ label a1a6:
 
     a "Mas tudo bem, você fez o desafio, isso que importa."
 
-    jump a1m4
+    jump a1m7
 
 label a1b6:
 
@@ -395,7 +395,7 @@ label a1a7:
 
     n "Ela não sabe que você perdeu os seus pais em um ataque de tubarão há dois anos atrás."
 
-    jump a1m4
+    jump a1m7
 
 label a1b7:
 
@@ -405,7 +405,7 @@ label a1b7:
 
     a "Brincadeira! precisando de mais remendos estou aqui para ajudar."
 
-    jump a1m4
+    jump a1m7
 
 label a1c7:
 
@@ -419,7 +419,7 @@ label a1c7:
 
     a "Quando tudo isso acabar daremos PT de pinga azul para comemorar!"
 
-    jump a1m4
+    jump a1m7
 
 label a1d7:
 
@@ -435,13 +435,14 @@ label a1d7:
 
     n "Ainda bem que ela não sabe que o seu filme favorito de todos os tempos é 'Cada Um Tem a Gêmea Que Merece'."
 
-    jump a1m4
+    jump a1m7
 
 label a1a8:
 
     show alessandra default
 
     a "Falei para ela ajeitar a postura kkkkk"
+    n "Você percebe que ela realmenete é meio torta"
 
     jump a1c8
 
@@ -449,14 +450,12 @@ label a1b8:
 
     show alessandra smirk
 
-    a "Sei lá! Só acho engraçado, e eu genuinamente prefiro o Calcinha Preta"
+    a "Sei lá! Só acho engraçado tirar uma com a cara dela"
 
     jump a1c8
 
 
 label a1c8:
-
-    n "Você percebe que ela realmenete é meio torta"
 
     show alessandra default
 
@@ -513,7 +512,11 @@ label a1d9:
 
     a "Ok, você é bem inocente mesmo, fico feliz por não ter deixado na cara."
 
-    a "Sua vez agora, vou te deixar escolher."
+    jump a1m4
+
+
+label a1m7:
+    a "Sua vez agora, vou deixar escolher para mim."
 
     menu:
         "Verdade":
@@ -546,7 +549,6 @@ label a1d9:
 
             show alessandra smirk
             a "Desculpa, não resisti!"
-
 
     jump a1m4
 
