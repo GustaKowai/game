@@ -578,7 +578,7 @@ label k1a15:
     show katarina smirk
     k "Pode ir abrindo o caminhão!"
     n "De qualquer forma, ela parece ter gostado da sua atitude"
-    vo "Está bem! Está bem! só não me machuquem!
+    vo "Está bem! Está bem! só não me machuquem!"
     
     menu:
         "Investigar a cabine":
@@ -612,7 +612,7 @@ label k1b17:
     n "Há muitos papéis e embalagens de snacks"
     n "Há muitas embalagens de Polenguinho"
     menu:
-        "Tem umas embalagens de Polenguinho aqui no banco"
+        "Tem umas embalagens de Polenguinho aqui no banco":
             k "Polenguinho? Aquele queijo de bolso? Quem come esse tipo de coisa?"
             jump k1m9
 
