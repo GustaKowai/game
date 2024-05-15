@@ -81,10 +81,18 @@ Objetivos concluidos na semanade 08/05-14/05:
 - Terceiro dia da Alessandra escrito
 - Katarina também tem a animação de piscar
 
+Objetivos concluidos na semanade 15/05-22/05:
+
+- Musica de Intro adicionada
+- Musica de Menu adicionada
+- Musica do Atelie adicionada
+- Novas sprites para o gatovaldo apresentando as novatas
+- Mudanças no dia 1 da Katarina
+- Cláudia brava adicionada
+
 Objetivos em andamento:
 
 - Arte:
-  - Cláudia brava
   - Cláudia triste
   - Katarina com um sorriso triste
   - Katarina com máscara de Halloween
@@ -98,7 +106,6 @@ Objetivos em andamento:
   - padre com o braço decepado
 - História
   - História secreta (opcional)
-  - Terceiro dia da Alessandra
 - Programação:
   - Achievements
   - Investigação na parte noturna dos dias 2 e 3
@@ -110,7 +117,6 @@ Objetivos em andamento:
     - Sons da fala dos personagens (se possível mudar um pouco os sons para cada personagem ter um próprio)
     - Som de partida de moto (talvez)
   - Músicas de fundo:
-    - Main Menu
     - Quartel da Revolução
     - Missões Katarina:
       - Escritório
@@ -119,7 +125,6 @@ Objetivos em andamento:
       - Banco (tem 3 áreas, a externa, a recepção e o cofre)
       - Floresta
     - Missões Alessandra:
-      - Atelier
       - Restaurante
       - Igreja (tem 2 áreas, interna e externa)
       - Cidade (tem a cidade e o beco)
