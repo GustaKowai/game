@@ -654,8 +654,8 @@ label k1m9:
     show katarina default
     k "Tá bom, colete as evidências, Gatovaldo vai gostar de saber disso"
     k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão"
-    k "Mas agora a gente precisa dar o fora daqui"
-    n "Vocês pegam alguns picolés, já que ninguém está vendo"
+    k "Agora a gente precisa dar o fora daqui"
+    k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
     jump k1m8
 
 
