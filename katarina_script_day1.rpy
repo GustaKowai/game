@@ -116,8 +116,10 @@ label k1m1:
     k "Huuum... Certo, já te conheço.{w} Sua vez, me faz uma pergunta"
     menu:
         "Você pesquisou informações minhas na internet?":
+            $ JogadorAtivo += 0
             jump k1a2
         "O que são aquelas cabeças empalhadas com joias no lugar dos olhos?":
+            $ JogadorAtivo += 1
             jump k1b2       
 label k1a2:
     show katarina default
@@ -127,7 +129,6 @@ label k1a2:
     k "Acho que já podemos ir, eu vou dirigindo!"
     menu:
         "Ir para a missão":
-            $ JogadorAtivo += 0
             jump missaokat1
 label k1b2:
     show katarina feliz
@@ -140,7 +141,6 @@ label k1b2:
     k "Acho que já podemos ir, eu vou dirigindo!"
     menu:
         "Ir para a missão":
-            $ JogadorAtivo += 1
             jump missaokat1
 label missaokat1:
     scene bg deserto
@@ -269,23 +269,25 @@ label k1b6:
     n "Vocês entram na loja, parece ter algumas coisas para explorar"
     menu:
         "Procurar nas prateleiras":
+            $ JogadorAtivo += 1
             jump k1a7
         "Procurar no caixa":
+            $ JogadorAtivo += 1
             jump k1b7
             $ escopeta = True
         "Procurar no banheiro":
+            $ JogadorAtivo += 0
             jump k1c7
         "Procurar no escritório":
+            $ JogadorAtivo += 1
             jump k1d7
 label k1a7:
-    $ JogadorAtivo += 1
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{p}Ele venceu há 2 anos"
     k "Eai, algo que preste?"
     show katarina muitofeliz
     k "Caralho! esse era edição limitada, valeu!"
     jump k1m3
 label k1b7:
-    $ JogadorAtivo += 1
     n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da máquina registradora"
     $ escopeta = True
     k "Eai, algo que preste?"
@@ -294,7 +296,6 @@ label k1b7:
     k "Se não se importar, guarda ela contigo aí por enquanto, tô sem espaço"
     jump k1m3
 label k1c7:
-    $ JogadorAtivo += 0
     n "Você procura por coisas no banheiro..."
     n "Parece que alguém recentemente passou por aí"
     n "Você se arrepende da sua escolha"
@@ -303,7 +304,6 @@ label k1c7:
     "Pelo seu silêncio, julgo que coisa boa não foi"
     jump k1m3
 label k1d7:
-    $ JogadorAtivo += 1
     n "Você procura por coisas no escritório, e acha uma edição física de um filme nomeado 'Sharkula', aparentemente sobre um tubarão vampiro"
     n "Parece ser terrível"
     k "Eai, algo que preste?"

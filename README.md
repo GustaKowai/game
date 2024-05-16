@@ -89,6 +89,8 @@ Objetivos concluidos na semanade 15/05-22/05:
 - Novas sprites para o gatovaldo apresentando as novatas
 - Mudanças no dia 1 da Katarina
 - Cláudia brava adicionada
+- Flowchart do dia 1 da Alessandra
+- Flowchart do dia 1 da Katarina
 
 Objetivos em andamento:
 
@@ -129,6 +131,7 @@ Objetivos em andamento:
       - Igreja (tem 2 áreas, interna e externa)
       - Cidade (tem a cidade e o beco)
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazedo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
+
 Em breve:
 
 - Arte:
