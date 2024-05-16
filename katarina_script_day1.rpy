@@ -514,8 +514,8 @@ label k1m7:
 
     menu:
         "Você ouviu ela! *Apontar a escopeta para ele*" if escopeta:
-            jump k1a15
             $ JogadorAtivo += 1
+            jump k1a15
         "*Não fazer nada*" if escopeta:
             n "Você apenas deixa Katarina agir"
 
