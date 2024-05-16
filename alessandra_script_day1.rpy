@@ -131,7 +131,7 @@ label a1m1:
     
     scene bg restaurante
     with gatodissolve
-    play music "restaurante.mp3" volume 0.5
+    play music "restaurante.wav"
 
     n "E para em frente a um estabelecimento que se parece com um palácio."
 
