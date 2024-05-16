@@ -621,6 +621,8 @@ label a1m4:
 
     traf "Sim! O chefe de vocês, não é?"
 
+    show alessandra default with dissolve
+
     traf "Okay. Bem. Vamos direto ao ponto."
 
     n "O traficante recosta-se na cadeira e começa a falar em um tom sério."
@@ -789,7 +791,16 @@ label a1b10:
 
     a "Já sei!"
 
+    show alessandra default at easeoutzoom
+
     n "Ela vira de volta ao traficante."
+
+    show alessandra default at right
+    with move
+
+    show traficante default at left
+    with moveinleft
+
 
     a "Então, meu querido, o nosso preço também aumentou."
 
@@ -867,7 +878,16 @@ label a1c10:
 
     a "Arriscado, mas dá pra gente tentar... "
 
+    show alessandra default at easeoutzoom
+
     n "Ela vira de volta ao traficante."
+
+    show alessandra default at right
+    with move
+
+    show traficante default at left
+    with moveinleft
+
 
     a "E como exatamente a gente sabe que você está falando a verdade?"
 
@@ -960,7 +980,16 @@ label a1d10:
 
     a "Ele é um gênio!"
 
+    show alessandra default at easeoutzoom
+
     n "Ela vira de volta ao traficante."
+
+    show alessandra default at right
+    with move
+
+    show traficante default at left
+    with moveinleft
+
 
     show alessandra brava
 
