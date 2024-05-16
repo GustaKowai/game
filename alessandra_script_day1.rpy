@@ -767,7 +767,7 @@ label a1a10:
     show alessandra brava at center
     with move
 
-    show alessandra risada
+    show alessandra sorriso
     a "KKKKKKKK"
     a "Aquele otário vai levar meu catarro pra casa"
 
