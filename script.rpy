@@ -4,19 +4,19 @@
 init python:
     def low_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="textSound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
     def mid_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="textSound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
     def high_beep(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="textSound", loop=True)
+            renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
@@ -423,7 +423,7 @@ label start:
                 "Para o Ateliê da Alessandra" if aleDay3:
                     jump d3ale1
             
-            jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+            #jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
             jump changeDay                                    
 
     ########################################################################################################################### 
@@ -462,9 +462,9 @@ label start:
             #"katDay1[katDay1], katDay2[katDay2], katDay3[katDay3]"
             #"aleDay1[aleDay1], aleDay2[aleDay2], aleDay3[aleDay3]"
 
-            jump whereToGo
+            #jump whereToGo
 
-                #jump demoFinal
+            jump demoFinal
 
     ########################################################################################################################### 
     #######################################----------Final da Demo-----------##################################################
@@ -476,10 +476,10 @@ label start:
 
             g "Vocês terminaram a demo! Espero que tenham se divertido."
 
-            g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de 10 pontos disponíveis com a Katarina \ne [a.azul] de 10 pontos disponíveis com a Alessandra"
+            g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de 10 pontos disponíveis com a Katarina \ne [a.azul] de 11 pontos disponíveis com a Alessandra"
 
             
-            g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 10 pontos disponíveis com a Katarina \ne [a.laranja] de 10 pontos disponíveis com a Alessandra"
+            g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 10 pontos disponíveis com a Katarina \ne [a.laranja] de 11 pontos disponíveis com a Alessandra"
 
             g "Espero que tenham se divertido, em breve teremos mais missões."
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
