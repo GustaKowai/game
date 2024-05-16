@@ -824,7 +824,7 @@ label a1b10:
 
     traf "{size=+10} {cps=*0.2}ESSE-{/cps}{w}{cps=*2} NÃO ME DIGA QUE ESSE DIAMANTE FOI UTILIZADO NO FIGURINO DA KATY PERRY EM DARK HORSE, FOI?{/cps}{/size}"
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
     n "Alessandra finge surpresa."
 
@@ -832,7 +832,7 @@ label a1b10:
 
     a "Eu pensei que ele não fosse descobrir... Como?"
 
-    show alessandra confusa
+    show alessandra confusa with dissolve
 
     n "Ela te dá uma piscadinha sutil."
 
@@ -844,7 +844,7 @@ label a1b10:
 
     n "Eles realizam a troca entre a arma e o diamante."
 
-    show alessandra feliz
+    show alessandra feliz with dissolve
 
     a "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
 
@@ -874,7 +874,7 @@ label a1b10:
 
 label a1c10:
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Arriscado, mas dá pra gente tentar... "
 
@@ -901,7 +901,7 @@ label a1c10:
 
     traf "Não! Digo, não sei? Só tô tentando te entender."
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Me empresta isso aqui, vou transformar aquele cara sozinho ali em tofu. Se ninguém perceber e a gente não for preso o diamante é todo seu."
 
@@ -933,7 +933,7 @@ label a1c10:
     n "Ela atira nele."
     n "Por um momento, você se questiona por que tem um tofu na cadeira com vocês"
 
-    show alessandra confusa
+    show alessandra confusa with dissolve
     
     a "Espera... Isso realmente aconteceu?"
 
