@@ -182,19 +182,22 @@ image alessandra seria:
 image alessandra seria2:
     "/images/Alessandra Resize/ASeria (3).png"
 
+image alessandra confusa:
+    "/images/Alessandra Resize/AConfusa (1).png"
+
 image alessandra sorriso:
     "/images/Alessandra Resize/ASorriso.png"
 
-image alessandra test:
-    "/images/Alessandra Resize/Atest (1).png"
+image alessandra confusa2:
+    "/images/Alessandra Resize/AConfusa2 (1).png"
     pause 2
-    "/images/Alessandra Resize/Atest (2).png"
+    "/images/Alessandra Resize/AConfusa2 (2).png"
     pause .05
-    "/images/Alessandra Resize/Atest (3).png"
+    "/images/Alessandra Resize/AConfusa2 (3).png"
     pause .07
-    "/images/Alessandra Resize/Atest (2).png"
+    "/images/Alessandra Resize/AConfusa2 (2).png"
     pause .05
-    "/images/Alessandra Resize/Atest (1).png"
+    "/images/Alessandra Resize/AConfusa2 (1).png"
     pause 3
     repeat
 
