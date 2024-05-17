@@ -261,7 +261,12 @@ label k1a5:
     n "Ela tira uma foto da aranha estraçalhada no chão."
     
     k "Puta que pariu... Era uma demonius Dosinfernus..."
+
+    show bg loja
+    with gatodissolve
+    
     n "Vocês entram na loja, parece ter algumas coisas para explorar."
+
     
     menu:
         "Procurar nas prateleiras":
@@ -292,6 +297,10 @@ label k1a6:
     k "Ah, espera... Droga, acho que guardei meu lança chamas portátil no lugar errado, que porra..."
     show katarina default with dissolve
     k "Enfim, bora entrar nessa loja conveniente."
+
+    show bg loja
+    with gatodissolve
+
     n "Vocês entram na loja, parece ter algumas coisas para explorar."
     menu:
         "Procurar nas prateleiras":
@@ -308,6 +317,10 @@ label k1b6:
     k "CARALHO, QUE FODA, É UMA DEMONIUS DOSINFERNUS! Nunca tinha visto uma dessa espécie, muito obrigada! Vou levar ela para o meu zoológico particular."
     show katarina feliz with dissolve
     k "Enfim, bora entrar nessa loja conveniente."
+
+    show bg loja
+    with gatodissolve
+
     n "Vocês entram na loja, parece ter algumas coisas para explorar."
     menu:
         "Procurar nas prateleiras":
