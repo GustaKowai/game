@@ -243,13 +243,13 @@ image katarina brava:
 
 image katarina muitofeliz:
     "/images/Katarina Resize/Kmuitofeliz (1).png"
-    pause .05
+    pause .1
     "/images/Katarina Resize/Kmuitofeliz (2).png"
-    pause .05
+    pause .1
     "/images/Katarina Resize/Kmuitofeliz (1).png"
-    pause .05
+    pause .1
     "/images/Katarina Resize/Kmuitofeliz (3).png"
-    pause 3
+    pause .1
     repeat
 
 image katarina irritada:
@@ -333,10 +333,23 @@ image claudia default:
     pause 4.3
     repeat
 
-image claudia brava:
-    "/images/Claudia Resize/Cbrava (1).png"
+image claudia thinking:
+    "/images/Claudia Resize/CThinking (1).png"
+    pause 1.5
+    "/images/Claudia Resize/CThinking (2).png"
+    pause .05
+    "/images/Claudia Resize/CThinking (3).png"
+    pause .07
+    "/images/Claudia Resize/CThinking (2).png"
+    pause .05
+    "/images/Claudia Resize/CThinking (1).png"
+    pause 4.3
+    repeat
 
 image claudia brava:
+    "/images/Claudia Resize/Cbrava.png"
+
+image claudia feliz:
     "/images/Claudia Resize/Cdefault (3).png"
 
 ## Gatovaldo
