@@ -1,5 +1,5 @@
 ﻿# The script of the game goes in this file.
-#transicoes:
+# Sons das falas dos personagens
 
 init python:
     def low_beep(event, **kwargs):
@@ -46,6 +46,8 @@ init python:
         if newChannel is not None:
             renpy.music.play(music, channel=newChannel, loop=None,fadein=fadeTime)
 
+
+#transicoes:
 
 transform bounce:
     pause .15
