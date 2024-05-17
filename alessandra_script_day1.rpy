@@ -1248,7 +1248,9 @@ label a1b15:
 
 label a1m6:
 
+
     n "Ela dá uma garfada."
+    $ audio_crossFade(8, "tensao.wav")
 
     show alessandra assustada with dissolve
 
@@ -1299,7 +1301,7 @@ label a1a17:
 
     n "Você está confuso, mas ela parece ter um bom motivo para estar assustada."
 
-
+    stop music1 fadeout 2.0
     jump finalale1
 
 
