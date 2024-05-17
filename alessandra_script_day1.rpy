@@ -21,7 +21,7 @@ label d1ale1:
         with fadeL
     
     n "Você chega em um prédio antigo, em um bairro estranho da cidade. Ao mesmo tempo, ele parece confortante e assustador."
-    n "Gatovaldo te passou esse endereço e disse que você e Alessandra se encontrariam com algum tipo de informante"
+    n "Gatovaldo te passou esse endereço e disse que você e Alessandra se encontrariam com algum tipo de informante."
     n "Ao passar pela entrada, um sininho toca em cima de você."
 
     menu:
@@ -50,8 +50,7 @@ label a1a1:
         "Nunca diga \"Tem alguém aí?\".{w} Já assisti filmes de terror o suficiente." 
         "{cps=*0.2}Traz má sorte. {/cps}"
     
-    show alessandra sorriso
-    with moveinbottom
+    show alessandra sorriso with moveinbottom
 
     if alguem:
         a "Tô zoando!"
@@ -118,7 +117,7 @@ label a1b2:
     a "Sim! No restaurante de luxo com a reserva mais disputada da cidade."
     
     show alessandra eyeroll with dissolve 
-    a "E, na realidade, nosso amigo está mais para traficante do que informante, só para te avisar"
+    a "E, na realidade, nosso amigo está mais para traficante do que informante, só para te avisar."
 
     jump a1m1
 
@@ -131,7 +130,8 @@ label a1m1:
     
     scene bg restaurante
     with gatodissolve
-    play music "restaurante.wav"
+    stop music fadeout 1.0
+    play music "restaurante.wav" 
 
     n "E para em frente a um estabelecimento que se parece com um palácio."
 
@@ -164,7 +164,7 @@ label a1m1:
 label a1a3:
 
     show alessandra default with dissolve
-    a "É, poxa, esse diamante já fez parte de um visual que eu desenhei para ele. É aquele cara da banda 30 minutos para o fim do mundo, ou sei lá o que, ele já fez alguns filmes também, se não me engano, é o que daremos em troca pela arma."
+    a "É, poxa, esse diamante já fez parte de um visual que eu desenhei para ele. É aquele cara da banda 30 minutos para o fim do mundo, ou sei lá o que. Ele já fez alguns filmes também, se não me engano. É o que daremos em troca pela arma."
 
     jump a1m2
 
@@ -172,7 +172,7 @@ label a1b3:
 
     show alessandra triste with dissolve
     a "Hoje é sexta, pensei que colocariam alguém de mais prestígio."
-    a "Tipo, sei lá, o Calcinha Preta"
+    a "Tipo, sei lá, o Calcinha Preta."
 
     jump a1m2
 
@@ -215,11 +215,14 @@ label a1a4:
 
     gar "Pois não?"
 
-    a "Gostaria de um Frango Picatta com salada, pode fazer dois, para a gente"
+    a "Gostaria de um Frango Picatta com salada, pode fazer dois, para a gente."
 
 
     hide garcom
     with moveoutleft
+
+    show alessandra default at center
+    with move
 
     jump a1m3
     
@@ -253,10 +256,12 @@ label a1c4:
     with moveoutleft
 
 
-    show alessandra surpresa with dissolve
-    k "Uau, você sabe que acabou de pedir dois queijos coalhos e uma sprite, né?"
+    show alessandra surpresa at center
+    with move
 
-    k "Tem coisa melhor aqui, mas aprecio sua ousadia."
+    a "Uau, você sabe que acabou de pedir dois queijos coalhos e uma sprite, né?"
+
+    a "Tem coisa melhor aqui, mas aprecio sua ousadia."
 
     jump a1m3
     
@@ -264,8 +269,7 @@ label a1m3:
 
     n "O garçom sai com o pedido, mas vocês inevitavelmente voltam à espera."
 
-    show alessandra triste at center
-    with move
+    show alessandra triste with dissolve
 
     a "Que tédio..."
 
@@ -298,7 +302,7 @@ label a1m3:
 
 label a1a5:
 
-    a "Verdade ou desafio? Gostei, eu começo, verdade ou desafio?"
+    a "Verdade ou desafio? Gostei, eu começo. Verdade ou desafio?"
     
     menu:
         "Verdade":
@@ -318,7 +322,7 @@ label a1b5:
     
     a "Toma! Leva isso para ela."
 
-    n "Você leva o papel para a mulher no palco. {w} Ela lê, fecha a cara, amassa o papel e joga em você"
+    n "Você leva o papel para a mulher no palco. {w} Ela lê, fecha a cara, amassa o papel e joga em você."
 
     show alessandra smirk with dissolve
 
@@ -336,9 +340,9 @@ label a1b5:
 label a1a6:
     a "Te desafio a ir até aquele garçom e falar que ele está servindo horrores."
 
-    hide alessandra
+    hide alessandra with dissolve
 
-    show garcom default
+    show garcom default with dissolve
 
     n "Você vai até o garçom..."
     n "Vocês dois se olham em silêncio por alguns segundos."
@@ -357,11 +361,12 @@ label a1a6:
 
     n "Ele sai andando em passos rápidos enxugando lágrimas nos olhos disfarçadamente."
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
     a "Ué? O que aconteceu? Você não falou que ele estava bem vestido?"
     a "Amei o uniforme do pessoal daqui, não entendi como alguém poderia se magoar com um elogio."
 
+    show alessandra default with dissolve
 
     a "Mas tudo bem, você fez o desafio, isso que importa."
 
@@ -387,11 +392,13 @@ label a1b6:
 
 label a1a7:
 
-    show alessandra feliz
+    show alessandra sorriso with dissolve
 
     a "E quem não tem? Bobinho... Esses bichos foram criados para fazer as pessoas borrarem as calças."
 
     a "Tudo culpa do Spielberg!"
+
+    show alessandra default with dissolve
 
     n "Ela não sabe que você perdeu os seus pais em um ataque de tubarão há dois anos atrás."
 
@@ -399,9 +406,12 @@ label a1a7:
 
 label a1b7:
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
     a "Nossa, você está mais remendado do que muitas roupas com que trabalhei, espero que isso não venha a nos atrapalhar."
+
+
+    show alessandra smirk with dissolve
 
     a "Brincadeira! precisando de mais remendos estou aqui para ajudar."
 
@@ -409,13 +419,15 @@ label a1b7:
 
 label a1c7:
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
-    a "Realmente, nenhuma experiência é individual"
+    a "Realmente, nenhuma experiência é individual."
+
+    show alessandra triste with dissolve
 
     a "Eu sei bem como é..."     
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Quando tudo isso acabar daremos PT de pinga azul para comemorar!"
 
@@ -423,14 +435,16 @@ label a1c7:
 
 label a1d7:
 
-    show alessandra brava
+    show alessandra brava with dissolve
 
     a "Acho que essa foi a pior coisa que você poderia ter me contado."
 
+    show alessandra seria with dissolve
     a "Por muito tempo..."
 
-    a "Meio que só passavam filmes do Adam Sandler na minha televisão"
+    a "Meio que só passavam filmes do Adam Sandler na minha televisão."
 
+    show alessandra triste with dissolve
     a "É difícil de explicar..."
 
     n "Ainda bem que ela não sabe que o seu filme favorito de todos os tempos é 'Cada Um Tem a Gêmea Que Merece'."
@@ -439,16 +453,16 @@ label a1d7:
 
 label a1a8:
 
-    show alessandra default
+    show alessandra sorriso with dissolve
 
-    a "Falei para ela ajeitar a postura kkkkk"
-    n "Você percebe que ela realmenete é meio torta"
+    a "Falei para ela ajeitar a postura!"
+    n "Você percebe que ela realmenete é meio torta."
 
     jump a1c8
 
 label a1b8:
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Sei lá! Só acho engraçado tirar uma com a cara dela"
 
@@ -456,8 +470,8 @@ label a1b8:
 
 
 label a1c8:
-
-    show alessandra default
+ 
+    show alessandra default with dissolve
 
     a "Aliás, será que eu deixei muito claro meu gosto musical? Odeio fazer isso. Detesto ser previsível, me fala algo que você acha que eu gosto."
 
@@ -477,7 +491,7 @@ label a1c8:
 
 label a1a9:
 
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
 
     a "Emo? Sério? Olha para a minha cara!"
 
@@ -487,7 +501,7 @@ label a1a9:
 
 label a1b9:
 
-    show alessandra brava
+    show alessandra eyeroll with dissolve
 
     a "Odeio, fez um feat com a Taylor."
 
@@ -508,7 +522,7 @@ label a1c9:
 
 label a1d9:
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Ok, você é bem inocente mesmo, fico feliz por não ter deixado na cara."
 
@@ -516,38 +530,41 @@ label a1d9:
 
 
 label a1m7:
+    show alessandra default with dissolve
     a "Sua vez agora, vou deixar você escolher por mim."
 
     menu:
         "Verdade":
             a "Hummm... Deixa eu pensar..."
-            show alessandra assustada
-            a "Ok, a verdade é que eu não confio em absolutamente ninguém daqui"
-            show alessandra feliz
+            show alessandra seria with dissolve
+            a "Ok, a verdade é que eu não confio em absolutamente ninguém daqui."
+            show alessandra sorriso with dissolve
             a "Menos você, eu confio em ti."
-            show alessandra default
-            a "Mas fica esperto"
+            show alessandra smirk with dissolve
+            a "Mas fica esperto."
 
         "Desafio":
             $ lenco = True
-            n "Você desafia Alessandra a pedir um autógrafo para a Taylor"
+            n "Você desafia Alessandra a pedir um autógrafo para a Taylor."
             
-            show alessandra brava
+            show alessandra eyeroll with dissolve
             a "Que humilhação... Tantos adolescentes perto daquele palco e você quer que eu vá até lá pedir um autógrafo?"
 
             a "Argh, tudo bem, um desafio é um desafio"
 
-            n "Ela levanta da mesa e volta depois de alguns minutos"
+            hide alessandra with dissolve
+            n "Ela levanta da mesa e volta depois de alguns minutos."
 
+            show alessandra default with dissolve
             a "Aqui está."
 
             n "Ela te mostra um lenço com a assinatura da cantora."
 
             a "A-a-ATCHIM!"
 
-            n "Ela espirra e assoa o nariz no lenço"
+            n "Ela espirra e assoa o nariz no lenço."
 
-            show alessandra smirk
+            show alessandra smirk with dissolve
             a "Desculpa, não resisti!"
 
     jump a1m4
@@ -555,11 +572,13 @@ label a1m7:
 label a1m4:
 
 
-    show alessandra assustada with dissolve
+    show alessandra default with dissolve
 
     a "Eita, acho que ele chegou."
 
     n "Você olha para trás, e vê um homem parrudo e amedrontador, usando roupas formais, de óculos escuros. Ele está se aproximando da mesa de vocês."
+
+    show alessandra assustada with dissolve
 
     a "A gente tá fudido, olha o tamanho desse cara."
 
@@ -582,7 +601,7 @@ label a1m4:
 
     a "..."
 
-    show alessandra feliz with dissolve
+    show alessandra sorriso with dissolve
 
     a "Ah, acho que era o segurança..."
 
@@ -602,6 +621,7 @@ label a1m4:
     with move
 
     show traficante default at left
+    with moveinleft
     
     traf "Vocês são que são Alessandra e-"
 
@@ -614,6 +634,8 @@ label a1m4:
     show alessandra default with dissolve
 
     traf "Esse lugar que o Gatovaldo escolheu é camp!"
+
+    show traficante default at bounce
     traf "Tipo, a Taylor está tocando aqui! Eu nem sabia que ela tocava em restaurantes!"
 
     show alessandra confusa with dissolve
@@ -710,6 +732,8 @@ label a1a10:
 
     n "Ele começa a pensar."
 
+    show traficante default at shake
+
     traf "ESPERA, essa não é a assinatura da Taylor, é?"
 
     show alessandra default with dissolve
@@ -725,7 +749,7 @@ label a1a10:
 
     show alessandra default with dissolve
 
-    n "Ele fica paralisado por um tempo, como se tivesse o Santo Graal a sua frente"
+    n "Ele fica paralisado por um tempo, como se tivesse o Santo Graal a sua frente."
     traf "Eu... Eu preciso conversar com o meu assistente."
 
     hide traficante
@@ -766,12 +790,9 @@ label a1a10:
     hide traficante
     with moveoutleft
 
-    show alessandra brava at center
+    show alessandra sorriso at center
     with move
-
-    show alessandra sorriso
-    a "KKKKKKKK"
-    a "Aquele otário vai levar meu catarro pra casa"
+    a "Aquele otário vai levar meu catarro pra casa."
 
     menu:
         "Me sinto mal por termos enganado ele.":
@@ -783,11 +804,11 @@ label a1a10:
 
 label a1b10:
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Agora você falou a minha língua, e se a gente disser que..."
 
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "Já sei!"
 
@@ -806,14 +827,16 @@ label a1b10:
 
     traf "O quê?!"
 
-    a "Isso mesmo, ta vendo esse diamante aqui?"
+    a "Isso mesmo, tá vendo esse diamante aqui?"
 
     traf "Sim, o do Jared Leto, o que tem nele?"
 
+    show alessandra smirk with dissolve
     a "Então, ele não fez parte de um look só do Jared Leto."
 
     traf "Não? Espera, o que você quer dizer com isso?"
 
+    show alessandra default with dissolve
     a "Quero dizer que eu já reaproveitei ele em outro grande visual{w} e se você adivinhar qual foi esse outro visual eu trocarei ele pela arma e não requisitarei mais nada de você."
 
     traf "E-eu posso analisá-lo?"
@@ -822,7 +845,7 @@ label a1b10:
 
     n "Ele começa a observar minuciosamente o diamante, cheirando-o, ouvindo-o, sentindo-o. Até que paralisa em choque."
 
-    traf "{size=+10} {cps=*0.2}ESSE-{/cps}{w}{cps=*2} NÃO ME DIGA QUE ESSE DIAMANTE FOI UTILIZADO NO FIGURINO DA KATY PERRY EM DARK HORSE, FOI?{/cps}{/size}"
+    traf "{size=+10}{cps=*0.2}ESSE-{/cps}{w}{cps=*2} NÃO ME DIGA QUE ESSE DIAMANTE FOI UTILIZADO NO FIGURINO DA KATY PERRY EM DARK HORSE, FOI?{/cps}{/size}"
 
     show alessandra surpresa with dissolve
 
@@ -832,9 +855,9 @@ label a1b10:
 
     a "Eu pensei que ele não fosse descobrir... Como?"
 
-    show alessandra confusa with dissolve
-
     n "Ela te dá uma piscadinha sutil."
+
+    show alessandra smirk with dissolve
 
     a "Certo, trato é trato, você acertou, eu aceito trocá-lo pela arma nessas condições."
 
@@ -844,7 +867,7 @@ label a1b10:
 
     n "Eles realizam a troca entre a arma e o diamante."
 
-    show alessandra feliz with dissolve
+    show alessandra sorriso with dissolve
 
     a "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
 
@@ -858,9 +881,9 @@ label a1b10:
 
     a "Mas que figura, ein?"
 
-    show alessandra feliz
+    show alessandra sorriso with dissolve
 
-    extend "Todo dia sai de casa um malandro e um otário, bate aqui!"
+    extend " Todo dia sai de casa um malandro e um otário, bate aqui!"
 
     n "Você retribui o cumprimento dela."
 
@@ -907,15 +930,20 @@ label a1c10:
 
     traf "Espera! Mas por que aquele homem?"
 
+    show alessandra default with dissolve
+
     a "Porque ele... Está sozinho?"
 
     traf "Ele pode apenas estar exercendo a sua liberdade! O que te garante que ele não tenha alguém esperando por ele em casa?"
 
-    a "Cara, ninguém vai comer sozinho em um restaurante desses, esse aí deve ser um milhonário serial killer excêntrico"
+    show alessandra eyeroll with dissolve
+    a "Cara, ninguém vai comer sozinho em um restaurante desses, esse aí deve ser um milhonário serial killer excêntrico."
 
     traf "Tá bom... Só toma cuidado para mirar certo e para não levantar nenhum tipo de suspeita."
 
     n "Ele entrega a arma tofuzadora pra ela."
+
+    show alessandra default with dissolve
 
     a "Só uma dúvida, como exatamente isso vai funcionar mesmo? Ele vai virar tofu e todo mundo aqui em volta não vai entender nada?"
 
@@ -927,13 +955,17 @@ label a1c10:
     traf "Gata, estou sim, mas caso não tenha percebido ainda, eu não me interesso por-"
     traf "Espera,{w} {size=+20}NÃO!{/size}"
 
-    show traficante tofu
-    with flashbulb
+
+    show white with dissolve
+    hide traficante
+    show alessandra confusa2 at center
+    pause 2.0
+    show cgAle1 with dissolve
+    hide white
+
 
     n "Ela atira nele."
-    n "Por um momento, você se questiona por que tem um tofu na cadeira com vocês"
-
-    show alessandra confusa with dissolve
+    n "Por um momento, você se questiona por que tem um tofu na cadeira com vocês."
     
     a "Espera... Isso realmente aconteceu?"
 
@@ -943,20 +975,24 @@ label a1c10:
     menu:
         "Comer o tofu que está na cadeira do seu lado.":
             $ JogadorAtivo += 0
+            hide cgAle1 with dissolve
             jump a1a13
         "Oferecer o tofu a ela.":
             $ JogadorAtivo += 1
+            hide cgAle1 with dissolve
             jump a1b13
+
+
 
 label a1d10:
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Aquele gato vagabundo deve estar dormindo, mas vale a pena a tentativa."
 
     n "Ela pega o celular e começa a discar um número."
 
-    show alessandra triste
+    show alessandra triste with dissolve
 
     a "Ele não vai atender."
 
@@ -991,22 +1027,23 @@ label a1d10:
     with moveinleft
 
 
-    show alessandra brava
+    show alessandra brava with dissolve
 
     a "Escuta só, seu merdinha, você não sabe com quem você está lidando, o nosso combinado foi o diamante pela a arma, e vai ser isso que a gente irá trocar,{w} o que você fez ou não fez de extra nessa arma simplesmente não interessa!" 
     a "Então vamos fazer o seguinte,{w} ou você sai desse restaurante com o seu diamante e a gente sai com a nossa arma,{w} ou ninguém sai daqui."
     
-    show alessandra smirk
+    show alessandra smirk with dissolve
 
     a "O que você me diz?"
 
+    show traficante default at shake
     n "Ele começa a suar frio."
 
     traf "T-tá bom..."
 
     n "Ele passa a arma por debaixo da mesa."
 
-    show alessandra brava
+    show alessandra brava with dissolve
 
     a "Acho bom!"
 
@@ -1014,7 +1051,7 @@ label a1d10:
 
     traf "..."
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "..."
 
@@ -1022,7 +1059,7 @@ label a1d10:
 
     traf "B-b-bom, acho que é melhor eu ir indo haha..."
 
-    show alessandra brava
+    show alessandra brava2 at shake
 
     a "{size=+5}Grrrrrrrr{/size}"
 
@@ -1051,20 +1088,20 @@ label a1d10:
 
 label a1a11:
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Ah, eu sinceramente não ligaria nem um pouco pra isso se eu fosse você..."
 
-    show alessandra feliz
+    show alessandra sorriso with dissolve
 
-    extend "Afinal, temos nossa arma de tofu em mãos agora!"
+    a "Afinal, temos nossa arma de tofu em mãos agora!"
 
     jump a1m5
 
 
 label a1b11:
 
-    show alessandra feliz
+    show alessandra sorriso with dissolve
 
     a "Você teve uma ótima ideia!"
 
@@ -1072,7 +1109,7 @@ label a1b11:
 
 label a1a12:
 
-    show alessandra feliz
+    show alessandra sorriso with dissolve
 
     a "Agradeço pela sua modéstia, mas você também ajudou nisso. Mandamos bem!"
 
@@ -1080,7 +1117,7 @@ label a1a12:
 
 label a1b12:
 
-    show alessandra default
+    show alessandra default with dissolve
 
     a "Eu nunca duvidei que seriamos uma ótima dupla."
 
@@ -1090,18 +1127,25 @@ label a1b12:
 
 label a1a13:
 
-    n "Você pega o tofu da cadeira e devora ele em uma mordida só."
+    show alessandra confusa2 at center with dissolve 
 
-    hide traficante
+    n "Você pega o tofu da cadeira e devora ele em uma mordida só."
 
     n "Tem gosto de tofu."
 
-    show alessandra surpresa
+    show alessandra confusa2 at center 
 
-    a "Espera, {size=+5}VOCÊ ACABOU DE COMER O NOSSO TRAFICANTE?{p} MEU PLANO ERA TENTAR DESENVOLVER UMA TECNOLOGIA REVERSA PARA TRAZER ELE DE VOLTA!{/size}"
+
+    a "Espera, {size=+5}VOCÊ ACABOU DE COMER O NOSSO TRAFICANTE?{/size}"
+
+    show alessandra confusa2 at easeinzoom2
+    
+    a "{size=+5}MEU PLANO ERA TENTAR DESENVOLVER UMA TECNOLOGIA REVERSA PARA TRAZER ELE DE VOLTA!{/size}"
+
+    show alessandra confusa2 at easeinzoom
     a "{size=+5}AGORA SOMOS ASSASSINOS!!!!{w} E VOCÊ É UM{/size}{size=+15} CANIBAL!!!{/size}"
     
-    show alessandra feliz
+    show alessandra sorriso at easeoutzoom
 
     a "Brincadeirinha, era só um pedaço de tofu."
 
@@ -1111,18 +1155,23 @@ label a1b13:
 
     n "Você oferece o tofu a ela."
 
-    show alessandra feliz
+    hide traficante with dissolve
 
-    a "Obrigado! Vou guardar de recordação."
+    show alessandra sorriso at center 
+    with dissolve
+
+    a "Obrigada! Vou guardar de recordação."
     $ tofu = True
 
     n "Ela chama o garçom."
 
+    show alessandra default at right
+    with move
+
     show garcom default at left
     with moveinleft
 
-    show alessandra default at right
-    with move
+    
 
     a "Com licença, poderia me trazer uma embalagem para eu levar isso aqui para a viagem?"
 
@@ -1144,9 +1193,14 @@ label a1a14:
 
     a "Foi o que o Gatovaldo me indicou! Intimidar e rosnar, ele diz que para ele sempre funciona."
 
+    n "..."
+
     jump a1m5
 
 label a1m5:
+
+    show alessandra default at right
+    with move
 
     show garcom default at left
     with moveinleft
@@ -1158,9 +1212,12 @@ label a1m5:
     hide garcom
     with moveoutleft
 
-    show alessandra feliz
+    show alessandra default at center
+    with move
 
-    a "Caraca! Uau, isso aqui parece estar muito gostoso"
+    show alessandra surpresa with dissolve
+
+    a "Caraca! Uau, isso aqui parece estar muito gostoso."
 
     n "A comida realmente parece estar muito boa."
 
@@ -1175,6 +1232,7 @@ label a1m5:
 
 label a1a15:
 
+    show alessandra smirk with dissolve
     a "Com todo o prazer!"
 
     jump a1m6
@@ -1183,6 +1241,7 @@ label a1b15:
 
     n "Você experimenta o prato... Ele está muito gostoso!"
 
+    show alessandra smirk with dissolve
     a "Hummm... Parece que está bom mesmo, minha vez!"
 
     jump a1m6
@@ -1191,7 +1250,7 @@ label a1m6:
 
     n "Ela dá uma garfada."
 
-    show alessandra assustada
+    show alessandra assustada with dissolve
 
     menu:
         "Está tudo bem?":
@@ -1202,6 +1261,8 @@ label a1m6:
             jump a1b16
  
 label a1a16:
+
+    show alessandra medo1 with dissolve
 
     a "Não, não está tudo bem, precisamos sair daqui agora."
     
@@ -1225,7 +1286,7 @@ label a1b16:
 
 label a1a17:
 
-    show alessandra medo1
+    show alessandra medo1 with dissolve
 
     a "Essa comida tem o mesmo gosto da comida do lugar em que me mantiveram presa por todos esses anos."
 

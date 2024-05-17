@@ -21,6 +21,27 @@ init python:
             renpy.music.stop(channel="textSound")
 
 
+transform bounce:
+    pause .15
+    yoffset 0
+    easein .175 yoffset 20
+    easeout .175 yoffset 0
+    easein .175 yoffset 20
+    easeout .175 yoffset 0
+    yoffset 0
+
+
+transform shake:
+    pause .15
+    xoffset 0
+    easein .1 xoffset 5
+    easeout .1 xoffset 0
+    easein .1 xoffset 5
+    easeout .1 xoffset 0
+    easein .1 xoffset 5
+    easeout .1 xoffset 0
+    xoffset 0
+
 #Efeito de luz de sirene
 transform siren_tint:
     matrixcolor TintMatrix("f00")
@@ -29,9 +50,22 @@ transform siren_tint:
     repeat
 
 #Efeito Zoom
+
+#Efeito Zoom
+
+
 transform easeinzoom:
     center
     ease 0.7 zoom 1.5 yoffset 500
+
+transform easeinzoom2:
+    center
+    ease 0.7 zoom 1.2 yoffset 200
+
+transform dissolvezoom:
+    center
+    zoom 1.5 yoffset 500
+
 
 transform easeoutzoom:
     center

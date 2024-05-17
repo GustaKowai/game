@@ -1,3 +1,10 @@
+image white:
+    "/images/white.png"
+
+image cgAle1:
+    "/images/CGs/AlessandraCG1.png"
+
+
 ## Alessandra
 
 image alessandra default:
