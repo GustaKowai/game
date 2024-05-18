@@ -388,14 +388,14 @@ label start:
 
             g @serio "Aquele rato desgramento nem fala direito, o arrombadinho usa um sintetizador,"
             
-            show gatovaldo feliz
+            show gatovaldo feliz with dissolve
 
             extend "poucos sabem da minha existência, até onde sabem, ele foi o único afetado pelo experimento."
             jump prologom4
 
         label prologom4:
 
-            show gatovaldo default
+            show gatovaldo default with dissolve
 
             g "Enfim, preciso que interajam com elas, pois provavelmente serão suas parceiras de missão."
 
@@ -407,17 +407,17 @@ label start:
 
             g "Ah, e só para deixar claro..."
 
-            show gatovaldo serio
+            show gatovaldo serio with dissolve
 
             g "Não sei se confio muito nelas."
 
             g "Então deixo na mão de vocês investigar se elas são quem realmente dizem ser."
 
-            show gatovaldo default
+            show gatovaldo default with dissolve
 
             g "Como diz o ditado:"
 
-            show gatovaldo feliz
+            show gatovaldo feliz with dissolve
 
             g "Deus dá as suas tarefas mais árduas aos seus soldados mais bobinhos." 
             

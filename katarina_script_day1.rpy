@@ -85,7 +85,7 @@ label k1a1:
     c "Ah! Já ia me esquecendo. Com licença, preciso acender o incenso do dia. Você sabe, para atrair boas energias."
     n "Ela se dirige a um armário rústico e começa a procurar por algo em uma gaveta."
     show claudia thinking with dissolve
-    c "Lavanda, orvalho do amanhecer, lírios holandeses, não... hoje é terça, cadê o de terça?"
+    c "Lavanda, orvalho do amanhecer, lírios holandeses, não... Hoje é terça, cadê o de terça?"
     show claudia feliz with dissolve
     c "Aqui! Te achei, Mosh Pit do Slipknot!"
     n "Ela acende o incenso, e um cheiro de rebeldia toma conta do ambiente. Você nem imaginava que seria possível perceber isso olfativamente."
@@ -341,7 +341,7 @@ label k1a7:
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{w} Ele venceu há 2 anos."
     k "Eaí, algo que preste?"
     show katarina muitofeliz with dissolve
-    k "Caralho! esse era edição limitada, valeu!"
+    k "Caralho! Esse era edição limitada, valeu!"
     jump k1m3
 label k1b7:
     show katarina default with dissolve
@@ -562,7 +562,7 @@ label k1m6:
     n "Ele chega a uma distância consideravelmente perto de ti... {w} ele se aproxima...{w} e de repente..."
     n "Ele para."
     n "Um senhorzinho muito fofo sai da cabine."
-    show vovo default at left
+    show vovo default at left with moveinleft
     vo "Meu Deus! Você está bem? o que houve?"
     
     menu:
@@ -586,7 +586,7 @@ label k1m7:
     show vovo default at shake
     vo "Mas o quê...?"
     show katarina brava at bounce
-    k "Isso mesmo! mãos ao alto! isso é um assalto!"
+    k "Isso mesmo! Mãos ao alto! Isso é um assalto!"
     n "Ele paralisa, parece estar muito assustado."
 
     menu:

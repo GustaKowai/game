@@ -413,7 +413,7 @@ label a1b7:
 
     show alessandra smirk with dissolve
 
-    a "Brincadeira! precisando de mais remendos estou aqui para ajudar."
+    a "Brincadeira! Precisando de mais remendos estou aqui para ajudar."
 
     jump a1m7
 
@@ -767,7 +767,7 @@ label a1a10:
     with vpunch
     n "{size=+10}\"AAH!\"{/size}"
     
-    n "Vocês ouvem do telefone dele."
+    n "Vocês ouvem um grito do telefone dele."
 
     show alessandra default at right
     with move
