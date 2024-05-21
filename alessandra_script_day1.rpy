@@ -940,20 +940,17 @@ label a1b10:
             n: "Ele parece gostar da ideia"
             n: "Por mais que a arma transforme coisas vivas em tofu"
 
-   
+   #se fez 3 ou mais pontos
     traf "Tá bom! Vamos fazer esse negócio"
-
-    a "Certo, trato é trato, você acertou, eu aceito trocá-lo pela arma nessas condições."
-
-    n "Ele parece impressionado."
-
-    traf "M-muito obrigado."
-
-    n "Eles realizam a troca entre a arma e o diamante."
 
     show alessandra sorriso with dissolve
 
-    a "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
+    a "Sabia que você faria a escolha certa!"
+
+    n "O traficante troca a arma pelo diamante de Alessandra"
+
+
+    traf "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
 
     hide traficante
     with moveoutleft
@@ -967,7 +964,7 @@ label a1b10:
 
     show alessandra sorriso with dissolve
 
-    extend " Todo dia sai de casa um malandro e um otário, bate aqui!"
+    extend "Todo dia sai de casa um malandro e um otário, bate aqui!"
 
     n "Você retribui o cumprimento dela."
 
@@ -978,6 +975,43 @@ label a1b10:
         "Mandamos bem!":
             $ JogadorAtivo += 0
             jump a1b12
+
+    # se fez menos que 3 pontos
+
+    traf "É... Acho que mudei de ideia, acredito que vocês não devem ter uma arma tão poderosa em mãos"
+
+    show alessandra brava with dissolve
+
+    a "O QUE?"
+
+    show alessandra brava2 with dissolve
+    a "Você só pode estar de brincadeira."
+
+    traf "Foi mal!"
+    hide traficante
+    with moveoutbottom
+    n "O traficante sai de fininho da mesa"
+
+    a "Não acredito que ele fez isso com a gente!"
+
+    menu:
+        "Mandei mal...":
+            show alessandra triste with dissolve
+            a "É..."
+            show alessandra default with dissolve
+            a "Mas eu também não fiz nada para te impedir "
+            jump a1m5
+
+        "Mandamos mal...":
+            show alessandra triste with dissolve
+            a "É..."
+            a "Mentir foi uma péssima ideia."
+            show alessandra default with dissolve
+            a "Nem sempre dá para ganhar todas!"
+            show alessandra smirk with dissolve
+            a "Mas perder dá sim..."
+            jump a1m5
+
 
 
 label a1c10:
