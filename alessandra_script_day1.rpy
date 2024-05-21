@@ -227,6 +227,9 @@ label a1a4:
     jump a1m3
     
 label a1b4:
+    show alessandra surpresa with dissolve
+
+    a "..."
     
     show alessandra eyeroll with dissolve
 
@@ -249,7 +252,40 @@ label a1c4:
 
     gar "Pois não?"
 
-    n "Você faz o pedido para a mesa, mas não tem a menor ideia do que está pedindo, é um menu complexo."
+    n "Você olha para o menu, mas não entende absolutamente nada que está escrito."
+
+    menu:
+        "Pedir comida com nome alemão.":
+            $ JogadorAtivo += 1
+            n "Você pede uma comida com um nome esquisito em alemão."
+            hide garcom
+            with moveoutleft
+            show alessandra surpresa at center
+            with move
+            a "Uau, você sabe que acabou de pedir dois pães com salsisha e uma Itaipava, né?"
+            a "Tem coisa melhor aqui, mas aprecio sua ousadia."
+
+        "Pedir comida com nome francês.":
+            $ JogadorAtivo += 2
+            n "Você pede uma comida com um nome esquisito em francês."
+            hide garcom
+            with moveoutleft
+            show alessandra surpresa at center
+            with move
+            a "Adoro fígado de pato! Ótima escolha."
+            n "Você acha que fez uma péssima escolha, mas ela parece ter gostado"
+
+        "Pedir comida com nome coreano.":
+            $ JogadorAtivo += 0
+            n "Você pede uma comida com um nome esquisito em coreano."
+            hide garcom
+            with moveoutleft
+            show alessandra surpresa at center
+            with move
+            a "Polvo vivo!"
+            a "Diferente, mas interessante."
+            n "Você deveria ter usado o tradutor."
+
 
     hide garcom
 
@@ -258,10 +294,6 @@ label a1c4:
 
     show alessandra surpresa at center
     with move
-
-    a "Uau, você sabe que acabou de pedir dois queijos coalhos e uma sprite, né?"
-
-    a "Tem coisa melhor aqui, mas aprecio sua ousadia."
 
     jump a1m3
     
@@ -288,12 +320,15 @@ label a1m3:
     show alessandra triste with dissolve  
     a "Se não tivesse sido a escolha pessoal do nosso colega eu teria outras 20 melhores opções de restaurantes para escolher."
 
+
     show alessandra default with dissolve
 
     a "Mas, já que estamos aqui, aguardemos..."
 
+
+
     menu:
-        "Vamos jogar verdade ou desafio enquanto isso.":
+        "Vamos jogar algo.":
             $ JogadorAtivo += 0
             jump a1a5
         "Vamos pedir uma música.":
@@ -302,7 +337,7 @@ label a1m3:
 
 label a1a5:
 
-    a "Verdade ou desafio? Gostei, eu começo. Verdade ou desafio?"
+    a "Hum... Que tal verdade ou desafio? Gostei, eu começo. Verdade ou desafio?"
     
     menu:
         "Verdade":
@@ -1058,6 +1093,49 @@ label a1c10:
     show alessandra eyeroll with dissolve
     a "Cara, ninguém vai comer sozinho em um restaurante desses, esse aí deve ser um milhonário serial killer excêntrico."
 
+    traf "Não sei se gosto dessa ideia..."
+
+    menu:
+        "Vamos transformar esse cara em tofu mesmo, ele é esquisito.":
+            show alessandra smirk with dissolve
+            $ JogadorAtivo += 1
+            a "Viu!"
+
+        "Vamos transformar um garçom em tofu.":
+            show alessandra smirk with dissolve
+            a "É uma alternativa! Ele provavelmente peida na comida."
+
+        "Vamos transformar a Taylor Swift em tofu":
+            $ JogadorAtivo += 2
+            show alessandra smirk with dissolve
+            a "Gostei dessa ideia!"
+            traf "O QUE?"
+            traf "VOCÊ ESTÁ MALUCO??"
+            show alessandra surpresa with dissolve
+            a "Não gostei dessa ideia..."
+            n "Alessandra está mentindo."
+            n "Mas o traficante parece realmente odiar essa ideia."
+            menu:
+                "Estou falando sério.":
+                    $ JogadorAtivo += 1
+                    traf "Vocês só podem estar de brincadeira!"
+                    traf "Sério, desisto de tentar fazer négocio com vocês!"
+                    hide traficante
+                    with moveoutleft
+                    show alessandra surpresa with dissolve
+                    a "Eita."
+                    show alessandra smirk with dissolve
+                    a "Gostei tanto da sua ideia que por um momento esqueci que nosso objetivo era transformar ele em tofu."
+                    show alessandra default with dissolve
+                    a "Infelizmente, nem sempre dá para ganhar todas!"
+                    show alessandra smirk with dissolve
+                    a "Mas perder dá sim..."
+                    jump a1m5
+
+
+                "Brincadeira! Vamos transformar um garçom mesmo...":
+                    traf "Ufa, melhor."
+
     traf "Tá bom... Só toma cuidado para mirar certo e para não levantar nenhum tipo de suspeita."
 
     n "Ele entrega a arma tofuzadora pra ela."
@@ -1158,7 +1236,46 @@ label a1d10:
     show traficante default at shake
     n "Ele começa a suar frio."
 
-    traf "T-tá bom..."
+    show alessandra brava2 at shake
+    a "{size=+5}Grrrrrrrr{/size}"
+
+    n "Ela começa a rosnar."
+    n "O traficante olha confuso para você."
+
+    menu: 
+        "*Começar a rosnar também*":
+            $ JogadorAtivo += 2
+            n "Você começa a rosnar junto de alessandra"
+            traf "Tá bom!"
+            traf "Só por favor, parem de fazer isso, está me assustando"
+
+        "*Fazer um gesto ameaçador*":
+            $ JogadorAtivo += 1
+            n "Você faz um gesto de corte com sua mão em sua garganta para intimidá-lo."
+            traf "Tá bom!"
+            traf "Deus, não sabia que vocês eram barra pesada assim."
+
+        "*Rir descontroladamente*":
+            $ JogadorAtivo += -2
+            n "Você descaralha de rir."
+            n "Ver Alessandra rosnando foi realmente algo que você nunca imaginou."
+            n "É intankavel."
+            show traficante default
+            traf "..."
+            traf "Vocês estão tirando uma com a minha cara?"
+            traf "Quer saber, eu vou embora!"
+            hide traficante
+            with moveoutleft
+            show alessandra brava with dissolve
+            a "Ei! O que tem de tão engraçado em me ver rosnando?"
+            show alessandra confusa with dissolve
+            a "..."
+            a "Realmente, foi meio patético..."
+            a "Mas você deveria ter me seguido!"
+            a "Droga..."
+            a "Qualquer coisa a gente mente para o Gatovaldo, falamos que o plano dele deu errado."
+            jump a1m5
+
 
     n "Ele passa a arma por debaixo da mesa."
 
@@ -1180,9 +1297,9 @@ label a1d10:
 
     show alessandra brava2 at shake
 
-    a "{size=+5}Grrrrrrrr{/size}"
+    a "{size=+5}Grrrrrrrrrrrr{/size}"
 
-    n "Ela começa a rosnar."
+    n "Ela começa a rosnar de novo."
 
     traf "O-ok, t-tchauzinho!"
 
@@ -1197,7 +1314,7 @@ label a1d10:
     a "Ufa! Isso foi tenso."
 
     menu:
-        "Você acabou de rosnar?":
+        "Você realmente começou a rosnar?":
             $ JogadorAtivo += 1
             jump a1a14
         "Que porra foi essa?":
