@@ -724,7 +724,7 @@ label a1a10:
 
     traf "O.. O que você quer dizer com isso?"
 
-    a "Muito, bem, está vendo esse lencinho aqui na minha mão?"
+    a "Muito bem, está vendo esse lencinho aqui na minha mão?"
 
     traf "S-sim, o que tem ele?"
 
@@ -775,13 +775,13 @@ label a1a10:
     show traficante default at left
     with moveinleft
 
-    traf "Tá na mão!"
-
     traf "T-tudo bem, a arma é sua!{w} Mas eu preciso do diamante e do lenço agora!"
 
     show alessandra smirk with dissolve
 
     a "São todos seus!"
+
+    n "Eles realizam a troca"
 
     traf "Magnífico! Bom, tchauzinho!"
 
@@ -807,6 +807,7 @@ label a1b10:
     show alessandra default with dissolve
 
     a "Agora você falou a minha língua, e se a gente disser que..."
+    a "Isso pode ser difícil, você precisa me ajudar a enganá-lo"
 
     show alessandra smirk with dissolve
 
@@ -829,35 +830,118 @@ label a1b10:
 
     a "Isso mesmo, tá vendo esse diamante aqui?"
 
-    traf "Sim, o do Jared Leto, o que tem nele?"
+    traf "Sim, o que tem nele?"
 
     show alessandra smirk with dissolve
-    a "Então, ele não fez parte de um look só do Jared Leto."
+    a "Então, antes de ser parte de um look do Jared Leto, esse diamante já esteve em outras mãos."
 
-    traf "Não? Espera, o que você quer dizer com isso?"
+    traf "Jared Leto? Espera, esse diamante não é do Jason Momoa?"
+
+    show alessandra surpresa with dissolve
+    a "..."
+
+    menu: 
+        "Na realidade é do Jason Momoa sim!": #0
+            traf "Então por que ela falou Jared Leto?"
+            traf "Tipo, não tem nada a ver uma coisa com a outra"
+            show alessandra confusa with dissolve
+            a "É porque... Os dois nomes começam com J."
+            a "E... Eu tenho um grande problema com nomes."
+            show alessandra default with dissolve
+            a "Eu só fui decorar o nome dos meus pais com 12 anos de idade."
+            show alessandra triste with dissolve
+            a "E eu esqueci de novo com 15."
+            n "Alessandra está improvisando muito."
+            n "Mas ele não parece muito convencido."
+            traf "Tudo bem, mas como você ia dizendo, ele já esteve em outras mãos?"
+            
+        "É do Jared Leto, mas fez parte de outro look famoso": #1
+            traf "Mas eu estou aqui por um diamante do Jason Momoa, foi o que combinaram comigo!"
+            show alessandra default with dissolve
+            a "É... Na realidade não!"
+            a "Você está aqui pelo diamante do Jared Leto"
+            a "Foi o combinado!"
+            a "Você deve ter entendido errado porque... "
+            a "Os dois nomes começam com J!"
+            n "O gaslight de Alessandra parece ser efetivo"
+            traf "Ok... Peço perdão por toda essa confusão!"
+            traf "Mas eu estou aqui por um diamante do Jason Momoa, então espero que me convençam!"
+            traf "Como você ia dizendo, ele já esteve em outras mãos?"
 
     show alessandra default with dissolve
-    a "Quero dizer que eu já reaproveitei ele em outro grande visual{w} e se você adivinhar qual foi esse outro visual eu trocarei ele pela arma e não requisitarei mais nada de você."
+    a "Isso mesmo! "
 
-    traf "E-eu posso analisá-lo?"
+    show alessandra default with dissolve
+    a "Quero dizer que ele já foi utilizado em outra grande ocasião{w} e acredito que a notoriedade desta ocasião se destacará muito mais do que o verdadeiro motivo pelo qual você veio até aqui hoje"
+
+    traf "Eu posso analisá-lo?"
 
     a "Claro, aqui está.{w} Só não tente nada estúpido."
 
     n "Ele começa a observar minuciosamente o diamante, cheirando-o, ouvindo-o, sentindo-o. Até que paralisa em choque."
 
-    traf "{size=+10}{cps=*0.2}ESSE-{/cps}{w}{cps=*2} NÃO ME DIGA QUE ESSE DIAMANTE FOI UTILIZADO NO FIGURINO DA KATY PERRY EM DARK HORSE, FOI?{/cps}{/size}"
+    traf "{size=+10}{cps=*0.2}ESSE-{/cps}{w}{cps=*2} ESPERA, ISSO É O QUE ESTOU PENSANDO?{/cps}{/size}"
 
-    show alessandra surpresa with dissolve
+    menu:
+        "Esse diamante foi segurado por Katy Perry em Dark Horse": #1
+            traf "UAU!"
+            traf "Não era o que eu imaginava, mas até que faz sentido"
 
-    n "Alessandra finge surpresa."
+        "Esse diamante já foi da Joelma, ex-Calypso": #0
+            traf "APOCALIPSE?"
+            traf "O QUE VOCÊ QUER DIZER COM ISSO?"
+            traf "Não parece bom..."
+            show alessandra brava with dissolve
+            a "Calypso foi o maior grupo de Brega-Pop brasileiro a já existir!"
+            a "A Joelma é a nossa Taylor Swift Paraense!"
+            traf "Ahh... Tem pop no nome, deve ser bom então."
+            traf "Mas ainda não supera o motivo de eu estar aqui."
+            n "Alessandra parece ter gostado de sua mentira, mas o traficante parece não conhecer a Joelma"
+            a "Você não tem a menor ideia do quanto isso é valioso"
+            traf "Preciso ter certeza disso ainda..."
 
-    n "Ela olha para você e diz sussurando alto."
 
-    a "Eu pensei que ele não fosse descobrir... Como?"
+        "Esse diamante esteve na banheira de Look What You Made me Do, da Taylor Swift": #3
+            traf "EU SABIA!"
+            traf "Isso realmente é bastante empolgante"
 
-    n "Ela te dá uma piscadinha sutil."
+        "Esse diamante apareceu no clipe de Diamonds, da Rihanna": #2
+            traf "EITA!"
+            traf "Faz total sentido!"
 
     show alessandra smirk with dissolve
+
+    a "Eai, podemos realizar a troca?"
+
+    traf "Só um instante, preciso falar com o meu associado."
+
+    n "Ele pega o telefone, disca um número, e sai da mesa por alguns instantes."
+
+    n "Após alguns minutos, ele finalmente volta."
+
+    traf "Certo! Agora preciso que vocês me digam as suas intenções com essa arma"
+    traf "Tenho consciência social, ela pode causar grandes estragos!"
+    traf "Ano passado vendi uma arma que transformava pessoas em queijo Brie para um francês"
+    traf "Ele queria dominar o mundo, transformou toda sua cidade em queijo Brie"
+    traf "O problema é que ele gostava muito de queijo Brie"
+    traf "Comeu tanto que morreu"
+
+    menu:
+        "Também queremos dominar o mundo!": #-1
+            n "Ele olha para vocês com uma cara séria."
+            traf "Vocês ouviram o que eu acabei de dizer?"
+
+        "Pretendemos transformar o Ratotávio em tofu!": #2
+            traf "Uauu! Gostei da ideia."
+            traf "Seria irônico, e icônico."
+
+        "Queremos promover o veganismo!": #1
+            traf: "Lacraram!"
+            n: "Ele parece gostar da ideia"
+            n: "Por mais que a arma transforme coisas vivas em tofu"
+
+   
+    traf "Tá bom! Vamos fazer esse negócio"
 
     a "Certo, trato é trato, você acertou, eu aceito trocá-lo pela arma nessas condições."
 
@@ -894,6 +978,7 @@ label a1b10:
         "Mandamos bem!":
             $ JogadorAtivo += 0
             jump a1b12
+
 
 label a1c10:
 
