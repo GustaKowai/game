@@ -524,9 +524,9 @@ label start:
             #"katDay1[katDay1], katDay2[katDay2], katDay3[katDay3]"
             #"aleDay1[aleDay1], aleDay2[aleDay2], aleDay3[aleDay3]"
 
-            #jump whereToGo
+            jump whereToGo
 
-            jump demoFinal
+            #jump demoFinal
 
     ########################################################################################################################### 
     #######################################----------Final da Demo-----------##################################################

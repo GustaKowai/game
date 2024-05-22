@@ -9,6 +9,8 @@
 
 label d1ale1:
     default lenco = False
+    default pontosSucesso = 0
+    default sucessoMissao1Ale = True
 
     $ aleDay1 = False
     scene bg atelie
@@ -919,10 +921,12 @@ label a1b10:
 
     menu:
         "Esse diamante foi segurado por Katy Perry em Dark Horse": #1
+            $ pontosSucesso += 1
             traf "UAU!"
             traf "Não era o que eu imaginava, mas até que faz sentido"
 
         "Esse diamante já foi da Joelma, ex-Calypso": #0
+            $ pontosSucesso += 0
             traf "APOCALIPSE?"
             traf "O QUE VOCÊ QUER DIZER COM ISSO?"
             traf "Não parece bom..."
@@ -937,10 +941,12 @@ label a1b10:
 
 
         "Esse diamante esteve na banheira de Look What You Made me Do, da Taylor Swift": #3
+            $ pontosSucesso += 3
             traf "EU SABIA!"
             traf "Isso realmente é bastante empolgante"
 
         "Esse diamante apareceu no clipe de Diamonds, da Rihanna": #2
+            $ pontosSucesso += 2
             traf "EITA!"
             traf "Faz total sentido!"
 
@@ -963,89 +969,96 @@ label a1b10:
 
     menu:
         "Também queremos dominar o mundo!": #-1
+            $ pontosSucesso += -1
             n "Ele olha para vocês com uma cara séria."
             traf "Vocês ouviram o que eu acabei de dizer?"
 
         "Pretendemos transformar o Ratotávio em tofu!": #2
+            $ pontosSucesso += 2
             traf "Uauu! Gostei da ideia."
             traf "Seria irônico, e icônico."
 
         "Queremos promover o veganismo!": #1
+            $ pontosSucesso += 1
             traf: "Lacraram!"
             n: "Ele parece gostar da ideia"
             n: "Por mais que a arma transforme coisas vivas em tofu"
 
-   #se fez 3 ou mais pontos
-    traf "Tá bom! Vamos fazer esse negócio"
+    #se fez 3 ou mais pontos
+    if pontosSucesso >= 3:
+        traf "Tá bom! Vamos fazer esse negócio"
 
-    show alessandra sorriso with dissolve
+        show alessandra sorriso with dissolve
 
-    a "Sabia que você faria a escolha certa!"
+        a "Sabia que você faria a escolha certa!"
 
-    n "O traficante troca a arma pelo diamante de Alessandra"
+        n "O traficante troca a arma pelo diamante de Alessandra"
 
 
-    traf "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
+        traf "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
 
-    hide traficante
-    with moveoutleft
+        hide traficante
+        with moveoutleft
 
-    n "Ele sai do restaurante dando pulinhos."
+        n "Ele sai do restaurante dando pulinhos."
 
-    show alessandra default at center
-    with move
+        show alessandra default at center
+        with move
 
-    a "Mas que figura, ein?"
+        a "Mas que figura, ein?"
 
-    show alessandra sorriso with dissolve
+        show alessandra sorriso with dissolve
 
-    extend "Todo dia sai de casa um malandro e um otário, bate aqui!"
+        extend "Todo dia sai de casa um malandro e um otário, bate aqui!"
 
-    n "Você retribui o cumprimento dela."
+        n "Você retribui o cumprimento dela."
 
-    menu:
-        "Você mandou bem!":
-            $ JogadorAtivo += 1
-            jump a1a12
-        "Mandamos bem!":
-            $ JogadorAtivo += 0
-            jump a1b12
+        menu:
+            "Você mandou bem!":
+                $ JogadorAtivo += 1
+                jump a1a12
+            "Mandamos bem!":
+                $ JogadorAtivo += 0
+                jump a1b12
 
     # se fez menos que 3 pontos
 
-    traf "É... Acho que mudei de ideia, acredito que vocês não devem ter uma arma tão poderosa em mãos"
+    if pontosSucesso <3:
 
-    show alessandra brava with dissolve
+        traf "É... Acho que mudei de ideia, acredito que vocês não devem ter uma arma tão poderosa em mãos"
 
-    a "O QUE?"
+        show alessandra brava with dissolve
 
-    show alessandra brava2 with dissolve
-    a "Você só pode estar de brincadeira."
+        a "O QUE?"
 
-    traf "Foi mal!"
-    hide traficante
-    with moveoutbottom
-    n "O traficante sai de fininho da mesa"
+        show alessandra brava2 with dissolve
+        a "Você só pode estar de brincadeira."
 
-    a "Não acredito que ele fez isso com a gente!"
+        traf "Foi mal!"
+        hide traficante
+        with moveoutbottom
+        n "O traficante sai de fininho da mesa"
 
-    menu:
-        "Mandei mal...":
-            show alessandra triste with dissolve
-            a "É..."
-            show alessandra default with dissolve
-            a "Mas eu também não fiz nada para te impedir "
-            jump a1m5
+        a "Não acredito que ele fez isso com a gente!"
+        $ sucessoMissao1Ale = False
 
-        "Mandamos mal...":
-            show alessandra triste with dissolve
-            a "É..."
-            a "Mentir foi uma péssima ideia."
-            show alessandra default with dissolve
-            a "Nem sempre dá para ganhar todas!"
-            show alessandra smirk with dissolve
-            a "Mas perder dá sim..."
-            jump a1m5
+        menu:
+            "Mandei mal...":
+                show alessandra triste with dissolve
+                a "É..."
+                show alessandra default with dissolve
+                a "Mas eu também não fiz nada para te impedir "
+                jump a1m5
+
+            "Mandamos mal...":
+                show alessandra triste with dissolve
+                a "É..."
+                a "Mentir foi uma péssima ideia."
+                show alessandra default with dissolve
+                a "Nem sempre dá para ganhar todas!"
+                show alessandra smirk with dissolve
+                a "Mas perder dá sim..."
+                jump a1m5
 
 
 
@@ -1130,6 +1143,7 @@ label a1c10:
                     a "Infelizmente, nem sempre dá para ganhar todas!"
                     show alessandra smirk with dissolve
                     a "Mas perder dá sim..."
+                    $ sucessoMissao1Ale =  False
                     jump a1m5
 
 
@@ -1274,6 +1288,7 @@ label a1d10:
             a "Mas você deveria ter me seguido!"
             a "Droga..."
             a "Qualquer coisa a gente mente para o Gatovaldo, falamos que o plano dele deu errado."
+            $ sucessoMissao1Ale = False
             jump a1m5
 
 

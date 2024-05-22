@@ -89,8 +89,10 @@ Objetivos concluidos na semanade 15/05-22/05:
 - Novas sprites para o gatovaldo apresentando as novatas
 - Mudanças no dia 1 da Katarina
 - Cláudia brava adicionada
+- Música do restaurante adicionada
 - Flowchart do dia 1 da Alessandra
 - Flowchart do dia 1 da Katarina
+- Dia 1 da Alessandra modificado para ter como falhar na missão
 
 Objetivos em andamento:
 
@@ -98,20 +100,20 @@ Objetivos em andamento:
   - Cláudia triste
   - Katarina com um sorriso triste
   - Katarina com máscara de Halloween
-  - Zé (em pausa)
+  - Zé
   - Katarina segurando uma arma
   - Alessandra com capacete de moto
   - Alessandra com duas metralhadoras, uma em cada mão e uma cara de psicopata (opcional)
-  - CG de algumas cenas (Pelo menos uma)
+  - CG de algumas cenas
   - atendente do banco
   - padre
   - padre com o braço decepado
 - História
-  - História secreta (opcional)
+  - Finais diferentes
 - Programação:
   - Achievements
   - Investigação na parte noturna dos dias 2 e 3
-  - Cassino (em pausa)
+  - Cassino
 - Sons e Música:
   - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
     - Sirene
@@ -127,7 +129,6 @@ Objetivos em andamento:
       - Banco (tem 3 áreas, a externa, a recepção e o cofre)
       - Floresta
     - Missões Alessandra:
-      - Restaurante
       - Igreja (tem 2 áreas, interna e externa)
       - Cidade (tem a cidade e o beco)
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazedo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
