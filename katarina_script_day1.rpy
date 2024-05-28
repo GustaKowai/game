@@ -8,6 +8,10 @@
 
 label d1kat1:
     default escopeta = False
+    default xmortadela = False
+    default cha = False
+    default cd = False
+    default salgadinho = False
 
     play music "escritorio.mp3" volume 0.5
     $ katDay1 = False
@@ -62,13 +66,14 @@ label k1a1:
     show katarina brava at right
     show katarina brava at siren_tint()
     with moveinright
-    k "PORRA ME DIZ QUE É O MEU X-MORTADELA-MALIGNO, CLÁUDIA, 2 HORAS JÁ QUE EU PEDI!"
+    k "PORRA, ME DIZ QUE É O MEU X-MORTADELA-MALIGNO, CLÁUDIA, 2 HORAS JÁ QUE EU PEDI!"
+    $ xmortadela = True
     show claudia feliz with dissolve
     c  "Senhorita Katarina! Essa pessoa veio procurar por ti, ela é de poucas palavras, parece ser algo importante."
     show katarina feliz with dissolve
-    k "Ah! Você faz parte do movimento, o Gatovaldo me disse que apareceria."
+    k "Ah! Você faz parte do movimento, Gatovaldo me informou que apareceria."
     show katarina default with dissolve
-    k "Claudia, sempre que alguma pessoa esquisita assim aparecer por aqui pode liberar direto para a minha sala."
+    k "Claudia, sempre que alguma pessoa... {w} esquisita {w} assim aparecer por aqui pode liberar direto para a minha sala."
     show katarina smirk with dissolve
     k "Faz parte de uma nova terapia que estou experimentando."
     jump k1m1
@@ -79,6 +84,7 @@ label k1a1:
     c @default "Ela está sim! Se não se importa em esperar um pouco, ela está em sua sessão diária de Post-Generic-Slovenian-Punk-Rock."
     show claudia feliz with dissolve
     c "Enquanto isso, aceita um chá de camomila fervido em sangue de carneiro? É uma bebida típica sueca."
+    $ cha = True
     show claudia default with dissolve
     n "Ela não aguarda por uma resposta e te serve uma xícara de um líquido viscoso esquisito..."
     n "Você definitivamente não quer tomar isso."
@@ -96,14 +102,14 @@ label k1a1:
     with move
     show katarina irritada at right
     with moveinright
-    k "Claudia, Mosh Pit do Slipknot agora é o incenso de quinta, você não viu as alterações que eu te mandei por email?"
+    k "Claudia, Mosh Pit do Slipknot agora é o incenso de quinta, você não recebeu as alterações que eu te enviei por e-mail?"
     c "Senhorita Katarita! Peço perdão, não acontecerá novamente! Já irei providenciar o incenso diário correto." 
     
     c "Ah, aliás, essa pessoa veio te procurar. Ela recusou o chá sueco, eu te avisei que capim-limão ornava melhor."
     show katarina feliz with dissolve
-    k "Ah! Você faz parte do movimento, o Gatovaldo me disse que apareceria."
+    k "Ah! Você faz parte do movimento, Gatovaldo me informou que apareceria."
     show katarina default with dissolve
-    k "Claudia, sempre que alguma pessoa esquisita assim aparecer por aqui pode liberar direto para a minha sala."
+    k "Claudia, sempre que alguma pessoa... {w} esquisita {w} assim aparecer por aqui pode liberar direto para a minha sala."
     show katarina smirk with dissolve
     k "Faz parte de uma nova terapia que estou experimentando."
     jump k1m1
@@ -116,16 +122,32 @@ label k1m1:
     with gatodissolve
     show katarina default at center
     with moveinleft
-    n "Você acompanha Katarina até o seu escritório. Ele é repleto de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa."
+    n "Você acompanha Katarina até o seu escritório. Ele é repleto de esculturas bizarras e pinturas que remetem ao caos e à destruição, tudo em tons de branco e rosa, há um grande pedido de socorro pixado na parede."
     show katarina smirk with dissolve
-    k "Você parece espantado, gostou do meu cantinho? Descobri a identidade do Bansky e tranquei ele aqui com baldes de tinta durante 3 dias."
+    k "Você parece espantado, gostou do meu cantinho? Eu e Cláudia capturamos um desses artistas de rua e trancamos ele aqui com baldes de tinta e latas de spray durante 3 dias."
+    menu:
+        "É aconchegante.":
+            $ JogadorAtivo += -1
+            show katarina surpresa with dissolve
+            k "Você achou... {w} Aconchegante?"
+            show katarina smirk with dissolve
+            k "Tudo bem... Essa não foi a intenção, mas arte desperta sentimentos diferentes nas pessoas, correto?"
+        "É desesperador.":
+            $ JogadorAtivo += 2
+            show katarina feliz with dissolve
+            k "Ótimo!"
+            k "Foi exatamente o que pretendiamos representar!"
     show katarina default with dissolve
-    k "Na verdade, 3 dias para cada vez que eu abrisse a porta e não gostasse do que estivesse vendo. Ele acabou ficando uns 2 meses trancado aqui."
+    k "Na realidade, foram 3 dias para cada vez que eu abrisse a porta e não gostasse do que estivesse vendo. Ele ficou aproximadamente 2 meses trancado aqui."
     show katarina smirk with dissolve
     k "Mas no fim o resultado foi espetacular!"
     show katarina default with dissolve
-    k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas sinceramente, não entendo o porquê...{w} Minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas."
-    n "Você se lembra de uma aberração gastronômica sendo mencionada anteriormente..."
+    k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas, sinceramente, não entendo o porquê...{w} Minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas."
+    n "Você se lembra de uma aberração gastronômica sendo mencionada anteriormente."
+    if cha
+        n "Um chá fervido em sangue de carneiro certeamente te levaria para a terapia também..."
+    if xmortadela
+        n "Sejá lá o que um X-Mortadela-Maligno represente, certamente coisa boa não é..."
     n "...pobrezinho."
     show katarina feliz with dissolve
     k "Bem, vamos falar de negócios, sugeri ao seu chefe que a gente fosse explodir alguma coisa..."
@@ -152,8 +174,8 @@ label k1m1:
             $ JogadorAtivo += 1
             jump k1b2       
 label k1a2:
-    k "Na realidade não, só pesquisei o significado do seu nome, isso já basta pra mim."
-    k "Só responde esse formulário aqui depois e manda para mim, é extremamente necessário."
+    k "Na realidade não, apenas pesquisei o significado do seu nome, isso já basta pra mim."
+    k "Só responda a este formulário aqui depois e me encaminhe, é extremamente necessário."
     n "Ela te manda um teste do Buzzfeed para descobrir qual membro do One Direction você seria."
     show katarina feliz with dissolve
     k "Acho que já podemos ir, eu vou dirigindo!"
@@ -180,7 +202,7 @@ label missaokat1:
     play music "deserto.mp3" volume 0.5
     n "Vocês dirigem até uma estrada deserta. Não há nada além de um posto de gasolina abandonado e uma grande torre de telefone nas redondezas."
     show katarina irritada with dissolve
-    k "Que calor da porra, ainda bem que eu vim preparada..."
+    k "Mas que calor intolerável! Sorte a minha que vim preparada..."
     n "Ela tira uma garrafa de vodka da mochila."
     menu:
         "Você não deveria fazer isso em uma missão.":
@@ -212,32 +234,32 @@ label k1b3:
 label k1a4:
     
     show katarina smirk with dissolve
-    k "Nunca se sabe quando você irá precisar de uma arma improvisada. E além disso, você já quebrou uma garrafa para uma briga de bar? É super divertido."
+    k "Nunca se sabe quando você irá precisar de uma arma improvisada. E além disso, você já quebrou uma garrafa para uma briga de bar? É demasiado divertido."
     
     jump k1m2
 
 label k1b4:
     show katarina feliz with dissolve
-    k "Sim! Se tô no inferno vou logo abraçar o capeta.{p} Minha bebida favorita do inverno é milkshake."
+    k "Sim! Se estamos no inferno, por que não abraçar o cramunhão?{p} Nada como um milkshake congelante para se tomar durante o inverno."
     jump k1m2
 
 label k1m2: 
     show katarina default with dissolve
-    k "Bem, acho que a gente ainda tem um tempo."
-    k "Aliás, acho que você não deve ter a menor ideia do que a gente está fazendo aqui, né?"
-    k "Basicamente, teu chefe, o gato falante, está desconfiando de uma empresa de sorvetes.{w} Ele acha que ela está realizando tráfico ilegal de queijos para a sede do governo."
-    k "Você sabe, estamos sendo governados por um rato. Deve ser mais barato traficar do que lidar com todos os trâmites legais e impostos para a importação desses queijos chiques para cá."
+    k "Bem, acho que ainda temos um tempo."
+    k "Aliás, tens alguma ideia do que estamos fazendo aqui?"
+    k "Essencialmente, nosso chefe, o gato falante, está desconfiando de uma empresa de sorvetes.{w} Ele acha que ela está realizando tráfico ilegal de queijos para a sede do governo."
+    k "Você sabe, estamos sendo governados por um rato. É mais barato traficar do que lidar com todos os trâmites legais e impostos para a importação desses queijos finos para cá."
     show katarina feliz with dissolve
-    k "Ou talvez o Gatovaldo só queria tomar um sorvetinho e não estava sabendo pedir, então, caso ele esteja errado, pelo menos sairemos daqui com picolés!"
+    k "Ou talvez Gatovaldo só quer tomar um sorvetinho e não está sabendo pedir! Então, caso ele esteja errado, pelo menos sairemos daqui com picolés!"
     show katarina default with dissolve
-    k "Mas antes, bora naquele posto de gasolina abandonado dar uma explorada e depois a gente sobe naquela torre telefônica para termos uma visão melhor dos arredores e começarmos a nos preparar."
+    k "Mas antes, Que tal visitarmos aquele posto de gasolina abandonado e depois subirmos naquela torre telefônica para termos uma visão melhor dos arredores e começarmos a nos preparar?"
     show bg posto
     with gatodissolve
     n "Vocês andam até o posto de gasolina abandonado..."
     n "É definitivamente um posto de gasolina..."
     n "Está definitivamente abandonado..."
     show katarina surpresa with dissolve
-    k "Que maneiro, parece que algumas coisas das prateleiras ainda estão aqui, bora dar uma olhada."
+    k "Que interessante, parece que algumas coisas das prateleiras ainda estão aqui, vamos dar uma olhada."
     show katarina default with dissolve
     n "Katarina vira de costas para você, tem uma tarântula enorme nela."
     menu:
@@ -249,18 +271,18 @@ label k1m2:
 label k1a5:
     with vpunch
     show katarina brava with dissolve
-    k "Que porra foi essa? Por que você bateu em m..."
+    k "O que foi isso? Por que você bateu em m..."
     show katarina confusa with dissolve
     k "Espera, isso estava nas minhas costas?"
     show katarina surpresa with dissolve
     k "PUTA QUE PARIU."
     show katarina irritada with dissolve
-    k "Não acredito que você fez isso, nunca tinha visto uma dessa espécie!"
+    k "Não acredito que você fez isso, jamais havia visto um desta espécie!"
     show katarina triste with dissolve
     k "Que droga. Argh, tudo bem, vamos entrar."
     n "Ela tira uma foto da aranha estraçalhada no chão."
     
-    k "Puta que pariu... Era uma demonius Dosinfernus..."
+    k "Era uma demonius Dosinfernus..."
 
     show bg loja
     with gatodissolve
@@ -279,7 +301,7 @@ label k1a5:
             jump k1d7
 label k1b5:
     show katarina surpresa with dissolve
-    k "SÉRIO? RÁPIDO, abre o segundo bolso da minha mochila, você vai entender o que fazer!"
+    k "SÉRIO? RÁPIDO, abra o segundo bolso da minha mochila, você entenderá o que fazer!"
     n "Você abre o segundo bolso, tem um pote de vidro, um desodorante aerosol e um isqueiro."
     menu:
         "Tacar fogo na aranha":
@@ -294,9 +316,9 @@ label k1a6:
     show katarina brava  with dissolve
     k "O QUE CARALHOS VOCÊ ACABOU DE FAZER? EU FALEI O SEGUNDO BOLSO."
     show katarina triste with dissolve
-    k "Ah, espera... Droga, acho que guardei meu lança chamas portátil no lugar errado, que porra..."
+    k "Ah, espera... Droga, acho que guardei o meu lança-chamas portátil no lugar errado, que porra..."
     show katarina default with dissolve
-    k "Enfim, bora entrar nessa loja conveniente."
+    k "Enfim, vamos ver o que esta conveniência tem a nos oferecer."
 
     show bg loja
     with gatodissolve
@@ -314,9 +336,9 @@ label k1a6:
 label k1b6:
     n "Você coloca ela no pote, ela entra sem resistir."
     show katarina muitofeliz with dissolve
-    k "CARALHO, QUE FODA, É UMA DEMONIUS DOSINFERNUS! Nunca tinha visto uma dessa espécie, muito obrigada! Vou levar ela para o meu zoológico particular."
+    k "CARALHO, QUE FODA, É UMA DEMONIUS DOSINFERNUS! Nunca havia visto uma desta espécie, muito obrigada! Irei levá-la para o meu zoológico particular."
     show katarina feliz with dissolve
-    k "Enfim, bora entrar nessa loja conveniente."
+    k "Enfim, vamos ver o que esta conveniência tem a nos oferecer."
 
     show bg loja
     with gatodissolve
@@ -326,22 +348,25 @@ label k1b6:
         "Procurar nas prateleiras":
             $ JogadorAtivo += 1
             jump k1a7
+            $ salgadinho = True
         "Procurar no caixa":
             $ JogadorAtivo += 1
-            jump k1b7
             $ escopeta = True
+            jump k1b7
         "Procurar no banheiro":
             $ JogadorAtivo += 0
             jump k1c7
         "Procurar no escritório":
             $ JogadorAtivo += 1
+            $ cd = True
             jump k1d7
 label k1a7:
     show katarina default with dissolve
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{w} Ele venceu há 2 anos."
-    k "Eaí, algo que preste?"
+    k "Eaí, algo de interessante?"
     show katarina muitofeliz with dissolve
-    k "Caralho! Esse era edição limitada, valeu!"
+    k "Minha nossa! Era uma edição limitada, valeu!"
+    n "Katarina guarda o salgadinho no bolso."
     jump k1m3
 label k1b7:
     show katarina default with dissolve
@@ -351,24 +376,40 @@ label k1b7:
     show katarina smirk with dissolve
     k "Que massa, mais uma pro meu arsenal."
     show katarina default with dissolve
-    k "Se não se importar, guarda ela contigo aí por enquanto, tô sem espaço."
+    k "Se não se importar, guarde-a contigo por enquanto, estou sem espaço."
     jump k1m3
 label k1c7:
     show katarina default with dissolve
     n "Você procura por coisas no banheiro..."
     n "Parece que alguém recentemente passou por aí."
     n "Você se arrepende da sua escolha."
-    k "Eai, algo que preste?"
-    show katarina smirk with dissolve
-    k "Pelo seu silêncio, julgo que coisa boa não foi."
+    n "Tem um papel suspeito no lixo."
+    n "Pegar?"
+    menu
+        "Sim":
+            n "Você cria coragem e pega o papel do lixo."
+            n "Por incrível que pareça, ele não está cheio de bosta."
+            n "Há uma mensagem dentro dele, em uma língua que você desconhece."
+            k "Eai, achou alguma coisa?"
+            show katarina smirk with dissolve
+            k "Esse papel... não contém fezes, né? Espero que não, deixe-me vê-lo."
+            show katarina surpresa with dissolve
+            k "Está escrito em ratinhês, não sou fluente, mas é algo sobre queijos e fiscalização..."
+            k "Vamos ficar atentos, essa mensagem foi deixada para alguém aqui."
+        "Nem fodendo":
+            n "Você prefere não tocar nesse papel de origem suspeita."
+            k "Eaí, algo útil?"
+            show katarina smirk with dissolve
+            k "Pelo seu silêncio, julgo que nada agradável."
     jump k1m3
 label k1d7:
     show katarina default with dissolve
     n "Você procura por coisas no escritório, e acha uma edição física de um filme nomeado 'Sharkula', aparentemente sobre um tubarão vampiro."
     n "Parece ser terrível."
-    k "Eaí, algo que preste?"
+    k "Eaí, algo útil?"
     show katarina feliz with dissolve
-    k "Porra, tava querendo ver esse aí faz tempo, obrigada!"
+    k "Queria assistir a este filme há bastante tempo, mais uma obra cinematográfica de Mark Polonia, obrigada!"
+    n "Katarina guarda o CD no bolso."
     jump k1m3
 label k1m3:
     show katarina default with dissolve
@@ -381,17 +422,24 @@ label k1m3:
     n "Você percebe que um dos braços de Katarina na realidade é uma prótese. Muito bem feita, por sinal."
     menu:
         "Atentado?":
-            jump k1a8
+            if JogadorAtivo >=3
+                k "Ainda não sei o que houve exatamente naquele dia."
+                k "Instalaram uma bomba no nosso carro, o alvo era o meu pai."
+                k "Não restou nada dele, mas apenas um braço meu foi atingido."
+                k "Nunca deixarei de questionar as motivações de quem quer que tenha feito isso."
+                jump k1m4
+            else
+                jump k1a8
         "Meus sentimentos...":
             $ JogadorAtivo += 1
             jump k1b8
 label k1a8:
     show katarina irritada with dissolve
-    k "Não quero falar sobre isso no momento,{w} acho que já ta na hora da gente se preparar."
+    k "Não quero falar sobre isso no momento,{w} acho que já está na hora de começarmos os preparativos."
     jump k1m4
 label k1b8:
     show katarina triste with dissolve
-    k "É... obrigada.{w} Bora ir se preparar agora."
+    k "É... obrigada.{w} Vamos nos preparar agora"
     jump k1m4
 label k1m4:
     show katarina default with dissolve
@@ -400,9 +448,9 @@ label k1m4:
     show bg caixadagua
     with gatodissolve
     n "Após chegarem a uma certa altura, vocês chegam a uma plataforma e se sentam na beirada. Definitivamente não há mais nada por perto além desta torre e daquele posto de gasolina."
-    k "É... Parece que a gente está bem isolado aqui mesmo, mas vai ser bom para ver quando o caminhão estiver chegando." 
+    k "É... Parece que estamos bastante isolados aqui mesmo, será bom para ver quando o caminhão estiver chegando." 
     show katarina smirk with dissolve
-    k "Bora fazer alguma coisa enquanto isso.{w} Abre o terceiro bolso da minha mochila ai e pega alguma coisa."
+    k "Vamos fazer alguma coisa enquanto isso.{w} Abra o terceiro bolso da minha mochila e pegue alguma coisa."
     menu:
         "Pegar tabuleiro de xadrez":
             jump k1a9
