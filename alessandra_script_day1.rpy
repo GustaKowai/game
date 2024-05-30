@@ -980,9 +980,9 @@ label a1b10:
 
         "Queremos promover o veganismo!": #1
             $ pontosSucesso += 1
-            traf: "Lacraram!"
-            n: "Ele parece gostar da ideia"
-            n: "Por mais que a arma transforme coisas vivas em tofu"
+            traf "Lacraram!"
+            n "Ele parece gostar da ideia"
+            n "Por mais que a arma transforme coisas vivas em tofu"
 
     #se fez 3 ou mais pontos
     if pontosSucesso >= 3:
