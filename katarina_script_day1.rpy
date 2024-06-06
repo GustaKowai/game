@@ -8,10 +8,13 @@
 
 label d1kat1:
     default escopeta = False
+    default rifle = False
     default xmortadela = False
     default cha = False
     default cd = False
     default salgadinho = False
+    default garrafa = False
+    default pinga = False
 
     play music "escritorio.mp3" volume 0.5
     $ katDay1 = False
@@ -475,6 +478,7 @@ label k1a9:
             jump k1b10
 label k1b9:
     show katarina feliz with dissolve
+    $ garrafa = True
     k "Boa! Tava querendo fazer isso mesmo."
     n "Ela pega a garrafa da sua mão, a arremessa para frente e aguarda ansiosamente ela espatifar no chão."
     show katarina default with dissolve
@@ -509,10 +513,14 @@ label k1c9:
             jump k1d11
 label k1a10:
     show katarina feliz with dissolve
+    $ pinga = True
     k "Toma essa aqui, é massa."
     n "Ela te dá uma pinga sabor planta carnívora."
     n "Você já deveria ter aprendido a não confiar nas preferências gastronômicas dela."
     k "Feita em casa!"
+    n "Você fecha os olhos e a experimenta..."
+    n "É surpreendentemente boa!"
+    n "E forte..."
     jump k1m5
 label k1b10:
     show katarina meh with dissolve
@@ -603,9 +611,18 @@ label k1b12:
     jump k1m6
 
 label k1m6:
+    if pinga
+        n "Você sente que não tem outra alternativa a não ser a confiar nela. Flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção."
+        n "Uma sensação esquisita toma você, por um momento, você se questiona o porquê, mas se recorda: a mini pinga."
+        k "Você está bem?"
+        menu:
+            "Não.":
+                jump k1m10
+            "Nem fodendo.":
+                jump k1m10
     n "Você sente que não tem outra alternativa a não ser a confiar nela. Flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção."
     hide katarina with dissolve
-    n "Então você vai, deita na rodovia, e espalha o ketchup porcamente na sua perna.{w} Só uma pessoa muito ingênua mesmo cairia nisso."
+    n "Você deita na rodovia e espalha o ketchup porcamente pela sua perna.{w} Só uma pessoa muito ingênua mesmo cairia nisso."
     n "O caminhão se aproxima cada vez mais. Você sente um frio na espinha mas começa a gritar por ajuda. Sua atuação é terrível, nem a alma mais inocente da terra seria capaz de acreditar nisso."
     n "Ele chega a uma distância consideravelmente perto de ti... {w} ele se aproxima...{w} e de repente..."
     n "Ele para."
@@ -618,6 +635,91 @@ label k1m6:
             jump k1a13
         "Continuar atuando":
             jump k1b13
+
+label k1m10:
+    show katarina irritada with dissolve
+    k "Droga! Está certo, você não está em condições de atuar. Pegue esta arma, irei lá."
+    hide katarina with dissolve
+    n "Katarina te entrega o rifle, vai até a rodovia, espalha ketchup pela sua perna e começa a atuar."
+    n "Ela parece bastante convinvente."
+    n "O caminhoneiro se aproxima, você está muito bêbado e não consegue discernir se ele irá parar o caminhão ou não."
+    menu:
+        "Atirar.":
+            jump k1a19
+        "Aguardar.":
+            jump k1b19
+
+label k1a19:
+    n "Você mira, Katarina olha para você assustada, sabendo que você vai fazer merda."
+    k "Não!"
+    n "Você atira nos pneus, para evitar uma fatalidade imediata."
+    n "A sua mira é terrível."
+    n "Você acerta o tiro na testa do velhinho que dirigia o caminhão."
+    show katarina surpresa
+    with moveinright
+    k "Você realmente atirou no velhinho fofo que estava dirigindo o caminhão?"
+    k "Ele já tinha até parado!"
+    n "O caminhão está parado."
+    n "Você nunca mais irá tomar uma mini pinga"
+    k "Irei lá conferir."
+    n "Katarina abre a porta do caminhão, um ratinho sai correndo."
+    show katarina default with dissolve
+    k "Que porco!"
+    n "Ela começa a investigar."
+    k "Ei! Vem aqui."
+    n "Você vai até a cabine do caminhão."
+    show katarina confusa with dissolve
+    k "Olha só isso."
+    n "Você olha para o buraco da bala na testa do velhinho."
+    n "Não há nenhum indício de sangue, a bala parece ter furado metal."
+    n "Katarina dá umas batidinhas na cabeça do velhinho, um barulho metálico é emitido."
+    k "O que é isso? Parece um... robô?"
+    menu:
+        "Ufa, não sou um assassino.":
+            show katarina smirk with dissolve
+            k "Ainda não, não se esqueça que fazemos parte de uma revolução brutal."
+        "Eu acabei de matar um robô!":
+            show katarina smirk with dissolve
+            k "Menos um na revolução das máquinas."
+        
+    show katarina default with dissolve
+    k "Tudo bem, vamos investigar este caminhão."
+    n "Katarina começa a procurar pelo porta luvas."
+    n "Ela encontra luvas."
+    show katarina surpresa with dissolve
+    k "Quem diria..."
+    show katarina default with dissolve
+    n "Ela vai até a cabine do caminhão e procura por algo na sessão de sorvetes de queijo."
+    show katarina feliz with dissolve
+    k "A-ha! Aqui está!"
+    n "Ela tira de dentro de um pote de sorvete um saquinho com um pequeno pedaço de queijo dentro."
+    k "Esse queijo é faraônico."
+    menu:
+        "Parece perigoso.":
+            show katarina irritada with dissolve
+            k "Ele pode ser poderoso, não há dúvidas sobre isso."
+            show katarina default with dissolve
+            k "Só não sabemos exatamente como."
+        "Parece gostoso.":
+            show katarina smirk with dissolve
+            k "Eu não faria isso, esse queijo pode ser mais perigoso do que imaginamos."
+    show katarina smirk with dissolve
+    k "Ele é extremamente antigo, sabia que havia algo de errado."
+    n "Katarina pega alguns picolés."
+    show katarina default with dissolve
+    k "Precisamos reportar isso ao Gatovaldo."
+    jump k1m8
+
+label k1b19:
+    n "Você aguarda."
+    n "Mas a mini pinga te deixa extremamente ansioso."
+    n "Você sente que talvez precise tomar uma atitude rápida."
+    n "Ou não..."
+    menu:
+        "Atirar.":
+            jump k1a19
+        "Aguardar.":
+            
 label k1a13:
     
     vo "O quê? Mas o que você está fazendo aqui nesse meio do nada?"
@@ -804,7 +906,7 @@ label k1m9:
 
 
 label k1m8:
-    n "Vocês voltam até o carro, os picolés já estão quase derretidos e o calor está insuportável."
+    n "Vocês voltam até o carro, os picolés já estão quase derretidos, o calor está insuportável."
     show katarina feliz with dissolve
     k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
     
