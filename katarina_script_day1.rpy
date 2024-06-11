@@ -613,7 +613,7 @@ label k1b12:
 label k1m6:
     if pinga
         n "Você sente que não tem outra alternativa a não ser a confiar nela. Flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção."
-        n "Uma sensação esquisita toma você, por um momento, você se questiona o porquê, mas se recorda: a mini pinga."
+        n "Uma sensação esquisita toma você, por um momento, você questiona o porquê, mas se recorda: a mini pinga."
         k "Você está bem?"
         menu:
             "Não.":
@@ -625,6 +625,87 @@ label k1m6:
     n "Você deita na rodovia e espalha o ketchup porcamente pela sua perna.{w} Só uma pessoa muito ingênua mesmo cairia nisso."
     n "O caminhão se aproxima cada vez mais. Você sente um frio na espinha mas começa a gritar por ajuda. Sua atuação é terrível, nem a alma mais inocente da terra seria capaz de acreditar nisso."
     n "Ele chega a uma distância consideravelmente perto de ti... {w} ele se aproxima...{w} e de repente..."
+    if garrafa:
+        n "O caminhão passa por cima de um grande caco de vidro da garrafa de vodka que vocês derrubaram da torre mais cedo."
+        n "O pneu estoura, ele capota e passa voando por cima de ti."
+        show katarina surpresa with dissolve
+        k "..."
+        vo "Socorro!"
+        n "Vocês ouvem uma voz vindo do caminhão."
+        k "A gente precisa ajudá-lo!"
+        n "BOOOOOOM"
+        n "O caminhão explode."
+        k ".........."
+        show katarina triste with dissolve
+        k "Você tinha que escolher a garrafa de vodka..."
+        n "Se é que aquele caminhão tinha alguma evidência, dificilmente resta algo nele agora."
+        k "A gente meio que... meio que estragou tudo..."
+        k "Mas se bem que..."
+        show katarina muitofeliz with dissolve
+        k "ISSO FOI FODA PARA CARALHO!!!!!"
+        k "VOCÊ TINHA QUE VER, ELE VOU POR CIMA DE TI, TIPO, VOANDO!!  FOI MUITO FODA!!!"
+        k "QUANDO ELE EXPLODIU FOI TIPO...."
+        k "AAAAAAAAA"
+        show katarina default with dissolve
+        k "Ok, tudo bem, isso não aconteceu, beleza? Vamos lá ver se sobrou alguma coisa"
+        n "Vocês chegam até o caminhão, que ainda está pegando fogo."
+        n "Katarina tira um extintor de incêndio de sua mochila e começa a apagá-lo."
+        n "Você vai até a cabine, e encontra um corpo carbonizado"
+        n "Do lado dele, há uma capsula, que parece intacta."
+        n "Você a pega, e percebe que tem um rato dentro dela."
+        menu:
+            "Tem um rato aqui!":
+                show katarina confusa with dissolve
+                k "Um rato?"
+                n "Ela pega a capsula da sua mão."
+                n "Ao apertar um botão na lateral, a capsula se abre, um líquido laranja transparente escorre pelas mãos de Katarina."
+                n "O rato permanece imóvel."
+            "AHHH! (Largar a capsula)":
+                n "Você se lembra que tem medo de ratos, e solta a capsula no chão."
+                n "Ela se quebra, um líquido laranja transparente vaza de dentro dela, o rato permanece imóvel."
+                show katarina confusa with dissolve
+                k "O que é isso?"
+                k "Um rato?"
+                n "Ela o pega."
+        show katarina default with dissolve
+        k "Ele não parece bem"
+        n "Katarina tira uma gaiola de hamster da mochila, e coloca o rato dentro dela."
+        k "Precisamos levar isso para o gatovaldo, é a única evidência que sobrou."
+        k "Espero que ele não esteja com fome..."
+        n "O rato acorda, ele começa a emitir guinchos agudos e a correr de um lado para o outro dentro da gaiola."
+        show katarina surpresa with dissolve
+        k "Ei! Calma aí! Eu estava brincando..."
+        n "Ele parece se acalmar, e dá um suspiro aliviado."
+        show katarina confusa with dissolve
+        k "Espera, você consegue me ouvir?"
+        n "Ele faz 'sim' com a cabeça."
+        show katarina surpresa with dissolve
+        k "Caramba!"
+        show katarina smirk with dissolve
+        k "Obrigado por se entregar ratinho, pode ter certeza que você vai passar por um questionamento"
+        n "O rato parece triste."
+        k "Faz uma pergunta para ele aí!"
+        menu:
+            "Qual é o seu nome?":
+                n "O rato fica te encarando por um tempo."
+                n "Ele faz sim com a cabeça"
+            "Você era pet do motorista?":
+                n "O rato faz não com a cabeça."
+                n "Ele olha para o corpo carbonizado, e parece triste com isso."
+                n "Você não entende exatamente o porquê."
+        show katarina default with dissolve
+        k "Acabei de contatar uma equipe para lidar com esse caminhão explodido na estrada."
+        k "Vamos voltar para a base, precisamos urgentemente mostrar isso ao gatovaldo."
+        n "Vocês voltam até o carro, o ratinho parece ansioso, ele começa a correr pela roda giratória da gaiola."
+        show katarina feliz with dissolve
+        k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
+    
+        show katarina smirk with dissolve
+
+        extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso."
+        n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem."
+
+        jump finalkat1
     n "Ele para."
     n "Um senhorzinho muito fofo sai da cabine."
     show vovo default at left with moveinleft
@@ -719,9 +800,31 @@ label k1b19:
         "Atirar.":
             jump k1a19
         "Aguardar.":
-            
+            jump k1b20
+
+
+label k1b20:
+    n "Você aguarda novamente, e percebe que o caminhão está parando."
+    k "SOCORRO!!"
+    n "Um idoso sai de dentro do caminhão."
+    vo "Pelas barbas do profeta, você está bem?"
+    k "Ai!!!!!!! Minha perna!!!"
+    show katarina smirk with dissolve
+    k "Mãos ao alto velhote!"
+    n "Katarina tira um trabuco da mochila e aponta para o senhorzinho."
+    show vovo default at shake
+    vo "Mas... o quê...?"
+    show katarina brava at bounce
+    k "Isso mesmo! Mãos ao alto! Isso é um assalto!"
+    n "Ele paralisa, parece estar muito assustado."
+    menu:
+        "Isso mesmo! (Render o vovô com a sua arma).":
+            jump k1a15
+        "Não se intrometer.":
+            jump k1b21
+
+
 label k1a13:
-    
     vo "O quê? Mas o que você está fazendo aqui nesse meio do nada?"
     jump k1m7
 label k1b13:
@@ -745,7 +848,10 @@ label k1m7:
             jump k1a15
         "Não fazer nada" if escopeta:
             n "Você apenas deixa Katarina agir."
+            jump k1b15
 
+label k1b15:
+    n "Você apenas deixa Katarina agir."
     show katarina feliz with dissolve
     k "Tô te zoando!"
     n "Ela abaixa a arma."
@@ -756,6 +862,108 @@ label k1m7:
     n "Ele ainda está bastante assustado."
     show katarina default with dissolve
     k "Calma! Toma aqui."
+    if salgadinho
+        n "Katarina abre um bolso da mochila para pegar dinheiro, mas acaba derrubando o pacote de salgadinho que você havia achado."
+        vo "O-oque é isso?"
+        n "Katarina se inclina para pegar o salgadinho."
+        show katarina default with dissolve
+        k "Um salgadinho..."
+        vo "De que sabor?"
+        k "Queijo picante."
+        n "Você percebe que os olhos do vovozinho dilatam um pouco."
+        menu:
+            "Oferece um pouco para ele!":
+                show katarina surpresa with dissolve
+                k "O que?? Eu pretendia comê-lo todo sozinha."
+                show katarina triste with dissolve
+                k "Tá bom... Quer experimentar, vovô?"
+                vo "Aceito!"
+                n "Katarina abre o pacote, o senhorzinho enfia a sua mão dentro dele e pega um punhado como um animal agindo por instinto."
+                n "Ele coloca tudo na boca e começa a mastigar."
+                n "Até que vai lentamente parando, com a boca ainda cheia."
+                vo "Om quãm ardido?"
+                n "Katarina lê a embalagem."
+                show katatina smirk with dissolve
+                k "Aqui diz Ultra Mega Blaster Insanamente Ardido, provavelmente é marketing..."
+                n "Um jato de líquido branco é cuspido pelo vovô durante alguns segundos, ele cai após isso."
+                hide vovo with moveoutbottom
+                n "Vocês veem um ratinho encharcado saindo correndo para o deserto."
+                show katarina surpresa with dissolve
+                k "Acho que ele vai precisar de uma ambulância..."
+                show katarina confusa with dissolve
+                k "Espera aí..."
+                n "Ela coloca o dedo em uma poça daquele líquido e o experimenta."
+                show katarina smirk with dissolve
+                k "Isso é leite! Leite de vaca integral!"
+                k "Ótimo para aliviar a ardência da pimenta, isso foi um mecanismo de defesa."
+                show katarina confusa with dissolve
+                k "Mas certamente não é um mecanismo de defesa humano..."
+                menu:
+                    "Tinha um rato dentro dele.":
+                        k "Não consigo imaginar o motivo de..."
+                    "Ele pode só ter tomado muito leite no café da manhã...":
+                        show katarina smirk with dissolve
+                        k "Sim, e comeu um rato vivo pelo jeito também..."
+                show katarina surpresa with dissolve
+                        k "Espera! Claro, ele se empolgou com o fato de que o salgadinho era de queijo..."
+                        k "Por que ele era o rato!"
+                        n "Katarina puxa o cabelo do corpo do vovô que está no chão."
+                        show katarina brava with dissolve
+                        k "Argh! É muito pesado!"
+                        n "Ela o solta, ele faz um som metálico ao cair no chão."
+                        show katarina smirk with dissolve
+                        k "Era um robô..."
+                        show katarina default with dissolve
+                        k "Certo, Gatovaldo vai gostar de saber disso."
+                        k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
+                        k "Agora a gente precisa dar o fora daqui."
+                        show katarina feliz with dissolve
+                        k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
+                        jump k1m8
+            "Está vencido...":
+                vo "Ah... q-que pena..."
+                n "Katarina volta a procurar por dinheiro na mochila"
+                
+    if cd
+        n "Katarina abre um bolso da mochila para pegar dinheiro, mas acaba derrubando o DVD que você havia achado."
+        n "Ela tenta pegá-lo no ar, mas acaba fazendo um malabarismo impossível que faz com que a embalagem caia com mais força ainda no chão, ejetando o CD que estava dentro a uma velocidade absurda."
+        n "Ele passa direto pela cabeça do vovô, fazendo um corte limpo." 
+        n "Ela lentamente escorrega, até cair no chão."
+        show katarina surpresa with dissolve
+        k "N-nós acabamos... A GENTE ACABOU DE DECAPTAR A PORRA DO VELHO???"
+        show katarina confusa with dissolve
+        k "Espera..."
+        n "Um rato sai correndo de dentro da boca do idoso para o deserto."
+        n "Vocês percebem que não há uma gota de sangue."
+        k "Ele não era um vovozinho..."
+        show katarina smirk with dissolve
+        k "Era um rato se passando por um!"
+        n "Katarina pega a cabeça do velhinho e começa a analisá-la."
+        k "Isso aqui vai ficar bom na minha parede."
+        $ JogadorAtivo +=3
+        n "Ela guarda a cabeça na mochila."
+        show katarina default with dissolve
+        menu:
+            "A gente não deveria usar isso como evidência?":
+                k "Temos o resto do corpo inteiro para usarmos como evidência!"
+                k "Você deveria aprender a sempre tirar o melhor proveito de tudo!"
+                k "Essa foi uma clara oportunidade de souvenir."
+            "Já sabe quais jóias vão substituir os olhos?"
+                show katarina confusa with dissolve
+                k "Jóias?"
+                show katarina default with dissolve
+                k "Ah! Como os animais no meu escritório? Não! Essa vai para a minha parede de cabeças humanas!"
+                k "..."
+                n "..."
+                show katarina smirk with dissolve
+                k "Brincadeira! Provavelmente esmeraldas."
+        show katarina default with dissolve
+        k "Certo, Gatovaldo vai gostar de saber disso."
+        k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
+        k "Agora a gente precisa dar o fora daqui."
+        show katarina feliz with dissolve
+        k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
+        jump k1m8
     n "Ela tira um maço de dinheiro da mochila."
     show katarina feliz with dissolve
     k "Me vê três picolés!"
@@ -807,7 +1015,7 @@ label k1a15:
     k "Pode ir abrindo o caminhão!"
     n "De qualquer forma, ela parece ter gostado da sua atitude."
     show vovo default at shake
-    vo "Está bem! Está bem! Só não me machuquem!"
+    vo "Está bem! Está bem! Só não me machuquem, por favor!"
     
     menu:
         "Investigar a cabine":
