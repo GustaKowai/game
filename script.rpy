@@ -195,6 +195,7 @@ define ate = Character("Atendente", image="atendente", callback = low_beep, what
 define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep, what_prefix='"', what_suffix='"')
 define padre = Character("Padre", image="padre", callback = low_beep, what_prefix='"', what_suffix='"')
 define urso = Character("Urso", image="urso", callback = low_beep)
+define z = Character("Zé", image = "Ze", callback = beep_5, what_prefix='"', what_suffix='"')
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
 define character.k = Character("Katarina Kabrera", image="katarina", callback = beep_3, what_prefix='"', what_suffix='"')
 default k.azul = 0

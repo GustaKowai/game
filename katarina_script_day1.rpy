@@ -17,7 +17,7 @@ label d1kat1:
     default pinga = False
     default cabeca = False
     default papel = False
-    
+
     play music "escritorio.mp3" volume 0.5
     $ katDay1 = False
     scene bg recepcao
@@ -885,6 +885,7 @@ label k1b15:
                 k "Tá bom... Quer experimentar, vovô?"
                 vo "Aceito!"
                 n "Katarina abre o pacote, o senhorzinho enfia a sua mão dentro dele e pega um punhado como um animal agindo por instinto."
+                $ salgadinho = False
                 n "Ele coloca tudo na boca e começa a mastigar."
                 n "Até que vai lentamente parando, com a boca ainda cheia."
                 vo "Om quãm ardido?"

@@ -5,12 +5,15 @@ default lugar3trueK = True
 default lugar4trueK = True
 default lugar5trueK = True
 default lugar6trueK = True
+default lugar7trueK = True
 default lugar1trueA = True
 default lugar2trueA = True
 default lugar3trueA = True
 default lugar4trueA = True
 default lugar5trueA = True
 default lugar6trueA = True
+default energiaAzul = 0
+default energiaLaranja = 0
 
 
 label investigacao:
@@ -86,8 +89,17 @@ label investigacao:
                 "Rifle de precisão" if lugar6trueK:
                     $ energia -= 1
                     jump lugar6k
+                "Salgadinho" if (lugar7trueK and salgadinho):
+                    $ energia -= 1
+                    jump lugar7k
+                
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
+                    if jogador1:
+                        $ energiaAzul = energia
+                    else:
+                        $ energiaLaranja = energia
+
                     jump investigacao
 
 
@@ -109,7 +121,8 @@ label investigacao:
                 n "Ela tem um gosto estranho"
                 n "Você se sente sendo julgado pela planta carnivora do outro lado da sala"
             "Deixar de lado":
-                n "Você coloca o tabuleiro de xadrez de volta no lugar dele"
+                n "Você pega uma das mini garragas de pinga e depois coloca o tabuleiro de xadrez de volta no lugar dele"
+                $ zePinga = True
         jump d1kat1inv
     
     label lugar3k:
@@ -172,6 +185,19 @@ label investigacao:
 
         jump d1kat1inv
     
+    label lugar7k:
+        $ lugar7k = False
+        n "Você investiga o pacote de salgadinho"
+        n "Está escrito \"Aqui diz Ultra Mega Blaster Insanamente Ardido\""
+        menu:
+            "Provar":
+                n "O sabor é extremamente ardido, você sente como se tivesse colocado um pedaço do inferno na sua boca"
+                n "Não é apenas marketing"
+                n "Você precisa urgentemente de leite para aliviar a queimação"
+                n "Você gasta um tempo para se recuperar do dano causado pelo salgadinho"
+                $ energia -= 1
+            "Deixar de lado":
+                n "Você acha melhor não comer isso."
 
     ################----Alessandra----#######################
 
@@ -208,6 +234,11 @@ label investigacao:
                     jump lugar6a
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
+                    if jogador1:
+                        $ energiaAzul = energia
+                    else:
+                        $ energiaLaranja = energia
+
                     jump investigacao
 
 
