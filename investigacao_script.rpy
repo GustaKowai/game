@@ -80,7 +80,7 @@ label investigacao:
                 "Revista antiga" if lugar4trueK:
                     $ energia -= 1
                     jump lugar4k
-                "Garrafa de vodka" if lugar5trueK:
+                "Garrafa de vodka" if (lugar5trueK and not garrafa):
                     $ energia -= 1
                     jump lugar5k
                 "Rifle de precisão" if lugar6trueK:

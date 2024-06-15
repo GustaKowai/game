@@ -15,7 +15,9 @@ label d1kat1:
     default salgadinho = False
     default garrafa = False
     default pinga = False
-
+    default cabeca = False
+    default papel = False
+    
     play music "escritorio.mp3" volume 0.5
     $ katDay1 = False
     scene bg recepcao
@@ -147,9 +149,9 @@ label k1m1:
     show katarina default with dissolve
     k "Ele até deu uma sumida da ruas, acho que deve ter ido procurar terapia, mas, sinceramente, não entendo o porquê...{w} Minha sala tem ar condicionado e eu sempre o alimentava com minhas refeições preferidas."
     n "Você se lembra de uma aberração gastronômica sendo mencionada anteriormente."
-    if cha
+    if cha:
         n "Um chá fervido em sangue de carneiro certeamente te levaria para a terapia também..."
-    if xmortadela
+    if xmortadela:
         n "Sejá lá o que um X-Mortadela-Maligno represente, certamente coisa boa não é..."
     n "...pobrezinho."
     show katarina feliz with dissolve
@@ -351,21 +353,22 @@ label k1b6:
         "Procurar nas prateleiras":
             $ JogadorAtivo += 1
             jump k1a7
-            $ salgadinho = True
+            
         "Procurar no caixa":
             $ JogadorAtivo += 1
-            $ escopeta = True
             jump k1b7
+
         "Procurar no banheiro":
             $ JogadorAtivo += 0
             jump k1c7
+
         "Procurar no escritório":
             $ JogadorAtivo += 1
-            $ cd = True
             jump k1d7
 label k1a7:
     show katarina default with dissolve
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{w} Ele venceu há 2 anos."
+    $ salgadinho = True
     k "Eaí, algo de interessante?"
     show katarina muitofeliz with dissolve
     k "Minha nossa! Era uma edição limitada, valeu!"
@@ -388,9 +391,10 @@ label k1c7:
     n "Você se arrepende da sua escolha."
     n "Tem um papel suspeito no lixo."
     n "Pegar?"
-    menu
+    menu:
         "Sim":
             n "Você cria coragem e pega o papel do lixo."
+            $ papel = True
             n "Por incrível que pareça, ele não está cheio de bosta."
             n "Há uma mensagem dentro dele, em uma língua que você desconhece."
             k "Eai, achou alguma coisa?"
@@ -408,6 +412,8 @@ label k1c7:
 label k1d7:
     show katarina default with dissolve
     n "Você procura por coisas no escritório, e acha uma edição física de um filme nomeado 'Sharkula', aparentemente sobre um tubarão vampiro."
+    $ cd = True
+
     n "Parece ser terrível."
     k "Eaí, algo útil?"
     show katarina feliz with dissolve
@@ -425,13 +431,13 @@ label k1m3:
     n "Você percebe que um dos braços de Katarina na realidade é uma prótese. Muito bem feita, por sinal."
     menu:
         "Atentado?":
-            if JogadorAtivo >=3
+            if JogadorAtivo >=3:
                 k "Ainda não sei o que houve exatamente naquele dia."
                 k "Instalaram uma bomba no nosso carro, o alvo era o meu pai."
                 k "Não restou nada dele, mas apenas um braço meu foi atingido."
                 k "Nunca deixarei de questionar as motivações de quem quer que tenha feito isso."
                 jump k1m4
-            else
+            else:
                 jump k1a8
         "Meus sentimentos...":
             $ JogadorAtivo += 1
@@ -611,7 +617,7 @@ label k1b12:
     jump k1m6
 
 label k1m6:
-    if pinga
+    if pinga:
         n "Você sente que não tem outra alternativa a não ser a confiar nela. Flashs da sua vida inteira passam pela sua cabeça, e o caminhão ainda nem está vindo na sua direção."
         n "Uma sensação esquisita toma você, por um momento, você questiona o porquê, mas se recorda: a mini pinga."
         k "Você está bem?"
@@ -862,7 +868,7 @@ label k1b15:
     n "Ele ainda está bastante assustado."
     show katarina default with dissolve
     k "Calma! Toma aqui."
-    if salgadinho
+    if salgadinho:
         n "Katarina abre um bolso da mochila para pegar dinheiro, mas acaba derrubando o pacote de salgadinho que você havia achado."
         vo "O-oque é isso?"
         n "Katarina se inclina para pegar o salgadinho."
@@ -904,7 +910,7 @@ label k1b15:
                     "Ele pode só ter tomado muito leite no café da manhã...":
                         show katarina smirk with dissolve
                         k "Sim, e comeu um rato vivo pelo jeito também..."
-                show katarina surpresa with dissolve
+                        show katarina surpresa with dissolve
                         k "Espera! Claro, ele se empolgou com o fato de que o salgadinho era de queijo..."
                         k "Por que ele era o rato!"
                         n "Katarina puxa o cabelo do corpo do vovô que está no chão."
@@ -924,7 +930,7 @@ label k1b15:
                 vo "Ah... q-que pena..."
                 n "Katarina volta a procurar por dinheiro na mochila"
                 
-    if cd
+    if cd:
         n "Katarina abre um bolso da mochila para pegar dinheiro, mas acaba derrubando o DVD que você havia achado."
         n "Ela tenta pegá-lo no ar, mas acaba fazendo um malabarismo impossível que faz com que a embalagem caia com mais força ainda no chão, ejetando o CD que estava dentro a uma velocidade absurda."
         n "Ele passa direto pela cabeça do vovô, fazendo um corte limpo." 
@@ -940,6 +946,7 @@ label k1b15:
         k "Era um rato se passando por um!"
         n "Katarina pega a cabeça do velhinho e começa a analisá-la."
         k "Isso aqui vai ficar bom na minha parede."
+        $ cabeca = True
         $ JogadorAtivo +=3
         n "Ela guarda a cabeça na mochila."
         show katarina default with dissolve
@@ -948,7 +955,7 @@ label k1b15:
                 k "Temos o resto do corpo inteiro para usarmos como evidência!"
                 k "Você deveria aprender a sempre tirar o melhor proveito de tudo!"
                 k "Essa foi uma clara oportunidade de souvenir."
-            "Já sabe quais jóias vão substituir os olhos?"
+            "Já sabe quais jóias vão substituir os olhos?":
                 show katarina confusa with dissolve
                 k "Jóias?"
                 show katarina default with dissolve

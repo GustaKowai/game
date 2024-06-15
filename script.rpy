@@ -8,18 +8,48 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
-    def mid_beep(event, **kwargs):
+    def beep_2(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
+            renpy.music.play("bip 2.wav", channel="textSound", loop=True, relative_volume=0.5)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
-    def high_beep(event, **kwargs):
+    def beep_3(event, **kwargs):
         if event == "show":
-            renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
+            renpy.music.play("bip 3.wav", channel="textSound", loop=True, relative_volume=0.5)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="textSound")
 
+
+    def beep_4(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip 4.wav", channel="textSound", loop=True, relative_volume=0.5)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="textSound")
+
+    def beep_5(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip 5.wav", channel="textSound", loop=True, relative_volume=0.5)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="textSound")
+
+    def beep_6(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip 6.wav", channel="textSound", loop=True, relative_volume=0.5)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="textSound")
+
+    def beep_7(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip 7.wav", channel="textSound", loop=True, relative_volume=0.5)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="textSound")
+
+    def beep_8(event, **kwargs):
+        if event == "show":
+            renpy.music.play("bip 8.wav", channel="textSound", loop=True, relative_volume=0.5)
+        elif event == "slow_done" or event == "end":
+            renpy.music.stop(channel="textSound")
 
 ###Transição de musicas
 
@@ -129,7 +159,6 @@ default d8 = False
 
 #Variáveis da investigação:
 default xadrez = True
-default rifle = False
 default vestidotiedye = True
 default tofu = False
 default vestidorosa = False
@@ -158,7 +187,7 @@ define pag = Character(' ', kind=nvl, color="#c8c8ff")
 define e = Character("Eileen", what_prefix='"', what_suffix='"')
 define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep, what_prefix='"', what_suffix='"')
 define n = Character("", callback = low_beep, what_prefix='{i}', what_suffix='{/i}')
-define c = Character("Claudia", image="claudia", callback = low_beep, what_prefix='"', what_suffix='"')
+define c = Character("Claudia", image="claudia", callback = beep_2, what_prefix='"', what_suffix='"')
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep, what_prefix='"', what_suffix='"')
 define gar = Character("Garçom", image="garcom", callback = low_beep, what_prefix='"', what_suffix='"')
 define traf = Character("Traficante", image="traficante", callback = low_beep, what_prefix='"', what_suffix='"')
@@ -167,7 +196,7 @@ define rdj = Character("Robert Downey Jr.", image="rdj", callback = low_beep, wh
 define padre = Character("Padre", image="padre", callback = low_beep, what_prefix='"', what_suffix='"')
 define urso = Character("Urso", image="urso", callback = low_beep)
 #Define as conquistáveis e suas respectivas confianças nos jogadores azul e laranja
-define character.k = Character("Katarina Kabrera", image="katarina", callback = low_beep, what_prefix='"', what_suffix='"')
+define character.k = Character("Katarina Kabrera", image="katarina", callback = beep_3, what_prefix='"', what_suffix='"')
 default k.azul = 0
 default k.laranja = 0
 define character.a = Character("Alessandra Mallet", image="alessandra", callback = low_beep, what_prefix='"', what_suffix='"')
@@ -186,7 +215,7 @@ default a.laranja = 0
 label start:
 
     
-    play music "abandoned.ogg"  volume 2.0
+    play music "quartel.wav"  volume 2.0
     scene bg quartel
 
     n "Antes de começarmos..."
@@ -446,7 +475,7 @@ label start:
     ########################################################################################################################### 
 
         label whereToGo:
-            play music "abandoned.ogg" volume 2.0
+            play music "quartel.wav" volume 2.0
             scene bg quartel
             with gatodissolve
             $ JogadorAtivo = 0
@@ -485,7 +514,7 @@ label start:
                 "Para o Ateliê da Alessandra" if aleDay3:
                     jump d3ale1
             
-            #jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+            jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
             jump changeDay                                    
 
     ########################################################################################################################### 
@@ -494,7 +523,7 @@ label start:
 
         label changeDay:
             
-            play music "abandoned.ogg" volume 2.0
+            play music "quartel.wav" volume 2.0
             scene bg quartel
             with Fade(0.5, 1.0, 0.5)
 
