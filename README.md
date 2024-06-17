@@ -94,6 +94,15 @@ Objetivos concluidos na semanade 15/05-22/05:
 - Flowchart do dia 1 da Katarina
 - Dia 1 da Alessandra modificado para ter como falhar na missão
 
+Objetivos concluidos na semanade 12/07-18/07:
+
+- Musica do quartel adicionada
+- Dia 1 da Katarina modificado para ter como falhar na missão
+- Flowchart do dia 1 da Alessandra atualizado
+- Flowchart do dia 1 da Katarina atualizado
+- Sistema de investigação atualizado
+- Bar do Zé em inicio de produção
+
 Objetivos em andamento:
 
 - Arte:

@@ -14,6 +14,18 @@ default lugar5trueA = True
 default lugar6trueA = True
 default energiaAzul = 0
 default energiaLaranja = 0
+default itemInvestigado = ""
+default inventarioLaranja = []
+default inventarioAzul = []
+
+label adicionarItem:
+    if jogador1:
+        $ inventarioAzul.append(itemInvestigado)
+    else:
+        $ inventarioLaranja.append(itemInvestigado)
+    $ itemInvestigado = ""
+
+    jump investigacao
 
 
 label investigacao:
@@ -122,7 +134,7 @@ label investigacao:
                 n "Você se sente sendo julgado pela planta carnivora do outro lado da sala"
             "Deixar de lado":
                 n "Você pega uma das mini garragas de pinga e depois coloca o tabuleiro de xadrez de volta no lugar dele"
-                $ zePinga = True
+                
         jump d1kat1inv
     
     label lugar3k:
