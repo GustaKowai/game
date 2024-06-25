@@ -18,7 +18,7 @@ label d1kat1:
     default cabeca = False
     default papel = False
 
-    play music "escritorio.mp3" volume 0.5
+    play music "escritorio.wav" volume 0.5
     $ katDay1 = False
     scene bg recepcao
     if jogador1:

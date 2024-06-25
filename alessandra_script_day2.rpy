@@ -315,10 +315,12 @@ label a2a13:
     a "DROGA!"
     n "Alessandra vira para um beco estreito"
     show bg beco
+    play music "beco.wav" volume 0.5
     show alessandra smirk
     a "QUERO VER ELES PASSAREM AQUI"
     n "Ela acelera ainda mais, até que vocês chegam em uma área populada da cidade"
     show bg cidade
+    play music "cidade.wav" volume 0.5
     a "Agora eles não chegam mais na gente"
     show alessandra brava
     a "Bom, da próxima vez presta mais atenção no que falam para você, quase nos ferramos bonito."
@@ -334,6 +336,7 @@ label a2b13:
     n "Você sente que talvez tenha sido uma má ideia subir nessa moto"
     n "Vocês pousam em segurança"
     show bg cidade
+    play music "cidade.wav" volume 0.5
     show alessandra confusa
     a "Espera, não tem nada aqui!"
     show alessandra smirk
