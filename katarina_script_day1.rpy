@@ -184,9 +184,8 @@ label k1a2:
     n "Ela te manda um teste do Buzzfeed para descobrir qual membro do One Direction você seria."
     show katarina feliz with dissolve
     k "Acho que já podemos ir, eu vou dirigindo!"
-    menu:
-        "Ir para a missão":
-            jump missaokat1
+    jump missaokat1
+
 label k1b2:
     show katarina feliz with dissolve
     k "Não se preocupe, elas são falsas, menos a do jacaré, a do leão, a do urso..."
@@ -196,9 +195,7 @@ label k1b2:
     k "Eram do meu pai. Eu as herdei quando ele morreu, assim como as joias. Apenas uni as duas coisas..."
     show katarina feliz with dissolve
     k "Acho que já podemos ir, eu vou dirigindo!"
-    menu:
-        "Ir para a missão":
-            jump missaokat1
+    jump missaokat1
 
 
 label missaokat1:
@@ -351,22 +348,16 @@ label k1b6:
     n "Vocês entram na loja, parece ter algumas coisas para explorar."
     menu:
         "Procurar nas prateleiras":
-            $ JogadorAtivo += 1
             jump k1a7
-            
         "Procurar no caixa":
-            $ JogadorAtivo += 1
             jump k1b7
-
         "Procurar no banheiro":
-            $ JogadorAtivo += 0
             jump k1c7
-
         "Procurar no escritório":
-            $ JogadorAtivo += 1
             jump k1d7
 label k1a7:
     show katarina default with dissolve
+    $ JogadorAtivo += 1
     n "Você procura por coisas nas prateleiras, e acha um salgadinho super ardido.{w} Ele venceu há 2 anos."
     $ salgadinho = True
     k "Eaí, algo de interessante?"
@@ -376,6 +367,7 @@ label k1a7:
     jump k1m3
 label k1b7:
     show katarina default with dissolve
+    $ JogadorAtivo += 1
     n "Você procura por coisas no caixa, e acha uma escopeta escondida debaixo da máquina registradora."
     $ escopeta = True
     k "Eaí, algo que preste?"
@@ -386,6 +378,7 @@ label k1b7:
     jump k1m3
 label k1c7:
     show katarina default with dissolve
+    $ JogadorAtivo += 0
     n "Você procura por coisas no banheiro..."
     n "Parece que alguém recentemente passou por aí."
     n "Você se arrepende da sua escolha."
@@ -411,6 +404,7 @@ label k1c7:
     jump k1m3
 label k1d7:
     show katarina default with dissolve
+    $ JogadorAtivo += 1
     n "Você procura por coisas no escritório, e acha uma edição física de um filme nomeado 'Sharkula', aparentemente sobre um tubarão vampiro."
     $ cd = True
 
@@ -639,6 +633,7 @@ label k1m6:
         vo "Socorro!"
         n "Vocês ouvem uma voz vindo do caminhão."
         k "A gente precisa ajudá-lo!"
+        play sound "explosion.ogg"
         n "BOOOOOOM"
         n "O caminhão explode."
         k ".........."
@@ -727,8 +722,8 @@ label k1m10:
     show katarina irritada with dissolve
     k "Droga! Está certo, você não está em condições de atuar. Pegue esta arma, irei lá."
     hide katarina with dissolve
-    n "Katarina te entrega o rifle, vai até a rodovia, espalha ketchup pela sua perna e começa a atuar."
-    n "Ela parece bastante convinvente."
+    n "Katarina te entrega o rifle, vai até a rodovia, espalha ketchup pela própria perna e começa a atuar."
+    n "Ela parece bastante convincente."
     n "O caminhoneiro se aproxima, você está muito bêbado e não consegue discernir se ele irá parar o caminhão ou não."
     menu:
         "Atirar.":
@@ -738,7 +733,9 @@ label k1m10:
 
 label k1a19:
     n "Você mira, Katarina olha para você assustada, sabendo que você vai fazer merda."
+    show katarina surpresa at easeinzoom
     k "Não!"
+    hide katarina
     n "Você atira nos pneus, para evitar uma fatalidade imediata."
     n "A sua mira é terrível."
     n "Você acerta o tiro na testa do velhinho que dirigia o caminhão."
@@ -813,6 +810,7 @@ label k1b20:
     n "Você aguarda novamente, e percebe que o caminhão está parando."
     k "SOCORRO!!"
     n "Um idoso sai de dentro do caminhão."
+    show vovo default at left with dissolve
     vo "Pelas barbas do profeta, você está bem?"
     k "Ai!!!!!!! Minha perna!!!"
     show katarina smirk with dissolve
@@ -827,7 +825,7 @@ label k1b20:
         "Isso mesmo! (Render o vovô com a sua arma).":
             jump k1a15
         "Não se intrometer.":
-            jump k1b21
+            jump k1b15
 
 
 label k1a13:
@@ -935,6 +933,7 @@ label k1b15:
         n "Katarina abre um bolso da mochila para pegar dinheiro, mas acaba derrubando o DVD que você havia achado."
         n "Ela tenta pegá-lo no ar, mas acaba fazendo um malabarismo impossível que faz com que a embalagem caia com mais força ainda no chão, ejetando o CD que estava dentro a uma velocidade absurda."
         n "Ele passa direto pela cabeça do vovô, fazendo um corte limpo." 
+        hide vovo with moveoutbottom
         n "Ela lentamente escorrega, até cair no chão."
         show katarina surpresa with dissolve
         k "N-nós acabamos... A GENTE ACABOU DE DECAPTAR A PORRA DO VELHO???"

@@ -199,7 +199,7 @@ label a1m2:
             $ JogadorAtivo += -1
             jump a1b4
         "Eu não me importo. Garçooom!":
-            $ JogadorAtivo += 2
+            $ JogadorAtivo += 0
             jump a1c4
 
 label a1a4: 
@@ -879,6 +879,7 @@ label a1b10:
 
     menu: 
         "Na realidade é do Jason Momoa sim!": #0
+            $ pontosSucesso += 0
             traf "Então por que ela falou Jared Leto?"
             traf "Tipo, não tem nada a ver uma coisa com a outra"
             show alessandra confusa with dissolve
@@ -893,6 +894,7 @@ label a1b10:
             traf "Tudo bem, mas como você ia dizendo, ele já esteve em outras mãos?"
             
         "É do Jared Leto, mas fez parte de outro look famoso": #1
+            $ pontosSucesso += 1
             traf "Mas eu estou aqui por um diamante do Jason Momoa, foi o que combinaram comigo!"
             show alessandra default with dissolve
             a "É... Na realidade não!"
@@ -1148,6 +1150,7 @@ label a1c10:
 
 
                 "Brincadeira! Vamos transformar um garçom mesmo...":
+                    $ JogadorAtivo +=-1
                     traf "Ufa, melhor."
 
     traf "Tá bom... Só toma cuidado para mirar certo e para não levantar nenhum tipo de suspeita."
