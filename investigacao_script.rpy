@@ -1,32 +1,20 @@
 #######----Escolha de onde investigar -----################
-default lugar1trueK = True
-default lugar2trueK = True
-default lugar3trueK = True
-default lugar4trueK = True
-default lugar5trueK = True
-default lugar6trueK = True
-default lugar7trueK = True
-default lugar1trueA = True
-default lugar2trueA = True
-default lugar3trueA = True
-default lugar4trueA = True
-default lugar5trueA = True
-default lugar6trueA = True
+default escolhido = []
 default energiaAzul = 0
 default energiaLaranja = 0
 default itemInvestigado = ""
 default inventarioLaranja = []
 default inventarioAzul = []
 
-label adicionarItem:
-    if jogador1:
-        $ inventarioAzul.append(itemInvestigado)
-    else:
-        $ inventarioLaranja.append(itemInvestigado)
-    $ itemInvestigado = ""
 
-    jump investigacao
-
+#Cria a função que adiciona os itens nos respectivos inventários
+init python:
+    def adicionarItem(itemInvestigado):
+        if jogador1:
+            inventarioAzul.append(itemInvestigado)
+        else:
+            inventarioLaranja.append(itemInvestigado)
+        itemInvestigado = ""
 
 label investigacao:
     play music "abandoned.ogg" volume 2.0
@@ -83,30 +71,32 @@ label investigacao:
                 laranja "Onde irei investigar?"
 
             menu:
-                "Planta Carnívora" if lugar1trueK:
+                set escolhido
+                "Planta Carnívora":
                     $ energia -= 1
                     jump lugar1k
-                "Tabuleiro de xadrez" if (lugar2trueK and xadrez):
+                "Tabuleiro de xadrez" if (xadrez):
                     $ energia -= 1
                     jump lugar2k
-                "Palito de picolé" if lugar3trueK:
+                "Palito de picolé":
                     $ energia -= 1
                     jump lugar3k
-                "Revista antiga" if lugar4trueK:
+                "Revista antiga":
                     $ energia -= 1
                     jump lugar4k
-                "Garrafa de vodka" if (lugar5trueK and not garrafa):
+                "Garrafa de vodka" if (garrafa):
                     $ energia -= 1
                     jump lugar5k
-                "Rifle de precisão" if lugar6trueK:
+                "Rifle de precisão":
                     $ energia -= 1
                     jump lugar6k
-                "Salgadinho" if (lugar7trueK and salgadinho):
+                "Salgadinho" if (salgadinho):
                     $ energia -= 1
                     jump lugar7k
                 
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
+                    $escolhido.remove("Já vi o suficiente")
                     if jogador1:
                         $ energiaAzul = energia
                     else:
@@ -119,13 +109,11 @@ label investigacao:
         jump investigacao
 
     label lugar1k:
-        $ lugar1trueK = False
         n "Você vai até a planta carnívora"
         n "Ela parece uma planta carnívora normal"
         jump d1kat1inv
     
     label lugar2k:
-        $ lugar2trueK = False
         n "Você vai até o tabuleiro de xadrez"
         n "Ao pegar ele percebe que na verdade a caixa não tem peças de xadrez dentro, mas mini garrafas de pinga"
         menu:
@@ -134,11 +122,12 @@ label investigacao:
                 n "Você se sente sendo julgado pela planta carnivora do outro lado da sala"
             "Deixar de lado":
                 n "Você pega uma das mini garragas de pinga e depois coloca o tabuleiro de xadrez de volta no lugar dele"
+                $ adicionarItem("miniPinga")
+        n "agora o jogador azul tem [inventarioAzul] e o jogador laranja tem [inventarioLaranja]"
                 
         jump d1kat1inv
     
     label lugar3k:
-        $ lugar3trueK = False
         n "Você encontra um palito de picolé"
         n "Examinando melhor o palito ele parece ter algo estranho"
         menu:
@@ -150,7 +139,6 @@ label investigacao:
         jump d1kat1inv
     
     label lugar4k:
-        $ lugar4trueK = False
         n "Você pega a revista"
         n "Ela parece bem antiga"
         n "Na capa aparece uma garota jovem de cabelos ruivos e seu pai, ambos parecem felizes"
@@ -174,7 +162,6 @@ label investigacao:
         jump d1kat1inv
     
     label lugar5k:
-        $ lugar5trueK = False
         n "Você investiga a garrafa de vodka"
         menu:
             "Beber a vodka":
@@ -188,7 +175,6 @@ label investigacao:
         jump d1kat1inv
     
     label lugar6k:
-        $ lugar6trueK = False
         n "Você investiga Rifle de precisão"
         n "Ele parece ter sido bem usado"
         n "Apesar disso ele está em um ótimo estado, a Katarina deve fazer manutenção frequente nele"
@@ -198,7 +184,6 @@ label investigacao:
         jump d1kat1inv
     
     label lugar7k:
-        $ lugar7k = False
         n "Você investiga o pacote de salgadinho"
         n "Está escrito \"Aqui diz Ultra Mega Blaster Insanamente Ardido\""
         menu:
@@ -226,22 +211,23 @@ label investigacao:
                 laranja "Onde irei investigar?"
 
             menu:
-                "Carta" if lugar1trueA:
+                set escolhido
+                "Carta":
                     $ energia -= 1
                     jump lugar1a
-                "Vestido Tie-Dye" if (lugar2trueA and vestidotiedye):
+                "Vestido Tie-Dye" if (vestidotiedye):
                     $ energia -= 1
                     jump lugar2a
-                "Coleção de CDs do Slipknot" if lugar3trueA:
+                "Coleção de CDs do Slipknot":
                     $ energia -= 1
                     jump lugar3a
-                "Capacete de moto" if lugar4trueA:
+                "Capacete de moto":
                     $ energia -= 1
                     jump lugar4a
-                "Vestido rosa" if (lugar5trueA and vestidorosa):
+                "Vestido rosa" if (vestidorosa):
                     $ energia -= 1
                     jump lugar5a
-                "Um tofu" if (lugar6trueA and tofu):
+                "Um tofu" if (tofu):
                     $ energia -= 1
                     jump lugar6a
                 "Já vi o suficiente":
@@ -258,7 +244,6 @@ label investigacao:
         jump investigacao
 
     label lugar1a:
-        $ lugar1trueA = False
         n "Você encontra uma carta em cima de uma mesa no Atelie"
         n "A primeira vista parece só uma carta de alguém fazendo uma encomenda de roupa com a Alessandra"
         menu:
@@ -272,7 +257,6 @@ label investigacao:
         jump d1ale1inv
     
     label lugar2a:
-        $ lugar2trueA = False
         n "Você vê um vestido Tie-Dye"
         n "Ao se aproximar percebe que ele tem exatamente as suas medidas"
         n "Parece que foi feito para você"
@@ -286,7 +270,6 @@ label investigacao:
         jump d1ale1inv
     
     label lugar3a:
-        $ lugar3trueA = False
         n "Você encontra uma coleção de CDs do Slipknot"
         menu:
             "Olhar dentro das caixas de cds":
@@ -298,7 +281,6 @@ label investigacao:
         jump d1ale1inv
     
     label lugar4a:
-        $ lugar4trueA = False
         n "Você Vai até o capacete de moto"
         n "Você não imaginava que a Alessandra andasse de moto"
         n "Logo ao lado tem outro capacete parecido"
@@ -319,7 +301,6 @@ label investigacao:
         jump d1ale1inv
     
     label lugar5a:
-        $ lugar5trueA = False
         n "Você investiga o vestido rosa"
         n "Ele não parece ter as medidas da Alessandra"
         menu:
@@ -335,7 +316,6 @@ label investigacao:
         jump d1ale1inv
     
     label lugar6a:
-        $ lugar6trueA = False
         n "Você vê um tofu embrulhado para viagem"
         menu:
             "Comer o tofu":

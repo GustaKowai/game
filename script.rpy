@@ -267,7 +267,7 @@ label start:
     
 
     
-
+    
     # These display lines of dialogue.
     # -------------Prologo-----------------
     label jogadorAzul:
@@ -282,6 +282,7 @@ label start:
         show gatovaldo default
 
         g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
+        #jump investigacao
 
         g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
 
