@@ -61,14 +61,14 @@ Objetivos concluídos na semana de 03/04-09/04:
 - Dia 2 da Katarina implementado.
 - Dia 2 da Alessandra implementado.
 
-Objetivos concluidos na semanade 16/04-23/04:
+Objetivos concluidos na semana de 16/04-23/04:
 
 - Corrigido bug da Mudança de dia 2-3
 - Sistema de tiro
 - UI
 - Arte da Cláudia
 
-Objetivos concluidos na semanade 24/04-07/05:
+Objetivos concluidos na semana de 24/04-07/05:
 
 - Terceiro dia da Katarina totalmente implementado
 - Personagens agora tem animação de piscar
@@ -76,12 +76,12 @@ Objetivos concluidos na semanade 24/04-07/05:
 - Música da Intro e do Main Menu
 - Alguns efeitos visuais foram adicionados
 
-Objetivos concluidos na semanade 08/05-14/05:
+Objetivos concluidos na semana de 08/05-14/05:
 
 - Terceiro dia da Alessandra escrito
 - Katarina também tem a animação de piscar
 
-Objetivos concluidos na semanade 15/05-22/05:
+Objetivos concluidos na semana de 15/05-22/05:
 
 - Musica de Intro adicionada
 - Musica de Menu adicionada
@@ -94,7 +94,7 @@ Objetivos concluidos na semanade 15/05-22/05:
 - Flowchart do dia 1 da Katarina
 - Dia 1 da Alessandra modificado para ter como falhar na missão
 
-Objetivos concluidos na semanade 12/07-18/07:
+Objetivos concluidos na semana de 12/06-18/06:
 
 - Musica do quartel adicionada
 - Dia 1 da Katarina modificado para ter como falhar na missão
@@ -102,6 +102,13 @@ Objetivos concluidos na semanade 12/07-18/07:
 - Flowchart do dia 1 da Katarina atualizado
 - Sistema de investigação atualizado
 - Bar do Zé em inicio de produção
+
+Objetivos concluidos nas semanas de 19/06-01/07:
+
+- Script do bar do Zé corrigido e funcionando
+- Mudança na forma da investigação noturna
+- Adicionadas músicas da cidade e beco do dia 2 da Alessandra
+- Adicionada música do Escritório da Katarina
 
 Objetivos em andamento:
 
@@ -130,17 +137,14 @@ Objetivos em andamento:
     - Sons da fala dos personagens (se possível mudar um pouco os sons para cada personagem ter um próprio)
     - Som de partida de moto (talvez)
   - Músicas de fundo:
-    - Quartel da Revolução
     - Missões Katarina:
-      - Escritório
       - Recepção (talvez seja a mesma do escritório ou algo bem parecido?)
       - Deserto (tem 3 áreas, o deserto base, o posto abandonado e o topo da caixa de água.)
       - Banco (tem 3 áreas, a externa, a recepção e o cofre)
       - Floresta
     - Missões Alessandra:
       - Igreja (tem 2 áreas, interna e externa)
-      - Cidade (tem a cidade e o beco)
-      - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazedo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
+      - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazendo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
 
 Em breve:
 
@@ -150,7 +154,7 @@ Em breve:
   - Backgrounds
   - Mais poses para as duas personagens
 - História:
-  - Pelo menos 5 missões com cada personagem
+  - Pelo menos 4 missões com cada personagem
 - Programação:
   - Efeito visual/sonoro para diferenciar escolhas boas/ruins
 
