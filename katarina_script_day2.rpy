@@ -139,8 +139,84 @@ label k2b3:
     n "Vocês vão até a balconista"
     ate "Por favor volte ao seu assento e aguarde."
     n "Katarina olha furiosa para você"
-    k "Me desculpe mas ela está pedindo para ser assaltad"
-    jump k2m3
+    k "Me desculpe mas ela está pedindo para ser assaltada"
+    menu:
+        "Vamos agir com cautela.":
+            jump k2m15
+        "Você está certa.":
+            jump k2m3
+label k2m15:
+    k "Droga, está bem, o que você quer fazer então?"
+    menu:
+        "Vamos esperar.":
+            k "Sério? Desde quando a gente joga pelas regras? E aliás, olha só a cara dela."
+            n "Você olha para a atendente, seu rosto transparece claramente que ela não pretende atender vocês tão cedo."
+            k "Nossa única chance é colocando uma arma na cabeça dela!"
+            menu:
+                "Está bem, foda-se.":
+                    jump k2m3
+                "Vamos colocar uma arma na cabeça dela, porém furtivamente.":
+                    k "Tudo bem..."
+                    jump k1m16
+        "Vamos atacar furtivamente.":
+            k "Ótima ideia!"
+            jump k1m16
+            
+label k1m16:
+    n "Katarina se levanta e esgueira-se até a porta da recepção."
+    k "Vem!"
+    n "Você vai até ela, que abre sua mochila e começa a procurar por algo."
+    k "Estava bem aqui..."
+    k "Cadê?"
+    k "Achei!"
+    n "Katarina tira uma presilha de cabelo e um revólver comicamente grande da mochila."
+    k "O que acha melhor?"
+    menu:
+        "Lockpick com a presilha.":
+            k "Posso tentar..."
+            n "Katarina fica concentrada por alguns minutos tentando destrancar a porta."
+            k "Isso é difícil..."
+            n "Ela derruba o grampo dentro da fechadura."
+            k "AH! Eu não acredito!"
+            n "Ela se apoia na maçaneta para se lamentar, abrindo a porta instantâneamente."
+            menu:
+                "Ela estava... Destrancada?":
+                    k "Eu..."
+                    k "Acho que esqueci de verificar..."
+                "Mandou bem!":
+                    k "Obrigado! Ter derrubado o grampo lá dentro deve ter acionado um mecanismo secreto que destrancou a porta."
+                    k "É a única explicação plausível."
+                    n "Ela parece acreditar no que diz."
+            n "Vocês entram na sala da atendente, que está de costas."
+            k "Olha! Ela está jogando joguinho de tiro!"
+            n "Ela está jogando Counter Strike."
+            jump k2m16
+        "Arrombar a tranca com o revólver.":
+            k "É isso aí porra! Sabia que essa furtividade não iria durar."
+            n "Katarina faz uma pose, mira e atira."
+            n "BANG!"
+            n "Ela chuta a porta."
+            k "E nem pense em fazer nada estúpido!"
+            n "Ela mira o revólver comicamente grande para a atendente, que está de costas, e continua no computador sem expressar reação."
+            k "..."
+            k "Olha! Ela está jogando joguinho de tiro!"
+            n "Ela está jogando Counter Strike, por isso deve ter ignorado os barulhos."
+            jump k2m16
+label k2m16:
+    k "Observe, e aprenda."
+    n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."        k "Ele é comicamente pesado."
+    menu:
+        "Por que não disse sobre esse revolver antes?":
+            k "Eu tinha esquecido!"
+            k "Estava procurando pelo grampo e acabei encontrando ele."
+            k "Achei que seria comicamente engraçado usá-lo como alternativa."
+        "Como você consegue manuseá-lo com tanta facilidade?":
+            k "..."
+            k "Nunca pensei nisso..."
+            n "O revólver cai da mão de Katarina, criando uma leve cratera no chão."
+            n "Vocês tentam levantá-lo, mas falham."
+            k "Talvez fosse o poder da amizade, sei lá, mas infelizmente você acabou com o que quer que seja!"
+
 
 label k2m3:
     k "Desliga essa call"
@@ -175,6 +251,7 @@ label k2a4:
 label k2b4:
     k "Mal posso esperar para ver..."
     jump k2m4
+
 
 label k2m4:
 
@@ -239,6 +316,7 @@ label k2a7:
 label k2b7:
     n "Você desliga o telefone"
     k "Dia dos namorados? Mas estamos em outubro"
+    n "Vocês definitivamente estão em fevereiro."
     jump k2m7
 
 label k2m7:
@@ -246,7 +324,7 @@ label k2m7:
     k "O que você está fazendo?"
     n "Você percebe que no cabo dela está escrito 'Você me mata de paixão'"
     n "Você mira para cima e aperta o gatilho"
-    n "Uma música cafona do Roberto Carlos começa a tocar"
+    n " 'Como é grande o meu amor por você' do Roberto Carlos começa a tocar"
     k "O que caralhos isso significa?"
     ate "Vocês fizeram eu perder a minha partida e nem uma arma de verdade tem? {w}Que patético"
     n "A atendente sai andando para a recepção novamente"
@@ -310,13 +388,17 @@ label k2a10:
     menu:
         "1500":
             jump k2a11
-        "1278":
+        "2":
             jump k2b11
 label k2a11:
     k "1500 homens! Acha que vai ser capaz de parar os nossos 1500 homens? E eu nem te falei o número de mulheres ainda."
+    k "Acredite, são muitas também."
     jump k2m10
 label k2b11:
-    k "1278 homens! Acha que vai ser capaz de parar os nossos 1278 homens? E eu nem te falei o número de mulheres ainda."
+    k "2 homens!"
+    k "..."
+    k "Pode parecer pouco, mas eles são os caras."
+    k "Vai por mim, você não seria párea."
     jump k2m10
 label k2m10:
     n "Ela parece desesperada"
