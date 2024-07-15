@@ -11,6 +11,8 @@ label d1ale1:
     default lenco = False
     default pontosSucesso = 0
     default sucessoMissao1Ale = True
+    default jogador1Ale1 = False
+    default jogador2Ale1 = False
 
     $ aleDay1 = False
     scene bg atelie
@@ -1556,6 +1558,11 @@ label a1a17:
     n "Você está confuso, mas ela parece ter um bom motivo para estar assustada."
 
     stop music1 fadeout 2.0
+
+    if jogador1:
+        $ jogador1Ale1 = True
+    else:       
+        $ jogador2Ale1 = True
     jump finalale1
 
 
@@ -1563,5 +1570,5 @@ label finalale1:
     if jogador1:
         $ a.azul += JogadorAtivo
     else:
-        $ a.laranja += JogadorAtivo
+        $ a.laranja += JogadorAtivo 
     jump whereToGo

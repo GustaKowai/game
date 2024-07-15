@@ -201,30 +201,6 @@ label k3m5:
     "Vamos atirar nos patos":
       jump k3d8
 
-  label acertou:
-    if a8:
-      jump k3a8acertou 
-    if b8:
-      jump k3b8acertou 
-    if c8_2:
-      jump k3c8acertou2
-    if c8:
-      jump k3c8acertou 
-    if d8:
-      jump k3d8pontos 
-    
-    
-
-  label errou:
-    if a8:
-      jump k3a8errou 
-    if b8:
-      jump k3b8errou 
-    if c8:
-      jump k3c8errou 
-    if d8:
-      jump k3d8pontos 
-
 label k3a8:
   $ a8 = True
   k "Cervo, certo, ótima escolha"

@@ -64,3 +64,48 @@ label end_minigame: #End minigame. And jump continue game
     hide screen fable_timer_right
     $ renpy.pause(0.3)
     jump acertou #continue game
+
+label acertou:
+    if a8:
+        $ a8 = False
+        jump k3a8acertou 
+    if b8:
+        $ b8 = False
+        jump k3b8acertou 
+    if c8_2:
+        $ c8_2 = False
+        jump k3c8acertou2
+    if c8:
+        $ c8 = False
+        jump k3c8acertou 
+    if d8:
+        $ d8 = False
+        jump k3d8pontos 
+    if mercenarioFogo:
+        $ mercenarioFogo = False
+        jump a3a7acertou
+    if mercenarioFaca:
+        $ mercenarioFaca = False
+        jump a3b7pontos
+    
+    
+
+label errou:
+    if a8:
+        $ a8 = False
+        jump k3a8errou 
+    if b8:
+        $ b8 = False
+        jump k3b8errou 
+    if c8:
+        $ c8 = False
+        jump k3c8errou 
+    if d8:
+        $ d8 = False
+        jump k3d8pontos 
+    if mercenarioFogo:
+        $ mercenarioFogo = False
+        jump a3a7errou
+    if mercenarioFaca:
+        $ mercenarioFaca = False
+        jump a3b7pontos

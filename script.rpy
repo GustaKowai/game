@@ -156,6 +156,8 @@ default b8 = False
 default c8 = False
 default c8_2 = False
 default d8 = False
+default mercenarioFogo = False
+default mercenarioFaca = False
 
 #Variáveis da investigação:
 default xadrez = True
