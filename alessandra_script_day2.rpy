@@ -11,7 +11,8 @@ label d2ale1:
     default katana = False
     default catnip = False
     default mensagem = False
-
+    default jogador1Ale2 = False
+    default jogador2Ale2 = False
     play music "atelier.mp3" volume 0.5
     $ aleDay2 = False
     scene bg atelie
@@ -711,4 +712,8 @@ label a2m15:
     a "Bem, precisamos reportar tudo o que aconteceu ao gatovaldo, bora."
     show bg igreja
     n "Vocês dois saem da igreja, montam na moto, e partem para a base"
+    if jogador1:
+        $ jogador1Ale2 = True
+    else:       
+        $ jogador2Ale2 = True
     jump finalale1

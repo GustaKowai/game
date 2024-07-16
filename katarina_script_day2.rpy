@@ -204,7 +204,8 @@ label k1m16:
             jump k2m16
 label k2m16:
     k "Observe, e aprenda."
-    n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."        k "Ele é comicamente pesado."
+    n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."
+    n "Ele é comicamente pesado."
     menu:
         "Por que não disse sobre esse revolver antes?":
             k "Eu tinha esquecido!"

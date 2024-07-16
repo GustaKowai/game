@@ -7,6 +7,8 @@
 ########################################################################################################################### 
 
 label d3ale1:
+    default carrosSeparados = False
+    default carrosJuntos = False
 
     play music "atelier.mp3" volume 0.5
     $ aleDay3 = False
@@ -87,7 +89,7 @@ label d3ale1:
     show alessandra default with dissolve
     a "Nah, pode ir para lá se você quiser, eu to fora"
     hide danran with moveoutleft
-    show alessandra default with move at center
+    show alessandra default at center with move 
     a "E você, alguma sugestão?"
     menu:
         "Vamos comer":
@@ -104,7 +106,7 @@ label a3a4:
     if jogador1 and jogador1Ale1:
         a "Aliás, lembra aquele negócio que eu tinha te falado no restaurante?
 Da comida de lá ter um gosto familiar e tal"
-    elif jogador2 and jogador2Ale1:
+    elif not jogador1 and jogador2Ale1:
         a "Aliás, lembra aquele negócio que eu tinha te falado no restaurante?
 Da comida de lá ter um gosto familiar e tal"
     else: 
@@ -222,5 +224,112 @@ label a3b7pontos:
         n "Você não acertou nenhuma faca, voce talvez não devesse ser permitido manusear nem mesmo uma faca de mantega"
         n "Felizmente a Alessandra consegue dar um jeito em todos os mercenários próximos"
         a "Você deveria escolher algo que você sabe usar."
-        a "Eu não aguento mais isso..."
+    show alessandra eyeroll with dissolve
+    a "Eu não aguento mais isso..."
     jump a3m2
+
+    n "Vocês vão até a exposição de carros"
+    n "Vocês não entendem muito de carros, eles parecem carros, como todos os outros"
+    show alessandra seria with dissolve
+    if jogador1:
+        a "Sabe, [nome1], eu sei que hoje deveria ser um dia de confraternização, mas eu não consigo me sentir assim" 
+    else:
+        a "Sabe, [nome2], eu sei que hoje deveria ser um dia de confraternização, mas eu não consigo me sentir assim"
+    show alessandra seria2 with dissolve
+    a "Minhas missões são cada vez mais perigosas, eu sinto como se eu estivesse sendo mandada para a morte"
+    a "Eu sei que o intuito de estarmos aqui é lutar, mas eu já lutei demais"
+    show alessandra triste
+    a "Eu acho que vou sair"
+    menu:
+        "Não! Por que?":
+            a "Eu me sinto perseguida"
+            show alessandra seria2 with dissolve
+            a "Você não sabe pelo o que eu tive que passar nos últimos anos"
+            show alessandra triste with dissolve
+            a "Eu só não aguento mais."
+            a "Sinto como se estivesse cada vez mais perto do responsável por..."
+        "Falta tão pouco!":
+            a "Eu sei, e isso é o que me preocupa"
+            menu:
+                "Você está com medo dos ratos?":
+                    a "Os ratos? Não! Esses ratos são bobos, eu dou um pau neles, meu medo é..."
+                "Mas você luta tão bem" if jogador1 and jogador1Ale2:
+                    a "Eu sei! Mas não sei até que tipo de ameaça minhas habilidades são úteis, receio que enfrentaremos..."
+                "Mas você luta tão bem" if not jogador1 and jogador2Ale2:
+                    a "Eu sei! Mas não sei até que tipo de ameaça minhas habilidades são úteis, receio que enfrentaremos..."
+                "Mas você é tão inteligente" if jogador1 and jogador1Ale1:
+                    a "Eu sei! Mas não sei até que tipo de ameaça minhas habilidades são úteis, receio que enfrentaremos..."
+                "Mas você é tão inteligente" if not jogador1 and jogador2Ale1:
+                    a "Eu sei! Mas não sei até que tipo de ameaça minhas habilidades são úteis, receio que enfrentaremos..."
+
+    n "Antes que Alessandra termine, você percebe um ponto vermelho de um laser na testa dela"
+    n "Você a empurra, um tiro passa por vocês e atinge uma pessoa ao fundo"
+    show alessandra medo2 with dissolve
+    #Aqui a musiva poderia mudar né?
+    n "Uma confusão generalizada começa, vocês escutam tiros, pessoas correndo e gritando"
+    n "Você percebe alguns seguranças mortos, pessoas com roupas táticas andam no meio da multidão, atirando em quem entre no caminho"
+    n "Eles estão indo diretamente até vocês."
+    n "Você olha para Alessandra, ela está em choque"
+    n "Você percebe uma certa inconformidade no olhar assustado dela"
+    show alessandra brava with dissolve
+    a "I-isso não pode ficar assim, isso n-não pode ficar assim"
+    n "Você percebe que o lugar seguro mais próximo de vocês são os carros"
+    menu:
+        "Entra em um carro!":
+            $ carrosSeparados = True
+            jump a3a10
+        "Vamos para esse carro!":
+            $ carrosJuntos = True
+            jump a3b10
+label a3a10:
+    n "Alessandra parece acordar de um transe, ela corre até um dos carros e entra nele"
+    hide alessandra with moveoutleft
+    n "Ela abre o teto solar, tira duas pistolas do vestido e começa a atirar nos mercenários"
+    n "Você corre até outro carro"
+    menu:
+        "Procurar por algo":
+            n "É um carro para exposição, não tem absolutamente nada de especial escondido dentro dele"
+            menu:
+                "ligar o carro":
+                    jump a3b11
+        "Ligar o carro":
+            jump a3b11
+
+label a3b10:
+    n "Alessandra parece acordar de um transe, ela corre até um dos carros junto de você e entra nele"
+    n "Sem dizer uma palavra, ela tira duas pistolas do vestido, abre o teto solar e começa a atirar nos mercenários"
+    menu:
+        "Procurar por algo":
+            n "É um carro para exposição, não tem absolutamente nada de especial escondido dentro dele"
+            menu:
+                "ligar o carro":
+                    jump a3b11
+        "Ligar o carro":
+            jump a3b11
+
+
+label a3b11:
+    n "Você liga o carro, Alessandra continua atirando, mas são muitos, até que você tem uma ideia."
+    hide alessandra
+    image carroPrimeiraPessoa = "carroPrimeiraPessoa.png"
+    show carroPrimeiraPessoa
+    $ mercenarioCarro = True
+    image mercenario = "mercenario.png"
+    image mercenario center = Image("mercenario.png")
+    show mercenario center
+    $ tirosNecessarios = 5
+    jump start_minigame
+
+label a3a12pontos:
+    n "Você acelera com o carro em direção aos mercenários e atropela [fable_minigame_score] deles."
+    if carrosJuntos:
+        n "Alessandra parece gostar da sua ideia, ela fecha o teto solar e acelera em disparada com o carro"
+        n "Ela atropela alguns dos mercenários que você deixou para trás"
+        n "Precisamos dar o fora daqui!"
+    if carrosSeparados:
+        n "Eles atiram em você, sorte sua que uma das inovações do carro que está sendo exposto é a sua incrível blindagem"
+        n "Alessandra continua atirando, vocês conseguem matar a maioria deles"
+        a "A gente tem que vazar!"
+
+label a3c4:
+    

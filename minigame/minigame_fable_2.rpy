@@ -87,6 +87,9 @@ label acertou:
     if mercenarioFaca:
         $ mercenarioFaca = False
         jump a3b7pontos
+    if mercenariosCarro:
+        $ mercenarioCarro = False
+        jump a3a12pontos
     
     
 
@@ -109,3 +112,6 @@ label errou:
     if mercenarioFaca:
         $ mercenarioFaca = False
         jump a3b7pontos
+    if mercenariosCarro:
+        $ mercenarioCarro = False
+        jump a3a12pontos
