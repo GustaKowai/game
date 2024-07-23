@@ -10,7 +10,8 @@ label d3ale1:
     default carrosSeparados = False
     default carrosJuntos = False
 
-    play music "atelier.mp3" volume 0.5
+    play music "atelie_intro.ogg" volume 1.0
+    queue music "atelie.wav"
     $ aleDay3 = False
     scene bg atelie
 

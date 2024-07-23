@@ -13,7 +13,8 @@ label d2ale1:
     default mensagem = False
     default jogador1Ale2 = False
     default jogador2Ale2 = False
-    play music "atelier.mp3" volume 0.5
+    play music "atelie_intro.ogg" volume 1.0
+    queue music "atelie.wav"
     $ aleDay2 = False
     scene bg atelie
 

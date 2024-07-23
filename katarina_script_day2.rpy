@@ -7,7 +7,7 @@
 ########################################################################################################################### 
 
 label d2kat1:
-    play music "escritorio.mp3" volume 0.5
+    play music "escritorio.wav" volume 0.5
     $ katDay2 = False
     scene bg recepcao
     if jogador1:

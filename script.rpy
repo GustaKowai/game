@@ -251,6 +251,9 @@ label start:
     define azul = Character("[nome1]",color="#1338BE",what_prefix='{color=#1338BE}', what_suffix='{/color}')
     define laranja = Character("[nome2]",color="#f56300",what_prefix='{color=#f56300}', what_suffix='{/color}')
 
+    if nome1 == "wwssadadzx" or nome2 == "wwssadadzx":
+        jump desenvolvedores1
+
     "Quem irá ser o primeiro a jogar?{w} Recomendamos uma conversa amigável para decidir, porém vocês podem usar de maneiras diferentes."
 
     "Só por favor, precisamos de ambos os jogadores vivos para dar continuidade"
@@ -518,7 +521,7 @@ label start:
                 "Para o Ateliê da Alessandra" if aleDay3:
                     jump d3ale1
             
-            jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+            # jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
             jump changeDay                                    
 
     ########################################################################################################################### 
@@ -557,9 +560,9 @@ label start:
             #"katDay1[katDay1], katDay2[katDay2], katDay3[katDay3]"
             #"aleDay1[aleDay1], aleDay2[aleDay2], aleDay3[aleDay3]"
 
-            jump whereToGo
+            #jump whereToGo
 
-            #jump demoFinal
+            jump demoFinal
 
     ########################################################################################################################### 
     #######################################----------Final da Demo-----------##################################################
