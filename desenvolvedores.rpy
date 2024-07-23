@@ -10,18 +10,20 @@ label desenvolvedoresChoosePlayer:
     menu:
         g "Qual o jogador ativo?"
         "Azul":
-            $jogador1 == True
+            $ jogador1 = True
+            show screen char_name_screen([nome1],[jogador1])
         "Laranja":
-            $jogador1 == False
+            $ jogador1 = False
+            show screen char_name_screen([nome2],[jogador1])
 
 label desenvolvedoresChooseThings:
     menu .escolha1:
         g "O que quer alterar?"
         "Pegar o xadrez" if not xadrez: 
-            $xadrez = True
+            $ xadrez = True
             jump .escolha1
         "Largar o xadrez" if xadrez: 
-            $xadrez = False
+            $ xadrez = False
             jump .escolha1
         "Pegar o vestido tiedye" if not vestidotiedye: 
             $vestidotiedye = True
@@ -39,6 +41,8 @@ label desenvolvedoresChooseThings:
             jump .escolha2
         "Escolher o dia":
             jump desenvolvedoresChooseDay
+        "Quero mudar o player ativo":
+            jump desenvolvedoresChoosePlayer
 
     menu .escolha2:
         g "O que quer alterar?"
@@ -48,6 +52,8 @@ label desenvolvedoresChooseThings:
             jump .escolha2
         "Escolher o dia":
             jump desenvolvedoresChooseDay
+        "Quero mudar o player ativo":
+            jump desenvolvedoresChoosePlayer
 
 label desenvolvedoresChooseDay:
     menu:
