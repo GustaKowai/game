@@ -7,12 +7,6 @@
 ########################################################################################################################### 
 
 label d2ale1:
-    default telefonema = False
-    default katana = False
-    default catnip = False
-    default mensagem = False
-    default jogador1Ale2 = False
-    default jogador2Ale2 = False
     play music "atelie_intro.ogg" volume 1.0
     queue music "atelie.wav"
     $ aleDay2 = False
@@ -56,16 +50,16 @@ label a2a2:
     n "Você desliga o telefone"
     n "E se sente muito rebelde por isso"
     n "Você imagina que gatovaldo provavelmente admira sua atitude"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Você acabou de recusar uma ligação do nosso chefe enquanto estamos prestes a ir para uma missão?"
-    show alessandra feliz
+    show alessandra feliz with dissolve
     a "Ousado, mas você deve estar muito confiante para fazer isso"
     n "Você não tem a menor ideia de porque fez isso"
-    show alessandra default
+    show alessandra default with dissolve
     a "Bom, espero que não tenha sido nada importante"
     n "Provavelmente era"
     a "Acho que já sabemos de tudo que precis-"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Espera, aquilo ali é uma katana?"
     n "Tem uma katana jogada no chão perto de um bueiro"
     menu:
@@ -77,7 +71,7 @@ label a2a2:
 
 label a2a7:
     n "Você pega a Katana"
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
     a "Uau, quem caralhos perde uma katana?"
     menu:
         "Pode acontecer com qualquer um *Jogar a katana dentro do bueiro*":
@@ -88,18 +82,18 @@ label a2a7:
 
 label a2a8:
     n "Alessandra fica um tempo olhando para o bueiro"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Por que você fez isso?"
     n "Ela respira profundamente"
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "Você realmente está bastante confiante hoje"
     jump a2m2
 
 label a2b8:
-    show alessandra confusa
+    show alessandra confusa with dissolve
     n "Ela olha com uma cara confusa pra ti"
     n "Você está fazendo uma pose muito foda empunhando a katana"
-    show alessandra default
+    show alessandra default with dissolve
     a "De qualquer forma, espero que seja útil."
     jump a2m2
 
@@ -115,7 +109,7 @@ label a2b2:
     n "É catnip, certeza"
     g "Escuta, você precisa entender..."
     n "Ele fica em silêncio por alguns segundos"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "O que ele está dizendo?"
     menu:
         "Tá chapadasso de catnip":
@@ -124,12 +118,12 @@ label a2b2:
         "Aparentemente eu preciso saber de algo":
             jump a2b3
 label a2a3:
-    show alessandra brava
+    show alessandra brava with dissolve
     a "Ah, era melhor você nem ter atendido, eu deveria ter desconfiado pelo horário"
     n "São 9 da manhã"
     jump a2m3
 label a2b3:
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
     a "Que bom que você atendeu, deve ser uma informação importante"
     jump a2m3
 label a2m3:
@@ -137,7 +131,7 @@ label a2m3:
     n "Gatovaldo retorna à chamada"
     g "Burro não é um cavalo dirigindo, burro é um cavalo no meio da pista"
     n "Ele desliga o telefone"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Ele falou mais alguma coisa?"
     menu:
         "Algo sobre burros e cavalos dirigindo ou no meio de uma pista?":
@@ -147,16 +141,16 @@ label a2m3:
             jump a2m4
 label a2m4:
     if mensagem and (catnip):
-        show alessandra confusa
+        show alessandra confusa with dissolve
         a "Caramba, que catnip é esse que a Katarina anda trazendo para ele?"
     if mensagem and (catnip==False):
-        show alessandra smirk
+        show alessandra smirk with dissolve
         a "Deve ser um enigma, vamos ficar atentos a tudo que possa remeter a isso."
     if (mensagem==False) and (catnip):
-        show alessandra triste
+        show alessandra triste with dissolve
         a "Coitado... "
     if (mensagem==False) and (catnip==False):
-        show alessandra default
+        show alessandra default with dissolve
         a "Ah, ele também já me fez pensar que algo que estava dizendo era importante mas na realidade era só coisa da cabeça dele"
         a "Passei a aprender a reconhecer quando está com a voz mole"
         jump a2m2
@@ -170,17 +164,17 @@ label a2m2:
         "Tem capacete?":
             jump a2b5
 label a2a5:
-    show alessandra default
+    show alessandra default with dissolve
     a "Não se preocupe, sou uma boa condutora"
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "E afinal, se precisarmos dar fuga será muito mais fácil"
-    show alessandra capacete
+    show alessandra capacete with dissolve
     jump a2m5
 label a2b5:
-    show alessandra default
+    show alessandra default with dissolve
     a "Sim"
     n "Ela pega um capacete e coloca na cabeça"
-    show alessandra capacete
+    show alessandra capacete with dissolve
     n "Aparentemente só ela tem um capacete"
     jump a2m5
 label a2m5:
@@ -194,34 +188,34 @@ label a2m5:
 label a2m11:
     a "Danrandan danrandan danran"
     n "Ela começa a imitar o som da moto e saí cantando pneu e dando grau"
-    play music "church.mp3" volume 0.5
+    play music "igreja.wav" volume 0.5
     scene bg igreja
     n "Após uma viagem assustadora e de algumas experiências de quase morte em sinais vermelhos, vocês chegam ao destino"
-    show alessandra capacete
+    show alessandra capacete with dissolve
     n "Alessandra tira o capacete e dá uma jogada de cabelo, ele está intacto"
-    show alessandra default
+    show alessandra default with dissolve
     a "Ok, agora a gente precisa ser discreto"
     n "Ela está com uma roupa extremamente estilosa e chamativa"
     a "Me acompanhe, acho que a missa já começou"
     n "Vocês estão diante de uma grande igreja imponente, sua arquitetura remete ao goticismo"
     n "Todas as casas ao redor de vocês são extremamente antigas e muitas delas estão abandonadas"
-    show alessandra assustada
+    show alessandra assustada with dissolve
     a "Isso aqui é bem sinistro"
     n "Vocês abrem a porta da igreja"
-    show bg igrejadentro
-    show alessandra default
+    show bg igrejadentro with dissolve
+    show alessandra default with dissolve
     n "Ela é imensa por dentro"
     n "O padre estava no meio de um sermão, as cadeiras estão praticamente lotadas"
     n "Ele para imediatamente de falar e todas as pessoas que estão lá olham em conjunto para vocês"
     n "Eles ficam encarando vocês por alguns segundos, e depois olham de volta para o padre, que continua a falar"
-    show alessandra assustada
+    show alessandra assustada with dissolve
     a "Cara, isso foi bizarro"
-    show alessandra default
+    show alessandra default with dissolve
     a "Acho que tem dois lugares para a gente ali no meio"
     n "Vocês vão até os assentos livres, as pessoas parecem não olhar mais para vocês"
     a "Vamos prestar atenção no que ele diz"
     hide alessandra
-    show padre default
+    show padre default with dissolve
     padre "Os cordeiros, OS CORDEIROS! Eles são guiados, eles têm um pastor."
     padre "O pastor guia os cordeiros!"
     padre "Da mesma forma que 2 + 2 são 4."
@@ -265,13 +259,13 @@ label a2a9:
     n "Você olha para a boca do padre que está aberta gritando"
     n "Você vê um pequeno rato na região que deveria ser a garganta, ele está usando um pequeno óculos de realidade virtual e segurando duas alavancas"
     n "Ele parece estar gritando também"
-    show alessandra assustada
+    show alessandra assustada with dissolve
     a "CORRE!!"
     hide padre
     show alessandra medo1 at center
     n "Vocês começam a correr, a igreja inteira começa a perseguir vocês"
     a "EU FALEI, AINDA BEM QUE A GENTE VEIO DE MOTO"
-    show alessandra capacete
+    show alessandra capacete with dissolve
     n "Vocês montam na moto"
     play sound "moto.mp3"
     play music "dejavunointro.mp3" volume 1.0
@@ -297,7 +291,7 @@ label a2m6:
     n "Entendido."
     n "Danran desliga o microfone"
     n "Tem uma multidão correndo atrás de vocês pelas ruas"
-    show alessandra medo2
+    show alessandra medo2 with dissolve
     a "FERROU FERROU FERROU"
     n "Vocês estão chegando perto de um cruzamento, há uma rampa na rua que segue, uma rua na direita e uma na esquerda"
     a "RÁPIDO, O QUE ELE DISSE PARA VOCÊ?"
@@ -310,7 +304,7 @@ label a2m6:
             jump a2c13
 label a2a13:
     n "Alessandra vira para a direita"
-    show alessandra brava
+    show alessandra brava with dissolve
     a "NÃO TEM NADA AQUI"
     n "As pessoas da igreja ainda estão atrás de vocês"
     n "O bairro está tão vazio que parece que ninguém está presenciando isso"
@@ -318,30 +312,30 @@ label a2a13:
     n "Alessandra vira para um beco estreito"
     show bg beco
     play music "beco.wav" volume 0.5
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "QUERO VER ELES PASSAREM AQUI"
     n "Ela acelera ainda mais, até que vocês chegam em uma área populada da cidade"
     show bg cidade
     play music "cidade.wav" volume 0.5
     a "Agora eles não chegam mais na gente"
-    show alessandra brava
+    show alessandra brava with dissolve
     a "Bom, da próxima vez presta mais atenção no que falam para você, quase nos ferramos bonito."
-    show alessandra default
+    show alessandra default with dissolve
     a "Mas tudo bem, temos algo a contar para o Gatovaldo."
     n "Vocês voltam para a base."
     jump finalale1
 
 label a2b13:
     n "Alessandra acelera em direção à rampa"
-    show alessandra feliz
+    show alessandra feliz with dissolve
     a "IHUUU!"
     n "Você sente que talvez tenha sido uma má ideia subir nessa moto"
     n "Vocês pousam em segurança"
     show bg cidade
     play music "cidade.wav" volume 0.5
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Espera, não tem nada aqui!"
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "Acho que você entendeu errado, mas não tem problema, isso foi maneiro"
     show bg igreja
     n "Você olha para trás, a igreja está parada olhando para vocês de boca aberta, foi de fato impressionante"
@@ -350,7 +344,7 @@ label a2b13:
     jump finalale1
 label a2c13:
     n "Alessandra vira para a esquerda"
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "HAHA, boa!"
     n "Ela acelera"
     a "Se prepara, vai exp-"
@@ -366,9 +360,9 @@ label a2c13:
             jump a2m12
 
 label a2m12:
-    show alessandra brava
+    show alessandra brava with dissolve
     a "Tenho meus contatos, caso o Gatovaldo pergunte, diga que foi necessário"
-    show alessandra feliz
+    show alessandra feliz with dissolve
     a "Mas acho que na real ele vai ficar feliz com isso, bora contar para ele"
     n "*Vocês voltam para a base*"
     jump finalale1
@@ -417,16 +411,16 @@ label a2m7:
         "Vamos dar o fora daqui agora":
             jump a2b14
 label a2a14:
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
     a "VOCÊ ESTÁ MALUCO?"
     a "Eles vão drogar a gente!"
-    show alessandra medo1
+    show alessandra medo1 with dissolve
     a "Eu não posso morrer aqui."
     n "Você entra na fila"
     a "Droga!"
     jump a2m8
 label a2b14:
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "Ótima ideia!"
     n "Vocês começam a andar na direção oposta das pessoas"
     n "Elas olham com uma cara estranha para vocês"
@@ -444,7 +438,7 @@ label a2m8:
     n "A fila começa a andar"
     a "A gente não pode morrer aqui..."
     a "Eles vão colocar um parasita na nossa cabeça..."
-    show alessandra medo2
+    show alessandra medo2 with dissolve
     a "Onde é que eu fui me enfiar..."
     menu:
         "Calma!":
@@ -460,14 +454,14 @@ label a2b15:
 
 label a2m9:
     n "Enfim chega a vez de vocês"
-    show alessandra medo1
+    show alessandra medo1 with dissolve
     n "A pessoa responsável pela comunhão pega uma rodela de algo, molha no vinho e te entrega"
     n "Você fecha os olhos e come a rodela misteriosa"
     n "Tem gosto de queijo"
     n "Você olha para Alessandra"
     n "Ela olha para você"
     a "Meu. Deus."
-    show alessandra medo2
+    show alessandra medo2 with dissolve
     n "Ela puxa você pelo braço"
     a "Mas era claro! Como a gente não descobriu antes!"
     menu:
@@ -509,7 +503,7 @@ label a2a17:
     n "Vocês correm até a moto"
     show bg igreja
     n "O padre está agonizando de dor no chão, os fiéis parecem estar preocupados de mais com a comunhão"
-    show alessandra feliz
+    show alessandra feliz with dissolve
     a "Essa notícia será bombástica! Bora voltar!"
     n "Vocês voltam para a base"
     jump finalale1
@@ -523,7 +517,7 @@ label a2b17:
     a "FUNCIONOU! Eles realmente são ratos"
     n "Vocês saem correndo até a moto"
     show bg igreja
-    show alessandra feliz
+    show alessandra feliz with dissolve
     a "Essa notícia será bombástica! Bora voltar!"
     n "Vocês voltam para a base"
     jump finalale1
@@ -554,12 +548,12 @@ label a2a11:
 label a2a18:
     n "Vocês correm até as janelas"
     n "No caminho, passam por diversas pessoas lutando como se tivessem perdido o controle delas mesmas"
-    show alessandra surpresa
+    show alessandra surpresa with dissolve
     a "Seja lá o que você tenha dito, parece que tiltou bastante essas pessoas"
     a "Na realidade, acredito que nao são pessoas."
     n "Katarina aponta para uma mulher que acabou de arrancar a cabeça de um coroinha com um pedaço de um banco"
     n "Há fios debaixo da cabeça dele, um rato sai correndo de dentro de sua boca"
-    show alessandra assustada
+    show alessandra assustada with dissolve
     a "Estão formando uma legião de pessoas controladas por ratos!"
     a "Precisamos contar sobre isso para o Gatovaldo, corre!"
     n "Vocês chegam até uma janela, é um mosaico muito bonito e provavelmente muito antigo"
@@ -578,7 +572,7 @@ label a2a19:
     jump a2m13
 label a2b19:
     n "Alessandra dá um chutão na cabeça dela"
-    show alessandra brava
+    show alessandra brava with dissolve
     a "Você poderia ter feito isso"
     jump a2m13
 label a2m13:
@@ -592,11 +586,11 @@ label a2m13:
 label a2b18:
     n "Vocês correm até a porta dos fundos"
     n "Quando chegam, há um homem com um bastão de baseball virado de costas para vocês"
-    show alessandra default
+    show alessandra default with dissolve
     a "É... Senhor?"
     n "Ele encara Alessandra e diz:{p}JUDITE?"
     n "Ele parte para cima dela"
-    show alessandra brava
+    show alessandra brava with dissolve
     a "EU NÃO SOU ESSA AÍ NÃO"
     menu:
         "Tentar fazer ele tropeçar":
@@ -607,7 +601,7 @@ label a2a20:
     n "Você estica a perna para tentar fazer ele tropeçar"
     n "Ele estava correndo igual um cachorro louco, portanto de fato tropeça na sua perna"
     n "Ele cai de cara no chão, um ratinho sai correndo de dentro da sua boca"
-    show alessandra confusa
+    show alessandra confusa with dissolve
     a "Quando eu achei que já não dava para ficar mais estranho..."
     jump a2m14
 label a2b20:
@@ -624,7 +618,7 @@ label a2a21:
     a "Fiz aulas, ué!"
     jump a2m14
 label a2b21:
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "Eu sempre acabo."
     jump a2m14
 
@@ -638,10 +632,10 @@ label a2m14:
     jump finalale1
 
 label a2c18:
-    show alessandra brava
+    show alessandra brava with dissolve
     a "Aff, eu tava querendo quardar isso aqui para depois!"
     n "Alessandra tira duas submetralhadores de um compartimento secreto de seu vestido"
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "A gente conseguiria fazer isso do jeito stealth, mas você que escolheu!"
     n "Ela começa a metralhar todo mundo ao redor dela"
     a "Toma, pega isso!"
@@ -704,13 +698,14 @@ label a2d25:
     jump a2m15
 
 label a2m15:
-    show alessandra smirk
+    show alessandra smirk with dissolve
     a "Uau, você realmente se virou ein! "
     n "Diz Alessandra, sentada em uma pilha de corpos de lata"
     a "Acho que a gente acabou com todos eles"
     n "Ela acabou com todos eles, você acabou com uns 5, no máximo"
-    show alessandra default
+    show alessandra default with dissolve
     a "Bem, precisamos reportar tudo o que aconteceu ao gatovaldo, bora."
+    play music "igreja.wav" volume 0.5 
     show bg igreja
     n "Vocês dois saem da igreja, montam na moto, e partem para a base"
     if jogador1:

@@ -84,7 +84,7 @@ label k2m2:
     scene bg banco
     with gatodissolve
     show katarina mascarada
-    #play music "banco.mp3" volume 0.5
+    play music "banco.wav" volume 0.5
 
     k "Acho que é aqui, o gatovaldo mandou essa caixa para o escritório hoje de manhã, eu estava fumando lá fora e acabei recebendo isso, a pobre da Cláudia não teve nem a chance de fazer o trabalho de recepcionista dela."
     k "Acho que se eu começar a fumar mais talvez possa demití-la..."
@@ -415,7 +415,7 @@ label k2m10:
     ate "Ele não entende português, na real, ele nem sabe que está sendo sequestrado, pensa que está em um filme"
     n "Ele se aproxima de você e começa um monólogo, você não tem a mínima ideia do que ele está falando, mas parece importante"
     ate "Levem ele daqui! Por favor isso era tudo o que a gente tinha!"
-    k "Você entregou... Exatamente o que a gente precisava, agora fica pianinha ai!"
+    k "Você entregou... {w}Exatamente o que a gente precisava, agora fica pianinha ai!"
     n "Vocês saem do banco acompanhados dele, o monólogo continua, e não parece ter fim"
     k "O que caralhos a gente vai fazer com Robert Downey Jr.?"
     menu:

@@ -7,16 +7,6 @@
 ########################################################################################################################### 
 
 label d1kat1:
-    default escopeta = False
-    default rifle = False
-    default xmortadela = False
-    default cha = False
-    default cd = False
-    default salgadinho = False
-    default garrafa = False
-    default pinga = False
-    default cabeca = False
-    default papel = False
 
     play music "escritorio.wav" volume 0.5
     $ katDay1 = False
