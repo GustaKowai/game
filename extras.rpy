@@ -393,7 +393,7 @@ screen music_gallery():
     tag menu
 
     ## This use statement includes the extras_menu screen inside this one.
-    use extras_menu(_("Music Room")):
+    use extras_menu(_("Sala de música")):
 
         vbox:
 

@@ -52,7 +52,7 @@ screen bobcachievements():
     use extras_menu(_("Achievements"), scroll="viewport"):
         style_prefix "about"
         vbox:
-            text _("You have unlocked [numachievements] / [BOBCACHIEVEMENTS_NUMACHIEVEMENTS] achievements!") size gui.label_text_size
+            text _("Você já desbloqueou [numachievements] / [BOBCACHIEVEMENTS_NUMACHIEVEMENTS] conquistas!") size gui.label_text_size
             null height BOBCACHIVEMENTS_SPACING
             for achnfo in BOBCACHIEVEMENT_LIST:
                 $ achievement_id = achnfo[0]
@@ -60,16 +60,16 @@ screen bobcachievements():
                     spacing BOBCACHIVEMENTS_SPACING
                     if achievement.has(achievement_id):
                         # We have the achievement, so show its name and description
-                        text BOBCACHIEVEMENTS_MAP[achievement_id][0] color BOBCACHIEVEMENTS_GRANTED_COLOR
-                        text BOBCACHIEVEMENTS_SPACING_CHAR color BOBCACHIEVEMENTS_GRANTED_COLOR
-                        text BOBCACHIEVEMENTS_MAP[achievement_id][1] color BOBCACHIEVEMENTS_GRANTED_COLOR
+                        text BOBCACHIEVEMENTS_MAP[achievement_id][0] color BOBCACHIEVEMENTS_GRANTED_COLOR size 32
+                        text BOBCACHIEVEMENTS_SPACING_CHAR color BOBCACHIEVEMENTS_GRANTED_COLOR size 32
+                        text BOBCACHIEVEMENTS_MAP[achievement_id][1] color BOBCACHIEVEMENTS_GRANTED_COLOR size 32
                     elif BOBCACHIEVEMENTS_MAP[achievement_id][2]:
                         # The achievement has not been achieved, and it is marked as
                         # hidden, so don't show a description
-                        text BOBCACHIVEMENTS_HIDDEN_ACHIEVEMENT_TEXT color BOBCACHIEVEMENTS_UNGRANTED_COLOR
+                        text BOBCACHIVEMENTS_HIDDEN_ACHIEVEMENT_TEXT color BOBCACHIEVEMENTS_UNGRANTED_COLOR size 32
                     else:
                         # The achievement has not been achieved but it is not hidden
                         # so just show its name
-                        text BOBCACHIEVEMENTS_MAP[achievement_id][0] color BOBCACHIEVEMENTS_UNGRANTED_COLOR
-                        text BOBCACHIEVEMENTS_SPACING_CHAR color BOBCACHIEVEMENTS_UNGRANTED_COLOR
-                        text BOBCACHIVEMENTS_HIDDEN_ACHIEVEMENT_TEXT color BOBCACHIEVEMENTS_UNGRANTED_COLOR
+                        text BOBCACHIEVEMENTS_MAP[achievement_id][0] color BOBCACHIEVEMENTS_UNGRANTED_COLOR size 32
+                        text BOBCACHIEVEMENTS_SPACING_CHAR color BOBCACHIEVEMENTS_UNGRANTED_COLOR size 32
+                        text BOBCACHIVEMENTS_HIDDEN_ACHIEVEMENT_TEXT color BOBCACHIEVEMENTS_UNGRANTED_COLOR size 32

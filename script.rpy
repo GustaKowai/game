@@ -208,13 +208,13 @@ label start:
         with vpunch
         n "Ok!{w} Vocês que se virem para saber quem é quem!"
         $ doppelganger = True
-        $ renpy.notify("Doppelganger")
+        achieve Doppelganger
 
     if nome1 == "GAMSo" or nome2 == "GAMSo":
         play sound "honk.ogg"
         "HONK"
         $ gamsoGamer = True
-        $ renpy.notify("GAMSo Gamer")
+        achieve GAMSo_gamer
     define azul = Character("[nome1]",color="#1338BE",what_prefix='{color=#1338BE}', what_suffix='{/color}')
     define laranja = Character("[nome2]",color="#f56300",what_prefix='{color=#f56300}', what_suffix='{/color}')
 
@@ -252,7 +252,7 @@ label start:
     label prologo0:
 
         show gatovaldo default
-        achieve beginning
+        achieve Inicio
 
         g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
         #jump investigacao

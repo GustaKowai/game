@@ -320,6 +320,7 @@ label investigacao:
         menu:
             "Comer o tofu":
                 n "Você come o tofu"
+                achieve Comer_tofu
                 n "Tem sabor de tofu"
                 n "Por algum motivo você sente que pode ter cometido um crime"
             "Deixar o tofu de lado":
