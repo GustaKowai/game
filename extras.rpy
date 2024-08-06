@@ -171,7 +171,7 @@ style presplash_label_text:
 ## program.
 
 ## These background buttons are 480x270
-image quartel_button = im.FactorScale("bg quartel.jpg", 0.25)
+image cgAle1_button = im.FactorScale("cgs/AlessandraCG1.png", 0.25)
 image office_button = im.FactorScale("bg/future_office.jpg", 0.25)
 image beach_button = im.FactorScale("bg/sort_of_beautiful_beach_day.jpg", 0.25)
 image bglock_button = "gui/button/bg_locked.jpg"
@@ -188,8 +188,8 @@ init python:
     g_bg = Gallery()
 
     # Backgrounds for the BG Gallery
-    g_bg.button("quartel")
-    g_bg.unlock_image("bg quartel") 
+    g_bg.button("cgAle1")
+    g_bg.unlock_image("cgAle1")
 
     g_bg.button("office")
     g_bg.image("future_office")
@@ -251,27 +251,27 @@ screen extras_navigation():
 
         spacing gui.navigation_spacing
 
-        textbutton _("Achievements") action ShowMenu("bobcachievements") alt "Achievements"
+        textbutton _("Conquistas") action ShowMenu("bobcachievements") alt "Achievements"
 
-        textbutton _("Sprite Gallery") action ShowMenu("sprite_gallery") alt "Sprite Gallery"
+        textbutton _("Galeria de Sprites") action ShowMenu("sprite_gallery") alt "Sprite Gallery"
 
-        textbutton _("Background Gallery") action ShowMenu("bg_gallery") alt "Background Gallery"
+        textbutton _("Galeria de CG") action ShowMenu("bg_gallery") alt "Background Gallery"
 
-        textbutton _("Music Room") action ShowMenu("music_gallery") alt "Music Room"
+        textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
 
-        textbutton _("Replay Room") action ShowMenu("replay_gallery") alt "Replay Room"
+        textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
 
         textbutton _("Sobre") action ShowMenu("about")
 
         if persistent.game_clear:
 
-            textbutton _("Developer Notes") action ShowMenu("dev_notes") alt "Developer Notes"
+            textbutton _("Notas dos devs") action ShowMenu("dev_notes") alt "Developer Notes"
 
         else:
 
             textbutton _("???") action None alt "Locked Option"
 
-        textbutton _("Return") action Return() alt "Return"
+        textbutton _("Voltar") action Return() alt "Return"
 
 ## Extras Menu screen #######################################
 ##
@@ -287,7 +287,7 @@ screen extras_menu(title, scroll=None, yinitial=0.0):
         add gui.game_menu_background
 
     frame:
-        style "game_menu_outer_frame"
+        style "extra_menu_outer_frame"
 
         hbox:
 
@@ -370,9 +370,9 @@ screen bg_gallery():
     tag menu
 
     ## This use statement includes the extras_menu screen inside this one.
-    use extras_menu(_("Background Gallery")):
+    use extras_menu(_("Galeria de CG")):
 
-        grid 3 3:
+        grid 2 3:
 
             xfill True
             yfill True
@@ -380,7 +380,7 @@ screen bg_gallery():
             ## Call make_button to show a particular button.
             # add g_bg.make_button("background", "bg_button")
 
-            add g_bg.make_button("quartel", "quartel_button", xalign=0.5, yalign=0.5)
+            add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
 

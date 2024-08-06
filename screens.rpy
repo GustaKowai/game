@@ -430,7 +430,10 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         add gui.game_menu_background
 
     frame:
-        style "game_menu_outer_frame"
+        if main_menu:
+            style "game_menu_outer_frame"
+        else:
+            style "ingame_menu_outer_frame"
 
         hbox:
 
@@ -488,6 +491,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
 
 style game_menu_outer_frame is empty
+style ingame_menu_outer_frame is empty
+style extra_menu_outer_frame is empty
 style game_menu_navigation_frame is empty
 style game_menu_content_frame is empty
 style game_menu_viewport is gui_viewport
@@ -506,8 +511,21 @@ style game_menu_outer_frame:
 
     background "gui/overlay/game_menu.png"
 
+style ingame_menu_outer_frame:
+    bottom_padding 45
+    top_padding 180
+
+    background "gui/overlay/ingame_menu.png"
+
+style extra_menu_outer_frame:
+    bottom_padding 45
+    top_padding 180
+
+    background "gui/overlay/extra_menu.png"
+
+
 style game_menu_navigation_frame:
-    xsize 460
+    xsize 660
     yfill True
 
 style game_menu_content_frame:
@@ -534,8 +552,8 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos 1575
-    yalign 1.0
+    xpos 55
+    yalign 0.9
     yoffset 0
 
 
