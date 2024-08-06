@@ -319,10 +319,9 @@ screen navigation():
         elif not main_menu:
 
             textbutton _("Menu Principal") action MainMenu()
+        if main_menu:
 
-        textbutton _("Sobre") action ShowMenu("about")
-
-        #textbutton _("Galeria")
+            textbutton _("Extras") action ShowMenu("bobcachievements") alt "Extras"
         
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):

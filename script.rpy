@@ -252,11 +252,13 @@ label start:
     label prologo0:
 
         show gatovaldo default
+        achieve beginning
 
         g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
         #jump investigacao
 
         g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
+
 
         g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
         menu:
