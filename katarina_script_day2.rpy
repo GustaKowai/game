@@ -211,12 +211,58 @@ label k2m16:
             k "Eu tinha esquecido!"
             k "Estava procurando pelo grampo e acabei encontrando ele."
             k "Achei que seria comicamente engraçado usá-lo como alternativa."
+            jump k2a16
         "Como você consegue manuseá-lo com tanta facilidade?":
             k "..."
             k "Nunca pensei nisso..."
             n "O revólver cai da mão de Katarina, criando uma leve cratera no chão."
             n "Vocês tentam levantá-lo, mas falham."
             k "Talvez fosse o poder da amizade, sei lá, mas infelizmente você acabou com o que quer que seja!"
+            jump j2b16
+        
+
+label k2a16:
+    n "POW!"
+    n "Uma porta perto de vocês abre abruptamente."
+    n "Vocês veem um homem de terno e óculos escuros, com algum tipo de dispositivo tecnológico na mão, como se fosse uma luv..."
+    n "Espera, é o Robert Downey Jr.?"
+    k "Espera, Robert Downey Jr.?"
+    rdj "I am ron Man"
+    n "Vocês percebem que ele está carregando alguma espécie de ataque e mira a luva em vocês."
+    k "CALMA LÁ!"
+    n "Katarina mira o revólver comicamente grande para ele."
+    rdj "HEY, HEY, HEY, SLOW DOWN!"
+    n "Ele abaixa a luva, parece ter se sentido intimidado."
+    k "Vamos manter a calma!"
+    rdj "Sim! Sim!"
+    k "Espera, você entende português?"
+    rdj "Sim! Preciso casa de banho!"
+    n "Ele aponta para o banheiro."
+    k "Ah, lógico."
+    k "Pode ir."
+    rdj "Obrigado."
+    rdj "Você rapariga fixe!"
+    k "..."
+
+
+
+
+
+label k2b16:
+    n "POW!"
+    n "Uma porta perto de vocês abre abruptamente."
+    n "Vocês veem um homem de terno e óculos escuros, com algum tipo de dispositivo tecnológico na mão, como se fosse uma luv..."
+    n "Espera, é o Robert Downey Jr.?"
+    k "Espera, Robert Downey Jr.?"
+    rdj "I am Iron Man"
+    n "Vocês percebem que ele está carregando alguma espécie de ataque e mira a luva em vocês."
+    k "CALMA LÁ!"
+    n "Katarina realiza um movimento 'get down mr. president' em ti e vocês dois desviam do raio laser disparado pela luva."
+    k "QUE PORRA É ESSA??"
+    rdj "Stay on the ground."
+    n "Ele pega um telefone, disca um número e começa a falar com alguém."
+    
+
 
 
 label k2m3:
