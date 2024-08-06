@@ -406,6 +406,11 @@ screen music_gallery():
             #textbutton "Future Business" action mr.Play("audio/music/Future-Business_v001.mp3")
             #textbutton "Careless Summer" action mr.Play("audio/music/Careless-Summer_Looping.mp3")
 
+            if config.has_music:
+                label _("Music Volume")
+                hbox:
+                    bar value Preference("music volume")
+
             null height 20
 
             hbox:
@@ -414,15 +419,14 @@ screen music_gallery():
                 textbutton "Next" action mr.Next() alt "Next Song"
 
             null height 20
-
+    
         # Start the music playing on entry to the music room.
         on "replace" action mr.Play()
 
         ## Restore the main menu music upon leaving.
         ## You can actually comment this out if you want to let players enjoy the music
         ## while looking at the other screens.
-        on "replaced" action Play("music", "audio/The-Concrete-Bakes_Looping.mp3")
-
+        #on "replaced" action Play("music", "audio/The-Concrete-Bakes_Looping.mp3")
 ## Replay Gallery screen ######################################
 ##
 ## This is a simple screen that shows buttons that replay a scene from the game.
