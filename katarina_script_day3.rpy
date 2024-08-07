@@ -144,6 +144,7 @@ label k3m2:
   jump k3m3
 
 label k3m3:
+  play music "floresta.mp3" volume 0.5
   scene bg floresta with gatodissolve
   show katarina smirk
   n "Katarina começa a dirigir para fora da cidade"

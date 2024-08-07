@@ -234,8 +234,14 @@ init python:
     # Add music files.
     mr.add("audio/introMusic.ogg", always_unlocked=True)
     mr.add("audio/quartel.wav")
-    mr.add("audio/music/Sculpture-Garden_Looping.mp3")
-    mr.add("audio/music/The-Concrete-Bakes_Looping.mp3")
+    mr.add("audio/atelie_loop.ogg")
+    mr.add("audio/escritorio.wav")
+    mr.add("audio/deserto.mp3")
+    mr.add("audio/restaurante.wav")
+    mr.add("audio/church.mp3")
+    mr.add("audio/beco.wav")
+    mr.add("audio/cidade.wav")
+    mr.add("audio/floresta.mp3")
 
 ## Extras Navigation screen ############################################################
 ##
@@ -396,15 +402,22 @@ screen music_gallery():
     use extras_menu(_("Sala de música")):
 
         vbox:
-
             xalign 0.5
             yalign 0.5
 
             # The buttons that play each track.
             textbutton "Intro Song" action mr.Play("audio/introMusic.ogg")
             textbutton "Quartel song" action mr.Play("audio/quartel.wav")
-            #textbutton "Future Business" action mr.Play("audio/music/Future-Business_v001.mp3")
-            #textbutton "Careless Summer" action mr.Play("audio/music/Careless-Summer_Looping.mp3")
+            textbutton "Tema do Atelie" action mr.Play("audio/atelie_loop.ogg")
+            textbutton "Tema do escritorio" action mr.Play("audio/escritorio.wav")
+            textbutton "Tema do deserto" action mr.Play("audio/deserto.mp3")
+            textbutton "Tema do restaurante" action mr.Play("audio/restaurante.wav")
+            textbutton "Tema da igreja" action mr.Play("audio/church.mp3")
+            textbutton "Tema do beco" action mr.Play("audio/beco.wav")
+            textbutton "Tema da cidade" action mr.Play("audio/cidade.wav")
+            textbutton "Tema da floresta" action mr.Play("audio/floresta.mp3")
+            
+
 
             if config.has_music:
                 label _("Music Volume")

@@ -12,7 +12,7 @@ label d1ale1:
     $ aleDay1 = False
     scene bg atelie
     play music "atelie_intro.ogg" volume 1.0
-    queue music "atelie.wav"
+    queue music "atelie_loop.ogg"
 
     if jogador1:
         with fadeA

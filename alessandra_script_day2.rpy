@@ -8,7 +8,7 @@
 
 label d2ale1:
     play music "atelie_intro.ogg" volume 1.0
-    queue music "atelie.wav"
+    queue music "atelie_loop.ogg"
     $ aleDay2 = False
     scene bg atelie
 
