@@ -3,11 +3,13 @@
 
 init python:
     def muda_afeto(pontos):
+        global JogadorAtivo
         JogadorAtivo += pontos
         if pontos > 0:
             renpy.sound.play("doorOpen.ogg")
         if pontos < 0:
             renpy.sound.play("honk.ogg")
+        return pontos
 
 init python:
     def low_beep(event, **kwargs):
@@ -266,7 +268,6 @@ label start:
         #jump investigacao
 
         g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
-
 
         g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
         menu:
