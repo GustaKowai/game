@@ -177,7 +177,14 @@ image beach_button = im.FactorScale("bg/sort_of_beautiful_beach_day.jpg", 0.25)
 image bglock_button = "gui/button/bg_locked.jpg"
 
 ## These sprite buttons are 290x290
-image eneutral_button = Crop((170, 245, 290, 290), "eileen neutral")
+transform image_to_icon:
+    zoom 0.25
+image gdefault_button =  At("gatovaldo default",image_to_icon)
+#image gfeliz_button =  At("gatovaldo feliz",image_to_icon)
+#image gserio_button =  At("gatovaldo serio",image_to_icon)
+#image gwithale_button =  At("gatovaldo withale",image_to_icon)
+#image gwithkat_button =  At("gatovaldo withkat",image_to_icon)
+image adefault_button = At ("alessandra default", image_to_icon)
 image esurprised_button = Crop((170, 245, 290, 290), "eileen surprised")
 image eupset_button = Crop((170, 245, 290, 290), "eileen upset")
 image eangry_button = Crop((170, 245, 290, 290), "eileen angry")
@@ -204,10 +211,34 @@ init python:
 
     g_sprite = Gallery()
 
-    g_sprite.button("eileen neutral")
-    g_sprite.unlock_image("room", "eileen neutral")
-    #g_sprite.unlock_image("room", "eileen neutral")
-    g_sprite.unlock_image("sort_of_beautiful_beach_day", "eileen summer neutral")
+    g_sprite.button("gatovaldo default")
+    g_sprite.unlock_image("bg quartel", "gatovaldo default")
+    #g_sprite.button("gatovaldo feliz")
+    g_sprite.unlock_image("bg quartel", "gatovaldo feliz")
+    #g_sprite.button("gatovaldo serio")
+    g_sprite.unlock_image("bg quartel", "gatovaldo serio")
+    #g_sprite.button("gatovaldo withale")
+    g_sprite.unlock_image("bg quartel", "gatovaldo withale")
+    #g_sprite.button("gatovaldo withkat")
+    g_sprite.unlock_image("bg quartel", "gatovaldo withkat")
+    
+    g_sprite.button("alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra smirk")
+    g_sprite.unlock_image("bg atelie", "alessandra triste")
+    g_sprite.unlock_image("bg atelie", "alessandra surpresa")
+    g_sprite.unlock_image("bg atelie", "alessandra surpresa2")
+    g_sprite.unlock_image("bg atelie", "alessandra brava")
+    g_sprite.unlock_image("bg atelie", "alessandra brava2")
+    g_sprite.unlock_image("bg atelie", "alessandra assustada")
+    g_sprite.unlock_image("bg atelie", "alessandra medo1")
+    g_sprite.unlock_image("bg atelie", "alessandra medo2")
+    g_sprite.unlock_image("bg atelie", "alessandra eyeroll")
+    g_sprite.unlock_image("bg atelie", "alessandra seria")
+    g_sprite.unlock_image("bg atelie", "alessandra seria2")
+    g_sprite.unlock_image("bg atelie", "alessandra confusa")
+    g_sprite.unlock_image("bg atelie", "alessandra sorriso")
+    g_sprite.unlock_image("bg atelie", "alessandra default")
 
     g_sprite.button("eileen surprised")
     g_sprite.unlock_image("room", "eileen surprised")
@@ -353,7 +384,7 @@ screen sprite_gallery():
     ## This use statement includes the extras_menu screen inside this one.
     use extras_menu(_("Sprite Gallery")):
 
-        grid 4 1:
+        grid 4 2:
 
             xfill True
             yfill True
@@ -361,7 +392,12 @@ screen sprite_gallery():
             ## Call make_button to show a particular button.
             # add g_sprite.make_button("sprite", "sprite_button")
 
-            add g_sprite.make_button("eileen neutral", "eneutral_button")
+            add g_sprite.make_button("gatovaldo default", "gdefault_button")
+            add g_sprite.make_button("alessandra default", "adefault_button")
+            #add g_sprite.make_button("gatovaldo feliz", "gfeliz_button")
+            #add g_sprite.make_button("gatovaldo serio", "gserio_button")
+            #add g_sprite.make_button("gatovaldo withale", "gwithale_button")
+            #add g_sprite.make_button("gatovaldo withkat", "gwithkat_button")
             add g_sprite.make_button("eileen surprised", "esurprised_button")
             add g_sprite.make_button("eileen upset", "eupset_button")
             add g_sprite.make_button("eileen angry", "eangry_button")
