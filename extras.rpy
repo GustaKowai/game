@@ -296,6 +296,8 @@ screen extras_navigation():
 
         textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
 
+        textbutton _("Sala de musica extra") action ShowMenu("music_room3", mr=music_room) alt "Music Room"
+
         textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
 
         textbutton _("Sobre") action ShowMenu("about")

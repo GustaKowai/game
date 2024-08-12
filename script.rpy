@@ -2,6 +2,14 @@
 # Sons das falas dos personagens
 
 init python:
+    def muda_afeto(pontos):
+        JogadorAtivo += pontos
+        if pontos > 0:
+            renpy.sound.play("doorOpen.ogg")
+        if pontos < 0:
+            renpy.sound.play("honk.ogg")
+
+init python:
     def low_beep(event, **kwargs):
         if event == "show":
             renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
