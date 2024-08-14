@@ -29,7 +29,7 @@ label credits:
     ## We display a screen that shows how much the player has seen and played of the game.
     show screen results
     
-    centered "Fin"
+    centered "Fim"
 
     hide screen results
 

@@ -69,6 +69,8 @@ label desenvolvedoresChooseDay:
             jump d3kat1
         "Dia 3 da Alessandra":
             jump d3ale1
+        "Final da demo":
+            jump demoFinal
         "Quero mudar mais variáveis":
             jump desenvolvedoresChooseThings
         "Quero mudar o player ativo":

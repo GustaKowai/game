@@ -558,6 +558,9 @@ label start:
             g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 10 pontos disponíveis com a Katarina \ne [a.laranja] de 12 pontos disponíveis com a Alessandra"
 
             g "Espero que tenham se divertido, em breve teremos mais missões."
+
+            jump credits
+
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
 
             # if jogador1:

@@ -573,97 +573,99 @@ define gui.dev_notes = _p("""Hello, this is BáiYù of tofurocks here. I want to
 ## gui.about string in options.rpy, and you can style it using text tags.
 ## https://www.renpy.org/doc/html/text.html
 
-## The contents of your credits screen.
-define credits_string = _p("""
-{size=+100}Credits{/size}
-\n\n
-{size=+75}Programming{/size}
-\n
-BáiYù
-\n
-bobcgames
-\n
-npckc
-\n
-TheoMinute
-\n\n
-{size=+75}Art{/size}
-\n
-Sprites - Mannequin by HelloAR14
-\n
-Backgrounds - Uncle Mugen
-\n\n
-{size=+75}Soundtrack{/size}
-\n
-Eric Matyas
-\n\n
-{size=+75}Special Thanks{/size}
-\n
-Renall
-\n\n\n\n\n\n\n\n
-{size=+100}Made with{/size}
-\n
-{size=+100}Ren'Py [renpy.version_only].{/size}
-\n\n\n\n
-{size=+100}Thanks for Playing!{/size}
-""")
-
+### The contents of your credits screen.
+#define credits_string = _p("""
+#{size=+100}Credits{/size}
+#\n\n
+#{size=+75}Programming{/size}
+#\n
+#BáiYù
+#\n
+#bobcgames
+#\n
+#npckc
+#\n
+#TheoMinute
+#\n\n
+#{size=+75}Art{/size}
+#\n
+#Sprites - Mannequin by HelloAR14
+#\n
+#Backgrounds - Uncle Mugen
+#\n\n
+#{size=+75}Soundtrack{/size}
+#\n
+#Eric Matyas
+#\n\n
+#{size=+75}Special Thanks{/size}
+#\n
+#Renall
+#\n\n\n\n\n\n\n\n
+#{size=+100}Made with{/size}
+#\n
+#{size=+100}Ren'Py [renpy.version_only].{/size}
+#\n\n\n\n
+#{size=+100}Thanks for Playing!{/size}
+#""")
+#
 ## Here's a blank one with common roles to fit your game.
 ## TODO: Adjust this to fit your project
-# define credits_string = _p("""
-# {size=+100}Credits{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Producer:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Director:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Writing:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Art:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Music:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Sound:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Voiceover:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Programming:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Trailer:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Beta-Testing:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Special Thanks:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# \n\n\n\n\n\n\n\n
-# {size=+25}Made with Ren'Py [renpy.version_only].{/size}
-# \n\n\n\n\n\n\n\n
-# {size=+100}Thanks for Playing!{/size}
-# """)
+define credits_string = _p("""
+{size=+100}Credits{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Producer:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Director:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Writing:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Art:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Music:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Sound:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Voiceover:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Programming:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Trailer:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Beta-Testing:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Special Thanks:{/size}
+\n
+Lorem Ipsum
+\n\n
+\n\n\n\n\n\n\n\n
+{size=+25}Made with Ren'Py [renpy.version_only].{/size}
+\n\n\n\n\n\n\n\n
+{size=+100}Obrigado por jogar!{/size}
+""")
+
+call screen results()
 
 ## This controls the position and speed of your end credits.
 transform credits_scroll(t):

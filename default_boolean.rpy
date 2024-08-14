@@ -62,3 +62,4 @@ default gamsoGamer = False
 
 ##Variaveis persistentes:
 default persistent.watch_Intro = False
+default persistent.credits_seen = False
