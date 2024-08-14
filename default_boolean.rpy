@@ -17,6 +17,7 @@ default lenco = False
 default sucessoMissao1Ale = True
 default jogador1Ale1 = False
 default jogador2Ale1 = False
+default usandoeVestido = False
 #dia1 Katarina:
 default escopeta = False
 default rifle = False

@@ -126,6 +126,20 @@ Objetivos concluidos nas semanas de 23/07-05/08:
 - Alessandra com capacete de moto feito
 - Katarina com Máscara de Halloween feito
 
+Objetivos concluidos nas semanas de 06/07-12/08:
+
+- Criação do menu extra com artes e músicas desbloqueáveis
+- Tela de conquistas
+- Galeria de músicas pronta
+- Sons diferentes para escolhas que influenciam o afeto das personagens
+
+Objetivos concluidos nas semanas de 13/07-20/08:
+
+- Adição das músicas atuais na galeria de músicas
+- Adição das sprites na galeria de sprites
+- Adição das cgs atuais na galeria de cgs
+- Tela de créditos ao terminar o jogo
+
 Objetivos em andamento:
 
 - Arte:
@@ -166,7 +180,7 @@ Em breve:
 - História:
   - Pelo menos 3 missões com cada personagem
 - Programação:
-  - Efeito visual/sonoro para diferenciar escolhas boas/ruins
+  - ...
 
 Planos Abandonados:
 
