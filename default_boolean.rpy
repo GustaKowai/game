@@ -59,3 +59,6 @@ default pontosSucesso = 0
 
 default doppelganger = False
 default gamsoGamer = False
+
+##Variaveis persistentes:
+default persistent.watch_Intro = False

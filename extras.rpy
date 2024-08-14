@@ -174,6 +174,7 @@ style presplash_label_text:
 image cgAle1_button = im.FactorScale("cgs/AlessandraCG1.png", 0.25)
 image office_button = im.FactorScale("bg/future_office.jpg", 0.25)
 image beach_button = im.FactorScale("bg/sort_of_beautiful_beach_day.jpg", 0.25)
+image splash_button = im.FactorScale("splash/splash.png",0.25)
 image bglock_button = "gui/button/bg_locked.jpg"
 
 ## These sprite buttons are 290x290
@@ -197,6 +198,15 @@ init python:
     # Backgrounds for the BG Gallery
     g_bg.button("cgAle1")
     g_bg.unlock_image("cgAle1")
+
+    g_bg.button("splash")
+    g_bg.condition("persistent.watch_Intro")
+    g_bg.image("splash/1.png")
+    g_bg.image("splash/2.png")
+    g_bg.image("splash/3.png")
+    g_bg.image("splash/4.png")
+    g_bg.image("splash/5.png")
+    g_bg.image("splash/6.png")
 
     g_bg.button("office")
     g_bg.image("future_office")
@@ -425,6 +435,7 @@ screen bg_gallery():
             # add g_bg.make_button("background", "bg_button")
 
             add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
+            add g_bg.make_button("splash", "splash_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
 

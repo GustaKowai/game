@@ -17,7 +17,7 @@ init python:
         itemInvestigado = ""
 
 label investigacao:
-    play music "abandoned.ogg" volume 2.0
+    play music "audio/abandoned.ogg" volume 2.0
     scene bg quartel
     with gatodissolve
     default energia = 4

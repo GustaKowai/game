@@ -6,9 +6,9 @@ init python:
         global JogadorAtivo
         JogadorAtivo += pontos
         if pontos > 0:
-            renpy.sound.play("doorOpen.ogg")
+            renpy.sound.play("certo.wav")
         if pontos < 0:
-            renpy.sound.play("honk.ogg")
+            renpy.sound.play("errado.wav", relative_volume=1.5)
         return pontos
 
 init python:
@@ -195,7 +195,7 @@ default a.laranja = 0
 label start:
 
     
-    play music "quartel.wav"  volume 2.0
+    play music "audio/quartel.wav"  volume 2.0
     scene bg quartel
 
     n "Antes de começarmos..."
@@ -460,7 +460,7 @@ label start:
     ########################################################################################################################### 
 
         label whereToGo:
-            play music "quartel.wav" volume 2.0
+            play music "audio/quartel.wav" volume 2.0
             scene bg quartel
             with gatodissolve
             $ JogadorAtivo = 0
@@ -508,7 +508,7 @@ label start:
 
         label changeDay:
             
-            play music "quartel.wav" volume 2.0
+            play music "audio/quartel.wav" volume 2.0
             scene bg quartel
             with Fade(0.5, 1.0, 0.5)
 
@@ -621,8 +621,8 @@ label splashscreen:
     with Pause(1.5)
     stop music fadeout 1.5
 
+    $ persistent.watch_Intro = True
     scene black with dissolve
     with Pause(1)
-
 
     return

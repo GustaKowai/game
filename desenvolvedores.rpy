@@ -1,5 +1,5 @@
 label desenvolvedores1:
-    play music "quartel.wav" volume 2.0
+    play music "audio/quartel.wav" volume 2.0
     scene bg quartel
     with Fade(0.5, 1.0, 0.5)
     

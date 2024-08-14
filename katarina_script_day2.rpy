@@ -7,7 +7,7 @@
 ########################################################################################################################### 
 
 label d2kat1:
-    play music "escritorio.wav" volume 0.5
+    play music "audio/escritorio.wav" volume 0.5
     $ katDay2 = False
     scene bg recepcao
     if jogador1:
@@ -84,7 +84,7 @@ label k2m2:
     scene bg banco
     with gatodissolve
     show katarina mascarada
-    play music "banco.wav" volume 0.5
+    play music "audio/banco.wav" volume 0.5
 
     k "Acho que é aqui, o gatovaldo mandou essa caixa para o escritório hoje de manhã, eu estava fumando lá fora e acabei recebendo isso, a pobre da Cláudia não teve nem a chance de fazer o trabalho de recepcionista dela."
     k "Acho que se eu começar a fumar mais talvez possa demití-la..."

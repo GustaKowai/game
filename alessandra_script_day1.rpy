@@ -130,7 +130,7 @@ label a1m1:
     scene bg restaurante
     with gatodissolve
     stop music fadeout 1.0
-    play music "restaurante.wav" 
+    play music "audio/restaurante.wav" 
 
     n "E para em frente a um estabelecimento que se parece com um palácio."
 

@@ -75,7 +75,7 @@ label d3ale1:
     n "Vocês se acomodam no carro, Danran sai cantando pneu em direção ao evento"
 
     scene bg evento
-    play music "evento.wav" volume 0.5
+    play music "audio/evento.wav" volume 1.0
     n "Após uma viagem longa e repleta de sinais vermelhos cortados, vocês chegam a um grande salão de eventos, isolado"
     n "Há muitos carros de luxo estacionados, limousines chegam e saem deixando pessoas"
     show alessandra sorriso at left

@@ -41,12 +41,12 @@ init python:
     music_room.add(
         ## The title of the song. Used for alphabetization. Should probably
         ## be translatable.
-        name=_("Dance of the Sugar Plum Fairy"),
+        name=_("Intro Song"),
         ## This should be the path to the song i.e. "audio/music/sugar_plum.ogg"
-        path="<silence 124>",
+        path="audio/introMusic.ogg",
         ## The song artist. Optional; depends on how you want to set up
         ## your screens. The default layouts use the artist field.
-        artist="Pyotr Ilyich Tchaikovsky",
+        artist="R0n4n",
         ############ The following are more optional fields ####################
         ## This can be the path to album art specific for this song. If not
         ## provided/it is None (the default), it'll use the default_art,
@@ -56,7 +56,7 @@ init python:
         ## An optional extra field. You can put whatever information you like
         ## in here and display it however you want in the music room screen.
         ## By default, the screens do not display this information.
-        description=_("From {i}The Nutcracker{/i}"),
+        #description=_("From {i}The Nutcracker{/i}"),
         ## You may optionally provide an unlock condition as a string, which
         ## will be evaluated to determine if the song is unlocked or not.
         ## In this case, the song is unlocked when the persistent variable
@@ -68,50 +68,71 @@ init python:
     )
 
     music_room.add(
-        name=_("Cove"),
-        artist="Red Robotix",
-        path="<silence 201>",
+        name=_("Tema do quartel"),
+        artist="",
+        path="audio/quartel.wav",
         ## The other information is omitted here, so it gets the defaults.
         ## That is, it gets the default cover art, no description, and it is
         ## unlocked when it is listened to in-game.
     )
 
     music_room.add(
-        name=_("Beneath the Endless Day"),
-        artist="Tobi Weiss",
-        path="<silence 207>",
-        unlock_condition="True",
+        name=_("Tema atelie"),
+        artist="",
+        path="audio/atelie_loop.ogg",
+        #unlock_condition="True",
     )
 
     music_room.add(
-        name=_("Destati"),
-        artist="Yoko Shimomura",
-        path="<silence 173>",
-        unlock_condition="True",
+        name=_("Tema Escritório"),
+        artist="",
+        path="audio/escritorio.wav",
+        #unlock_condition="True",
     )
 
     music_room.add(
-        name=_("Song of the Ancients"),
-        artist="Keiichi Okabe",
-        path="<silence 317>",
-        unlock_condition="True",
+        name=_("Tema floresta"),
+        artist="",
+        path="audio/floresta.mp3",
+        #unlock_condition="True",
     )
 
     music_room.add(
-        name=_("Nightsong"),
-        artist="Borislav Slavov",
-        path="<silence 77>",
-        unlock_condition="True",
+        name=_("Tema deserto"),
+        artist="",
+        path="audio/deserto.mp3",
+        #unlock_condition="True",
     )
 
     music_room.add(
-        name=_("Requiem of Dawn"),
-        artist="Alcaknight",
-        path="<silence 225>",
-        unlock_condition="True",
+        name=_("Tema restaurante"),
+        artist="",
+        path="audio/restaurante.wav",
+        #unlock_condition="True",
     )
 
+    music_room.add(
+        name=_("Tema da igreja"),
+        artist="",
+        path="audio/church.mp3",
+        #unlock_condition="True",
+    )
 
+    music_room.add(
+        name=_("Tema beco"),
+        artist="",
+        path="audio/beco.wav",
+        #unlock_condition="True",
+    )
+
+    music_room.add(
+        name=_("Tema cidade"),
+        artist="",
+        path="audio/cidade.wav",
+        #unlock_condition="True",
+    )
+
+    
 ################################################################################
 ## CONFIGURATION VALUES
 ################################################################################
