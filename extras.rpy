@@ -186,6 +186,8 @@ image gdefault_button =  At("gatovaldo default",image_to_icon)
 #image gwithale_button =  At("gatovaldo withale",image_to_icon)
 #image gwithkat_button =  At("gatovaldo withkat",image_to_icon)
 image adefault_button = At ("alessandra default", image_to_icon)
+image kdefault_button = At ("katarina default", image_to_icon)
+image cdefault_button = At ("claudia default", image_to_icon)
 image esurprised_button = Crop((170, 245, 290, 290), "eileen surprised")
 image eupset_button = Crop((170, 245, 290, 290), "eileen upset")
 image eangry_button = Crop((170, 245, 290, 290), "eileen angry")
@@ -250,6 +252,24 @@ init python:
     g_sprite.unlock_image("bg atelie", "alessandra sorriso")
     g_sprite.unlock_image("bg atelie", "alessandra default")
 
+    g_sprite.button("katarina default")
+    g_sprite.unlock_image("bg escritorio", "katarina default")
+    g_sprite.unlock_image("bg escritorio", "katarina smirk")
+    g_sprite.unlock_image("bg escritorio", "katarina triste")
+    g_sprite.unlock_image("bg escritorio", "katarina muitofeliz")
+    g_sprite.unlock_image("bg escritorio", "katarina irritada")
+    g_sprite.unlock_image("bg escritorio", "katarina meh")
+    g_sprite.unlock_image("bg escritorio", "katarina brava")
+    g_sprite.unlock_image("bg escritorio", "katarina surpresa")
+    g_sprite.unlock_image("bg escritorio", "katarina confusa")
+
+    g_sprite.button("claudia default")
+    g_sprite.unlock_image("bg recepcao", "claudia default")
+    g_sprite.unlock_image("bg recepcao", "claudia thinking")
+    g_sprite.unlock_image("bg recepcao", "claudia brava")
+    g_sprite.unlock_image("bg recepcao", "claudia feliz")
+
+    
     g_sprite.button("eileen surprised")
     g_sprite.unlock_image("room", "eileen surprised")
 
@@ -304,7 +324,7 @@ screen extras_navigation():
 
         textbutton _("Galeria de CG") action ShowMenu("bg_gallery") alt "Background Gallery"
 
-        textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
+        #textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
 
         textbutton _("Sala de musica extra") action ShowMenu("music_room3", mr=music_room) alt "Music Room"
 
@@ -406,6 +426,8 @@ screen sprite_gallery():
 
             add g_sprite.make_button("gatovaldo default", "gdefault_button")
             add g_sprite.make_button("alessandra default", "adefault_button")
+            add g_sprite.make_button("katarina default", "kdefault_button")
+            add g_sprite.make_button("claudia default", "cdefault_button")
             #add g_sprite.make_button("gatovaldo feliz", "gfeliz_button")
             #add g_sprite.make_button("gatovaldo serio", "gserio_button")
             #add g_sprite.make_button("gatovaldo withale", "gwithale_button")
@@ -434,8 +456,8 @@ screen bg_gallery():
             ## Call make_button to show a particular button.
             # add g_bg.make_button("background", "bg_button")
 
-            add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("splash", "splash_button", xalign=0.5, yalign=0.5)
+            add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
 
