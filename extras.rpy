@@ -251,6 +251,8 @@ init python:
     g_sprite.unlock_image("bg atelie", "alessandra confusa")
     g_sprite.unlock_image("bg atelie", "alessandra sorriso")
     g_sprite.unlock_image("bg atelie", "alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra capacete")
+
 
     g_sprite.button("katarina default")
     g_sprite.unlock_image("bg escritorio", "katarina default")
@@ -262,6 +264,7 @@ init python:
     g_sprite.unlock_image("bg escritorio", "katarina brava")
     g_sprite.unlock_image("bg escritorio", "katarina surpresa")
     g_sprite.unlock_image("bg escritorio", "katarina confusa")
+    g_sprite.unlock_image("bg escritorio", "katarina mascarada")
 
     g_sprite.button("claudia default")
     g_sprite.unlock_image("bg recepcao", "claudia default")
@@ -613,7 +616,7 @@ define gui.dev_notes = _p("""Hello, this is BáiYù of tofurocks here. I want to
 define credits_string = _p("""
 {size=+100}Credits{/size}
 \n
-Lorem Ipsum
+VNM: Vendeta
 \n\n
 {size=+75}Producer:{/size}
 \n
