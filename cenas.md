@@ -102,3 +102,12 @@
     - Tema do atelie - ok
     - Tema da exibição - NOT OK
     - (??)
+
+## Bar do zé
+
+- Cenas:
+  - Cassino (Bar) - NOT OK
+- Personagens:
+  - Zé - NOT OK
+- Música:
+  - Tema do cassino - NOT OK
