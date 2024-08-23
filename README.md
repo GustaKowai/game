@@ -110,15 +110,43 @@ Objetivos concluidos nas semanas de 19/06-01/07:
 - Adicionadas músicas da cidade e beco do dia 2 da Alessandra
 - Adicionada música do Escritório da Katarina
 
+Objetivos concluidos nas semanas de 01/07-22/07:
+
+- Arte do Zé em andamento
+- Arte da tela de Save
+- Musica do deserto pronta
+- Dia 3 da Alessandra parcialmente implementado
+- Dia 3 da Katarina implementado
+
+Objetivos concluidos nas semanas de 23/07-05/08:
+
+- Alterações no dia 3 da Alessandra
+- Musica da floresta pronta
+- Musica da igreja pronta
+- Alessandra com capacete de moto feito
+- Katarina com Máscara de Halloween feito
+
+Objetivos concluidos nas semanas de 06/07-12/08:
+
+- Criação do menu extra com artes e músicas desbloqueáveis
+- Tela de conquistas
+- Galeria de músicas pronta
+- Sons diferentes para escolhas que influenciam o afeto das personagens
+
+Objetivos concluidos nas semanas de 13/07-20/08:
+
+- Adição das músicas atuais na galeria de músicas
+- Adição das sprites na galeria de sprites
+- Adição das cgs atuais na galeria de cgs
+- Tela de créditos ao terminar o jogo
+
 Objetivos em andamento:
 
 - Arte:
   - Cláudia triste
   - Katarina com um sorriso triste
-  - Katarina com máscara de Halloween
   - Zé
   - Katarina segurando uma arma
-  - Alessandra com capacete de moto
   - Alessandra com duas metralhadoras, uma em cada mão e uma cara de psicopata (opcional)
   - CG de algumas cenas
   - atendente do banco
@@ -127,7 +155,6 @@ Objetivos em andamento:
 - História
   - Finais diferentes
 - Programação:
-  - Achievements
   - Investigação na parte noturna dos dias 2 e 3
   - Cassino
 - Sons e Música:
@@ -139,11 +166,8 @@ Objetivos em andamento:
   - Músicas de fundo:
     - Missões Katarina:
       - Recepção (talvez seja a mesma do escritório ou algo bem parecido?)
-      - Deserto (tem 3 áreas, o deserto base, o posto abandonado e o topo da caixa de água.)
       - Banco (tem 3 áreas, a externa, a recepção e o cofre)
-      - Floresta
     - Missões Alessandra:
-      - Igreja (tem 2 áreas, interna e externa)
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazendo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
 
 Em breve:
@@ -154,9 +178,9 @@ Em breve:
   - Backgrounds
   - Mais poses para as duas personagens
 - História:
-  - Pelo menos 4 missões com cada personagem
+  - Pelo menos 3 missões com cada personagem
 - Programação:
-  - Efeito visual/sonoro para diferenciar escolhas boas/ruins
+  - ...
 
 Planos Abandonados:
 

@@ -17,7 +17,7 @@ init python:
         itemInvestigado = ""
 
 label investigacao:
-    play music "abandoned.ogg" volume 2.0
+    play music "audio/abandoned.ogg" volume 2.0
     scene bg quartel
     with gatodissolve
     default energia = 4
@@ -111,6 +111,17 @@ label investigacao:
     label lugar1k:
         n "Você vai até a planta carnívora"
         n "Ela parece uma planta carnívora normal"
+        menu:
+            "Pegar uma folha":
+                n "Você pega uma folha da planta carnivora"
+                n "Ela tenta te morder, parece que ela não ficou feliz com isso"
+                $ adicionarItem("plantaCarnivora")
+            "Cutucar a planta":
+                n "Você cutuca a planta carnívora"
+                n "Ela morde seu dedo"
+                n "Você não esperava ser mordido por uma planta"
+            "Deixar de lado":
+                n "Você sai de perto da planta carnívora"
         jump d1kat1inv
     
     label lugar2k:
@@ -134,8 +145,22 @@ label investigacao:
             "Investigar melhor":
                 n "Investigando melhor você consegue ver um equipamento eletrônico no palito"
                 n "Parece um rastreador"
+                menu:
+                    "Deixar ele no mesmo lugar":
+                        n "Você devolve ele para o lugar dele"
+                    "Levar ele com você":
+                        $ adicionarItem("palitoPicole")
+                        n "Você acha melhor levar ele com você"
             "Quebrar o palito":
                 n "Você escuta uns sons de faíscas ao quebrar o palito"
+                menu:
+                    "Jogar fora":
+                        n "Você joga o palito quebrado no lixo"
+                    "Devolver para o mesmo lugar":
+                        n "Você coloca o palito quebrado no mesmo lugar que encontrou ele"
+                    "Levar com você":
+                        $ adicionarItem("palitoQuebrado")
+                        n "Você leva o palito quebrado com você"
         jump d1kat1inv
     
     label lugar4k:
@@ -159,6 +184,12 @@ label investigacao:
                 pag "Podemos nos encontrar no..."
                 nvl clear
                 n "A partir dai o resto da carta parece ter sido destruida"
+                menu:
+                    "Deixar a carta na revista":
+                        n "Você devolve a carta para dentro da revista"
+                    "Levar a carta com você":
+                        $ adicionarItem("cartaRevista")
+                        n "Você dobra a carta e a coloca no bolso"
         jump d1kat1inv
     
     label lugar5k:
@@ -172,6 +203,12 @@ label investigacao:
                 n "O rótulo parece estar escrito em russo mas você não ter certeza"
                 n "A única coisa que você consegue identificar é o símbolo de caveira típico de \"perigo\""
                 n "Talvez isso não seja feito para o consumo humano"
+                menu:
+                    "Colocar ela de volta":
+                        n "Você acha que a Katarina pode dar pela falta da vodka dela e resolve coloca-la de volta no lugar"
+                    "Levar com você":
+                        $ adicionarItem("garrafaVodka")
+                        n "Você sente que pode precisar dessa garrafa mais tarde e resolve leva-la com você"
         jump d1kat1inv
     
     label lugar6k:
@@ -185,7 +222,7 @@ label investigacao:
     
     label lugar7k:
         n "Você investiga o pacote de salgadinho"
-        n "Está escrito \"Aqui diz Ultra Mega Blaster Insanamente Ardido\""
+        n "Está escrito \"Ultra Mega Blaster Insanamente Ardido\""
         menu:
             "Provar":
                 n "O sabor é extremamente ardido, você sente como se tivesse colocado um pedaço do inferno na sua boca"
@@ -195,6 +232,9 @@ label investigacao:
                 $ energia -= 1
             "Deixar de lado":
                 n "Você acha melhor não comer isso."
+            "Levar com você":
+                $ adicionarItem("salgadinhoArdido")
+                n "Apesar dela falar que adora o salgadinho, você acha melhor leva-lo com você"
 
     ################----Alessandra----#######################
 
@@ -264,6 +304,16 @@ label investigacao:
             "Provar":
                 n "Você experimenta o vestido"
                 n "Você se sente super na moda"
+                menu:
+                    "Tirar ele":
+                        n "Apesar disso você acha melhor devolver ele para o local apropriado"
+                    "Continuar vestindo":
+                        n "Você decide continuar vestido o vestido tie-dye"
+                        $ adicionarItem("VestidoTieDye")
+                        $ usandoeVestido = True
+            "Levar com você":
+                $ adicionarItem("vestidoTieDye")
+                n "Você decide levar o vestido com você"
             "Deixar de lado":
                 n "Você coloca o vestido de volta no cabide"
                 n "Um arrepio sobe a sua espinha ao se imaginar usando aquilo"
@@ -320,6 +370,7 @@ label investigacao:
         menu:
             "Comer o tofu":
                 n "Você come o tofu"
+                achieve Comer_tofu
                 n "Tem sabor de tofu"
                 n "Por algum motivo você sente que pode ter cometido um crime"
             "Deixar o tofu de lado":

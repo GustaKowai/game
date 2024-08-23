@@ -201,6 +201,8 @@ image alessandra confusa2:
     pause 3
     repeat
 
+image alessandra capacete:
+    "/images/Alessandra Resize/Acapacete.png"
 
 
 ## Katarina
@@ -319,6 +321,9 @@ image katarina confusa:
     "/images/Katarina Resize/Kconfusa (1).png"
     pause 3
     repeat
+
+image katarina mascarada:
+    "/images/KAtarina Resize/Kmascara.png"
 
 
 ## Claudia

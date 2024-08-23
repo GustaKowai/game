@@ -12,7 +12,7 @@ label d1ale1:
     $ aleDay1 = False
     scene bg atelie
     play music "atelie_intro.ogg" volume 1.0
-    queue music "atelie.wav"
+    queue music "atelie_loop.ogg"
 
     if jogador1:
         with fadeA
@@ -130,7 +130,7 @@ label a1m1:
     scene bg restaurante
     with gatodissolve
     stop music fadeout 1.0
-    play music "restaurante.wav" 
+    play music "audio/restaurante.wav" 
 
     n "E para em frente a um estabelecimento que se parece com um palácio."
 
@@ -816,6 +816,7 @@ label a1a10:
     a "São todos seus!"
 
     n "Eles realizam a troca"
+    achieve Arma_tofu
 
     traf "Magnífico! Bom, tchauzinho!"
 
@@ -992,6 +993,7 @@ label a1b10:
         a "Sabia que você faria a escolha certa!"
 
         n "O traficante troca a arma pelo diamante de Alessandra"
+        achieve Arma_tofu
 
 
         traf "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
@@ -1153,6 +1155,7 @@ label a1c10:
     traf "Tá bom... Só toma cuidado para mirar certo e para não levantar nenhum tipo de suspeita."
 
     n "Ele entrega a arma tofuzadora pra ela."
+    achieve Arma_tofu
 
     show alessandra default with dissolve
 
@@ -1293,7 +1296,7 @@ label a1d10:
 
 
     n "Ele passa a arma por debaixo da mesa."
-
+    achieve Arma_tofu
     show alessandra brava with dissolve
 
     a "Acho bom!"
@@ -1381,6 +1384,7 @@ label a1a13:
     show alessandra confusa2 at center with dissolve 
 
     n "Você pega o tofu da cadeira e devora ele em uma mordida só."
+    achieve Comer_tofu
 
     n "Tem gosto de tofu."
 

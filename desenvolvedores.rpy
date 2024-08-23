@@ -1,5 +1,5 @@
 label desenvolvedores1:
-    play music "quartel.wav" volume 2.0
+    play music "audio/quartel.wav" volume 2.0
     scene bg quartel
     with Fade(0.5, 1.0, 0.5)
     
@@ -69,6 +69,8 @@ label desenvolvedoresChooseDay:
             jump d3kat1
         "Dia 3 da Alessandra":
             jump d3ale1
+        "Final da demo":
+            jump demoFinal
         "Quero mudar mais variáveis":
             jump desenvolvedoresChooseThings
         "Quero mudar o player ativo":

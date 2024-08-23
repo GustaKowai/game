@@ -8,7 +8,7 @@
 
 label d2ale1:
     play music "atelie_intro.ogg" volume 1.0
-    queue music "atelie.wav"
+    queue music "atelie_loop.ogg"
     $ aleDay2 = False
     scene bg atelie
 
@@ -188,7 +188,7 @@ label a2m5:
 label a2m11:
     a "Danrandan danrandan danran"
     n "Ela começa a imitar o som da moto e saí cantando pneu e dando grau"
-    play music "igreja.wav" volume 0.5
+    play music "audio/igreja.wav" volume 1.0
     scene bg igreja
     n "Após uma viagem assustadora e de algumas experiências de quase morte em sinais vermelhos, vocês chegam ao destino"
     show alessandra capacete with dissolve
@@ -311,12 +311,12 @@ label a2a13:
     a "DROGA!"
     n "Alessandra vira para um beco estreito"
     show bg beco
-    play music "beco.wav" volume 0.5
+    play music "audio/beco.wav" volume 1.0
     show alessandra smirk with dissolve
     a "QUERO VER ELES PASSAREM AQUI"
     n "Ela acelera ainda mais, até que vocês chegam em uma área populada da cidade"
     show bg cidade
-    play music "cidade.wav" volume 0.5
+    play music "audio/cidade.wav" volume 1.0
     a "Agora eles não chegam mais na gente"
     show alessandra brava with dissolve
     a "Bom, da próxima vez presta mais atenção no que falam para você, quase nos ferramos bonito."
@@ -332,7 +332,7 @@ label a2b13:
     n "Você sente que talvez tenha sido uma má ideia subir nessa moto"
     n "Vocês pousam em segurança"
     show bg cidade
-    play music "cidade.wav" volume 0.5
+    play music "audio/cidade.wav" volume 1.0
     show alessandra confusa with dissolve
     a "Espera, não tem nada aqui!"
     show alessandra smirk with dissolve
@@ -705,7 +705,7 @@ label a2m15:
     n "Ela acabou com todos eles, você acabou com uns 5, no máximo"
     show alessandra default with dissolve
     a "Bem, precisamos reportar tudo o que aconteceu ao gatovaldo, bora."
-    play music "igreja.wav" volume 0.5 
+    play music "audio/igreja.wav" volume 1.0 
     show bg igreja
     n "Vocês dois saem da igreja, montam na moto, e partem para a base"
     if jogador1:

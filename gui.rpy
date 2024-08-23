@@ -77,6 +77,11 @@ define gui.interface_text_size = 60
 ## The size of labels in the game's user interface.
 define gui.label_text_size = 36
 
+## The size of labels in the game's achievement interface.
+define gui.achievement_text_size = 24
+
+
+
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24
 

@@ -2,6 +2,16 @@
 # Sons das falas dos personagens
 
 init python:
+    def muda_afeto(pontos):
+        global JogadorAtivo
+        JogadorAtivo += pontos
+        if pontos > 0:
+            renpy.sound.play("certo.wav")
+        if pontos < 0:
+            renpy.sound.play("errado.wav", relative_volume=1.5)
+        return pontos
+
+init python:
     def low_beep(event, **kwargs):
         if event == "show":
             renpy.music.play("bip.ogg", channel="textSound", loop=True, relative_volume=0.5)
@@ -185,7 +195,7 @@ default a.laranja = 0
 label start:
 
     
-    play music "quartel.wav"  volume 2.0
+    play music "audio/quartel.wav"  volume 2.0
     scene bg quartel
 
     n "Antes de começarmos..."
@@ -208,13 +218,13 @@ label start:
         with vpunch
         n "Ok!{w} Vocês que se virem para saber quem é quem!"
         $ doppelganger = True
-        $ renpy.notify("Doppelganger")
+        achieve Doppelganger
 
     if nome1 == "GAMSo" or nome2 == "GAMSo":
         play sound "honk.ogg"
         "HONK"
         $ gamsoGamer = True
-        $ renpy.notify("GAMSo Gamer")
+        achieve GAMSo_gamer
     define azul = Character("[nome1]",color="#1338BE",what_prefix='{color=#1338BE}', what_suffix='{/color}')
     define laranja = Character("[nome2]",color="#f56300",what_prefix='{color=#f56300}', what_suffix='{/color}')
 
@@ -252,13 +262,12 @@ label start:
     label prologo0:
 
         show gatovaldo default
-        achieve beginning
+        achieve Inicio
 
         g "Saudações, {color=#1338BE}[nome1]{/color} e {color=#F56300}[nome2]{/color},  espero poder contar com vocês nessa."
         #jump investigacao
 
         g @feliz "Como já sabem, em breve todos nós teremos grandes missões a serem cumpridas. "
-
 
         g "Será um grande evento, e de acordo com as minhas contas nossa chance de sucesso é de 86,4\%!"
         menu:
@@ -451,7 +460,7 @@ label start:
     ########################################################################################################################### 
 
         label whereToGo:
-            play music "quartel.wav" volume 2.0
+            play music "audio/quartel.wav" volume 2.0
             scene bg quartel
             with gatodissolve
             $ JogadorAtivo = 0
@@ -499,7 +508,7 @@ label start:
 
         label changeDay:
             
-            play music "quartel.wav" volume 2.0
+            play music "audio/quartel.wav" volume 2.0
             scene bg quartel
             with Fade(0.5, 1.0, 0.5)
 
@@ -549,6 +558,9 @@ label start:
             g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 10 pontos disponíveis com a Katarina \ne [a.laranja] de 12 pontos disponíveis com a Alessandra"
 
             g "Espero que tenham se divertido, em breve teremos mais missões."
+
+            jump credits
+
 #------função usada no final do dia para determinar quanta afeição o personagem ganhou com a Alessandra:
 
             # if jogador1:
@@ -612,8 +624,8 @@ label splashscreen:
     with Pause(1.5)
     stop music fadeout 1.5
 
+    $ persistent.watch_Intro = True
     scene black with dissolve
     with Pause(1)
-
 
     return

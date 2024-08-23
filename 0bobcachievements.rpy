@@ -21,9 +21,12 @@
 #   (This does not currently support progress stats.)
 define BOBCACHIEVEMENT_LIST = (
     # ("EXAMPLE_ID", _("EXAMPLE TITLE"), _("EXAMPLE DESCRIPTION"), True),
-    ("beginning", _("Beginning"), _("Started a new game")),
-    ("office", _("Office"), _("Went to the office")),
-    ("beach", _("Beach"), _("Went to the beach")),
+    ("Inicio", _("Inicio"), _("Comece um jogo novo")),
+    ("Doppelganger", _("Doppelganger"), _("Como saber quem é quem??"), True),
+    ("GAMSo_gamer", _("GAMSo gamer"), _("Jogue como um GAMSo"), True),
+    ("Arma_tofu", _("Arma tofuzadora"), _("Consiga a perigosa arma de tofu")),
+    ("Comer_tofu", _("Canibal"), _("Era só um pedaço de tofu... certo?"),True),
+    ("Rato_sorveteiro", _("O sorveteiro"), _("Descubra a verdade sobre o sorveteiro")),
     ("completionist", _("Completionist"), _("Read all of the game"), True),
     )
 
@@ -41,7 +44,7 @@ define BOBCACHIEVEMENT_LIST = (
 #    want to display them using a custom screen instead, override the screen variable with a string of
 #    the name of the screen you want to use. Or just change the prefix text to whatever you desire.
 define BOBCACHIEVEMENT_SCREEN_NAME = None
-define BOBCACHIEVEMENT_NOTIFY_PREFIX = _("You obtained an achievement:")
+define BOBCACHIEVEMENT_NOTIFY_PREFIX = _("Você obteve a conquista:")
 define BOBCACHIEVEMENT_SCREEN_TRANSITION = Dissolve(0.5)
 
 # 5) If you use a screen instead, it must take two string params of achievement title and description.

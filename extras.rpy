@@ -171,13 +171,23 @@ style presplash_label_text:
 ## program.
 
 ## These background buttons are 480x270
-image quartel_button = im.FactorScale("bg quartel.jpg", 0.25)
+image cgAle1_button = im.FactorScale("cgs/AlessandraCG1.png", 0.25)
 image office_button = im.FactorScale("bg/future_office.jpg", 0.25)
 image beach_button = im.FactorScale("bg/sort_of_beautiful_beach_day.jpg", 0.25)
+image splash_button = im.FactorScale("splash/splash.png",0.25)
 image bglock_button = "gui/button/bg_locked.jpg"
 
 ## These sprite buttons are 290x290
-image eneutral_button = Crop((170, 245, 290, 290), "eileen neutral")
+transform image_to_icon:
+    zoom 0.25
+image gdefault_button =  At("gatovaldo default",image_to_icon)
+#image gfeliz_button =  At("gatovaldo feliz",image_to_icon)
+#image gserio_button =  At("gatovaldo serio",image_to_icon)
+#image gwithale_button =  At("gatovaldo withale",image_to_icon)
+#image gwithkat_button =  At("gatovaldo withkat",image_to_icon)
+image adefault_button = At ("alessandra default", image_to_icon)
+image kdefault_button = At ("katarina default", image_to_icon)
+image cdefault_button = At ("claudia default", image_to_icon)
 image esurprised_button = Crop((170, 245, 290, 290), "eileen surprised")
 image eupset_button = Crop((170, 245, 290, 290), "eileen upset")
 image eangry_button = Crop((170, 245, 290, 290), "eileen angry")
@@ -188,8 +198,17 @@ init python:
     g_bg = Gallery()
 
     # Backgrounds for the BG Gallery
-    g_bg.button("quartel")
-    g_bg.unlock_image("bg quartel") 
+    g_bg.button("cgAle1")
+    g_bg.unlock_image("cgAle1")
+
+    g_bg.button("splash")
+    g_bg.condition("persistent.watch_Intro")
+    g_bg.image("splash/1.png")
+    g_bg.image("splash/2.png")
+    g_bg.image("splash/3.png")
+    g_bg.image("splash/4.png")
+    g_bg.image("splash/5.png")
+    g_bg.image("splash/6.png")
 
     g_bg.button("office")
     g_bg.image("future_office")
@@ -204,11 +223,56 @@ init python:
 
     g_sprite = Gallery()
 
-    g_sprite.button("eileen neutral")
-    g_sprite.unlock_image("room", "eileen neutral")
-    #g_sprite.unlock_image("room", "eileen neutral")
-    g_sprite.unlock_image("sort_of_beautiful_beach_day", "eileen summer neutral")
+    g_sprite.button("gatovaldo default")
+    g_sprite.unlock_image("bg quartel", "gatovaldo default")
+    #g_sprite.button("gatovaldo feliz")
+    g_sprite.unlock_image("bg quartel", "gatovaldo feliz")
+    #g_sprite.button("gatovaldo serio")
+    g_sprite.unlock_image("bg quartel", "gatovaldo serio")
+    #g_sprite.button("gatovaldo withale")
+    g_sprite.unlock_image("bg quartel", "gatovaldo withale")
+    #g_sprite.button("gatovaldo withkat")
+    g_sprite.unlock_image("bg quartel", "gatovaldo withkat")
+    
+    g_sprite.button("alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra smirk")
+    g_sprite.unlock_image("bg atelie", "alessandra triste")
+    g_sprite.unlock_image("bg atelie", "alessandra surpresa")
+    g_sprite.unlock_image("bg atelie", "alessandra surpresa2")
+    g_sprite.unlock_image("bg atelie", "alessandra brava")
+    g_sprite.unlock_image("bg atelie", "alessandra brava2")
+    g_sprite.unlock_image("bg atelie", "alessandra assustada")
+    g_sprite.unlock_image("bg atelie", "alessandra medo1")
+    g_sprite.unlock_image("bg atelie", "alessandra medo2")
+    g_sprite.unlock_image("bg atelie", "alessandra eyeroll")
+    g_sprite.unlock_image("bg atelie", "alessandra seria")
+    g_sprite.unlock_image("bg atelie", "alessandra seria2")
+    g_sprite.unlock_image("bg atelie", "alessandra confusa")
+    g_sprite.unlock_image("bg atelie", "alessandra sorriso")
+    g_sprite.unlock_image("bg atelie", "alessandra default")
+    g_sprite.unlock_image("bg atelie", "alessandra capacete")
 
+
+    g_sprite.button("katarina default")
+    g_sprite.unlock_image("bg escritorio", "katarina default")
+    g_sprite.unlock_image("bg escritorio", "katarina smirk")
+    g_sprite.unlock_image("bg escritorio", "katarina triste")
+    g_sprite.unlock_image("bg escritorio", "katarina muitofeliz")
+    g_sprite.unlock_image("bg escritorio", "katarina irritada")
+    g_sprite.unlock_image("bg escritorio", "katarina meh")
+    g_sprite.unlock_image("bg escritorio", "katarina brava")
+    g_sprite.unlock_image("bg escritorio", "katarina surpresa")
+    g_sprite.unlock_image("bg escritorio", "katarina confusa")
+    g_sprite.unlock_image("bg escritorio", "katarina mascarada")
+
+    g_sprite.button("claudia default")
+    g_sprite.unlock_image("bg recepcao", "claudia default")
+    g_sprite.unlock_image("bg recepcao", "claudia thinking")
+    g_sprite.unlock_image("bg recepcao", "claudia brava")
+    g_sprite.unlock_image("bg recepcao", "claudia feliz")
+
+    
     g_sprite.button("eileen surprised")
     g_sprite.unlock_image("room", "eileen surprised")
 
@@ -234,8 +298,14 @@ init python:
     # Add music files.
     mr.add("audio/introMusic.ogg", always_unlocked=True)
     mr.add("audio/quartel.wav")
-    mr.add("audio/music/Sculpture-Garden_Looping.mp3")
-    mr.add("audio/music/The-Concrete-Bakes_Looping.mp3")
+    mr.add("audio/atelie_loop.ogg")
+    mr.add("audio/escritorio.wav")
+    mr.add("audio/deserto.mp3")
+    mr.add("audio/restaurante.wav")
+    mr.add("audio/church.mp3")
+    mr.add("audio/beco.wav")
+    mr.add("audio/cidade.wav")
+    mr.add("audio/floresta.mp3")
 
 ## Extras Navigation screen ############################################################
 ##
@@ -251,27 +321,29 @@ screen extras_navigation():
 
         spacing gui.navigation_spacing
 
-        textbutton _("Achievements") action ShowMenu("bobcachievements") alt "Achievements"
+        textbutton _("Conquistas") action ShowMenu("bobcachievements") alt "Achievements"
 
-        textbutton _("Sprite Gallery") action ShowMenu("sprite_gallery") alt "Sprite Gallery"
+        textbutton _("Galeria de Sprites") action ShowMenu("sprite_gallery") alt "Sprite Gallery"
 
-        textbutton _("Background Gallery") action ShowMenu("bg_gallery") alt "Background Gallery"
+        textbutton _("Galeria de CG") action ShowMenu("bg_gallery") alt "Background Gallery"
 
-        textbutton _("Music Room") action ShowMenu("music_gallery") alt "Music Room"
+        #textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
 
-        textbutton _("Replay Room") action ShowMenu("replay_gallery") alt "Replay Room"
+        textbutton _("Sala de musica extra") action ShowMenu("music_room3", mr=music_room) alt "Music Room"
+
+        textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
 
         textbutton _("Sobre") action ShowMenu("about")
 
         if persistent.game_clear:
 
-            textbutton _("Developer Notes") action ShowMenu("dev_notes") alt "Developer Notes"
+            textbutton _("Notas dos devs") action ShowMenu("dev_notes") alt "Developer Notes"
 
         else:
 
             textbutton _("???") action None alt "Locked Option"
 
-        textbutton _("Return") action Return() alt "Return"
+        textbutton _("Voltar") action Return() alt "Return"
 
 ## Extras Menu screen #######################################
 ##
@@ -287,7 +359,7 @@ screen extras_menu(title, scroll=None, yinitial=0.0):
         add gui.game_menu_background
 
     frame:
-        style "game_menu_outer_frame"
+        style "extra_menu_outer_frame"
 
         hbox:
 
@@ -347,7 +419,7 @@ screen sprite_gallery():
     ## This use statement includes the extras_menu screen inside this one.
     use extras_menu(_("Sprite Gallery")):
 
-        grid 4 1:
+        grid 4 2:
 
             xfill True
             yfill True
@@ -355,7 +427,14 @@ screen sprite_gallery():
             ## Call make_button to show a particular button.
             # add g_sprite.make_button("sprite", "sprite_button")
 
-            add g_sprite.make_button("eileen neutral", "eneutral_button")
+            add g_sprite.make_button("gatovaldo default", "gdefault_button")
+            add g_sprite.make_button("alessandra default", "adefault_button")
+            add g_sprite.make_button("katarina default", "kdefault_button")
+            add g_sprite.make_button("claudia default", "cdefault_button")
+            #add g_sprite.make_button("gatovaldo feliz", "gfeliz_button")
+            #add g_sprite.make_button("gatovaldo serio", "gserio_button")
+            #add g_sprite.make_button("gatovaldo withale", "gwithale_button")
+            #add g_sprite.make_button("gatovaldo withkat", "gwithkat_button")
             add g_sprite.make_button("eileen surprised", "esurprised_button")
             add g_sprite.make_button("eileen upset", "eupset_button")
             add g_sprite.make_button("eileen angry", "eangry_button")
@@ -370,9 +449,9 @@ screen bg_gallery():
     tag menu
 
     ## This use statement includes the extras_menu screen inside this one.
-    use extras_menu(_("Background Gallery")):
+    use extras_menu(_("Galeria de CG")):
 
-        grid 3 3:
+        grid 2 3:
 
             xfill True
             yfill True
@@ -380,7 +459,8 @@ screen bg_gallery():
             ## Call make_button to show a particular button.
             # add g_bg.make_button("background", "bg_button")
 
-            add g_bg.make_button("quartel", "quartel_button", xalign=0.5, yalign=0.5)
+            add g_bg.make_button("splash", "splash_button", xalign=0.5, yalign=0.5)
+            add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
 
@@ -393,18 +473,25 @@ screen music_gallery():
     tag menu
 
     ## This use statement includes the extras_menu screen inside this one.
-    use extras_menu(_("Music Room")):
+    use extras_menu(_("Sala de música")):
 
         vbox:
-
             xalign 0.5
             yalign 0.5
 
             # The buttons that play each track.
             textbutton "Intro Song" action mr.Play("audio/introMusic.ogg")
             textbutton "Quartel song" action mr.Play("audio/quartel.wav")
-            #textbutton "Future Business" action mr.Play("audio/music/Future-Business_v001.mp3")
-            #textbutton "Careless Summer" action mr.Play("audio/music/Careless-Summer_Looping.mp3")
+            textbutton "Tema do Atelie" action mr.Play("audio/atelie_loop.ogg")
+            textbutton "Tema do escritorio" action mr.Play("audio/escritorio.wav")
+            textbutton "Tema do deserto" action mr.Play("audio/deserto.mp3")
+            textbutton "Tema do restaurante" action mr.Play("audio/restaurante.wav")
+            textbutton "Tema da igreja" action mr.Play("audio/church.mp3")
+            textbutton "Tema do beco" action mr.Play("audio/beco.wav")
+            textbutton "Tema da cidade" action mr.Play("audio/cidade.wav")
+            textbutton "Tema da floresta" action mr.Play("audio/floresta.mp3")
+            
+
 
             if config.has_music:
                 label _("Music Volume")
@@ -489,97 +576,99 @@ define gui.dev_notes = _p("""Hello, this is BáiYù of tofurocks here. I want to
 ## gui.about string in options.rpy, and you can style it using text tags.
 ## https://www.renpy.org/doc/html/text.html
 
-## The contents of your credits screen.
-define credits_string = _p("""
-{size=+100}Credits{/size}
-\n\n
-{size=+75}Programming{/size}
-\n
-BáiYù
-\n
-bobcgames
-\n
-npckc
-\n
-TheoMinute
-\n\n
-{size=+75}Art{/size}
-\n
-Sprites - Mannequin by HelloAR14
-\n
-Backgrounds - Uncle Mugen
-\n\n
-{size=+75}Soundtrack{/size}
-\n
-Eric Matyas
-\n\n
-{size=+75}Special Thanks{/size}
-\n
-Renall
-\n\n\n\n\n\n\n\n
-{size=+100}Made with{/size}
-\n
-{size=+100}Ren'Py [renpy.version_only].{/size}
-\n\n\n\n
-{size=+100}Thanks for Playing!{/size}
-""")
-
+### The contents of your credits screen.
+#define credits_string = _p("""
+#{size=+100}Credits{/size}
+#\n\n
+#{size=+75}Programming{/size}
+#\n
+#BáiYù
+#\n
+#bobcgames
+#\n
+#npckc
+#\n
+#TheoMinute
+#\n\n
+#{size=+75}Art{/size}
+#\n
+#Sprites - Mannequin by HelloAR14
+#\n
+#Backgrounds - Uncle Mugen
+#\n\n
+#{size=+75}Soundtrack{/size}
+#\n
+#Eric Matyas
+#\n\n
+#{size=+75}Special Thanks{/size}
+#\n
+#Renall
+#\n\n\n\n\n\n\n\n
+#{size=+100}Made with{/size}
+#\n
+#{size=+100}Ren'Py [renpy.version_only].{/size}
+#\n\n\n\n
+#{size=+100}Thanks for Playing!{/size}
+#""")
+#
 ## Here's a blank one with common roles to fit your game.
 ## TODO: Adjust this to fit your project
-# define credits_string = _p("""
-# {size=+100}Credits{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Producer:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Director:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Writing:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Art:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Music:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Sound:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Voiceover:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Programming:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Trailer:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Beta-Testing:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# {size=+75}Special Thanks:{/size}
-# \n
-# Lorem Ipsum
-# \n\n
-# \n\n\n\n\n\n\n\n
-# {size=+25}Made with Ren'Py [renpy.version_only].{/size}
-# \n\n\n\n\n\n\n\n
-# {size=+100}Thanks for Playing!{/size}
-# """)
+define credits_string = _p("""
+{size=+100}Credits{/size}
+\n
+VNM: Vendeta
+\n\n
+{size=+75}Producer:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Director:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Writing:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Art:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Music:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Sound:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Voiceover:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Programming:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Trailer:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Beta-Testing:{/size}
+\n
+Lorem Ipsum
+\n\n
+{size=+75}Special Thanks:{/size}
+\n
+Lorem Ipsum
+\n\n
+\n\n\n\n\n\n\n\n
+{size=+25}Made with Ren'Py [renpy.version_only].{/size}
+\n\n\n\n\n\n\n\n
+{size=+100}Obrigado por jogar!{/size}
+""")
+
+call screen results()
 
 ## This controls the position and speed of your end credits.
 transform credits_scroll(t):
