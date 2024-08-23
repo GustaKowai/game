@@ -206,6 +206,8 @@ label k2m16:
     k "Observe, e aprenda."
     n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."
     n "Ele é comicamente pesado."
+    k "..."
+    k "Ela vai ficar bem!"
     menu:
         "Por que não disse sobre esse revolver antes?":
             k "Eu tinha esquecido!"
@@ -218,7 +220,7 @@ label k2m16:
             n "O revólver cai da mão de Katarina, criando uma leve cratera no chão."
             n "Vocês tentam levantá-lo, mas falham."
             k "Talvez fosse o poder da amizade, sei lá, mas infelizmente você acabou com o que quer que seja!"
-            jump j2b16
+            jump k2b16
         
 
 label k2a16:
@@ -227,8 +229,8 @@ label k2a16:
     n "Vocês veem um homem de terno e óculos escuros, com algum tipo de dispositivo tecnológico na mão, como se fosse uma luv..."
     n "Espera, é o Robert Downey Jr.?"
     k "Espera, Robert Downey Jr.?"
-    rdj "I am ron Man"
-    n "Vocês percebem que ele está carregando alguma espécie de ataque e mira a luva em vocês."
+    rdj "I am Iron Man"
+    n "Vocês percebem que ele está prestes a atirar em vocês com a luva dele"
     k "CALMA LÁ!"
     n "Katarina mira o revólver comicamente grande para ele."
     rdj "HEY, HEY, HEY, SLOW DOWN!"
@@ -243,8 +245,253 @@ label k2a16:
     rdj "Obrigado."
     rdj "Você rapariga fixe!"
     k "..."
+    k "Tá, agora que estamos sozinhos, podemos investigar melhor isso aqui."
+    menu:
+        "Você acha que é uma boa ideia deixarmos ele sozinho?":
+            k "..."
+            k "Puta merda, verdade."
+            jump k2a17
 
 
+        "Vambora!":
+            jump k2b17
+
+
+label k2b17:
+    n "Vocês descem até o cofre do banco."
+    n "Ele é gigante."
+    k "Uau..."
+    k "..."
+    k "É... A gente meio que não tem a senha..."
+    menu:
+        "Vamos investigar a recepção.":
+            jump k2a18
+        "Vamos encontrar o Robert.":
+            jump k2b18
+
+label k2a18:
+    k "Boa! Aquela recepcionista deve estar escondendo alguma coisa."
+    n "Vocês vão até a recepção, a recepcionista continua desacordada."
+    k "Por onde começaremos?"
+    menu:
+        "Gavetas.":
+            n "Vocês começam a investigar as gavetas."
+            n "Você encontra documentos que indicam a falência do banco, eles estão em uma gaveta que tem um adesivo escrito 'Para a reciclagem'"
+            k "Ei, olha isso aqui!"
+            n "Katarina te mostra uma gaveta repleta de revistas de fofoca com o Robert Downey Jr. na capa."
+            n "Uma delas, que está guardada em uma caixa de vidro, tem um autógrafo."
+            k "Caramba... Essa guria..."
+            menu:
+                "É fissurada nele!":
+                    k "Demais!"
+                    k "Precisamos encontrá-lo!"
+                "Está roubando revistas da recepção!":
+                    k "..."
+                    k "Não era isso que eu queria dizer, mas realmente, talvez ela esteja!"
+                    k "Precisamos encontrá-lo!"
+                    
+        "Computador.":
+            n  "Vocês começam a fuçar pelo computador, o wallpaper é uma foto do Robert Downey Jr."
+            n "Vocês abrem o navegador, há uma página aberta no Twitter, logada na conta 'Mundinho RDJ'"
+            k "Caramba... Essa guria..."
+            menu:
+                "É fissurada nele!":
+                    k "Demais!"
+                    k "Precisamos encontrá-lo!"
+                "É adm da página Mundinho RDJ!":
+                    n "Katarina parece confusa com o fato de você conhecer essa página."
+                    k "..."
+                    k "Realmente, parece que ela é..."
+                    k "Enfim, precisamos encontrá-lo!"
+        "Os bolsos dela.":
+            k "..."
+            k "Ótima ideia!"
+            n "Vocês começam a vasculhar os bolsos dela."
+            n "Vocês encontram um celular e uma carteira."
+            k "Isso fica comigo."
+            n "Katarina embolsa o celular e a carteira."
+            k "É para a gente investigar melhor na base!"
+            k "Ei, espera!"
+            k "Aquele cagão está demorando demais, acho que a gente deveria ir atrás dele."
+    jump km18
+
+label km18:
+    n "Vocês vão até o banheiro a procura de Robert Downey Jr."
+    n "Quando estão prestes a entrar, ele abre a porta abruptamente e tenta correr, porém se depara com vocês."
+    n "Ele está suando bastante."
+    k "Eita! A coisa foi feia pelo jeito."
+    menu:
+        "Por que está nervoso?":
+            rdj "Muita estricto!"
+            k "O que?"
+            rdj "Ventana!"
+            k "Não estamos te entendendo, amigão."
+            n "Ele começa a fazer gestos duvidosos com a mão, tentando explicar com mímica que ele estava preso na janela."
+            n "Ninguém além do narrador entendeu os gestos dele."
+            k "Tá, deixa quieto isso aí, por que está correndo?"
+        "Por que está agitado?":
+            rdj "Eu preciso embora!"
+            rdj "Vocês são... maluco!"
+            k "O que? Não! A gente não é!"
+    rdj "Eu não confio vocês."
+    k "Mas... Somos tão legais!"
+    menu:
+    
+        "Dar um sorriso.":
+            n "Você dá um sorriso extremamente macabro."
+            n "Todos ficam em silêncio por alguns instantes."
+            rdj "Yeah... Meu uber chegou!"
+            n "Ele sai correndo."
+            n "Vocês veem ele se jogando na frente de um carro na rua, que breca instantaneamente, ele entra pela porta do passageiro."
+            n "Após alguns segundos parado, o carro parte cantando pneu."
+            k "Na próxima vez deixa que eu tento usar o meu charme."
+            n "O seu telefone começa a tocar, é o gatovaldo."
+            k "É o Gatovaldo? Precisa atender não, a gente vai pessoalmente avisar ele que deu tudo errado."
+            k "Depois a gente pode ir tomar uma cachaça lá no meu escritório para afogar as mágoas."
+            n "Katarina pega o seu celular tocando e aremessa ele na parede."
+            k "..."
+            k "Eu te compro um novo."
+            k "Vamos embora daqui..."
+            jump finalkat1
+        "Concordar com Katarina.":
+            n "Você diz: 'Sim, Katarina, de fato somos pessoas extremamente divertidas!' de uma maneira que beira o robótico."
+            n "Os dois te olham com uma cara esquisita."
+            k "Isso normalmente não acontece! Dá um voto de confianca para a gente, vai!"
+            rdj "Hm..."
+            menu:
+                "Fazer cara de coitado.":
+                ".":
+                
+        "Apresentar provas concretas.":
+            n "Você abre seu celular no briefing da missão e mostra para ele."
+            n "Você diz que estão agindo dentro da legalidade das leis que entrarão em vigência quando Gatovaldo assumir o poder."
+            n "Ele parece impressionado."
+            rdj "Vocês tem um causa nobre."
+            rdj "Contem em mim."
+            k "Irado!"
+            n "O seu telefone começa a tocar."
+            n "É o Gatovaldo."
+            k "É o Gatovaldo? Deixa esse merdinha no vácuo, a gente tem o apoio de Robert fucking Downey Jr!"
+            k "Que tal irmos para meu escritório tomarmos uma birita?"
+            rdj "I want to meet the cat first."
+            k "Tá bom então sr. Duolingo, primeiro gatovaldo, depois meu escritório!"
+            n "Vocês três partem para a base."
+            jump finalkat1
+
+    
+
+
+label k2b18:
+    k "Verdade, ele está demorando demais!"
+    jump k2a17
+
+
+
+
+label k2a17:
+    n "Vocês correm até o banheiro, e encontram ele entalado em uma pequena janela tentando escapar."
+    rdj "HELP! HELP!"
+    k "Que ótima ideia."
+    n "Katarina puxa ele de volta para o banheiro."
+    k "Escuta aqui, listen."
+    k "O que você está fazendo aqui?"
+    rdj "..."
+    n "Ele parece não ter uma resposta."
+    k "Tudo bem, nem tudo precisa de uma explicação, o que importa é que você está aqui, understand?"
+    n "Ele acena com a cabeça."
+    k "a gente está aqui porque..."
+    menu:
+        "Fazemos parte de uma revolução que quer tirar do poder o rato autoritário líder de nosso país no momento.":
+            n "Ele parece se interessar."
+            k "E por isso qualquer ajuda é bem vinda!"
+            k "Hoje mesmo, viemos roubar documentos importantes de..."
+            n "Seu telefone começa a tocar."
+            n "É o Gatovaldo."
+            k "É o Gatovaldo? Atende ele aí poxa!"
+            jump k2m17
+
+        "Não precisa de explicação.":
+            k "..."
+            rdj "..."
+            k "Acho que nesse caso a gente tem uma boa explicação, então não tem motivo para não dizer para ele."
+            k "Estamos roubando informações confidenciais para vantagem competitiva!"
+            n "Robert Downey Jr. parece surpreso."
+            rdj "But... Isso é errado!"
+            n "Ele parece desconfiado."
+            k "É... Mas... Na realidade..."
+            n "Katarina parece um pouco nervosa."
+            n "O seu telefone começa a tocar."
+            n "É o Gatovaldo."
+            k "É o Gatovaldo? Deixa eu conversar com ele."
+            menu:
+                "Atender":
+                    jump k2m17
+                "Dar o celular para a Katarina":
+                    n "Katarina atende o celular."
+                    k "Alô?"
+                    k "Ué, já estamos aqui!"
+                    k "O que?"
+                    k "A gente veio aqui a toa então?"
+                    k "Espera..."
+                    k "Encomenda?"
+                    n "Katarina tira da mochila a arma que vocês acharam dentro do bolo."
+                    n "Ela aperta o gatilho "
+                    n " 'Como é grande o meu amor por você' do Roberto Carlos começa a tocar"
+                    k "VOCÊ E A CLÁUDIA O QUE?"
+                    n "Ela desliga o telefone."
+                    k "AQUELE GATO SAFADO!"
+                    k "EU VOU PEGAR O FÍGADO DELE E CRIAR UM NOVO SABOR DE RAÇÃO!"
+                    rdj "..."
+                    rdj "Oh! Preciso ir, my limousine is here."
+                    n "Ele sai correndo para fora do banco, pela janela, vocês o veem entrando em um Fiat Palio prata."
+                    k "O desgraçado pediu um uber..."
+                    k "Droga, não lidei bem com a informação de que o meu chefe e a minha secretária estão..."
+                    k "Acabei me descontrolando, acho que ele se assustou."
+                    k "De qualquer forma, o Gatovaldo disse que já resolveu tudo."
+                    jump k2m14
+
+
+
+label k2m17:
+    n "Você atende o telefone"
+    g "Miau! Quer dizer, Alô? {w}Então vocês já chegaram no banco? {w}É que eu já consegui as informações que eu precisava"
+    g "Aparentemente eu me enganei e estava tudo em um banco online, foi fácil hackear e obter tudo."
+
+    menu:
+        "Haha ainda não chegamos":
+            g "Que alívio!"
+        "Poxa que bom haha...":
+            g "Poisé né!"
+
+    g "Pode perguntar para a Katarina se a Claudia recebeu a minha encomenda?{w} Fica entre nós, mas é algo bem romantico, quero que somente ela abra"
+
+    menu:
+        "Vou perguntar sim haha, tchau!!":
+            n "Você desliga o telefone"
+            k "Perguntar o que?"
+        "Dia dos namorados chegando né, tudo bem, tchau!!":
+            n "Você desliga o telefone"
+            k "Dia dos namorados? Mas estamos em outubro"
+            n "Vocês definitivamente estão em fevereiro."
+            rdj "Valentines day!"
+            n "Ele tira uma rosa do bolso e a oferece para Katarina."
+            k "..."
+            n "Katarina pega a rosa, envergonhada."
+            k "Niguém nunca..."
+            k "Eu nunca ganhei..."
+            k "Eu nunca ganhei flores..."
+            n "Ela cheira a rosa."
+            k "Isso vai dar uma pinga das boas!"
+            rdj "Pinga? Caipirinha?"
+            k "Sim! Podemos fazer caipirinha!"
+            n "Katarina parece ter conquistado Rdj com sua habilidade de fazer pinga com coisas improváveis."
+            k "Ei, já que a gente já fez tudo que tinhamos para fazer aqui, vamos embora!"
+            k "Pede um uber para a base aí, eu te faço o pix depois, eu e o Robert vamos para casa fabricar pingas!"
+            rdj "And caipirinhas."
+            k "Com certeza!
+            n "Os dois caminham para fora do banco, entram no carro e vão embora."
+            n "Resta a você pedir um uber e voltar para a base."
+            jump finalkat1
 
 
 
@@ -261,7 +508,27 @@ label k2b16:
     k "QUE PORRA É ESSA??"
     rdj "Stay on the ground."
     n "Ele pega um telefone, disca um número e começa a falar com alguém."
-    
+    n "Katarina sussurra para você:"
+    k "O que a gente vai fazer?"
+    menu:
+        "Usa a arma do bolo.":
+            k "Ótima ideia!"
+            n "Katarina pega a arma."
+            k "Ei, amigão, eu sou inevitável."
+            n "Ela aponta para ele."
+            rdj "Hey! Calm down, calma!"
+            k "Tira essa luva! Gloves! On the ground!"
+            n "Ele tira a luva e joga ela no chão."
+            n "Katarina mira e nela e aperta o gatilho."
+            n "'Como é grande o meu amor por você' do Roberto Carlos começa a tocar"
+            k "..."
+            k "Droga, o que é isso?"
+            k "Está escrito 'Você me mata de paixão no cabo'."
+            n "Vocês olham para Robert Downey Jr., ele parece não entender o que está acontecendo e está completamente aterrorizado."
+            
+
+        "Vamos aguardar."
+
 
 
 
@@ -284,11 +551,11 @@ label k2m3:
     n "Ela parece desesperada"
     ate "Eu não acredito!"
     n "Ela começa a chorar"
-    ate "Eu vou cair para o ouro 4 de novo!"
+    ate "Eu vou cair para o ouro de novo!"
     n "Katarina vira para você"
     k "Do que caralhos ela ta falando? Tem ouro aqui em baixo?"
     menu:
-        "Sim. Ela disse que tem muito, acho que umas 4 toneladas.":
+        "Sim.":
             jump k2a4
         "Provavelmente está falando em códigos, deve ter algo super secreto aqui que a gente não pode saber.":
             jump k2b4
@@ -538,8 +805,8 @@ label k2b15:
     jump k2m14
 
 label k2m14:
-    k "Bem, let's go para a base agora."
-    n "Vocês voltam para a base"
+    k "Bem, acho que podemos ir."
+    n "Vocês retornam para a base"
     jump finalkat1
 
 
