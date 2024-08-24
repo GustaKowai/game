@@ -130,6 +130,7 @@ label k2m2:
     k "Espera, acho que entendi a mensagem do gatovaldo, e se a gente assaltar essa porra aqui? {w}Já estamos de máscara mesmo."
     menu:
         "VOCÊ ESTÁ MALUCA? bora":
+            $ muda_afeto (1)
             jump k2a3
         "Precisamos nos atentar ao plano, vamos apenas extrair os documentos que precisamos.":
             jump k2b3
@@ -148,6 +149,7 @@ label k2b3:
         "Vamos agir com cautela.":
             jump k2m15
         "Você está certa.":
+            $ muda_afeto (1)
             jump k2m3
 label k2m15:
     k "Droga, está bem, o que você quer fazer então?"
@@ -158,6 +160,7 @@ label k2m15:
             k "Nossa única chance é colocando uma arma na cabeça dela!"
             menu:
                 "Está bem, foda-se.":
+                    $ muda_afeto (1)
                     jump k2m3
                 "Vamos colocar uma arma na cabeça dela, porém furtivamente.":
                     k "Tudo bem..."
@@ -188,6 +191,7 @@ label k1m16:
                     k "Eu..."
                     k "Acho que esqueci de verificar..."
                 "Mandou bem!":
+                    $ muda_afeto (1)
                     k "Obrigado! Ter derrubado o grampo lá dentro deve ter acionado um mecanismo secreto que destrancou a porta."
                     k "É a única explicação plausível."
                     n "Ela parece acreditar no que diz."
