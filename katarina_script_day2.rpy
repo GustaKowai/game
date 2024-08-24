@@ -698,6 +698,7 @@ label k2m19:
                     n "Talvez deixar decisões nas mãos de Katarina não seja tão sábio assim..."
             n "Vocês finalmente alcançam o carro."
             k "Bem, em relação a bomba, relaxa, ele vai saber lidar com is..."
+            play sound "explosion.ogg"
             n "BOOOOOOOOOOM"
             n "O banco explode logo atrás de vocês."
             k "..."
