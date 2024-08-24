@@ -190,7 +190,7 @@ label k1m16:
             n "Vocês entram na sala da atendente, que está de costas."
             k "Olha! Ela está jogando joguinho de tiro!"
             n "Ela está jogando Counter Strike."
-            jump k2m16
+            jump k2m20
         "Arrombar a tranca com o revólver.":
             k "É isso aí porra! Sabia que essa furtividade não iria durar."
             n "Katarina faz uma pose, mira e atira."
@@ -201,8 +201,8 @@ label k1m16:
             k "..."
             k "Olha! Ela está jogando joguinho de tiro!"
             n "Ela está jogando Counter Strike, por isso deve ter ignorado os barulhos."
-            jump k2m16
-label k2m16:
+            jump k2m20
+label k2m20:
     k "Observe, e aprenda."
     n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."
     n "Ele é comicamente pesado."
@@ -528,6 +528,9 @@ label k2m17:
         "Vou perguntar sim haha, tchau!!":
             n "Você desliga o telefone"
             k "Perguntar o que?"
+            menu:
+                "Nada não!"
+                "A Cláudia e o Gatovald"
         "Dia dos namorados chegando né, tudo bem, tchau!!":
             n "Você desliga o telefone"
             k "Dia dos namorados? Mas estamos em outubro"
