@@ -188,9 +188,6 @@ image gdefault_button =  At("gatovaldo default",image_to_icon)
 image adefault_button = At ("alessandra default", image_to_icon)
 image kdefault_button = At ("katarina default", image_to_icon)
 image cdefault_button = At ("claudia default", image_to_icon)
-image esurprised_button = Crop((170, 245, 290, 290), "eileen surprised")
-image eupset_button = Crop((170, 245, 290, 290), "eileen upset")
-image eangry_button = Crop((170, 245, 290, 290), "eileen angry")
 image spritelock_button = "gui/button/sprite_locked.jpg"
 
 init python:

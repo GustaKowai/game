@@ -1,5 +1,5 @@
 label barDoZe:
-    #play music "bar.wav"  volume 2.0
+    play music "audio/cassino.wav"  volume 2.0
     define trocaJogadorBar = False
     define inventarioAtual = []
     if jogador1:
