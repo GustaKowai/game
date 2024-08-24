@@ -276,6 +276,7 @@ label k2a18:
     k "Por onde começaremos?"
     menu:
         "Gavetas.":
+            $ revista = True
             n "Vocês começam a investigar as gavetas."
             n "Você encontra documentos que indicam a falência do banco, eles estão em uma gaveta que tem um adesivo escrito 'Para a reciclagem'"
             k "Ei, olha isso aqui!"
@@ -292,6 +293,7 @@ label k2a18:
                     k "Precisamos encontrá-lo!"
                     
         "Computador.":
+            $ adm = True
             n  "Vocês começam a fuçar pelo computador, o wallpaper é uma foto do Robert Downey Jr."
             n "Vocês abrem o navegador, há uma página aberta no Twitter, logada na conta 'Mundinho RDJ'"
             k "Caramba... Essa guria..."
@@ -361,7 +363,40 @@ label km18:
             rdj "Hm..."
             menu:
                 "Fazer cara de coitado.":
-                "":
+                    n "Você faz cara de coitado."
+                    n "Mas não cola."
+                    n "Ele sai correndo."
+                    n "Vocês veem ele se jogando na frente de um carro na rua, que breca instantaneamente, ele entra pela porta do passageiro."
+                    n "Após alguns segundos parado, o carro parte cantando pneu."
+                    k "..."
+                    n "O seu telefone começa a tocar, é o gatovaldo."
+                    k "É o Gatovaldo? Precisa atender não, a gente vai pessoalmente avisar ele que deu tudo errado."
+                    k "Depois a gente pode ir tomar uma cachaça lá no meu escritório para afogar as mágoas."
+                    n "Katarina pega o seu celular tocando e aremessa ele na parede."
+                    k "..."
+                    k "Eu te compro um novo."
+                    k "Vamos embora daqui..."
+                    n "Vocês vão até o carro e partem para a base."
+                    jump finalkat1
+                    
+                "Se provar um verdadeiro fã." if adm:
+                    n "Você se revela como admnistrador do perfil 'Mundinho RDJ' no Twitter."
+                    n "Robert parece confiar mais em vocês."
+                    rdj "Wow!"
+                    rdj "Vamos esmagar este rato!"
+                    k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
+                    n "Vocês vão até o carro e partem para a base."
+                    jump finalkat1
+                "Pedir autógrafo" if revista:
+                    n "Você tira uma revista do bolso, que você pegou de dentro da gaveta, e pede por um autógrafo."
+                    n "Robert parece confiar mais em vocês."
+                    n "Ele assina a revista."
+                    rdj "Tudo bem."
+                    k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
+                    n "Vocês vão até o carro e partem para a base."
+                    jump finalkat1
+
+
                 
         "Apresentar provas concretas.":
             n "Você abre seu celular no briefing da missão e mostra para ele."
@@ -512,7 +547,7 @@ label k2m17:
             k "Ei, já que a gente já fez tudo que tinhamos para fazer aqui, vamos embora!"
             k "Pede um uber para a base aí, eu te faço o pix depois, eu e o Robert vamos para casa fabricar pingas!"
             rdj "And caipirinhas."
-            k "Com certeza!
+            k "Com certeza!"
             n "Os dois caminham para fora do banco, entram no carro e vão embora."
             n "Resta a você pedir um uber e voltar para a base."
             jump finalkat1
@@ -679,7 +714,7 @@ label k2m18:
     n "Vocês prendem as mãos dele com um enforca gato e o guiam até o carro."
     n "Seu telefone começa a tocar, é o Gatovaldo."
     k "Desliga essa merda, foda-se os documentos, conseguimos algo mais importante."
-    n "Katarina dá dois tapinhas na cabeça de Robert Downey Jr."
+    n "Katarina dá dois tapinhas na cabeça de Robert"
     jump k2m14
 
 
