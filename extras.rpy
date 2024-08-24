@@ -613,51 +613,40 @@ define gui.dev_notes = _p("""Hello, this is BáiYù of tofurocks here. I want to
 define credits_string = _p("""
 {size=+100}Credits{/size}
 \n
-VNM: Vendeta
+VNM: Vendeta Noncomplience Murder
 \n\n
 {size=+75}Producer:{/size}
 \n
-Lorem Ipsum
+GAMSo
 \n\n
-{size=+75}Director:{/size}
-\n
-Lorem Ipsum
-\n\n
+
 {size=+75}Writing:{/size}
 \n
-Lorem Ipsum
+Nirto
 \n\n
 {size=+75}Art:{/size}
 \n
-Lorem Ipsum
+Ayla
 \n\n
-{size=+75}Music:{/size}
+{size=+75}Music and sound:{/size}
 \n
-Lorem Ipsum
-\n\n
-{size=+75}Sound:{/size}
+R0n4n
 \n
-Lorem Ipsum
-\n\n
-{size=+75}Voiceover:{/size}
-\n
-Lorem Ipsum
+Leo Malin
 \n\n
 {size=+75}Programming:{/size}
 \n
-Lorem Ipsum
-\n\n
-{size=+75}Trailer:{/size}
-\n
-Lorem Ipsum
+Kowai
 \n\n
 {size=+75}Beta-Testing:{/size}
 \n
-Lorem Ipsum
+...
 \n\n
 {size=+75}Special Thanks:{/size}
 \n
-Lorem Ipsum
+{size=+25}Music room:{/size}
+\n
+Feniks (feniksdev.itch.io / feniksdev.com)
 \n\n
 \n\n\n\n\n\n\n\n
 {size=+25}Made with Ren'Py [renpy.version_only].{/size}

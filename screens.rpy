@@ -333,7 +333,9 @@ screen navigation():
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Sair") action Quit(confirm=not main_menu)
+            if main_menu:
+
+                textbutton _("Sair") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -750,10 +752,12 @@ screen preferences():
 
     tag menu
 
+    #vbox:
+    #    xalign 0.5
     use game_menu(_("Preferences"), scroll="viewport"):
-
+        
         vbox:
-
+    #        text "Preferences" size 80 color gui.accent_color
             hbox:
                 box_wrap True
 
@@ -825,8 +829,7 @@ screen preferences():
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
-
-
+       
 style pref_label is gui_label
 style pref_label_text is gui_label_text
 style pref_vbox is vbox
