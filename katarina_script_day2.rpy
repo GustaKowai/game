@@ -539,34 +539,40 @@ label k2m17:
             n "Você desliga o telefone"
             k "Perguntar o que?"
             menu:
-                "Nada não!"
-                "A Cláudia e o Gatovald"
+                "Nada não!":
+                    k "Ok, vamos voltar para o que interessa"
+                    k "Não quero mais saber sobre o dia dos namorados"
+                "A Cláudia e o Gatovald":
+                    k "Estão o que? Deus! Por que que eu estou sempre cercada de gente esquisita?"
+                    rdj "The love is in the air"
         "Dia dos namorados chegando né, tudo bem, tchau!!":
             n "Você desliga o telefone"
             k "Dia dos namorados? Mas estamos em outubro"
             n "Vocês definitivamente estão em fevereiro."
             rdj "Valentines day!"
-            show rdj flores
-            n "Ele tira um buquê do bolso e a oferece para Katarina."
-            k "..."
-            show rdj assustado
-            n "Katarina pega a rosa, envergonhada."
-            k "Niguém nunca..."
-            k "Eu nunca ganhei..."
-            k "Eu nunca ganhei flores..."
-            n "Ela cheira a rosa."
-            k "Isso vai dar uma pinga das boas!"
-            show rdj surpreso
-            rdj "Pinga? Caipirinha?"
-            k "Sim! Podemos fazer caipirinha!"
-            n "Katarina parece ter conquistado Rdj com sua habilidade de fazer pinga com coisas improváveis."
-            k "Ei, já que a gente já fez tudo que tinhamos para fazer aqui, vamos embora!"
-            k "Pede um uber para a base aí, eu te faço o pix depois, eu e o Robert vamos para casa fabricar pingas!"
-            rdj "And caipirinhas."
-            k "Com certeza!"
-            n "Os dois caminham para fora do banco, entram no carro e vão embora."
-            n "Resta a você pedir um uber e voltar para a base."
-            jump finalkat1
+
+label rdjfloresfinal:    
+    show rdj flores
+    n "Ele tira um buquê do bolso e a oferece para Katarina."
+    k "..."
+    show rdj assustado
+    n "Katarina pega a rosa, envergonhada."
+    k "Niguém nunca..."
+    k "Eu nunca ganhei..."
+    k "Eu nunca ganhei flores..."
+    n "Ela cheira a rosa."
+    k "Isso vai dar uma pinga das boas!"
+    show rdj surpreso
+    rdj "Pinga? Caipirinha?"
+    k "Sim! Podemos fazer caipirinha!"
+    n "Katarina parece ter conquistado Rdj com sua habilidade de fazer pinga com coisas improváveis."
+    k "Ei, já que a gente já fez tudo que tinhamos para fazer aqui, vamos embora!"
+    k "Pede um uber para a base aí, eu te faço o pix depois, eu e o Robert vamos para casa fabricar pingas!"
+    rdj "And caipirinhas."
+    k "Com certeza!"
+    n "Os dois caminham para fora do banco, entram no carro e vão embora."
+    n "Resta a você pedir um uber e voltar para a base."
+    jump finalkat1
 
 
 
