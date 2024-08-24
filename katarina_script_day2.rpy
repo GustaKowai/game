@@ -385,6 +385,7 @@ label km18:
                     k "Eu te compro um novo."
                     k "Vamos embora daqui..."
                     n "Vocês vão até o carro e partem para a base."
+                    $ sucessoMissao2Kat = False
                     jump finalkat1
                     
                 "Se provar um verdadeiro fã." if adm:
@@ -517,6 +518,7 @@ label k2a17:
                     k "Droga, não lidei bem com a informação de que o meu chefe e a minha secretária estão..."
                     k "Acabei me descontrolando, acho que ele se assustou."
                     k "De qualquer forma, o Gatovaldo disse que já resolveu tudo."
+                    $ sucessoMissao2Kat = False
                     jump k2m14
 
 
@@ -1006,11 +1008,13 @@ label k2m13:
 label k2a15:
     k "Nunca se sabe quando precisaremos subornar alguém, pets são muito amados hoje em dia, mais do que os próprios humanos."
     k "Não é a toa que eu estou a cada dia mais rica e cada vez mais restaurantes românticos estão falindo."
+    $ sucessoMissao2Kat = False
     jump k2m14
 label k2b15:
     k "Espero que a gente nunca tenha o desprazer de se encontrar com uma \"fofura\" daquelas"
     k "A sua cabeça até que parece uma melancia mesmo..."
     n "Você não gostou dessa piada e definitivamente irá reportar isso ao RH da revolução"
+    $ sucessoMissao2Kat = False
     jump k2m14
 
 label k2m14:

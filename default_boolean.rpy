@@ -34,6 +34,7 @@ default sucessoMissao1Kat = True
 #dia2 Katarina:
 default adm = False
 default revista = False
+default sucessoMissao2Kat = True
 
 #dia2 Alessandra:
 default telefonema = False
