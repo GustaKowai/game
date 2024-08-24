@@ -83,7 +83,7 @@ label a1a1:
 
     menu:
         "Você tem algo mais adequado para eu vestir?":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1a2
         "A gente não ia só se encontrar com um informante em um local público?":
             jump a1b2
@@ -189,14 +189,14 @@ label a1m2:
 
     menu:
         "Ele provavelmente não está nem aí para a comida.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             a "Que bom que concorda!"
             jump a1a4
         "Seria extremamente desrespeitoso e você com certeza acabaria com o nosso plano inteirinho por conta dessa sua atitude egoísta.":
-            $ JogadorAtivo += -1
+            $ muda_afeto (-1)
             jump a1b4
         "Eu não me importo. Garçooom!":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1c4
 
 label a1a4: 
@@ -255,7 +255,7 @@ label a1c4:
 
     menu:
         "Pedir comida com nome alemão.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             n "Você pede uma comida com um nome esquisito em alemão."
             hide garcom
             with moveoutleft
@@ -265,7 +265,7 @@ label a1c4:
             a "Tem coisa melhor aqui, mas aprecio sua ousadia."
 
         "Pedir comida com nome francês.":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             n "Você pede uma comida com um nome esquisito em francês."
             hide garcom
             with moveoutleft
@@ -275,7 +275,7 @@ label a1c4:
             n "Você acha que fez uma péssima escolha, mas ela parece ter gostado"
 
         "Pedir comida com nome coreano.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             n "Você pede uma comida com um nome esquisito em coreano."
             hide garcom
             with moveoutleft
@@ -328,10 +328,10 @@ label a1m3:
 
     menu:
         "Vamos jogar algo.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1a5
         "Vamos pedir uma música.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1b5
 
 label a1a5:
@@ -340,10 +340,10 @@ label a1a5:
     
     menu:
         "Verdade":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1b6
         "Desafio":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             jump a1a6
     
 label a1b5:
@@ -364,11 +364,11 @@ label a1b5:
 
     menu:
         "O que estava escrito?":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1a8
         
         "Por que você não gosta dela?":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1b8
 
 label a1a6:
@@ -412,16 +412,16 @@ label a1b6:
 
     menu:
         "Eu tenho medo de tubarões.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1a7
         "Eu já quebrei os meus dois braços e minhas duas pernas.":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             jump a1b7
         "Já dei PT de pinga azul em um forró.":
-            $ JogadorAtivo += 3
+            $ muda_afeto (3)
             jump a1c7
         "Secretamente eu gosto dos filmes do Adam Sandler.":
-            $ JogadorAtivo += -2
+            $ muda_afeto (-2)
             jump a1d7
 
 label a1a7:
@@ -511,16 +511,16 @@ label a1c8:
 
     menu:
         "My Chemical Romance":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1a9
         "Ivete Sangalo":
-            $ JogadorAtivo += -1
+            $ muda_afeto (-1)
             jump a1b9
         "Barões da Pisadinha":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             jump a1c9
         "One Direction":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1d9
 
 label a1a9:
@@ -719,16 +719,16 @@ label a1m4:
 
     menu:
         "Dê algo mais valioso para ele." if lenco:
-            $ JogadorAtivo += 3
+            $ muda_afeto (3)
             jump a1a10
         "Invente uma mentira.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1b10
         "Devemos tomar medidas drásticas.":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             jump a1c10
         "Contate o gatovaldo.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1d10
 
 label a1a10:
@@ -831,10 +831,10 @@ label a1a10:
 
     menu:
         "Me sinto mal por termos enganado ele.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1a11
         "Tomou na jabiraca.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1b11
 
 label a1b10:
@@ -1016,10 +1016,10 @@ label a1b10:
 
         menu:
             "Você mandou bem!":
-                $ JogadorAtivo += 1
+                $ muda_afeto (1)
                 jump a1a12
             "Mandamos bem!":
-                $ JogadorAtivo += 0
+                $ muda_afeto (0)
                 jump a1b12
 
     # se fez menos que 3 pontos
@@ -1112,7 +1112,7 @@ label a1c10:
     menu:
         "Vamos transformar esse cara em tofu mesmo, ele é esquisito.":
             show alessandra smirk with dissolve
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             a "Viu!"
 
         "Vamos transformar um garçom em tofu.":
@@ -1120,7 +1120,7 @@ label a1c10:
             a "É uma alternativa! Ele provavelmente peida na comida."
 
         "Vamos transformar a Taylor Swift em tofu":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             show alessandra smirk with dissolve
             a "Gostei dessa ideia!"
             traf "O QUE?"
@@ -1131,7 +1131,7 @@ label a1c10:
             n "Mas o traficante parece realmente odiar essa ideia."
             menu:
                 "Estou falando sério.":
-                    $ JogadorAtivo += 1
+                    $ muda_afeto (1)
                     traf "Vocês só podem estar de brincadeira!"
                     traf "Sério, desisto de tentar fazer négocio com vocês!"
                     hide traficante
@@ -1188,11 +1188,11 @@ label a1c10:
 
     menu:
         "Comer o tofu que está na cadeira do seu lado.":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             hide cgAle1 with dissolve
             jump a1a13
         "Oferecer o tofu a ela.":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             hide cgAle1 with dissolve
             jump a1b13
 
@@ -1261,19 +1261,19 @@ label a1d10:
 
     menu: 
         "*Começar a rosnar também*":
-            $ JogadorAtivo += 2
+            $ muda_afeto (2)
             n "Você começa a rosnar junto de alessandra"
             traf "Tá bom!"
             traf "Só por favor, parem de fazer isso, está me assustando"
 
         "*Fazer um gesto ameaçador*":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             n "Você faz um gesto de corte com sua mão em sua garganta para intimidá-lo."
             traf "Tá bom!"
             traf "Deus, não sabia que vocês eram barra pesada assim."
 
         "*Rir descontroladamente*":
-            $ JogadorAtivo += -2
+            $ muda_afeto (-2)
             n "Você descaralha de rir."
             n "Ver Alessandra rosnando foi realmente algo que você nunca imaginou."
             n "É intankavel."
@@ -1333,10 +1333,10 @@ label a1d10:
 
     menu:
         "Você realmente começou a rosnar?":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1a14
         "Que porra foi essa?":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1a14
 
 
@@ -1478,10 +1478,10 @@ label a1m5:
 
     menu:
         "Pedir para ela experimentar primeiro":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1a15
         "Experimentar primeiro":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1b15
 
 
@@ -1511,10 +1511,10 @@ label a1m6:
 
     menu:
         "Está tudo bem?":
-            $ JogadorAtivo += 1
+            $ muda_afeto (1)
             jump a1a16
         "O que foi? Viu um fantasma?":
-            $ JogadorAtivo += 0
+            $ muda_afeto (0)
             jump a1b16
  
 label a1a16:
