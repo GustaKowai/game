@@ -25,8 +25,10 @@ label d2kat1:
     n "*Ela olha para você*"
 
     c "Só um instantinho!"
+    show claudia brava with dissolve
     c "{size=+10}EU NÃO ME IMPORTO SE ISSO É LEGAL OU NÃO, QUERO AS MINHAS VIÚVAS NEGRAS PARA {/size}{size=+20}ONTEM.{/size}"
     n "Ela desliga o telefone."
+    show claudia default with dissolve
     c "Ai, como é difícil lidar com esses vendedores, eu só queria deixar este lugar em uma ambientação de Halloween digna!"
     menu:
         "Mas estamos em fevereiro":
@@ -39,7 +41,9 @@ label k2a1:
     n "Ela pega o telefone e disca um número"
     c "Esquece as aranhas, quero corações, corações de verdade."
     n "Ela desliga"
+    show claudia feliz with dissolve
     c "Valentines day!!"
+    show claudia default with dissolve
     jump k2m1
     
 label k2b1:
@@ -109,8 +113,8 @@ label k2m2:
     k "Ótimo, isso não deve demorar."
     n "Ela se dirige até o caixa"
     k "Boa tarde, gostaria de-"
-    show katarina mascarada at right
-    show atendente default at left
+    show katarina mascarada at left
+    show atendente default at right
     ate "Tira uma senha."
     k "O que?"
     ate "Tira uma senha. Já te atendo."
@@ -205,6 +209,7 @@ label k1m16:
 label k2m16:
     k "Observe, e aprenda."
     n "Katarina pega o revolver e dá um leve toque com a coronha na cabeça da atendente, que cai desmaiada imediatamente."
+    hide atendente with moveoutbottom
     n "Ele é comicamente pesado."
     k "..."
     k "Ela vai ficar bem!"
@@ -230,10 +235,12 @@ label k2a16:
     n "Vocês veem um homem de terno e óculos escuros, com algum tipo de dispositivo tecnológico na mão, como se fosse uma luv..."
     n "Espera, é o Robert Downey Jr.?"
     k "Espera, Robert Downey Jr.?"
+    show rdj default at right
     rdj "I am Iron Man"
     n "Vocês percebem que ele está prestes a atirar em vocês com a luva dele"
     k "CALMA LÁ!"
     n "Katarina mira o revólver comicamente grande para ele."
+    show rdj assustado
     rdj "HEY, HEY, HEY, SLOW DOWN!"
     n "Ele abaixa a luva, parece ter se sentido intimidado."
     k "Vamos manter a calma!"
@@ -245,6 +252,7 @@ label k2a16:
     k "Pode ir."
     rdj "Obrigado."
     rdj "Você rapariga fixe!"
+    hide rdj with moveoutright
     k "..."
     k "Tá, agora que estamos sozinhos, podemos investigar melhor isso aqui."
     menu:
@@ -452,6 +460,8 @@ label k2a17:
                     n "Você enfim começa a puxar, e logo vocês conseguem trazer ele de volta para o banheiro."
         "Puxar ele para dentro":
             n "Vocês pega em uma perna, Katarina pega na outra, e juntos vocês o puxam para dentro do banheiro novamente."
+    show rdj assustado at right with moveinbottom
+    show katarina at left
     k "Escuta aqui, listen."
     k "O que você está fazendo aqui?"
     rdj "..."
@@ -533,14 +543,17 @@ label k2m17:
             k "Dia dos namorados? Mas estamos em outubro"
             n "Vocês definitivamente estão em fevereiro."
             rdj "Valentines day!"
-            n "Ele tira uma rosa do bolso e a oferece para Katarina."
+            show rdj flores
+            n "Ele tira um buquê do bolso e a oferece para Katarina."
             k "..."
+            show rdj assustado
             n "Katarina pega a rosa, envergonhada."
             k "Niguém nunca..."
             k "Eu nunca ganhei..."
             k "Eu nunca ganhei flores..."
             n "Ela cheira a rosa."
             k "Isso vai dar uma pinga das boas!"
+            show rdj surpreso
             rdj "Pinga? Caipirinha?"
             k "Sim! Podemos fazer caipirinha!"
             n "Katarina parece ter conquistado Rdj com sua habilidade de fazer pinga com coisas improváveis."
