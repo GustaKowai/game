@@ -213,6 +213,7 @@ label k2m16:
             k "Eu tinha esquecido!"
             k "Estava procurando pelo grampo e acabei encontrando ele."
             k "Achei que seria comicamente engraçado usá-lo como alternativa."
+            n "'Comicamente engraçado' é um pleonasmo que não deveria existir."
             jump k2a16
         "Como você consegue manuseá-lo com tanta facilidade?":
             k "..."
@@ -322,12 +323,12 @@ label km18:
     k "Eita! A coisa foi feia pelo jeito."
     menu:
         "Por que está nervoso?":
-            rdj "Muita estricto!"
+            rdj "Muita apertado!"
             k "O que?"
             rdj "Ventana!"
             k "Não estamos te entendendo, amigão."
-            n "Ele começa a fazer gestos duvidosos com a mão, tentando explicar com mímica que ele estava preso na janela."
-            n "Ninguém além do narrador entendeu os gestos dele."
+            n "Ele começa a fazer gestos duvidosos com a mão, tentando explicar com mímica que ele ficou preso na janela do banheiro tentando escapar"
+            n "Ninguém além do narrador entende os gestos dele."
             k "Tá, deixa quieto isso aí, por que está correndo?"
         "Por que está agitado?":
             rdj "Eu preciso embora!"
@@ -360,7 +361,7 @@ label km18:
             rdj "Hm..."
             menu:
                 "Fazer cara de coitado.":
-                ".":
+                "":
                 
         "Apresentar provas concretas.":
             n "Você abre seu celular no briefing da missão e mostra para ele."
@@ -392,7 +393,30 @@ label k2a17:
     n "Vocês correm até o banheiro, e encontram ele entalado em uma pequena janela tentando escapar."
     rdj "HELP! HELP!"
     k "Que ótima ideia."
-    n "Katarina puxa ele de volta para o banheiro."
+    menu:
+        "Empurrar ele para fora":
+            n "Você imagina que o objetivo dele era sair, então você começa a empurrá-lo para fora."
+            k "NÃO!"
+            n "Katarina começa a puxar ele para dentro."
+            rdj "aaaaaaaaaaaaaaaaaaaaaaaaa"
+            n "Robert começa a gritar"
+            rdj "ME LARGUEEEE!"
+            k "PUXAAAAAAAAAAA!"
+            menu:
+                "Fazer mais força.":
+                    n "Você desobedece a ordem dos dois e começa a empurrar ainda mais forte."
+                    n "É como se você estivesse disputando em um cabo de guerra com Katarina."
+                    n "Só que ao invés de uma corda vocês estão quase partindo o Robert Downey Jr. em dois."
+                    k "AAAAAAAAAAAAARGH"
+                    n "Katarina encarna uma força ancestral e consegue puxar RDJ de volta para o banheiro."
+                    n "Ela está ofegante e com os olhos arregalados te encarando."
+                    k "Foi bom disputar com você!"
+                    n "Ela te estende a mão, vocês se cumprimentam."
+                    n "Robert observa vocês dois do chão como dois malucos."
+                "Começar a puxar.":
+                    n "Você enfim começa a puxar, e logo vocês conseguem trazer ele de volta para o banheiro."
+        "Puxar ele para dentro":
+            n "Vocês pega em uma perna, Katarina pega na outra, e juntos vocês o puxam para dentro do banheiro novamente."
     k "Escuta aqui, listen."
     k "O que você está fazendo aqui?"
     rdj "..."
@@ -519,17 +543,144 @@ label k2b16:
             rdj "Hey! Calm down, calma!"
             k "Tira essa luva! Gloves! On the ground!"
             n "Ele tira a luva e joga ela no chão."
-            n "Katarina mira e nela e aperta o gatilho."
+            n "Katarina mira na luva e aperta o gatilho."
             n "'Como é grande o meu amor por você' do Roberto Carlos começa a tocar"
             k "..."
             k "Droga, o que é isso?"
             k "Está escrito 'Você me mata de paixão no cabo'."
             n "Vocês olham para Robert Downey Jr., ele parece não entender o que está acontecendo e está completamente aterrorizado."
+            menu:
+                "Tentar pegar as luvas.":
+                    n "Você cogita pegar as luvas, e é nesse momento que você dá na cara que o Roberto Carlos não fazia parte dos planos."
+                    n "Robert também pula para alcançar as luvas, e vocês começam uma disputa."
+                    k "Aaah droga!"
+                    menu:
+                        "Pedir ajuda para Katarina.":
+                            n "Vocês começam a rolar no chão, com medo de levar a pior, você chama por Katarina."
+                            jump k2m18
+
+                        "Tentar se virar.":
+                            n "Você tenta se garantir no soco, mas Robert parece ter um melhor treinamento do que ti (Que faz parte da linha de frente de uma revolução)."
+                            n "Ele claramente está na melhor."
+                            n "Katarina tirou um Toddynho da mochila e está observando vocês enquanto lutam."
+                            menu:
+                                "Pedir ajuda.":
+                                    n "Com medo de continuar apanhando, você grita por Katarina"
+                                    jump k2m18
+                                "Persistir.":
+                                    n "Você persiste."
+                                    n "Sua força de vontade parece dominá-lo, uma força interior desperta dentro de ti."
+                                    n "Você é capaz, você chegou até aqui, não vai perder para um ator com um Oscar roubado."
+                                    n "'Ele pertencia ao Ryan Gosling, seu desgraçado!' Você começa a pensar."
+                                    n "Você começa a elaborar o seu discurso de vitória."
+                                    n "Enquanto isso, Robert alcança a luva."
+                                    k "Uhuuuuuuuuul! Isso foi foda!"
+                                    jump k2m19
+                    
+                "Manter pose ameaçadora.":
+                    n "Você mantém uma pose ameaçadora, e começa a cantar a música junto com a arma."
+                    n "Ele parece confuso e assustado."
+                    n "Katarina lentamente se aproxima das luvas e pega elas"
+                    k "Tá bom, escuta aqui, a gente não é bandido, então não te sequestraremos, a não ser que você queira."
+                    k "Deixamos em suas mãos."
+                    rdj "..."
+                    n "Ele parece estar mais confuso ainda."
+                    menu:
+                        "A gente tem redbull à vontade na base!":
+                            n "Robert parece ter se interessado."
+                        "Somos tipo os vingadores!":
+                            n "Robert parece ter se interessado."
+                    rdj "Okay! Let's do it."
+                    k "Fechou, sr. Duolingo, vamos ir conhecer o gato."
+                    n "Vocês vão embora juntos."
+                    jump finalkat1
             
 
-        "Vamos aguardar."
+        "Vamos aguardar.":
+            jump k2m19
+
+label k2m19:
+    rdj "On the ground! Now!"
+    k "Caaalma Duolingo. Que tal a gente ir tomar um café e resolver isso com calma?"
+    rdj "NOW!"
+    n "Ele parece nervoso."
+    k "Droga, ele não está para brincadeira."
+    n "Katarina se deita no chão."
+    n "Ela começa a sussurrar para ti."
+    k "Escuta aqui, a gente ta meio fodido, vamos precisar escapar daqui."
+    menu:
+        "Mas e os documentos?":
+            k "Foda-se os documentos! É a nossa vida em jogo, você quer ir acabar virando figurante da Marvel?"
+            k "A gente precisa distraí-lo e correr. "
+        "Mas ele tem uma luva que atira raios laser!":
+            k "Eu sei! Isso também me assusta. Por isso criaremos uma distração."
+    menu:
+        "Usa alguma coisa da sua mochila!":
+            k "Boa ideia!"
+            n "Katarina discretamente abre a sua mochila e pega um explosivo c4."
+            k "Isso vai bastar!"
+            menu:
+                "puta que pariu.":
+                    k "Relaxa!"
+                "puta merda.":
+                    k "Preocupa não!"
+            k "HEY!"
+            n "Katarina chama a atenção de Robert."
+            n "Ao virar para vocês, Katarina arremessa a bomba na testa dele."
+            k "CORRE!!"
+            n "Vocês começam a correr em direção à saída."
+            menu:
+                "POR QUE VOCÊ TEM UMA BOMBA NA MOCHILA?":
+                    k "Era uma réplica!"
+                    n "Você se acalma um pouco."
+                    k "Funcional, mas ela não estava ativa, então é seguro!"
+                    n "Você se desacalma."
+                "POR QUE VOCÊ TACOU A BOMBA NA TESTA DELE?":
+                    k "Era a coisa mais pesada que eu tinha na bolsa!"
+                    k "Pelo menos ela não explodiu!"
+                    n "Talvez deixar decisões nas mãos de Katarina não seja tão sábio assim..."
+            n "Vocês finalmente alcançam o carro."
+            k "Bem, em relação a bomba, relaxa, ele vai saber lidar com is..."
+            n "BOOOOOOOOOOM"
+            n "O banco explode logo atrás de vocês."
+            k "..."
+            k "Eles vão ficar bem!"
+            n "Katarina acelera, e vocês voltam para a base."
+            jump finalkat1
 
 
+        "Vamos esperar para ver o que acontece!":
+            k "NÃO! Cansei disso, não podemos continuar entregando nosso destino ao acaso, já é a seg..."
+            n "Seu telefone começa a tocar."
+            n "É o gatovaldo."
+            k "AGORA!"
+            n "Katarina pega o celular da sua mão e arremessa-o na cabeça de Robert."
+            k "Eu te compro outro!"
+            n "Vocês correm, sem olhar para trás."
+            n "Até que você fica um pouco curioso, e olha para trás."
+            n "Ele parece estar desmaiado."
+            k "Ele vai ficar bem!"
+            n "Vocês alcançam a saída, entram no carro e começam a ir embora."
+            k "..."
+            k "Pelo menos temos história para contar!"
+            jump finalkat1
+
+label k2m18:
+    n "Katarina tira um taser da mochila e eletrocuta Robert."
+    rdj "Ouch!"
+    n "Ele te larga e se afasta um pouco."
+    k "Escuta aqui, seu bostinha, me explica tudo. O que caralhos você está fazendo aqui?"
+    rdj "..."
+    rdj "Eu não sei..."
+    k "Lavagem cerebral. Caso resolvido."
+    k "Você vem com a gente."
+    rdj "What?"
+    k "Isso mesmo. vamos te apresentar para um gatinho."
+    n "Vocês prendem as mãos dele com um enforca gato e o guiam até o carro."
+    n "Seu telefone começa a tocar, é o Gatovaldo."
+    k "Desliga essa merda, foda-se os documentos, conseguimos algo mais importante."
+    n "Katarina dá dois tapinhas na cabeça de Robert Downey Jr."
+    jump k2m14
 
 
 label k2m3:

@@ -99,6 +99,10 @@ label k1a1:
     with moveinright
     k "Claudia, Mosh Pit do Slipknot agora é o incenso de quinta, você não recebeu as alterações que eu te enviei por e-mail?"
     c "Senhorita Katarita! Peço perdão, não acontecerá novamente! Já irei providenciar o incenso diário correto." 
+
+    k "É KATARINA, PORRA! Você trabalha comigo há sei lá, 20 anos?"
+    c "Perdão... Estava testando apelidos..."
+    k "Está tudo bem, mas {w} JAMAIS {w} me chame de Katarita novamente."
     
     c "Ah, aliás, essa pessoa veio te procurar. Ela recusou o chá sueco, eu te avisei que capim-limão ornava melhor."
     show katarina feliz with dissolve
