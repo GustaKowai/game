@@ -18,8 +18,8 @@ init python:
         return pontos
 
 transform top_right:
-    xalign 1.0
-    yalign 0.0
+    xalign 0.95
+    yalign 0.1
 
 init python:
     def low_beep(event, **kwargs):
