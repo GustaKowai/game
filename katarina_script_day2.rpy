@@ -464,6 +464,7 @@ label k2a17:
                 "Começar a puxar.":
                     n "Você enfim começa a puxar, e logo vocês conseguem trazer ele de volta para o banheiro."
         "Puxar ele para dentro":
+            $ muda_afeto (1)
             n "Vocês pega em uma perna, Katarina pega na outra, e juntos vocês o puxam para dentro do banheiro novamente."
     show rdj assustado at right with moveinbottom
     show katarina at left
@@ -776,6 +777,7 @@ label k2m3:
             jump k2b4
 label k2a4:
     k "Haha! Aí sim, tomamos a decisão correta!"
+    $ muda_afeto (1)
     jump k2m4
 label k2b4:
     k "Mal posso esperar para ver..."
@@ -805,6 +807,7 @@ label k2m4:
 
 label k2a5:
     k "Eita, deve ser importante"
+    $ muda_afeto (1)
     jump k2m5
 label k2b5:
     k "Manda ela pra merda!"
@@ -883,7 +886,7 @@ label k2m8:
         "A gente pode ser preso!":
             jump k2b9
 label k2a9:
-    k "Claro! é desonrante assaltar um banco e sair de mãos abanando, quando isso virar um esporte tudo bem."
+    k "Claro! É desonrante assaltar um banco e sair de mãos abanando, quando isso virar um esporte tudo bem."
     jump k2m9
 label k2b9:
     k "Fica tranquilo, estamos de máscara."
@@ -1008,6 +1011,7 @@ label k2m13:
         "Você anda com vales rações no seu bolso?":
             jump k2a15
         "Aquele cachorro fez eu cagar nas calças":
+            $ muda_afeto (-1)
             jump k2b15
 label k2a15:
     k "Nunca se sabe quando precisaremos subornar alguém, pets são muito amados hoje em dia, mais do que os próprios humanos."
