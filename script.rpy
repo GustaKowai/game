@@ -7,9 +7,16 @@ init python:
         JogadorAtivo += pontos
         if pontos > 0:
             renpy.sound.play("certo.wav")
+            renpy.show("mais",[top_right])
+            renpy.pause(0.2)
+            renpy.hide("mais")
         if pontos < 0:
-            renpy.sound.play("errado.wav", relative_volume=1.5)
+            renpy.sound.play("errado.wav", relative_volume=2.5)
         return pontos
+
+transform top_right:
+    xalign 1.0
+    yalign 0.0
 
 init python:
     def low_beep(event, **kwargs):
