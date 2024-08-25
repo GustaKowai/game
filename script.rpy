@@ -12,6 +12,9 @@ init python:
             renpy.hide("mais")
         if pontos < 0:
             renpy.sound.play("errado.wav", relative_volume=2.5)
+            renpy.show("menos",[top_right])
+            renpy.pause(0.2)
+            renpy.hide("menos")
         return pontos
 
 transform top_right:
