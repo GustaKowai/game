@@ -140,6 +140,13 @@ Objetivos concluidos nas semanas de 13/07-20/08:
 - Adição das cgs atuais na galeria de cgs
 - Tela de créditos ao terminar o jogo
 
+Objetivos concluidos nas semanas de 13/07-20/08:
+
+- Tela de créditos corrigida
+- Refatoração do script.rpy
+- Adicionados novos Achievements
+- Alterações na UI
+
 Objetivos em andamento:
 
 - Arte:
