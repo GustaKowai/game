@@ -1,3 +1,9 @@
+#Variáveis iniciais dos jogadores:
+default jogador1 = True ##Jogador azul = true, jogador laranja = False
+default JogadorAtivo = 0 #Variavel usada para captar os pontos da missão, ao final da missão é dado para o jogador ativo
+default alguem = False
+
+
 #Variáveis para o jogo de tiro:
 default tirosNecessarios = 0
 default a8 = False

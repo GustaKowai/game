@@ -27,6 +27,8 @@ define BOBCACHIEVEMENT_LIST = (
     ("Arma_tofu", _("Arma tofuzadora"), _("Consiga a perigosa arma de tofu")),
     ("Comer_tofu", _("Canibal"), _("Era só um pedaço de tofu... certo?"),True),
     ("Rato_sorveteiro", _("O sorveteiro"), _("Descubra a verdade sobre o sorveteiro")),
+    ("dia1_ale_perfeito", _("Boa etiqueta"), _("Consiga pontuação máxima no primeito dia com a Alessandra"),True),
+    ("dia1_kat_perfeito", _("Encontro com sorvete"), _("Consiga pontuação máxima no primeito dia com a Katarina"),True),
     ("completionist", _("Completionist"), _("Read all of the game"), True),
     )
 

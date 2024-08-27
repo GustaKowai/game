@@ -1558,14 +1558,17 @@ label a1a17:
 
     stop music1 fadeout 2.0
 
+    if JogadorAtivo == 12:
+        achieve dia1_ale_perfeito
+
     if jogador1:
         $ jogador1Ale1 = True
     else:       
         $ jogador2Ale1 = True
-    jump finalale1
-
+    jump finalale1 
 
 label finalale1:
+
     if jogador1:
         $ a.azul += JogadorAtivo
     else:

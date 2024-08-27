@@ -700,6 +700,9 @@ label k1m6:
         extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso."
         n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem."
 
+        if JogadorAtivo == 12:
+            achieve dia1_ale_perfeito
+
         jump finalkat1
     n "Ele para."
     n "Um senhorzinho muito fofo sai da cabine."
@@ -1123,6 +1126,9 @@ label k1m8:
 
     extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso."
     n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem."
+
+    if JogadorAtivo == 12:
+        achieve dia1_kat_perfeito
 
     jump finalkat1
 
