@@ -147,6 +147,10 @@ Objetivos concluidos nas semanas de 21/08-28/08:
 - Adicionados novos Achievements
 - Alterações na UI
 
+Objetivos concluidos na semana de 15/10-22/10:
+
+- Dia 3 da Alessandra implementado
+
 Objetivos em andamento:
 
 - Arte:
@@ -172,10 +176,10 @@ Objetivos em andamento:
     - Som de partida de moto (talvez)
   - Músicas de fundo:
     - Missões Katarina:
-      - Recepção (talvez seja a mesma do escritório ou algo bem parecido?)
       - Banco (tem 3 áreas, a externa, a recepção e o cofre)
     - Missões Alessandra:
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazendo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
+      - Exibição de carros
 
 Em breve:
 
