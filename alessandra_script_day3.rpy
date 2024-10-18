@@ -39,6 +39,7 @@ label d3ale1:
             a "É sempre bom ver seu trabalho sendo reconhecido, eu sempre me esforço para fazer tudo da forma que deveria ser."
         "E a gente vai roubar o carro, né?":
             a @seria2 "Ah, meio que mancharia um pouco a minha imagem, então evitaremos isso."
+            $ roubarCarro = True
             a "Mas não é uma possibilidade descartada!"
 
     a "Acho que é bom irmos logo, não quero me atrasar"
@@ -97,6 +98,9 @@ label d3ale1:
             jump a3b4
         "Vamos ver o desfile":
             jump a3c4
+
+
+##Rota da comida##
 
 label a3a4:
     n "Vocês vão em direção à mesa das comidas, tudo parece muito caro e bem preparado"
@@ -177,6 +181,7 @@ label a3a7:
     image mercenario = "mercenario.png"
     image mercenario center = Image("mercenario.png")
     show mercenario center
+    $ acaojogo = "lançar chamas"
     $ tirosNecessarios = 0
     jump start_minigame
 
@@ -202,10 +207,12 @@ label a3b7:
     image mercenario = "mercenario.png"
     image mercenario center = Image("mercenario.png")
     show mercenario center
+    $ acaojogo = "arremessar facas"
     $ tirosNecessarios = 3
     jump start_minigame
 
 label a3b7pontos:
+    hide mercenario
     if fable_minigame_score == 1:
         n "Você arremessa suas facas, erra a maioria, mas uma acerta um dos mercenários bem na testa"
         n "Ele cai morto, Alessandra da um jeito nos outros que estavam ali"
@@ -227,6 +234,9 @@ label a3b7pontos:
     a "Eu não aguento mais isso..."
     jump a3m2
 
+##Rota da exposição de carros##
+
+label a3b4:
     n "Vocês vão até a exposição de carros"
     n "Vocês não entendem muito de carros, eles parecem carros, como todos os outros"
     show alessandra seria with dissolve
@@ -308,27 +318,148 @@ label a3b10:
 
 
 label a3b11:
+    if roubarCarro:
+        a "Liga o carro logo!"
+        if jogador1:
+            azul "Achei que iríamos evitar roubar carros"
+        else:
+            laranja "Achei que iríamos evitar roubar carros"
+        a "Eu avisei que não era uma possibilidade descartada!"
     n "Você liga o carro, Alessandra continua atirando, mas são muitos, até que você tem uma ideia."
     hide alessandra
     image carroPrimeiraPessoa = "carroPrimeiraPessoa.png"
-    show carroPrimeiraPessoa
-    $ mercenarioCarro = True
+    $ mercenariosCarro = True
     image mercenario = "mercenario.png"
     image mercenario center = Image("mercenario.png")
     show mercenario center
+    show carroPrimeiraPessoa
+    $ acaojogo = "acelerar"
     $ tirosNecessarios = 5
     jump start_minigame
 
 label a3a12pontos:
+    hide mercenario
     n "Você acelera com o carro em direção aos mercenários e atropela [fable_minigame_score] deles."
-    if carrosJuntos:
+    if carrosSeparados:
         n "Alessandra parece gostar da sua ideia, ela fecha o teto solar e acelera em disparada com o carro"
         n "Ela atropela alguns dos mercenários que você deixou para trás"
         n "Precisamos dar o fora daqui!"
-    if carrosSeparados:
+    if carrosJuntos:
         n "Eles atiram em você, sorte sua que uma das inovações do carro que está sendo exposto é a sua incrível blindagem"
         n "Alessandra continua atirando, vocês conseguem matar a maioria deles"
         a "A gente tem que vazar!"
+    
+    n "Vocês correm com os carros pelo evento procurando por uma saída do enorme galpão"
+    n "As saídas parecem blindadas, tentar atravessar elas com os carros seria suicídio" 
+    n "O combustível dos carros começa a acabar"
+    if carrosSeparados:
+        n "Vocês descem dos carros e procuram por abrigo"
+    if carrosJuntos:
+        n "Vocês descem do carro e procuram por abrigo"
+    hide carroPrimeiraPessoa
+    show alessandra brava
+    a "Merda, a gente ta fudido"
+    jump a3m2
+
+##Rota do desfile##
 
 label a3c4:
-    
+    n "Vocês vão até o desfile"
+    n "As pessoas desfilando vestem roupas vermelhas e brancas, com detalhes rasgados e assimétricos"
+    show alessandra triste
+    n "Alessandra não parece muito feliz muito feliz com suas criações"
+    menu:
+        "Por que está assim?":
+            a "Foi um doloroso processo criativo."
+        "Você não gostou do que fez?":
+            a "Pode parecer que não, mas eu me sinto orgulhosa por tudo isso"
+    a "Algo tem me atormentado, há um tempinho já..."
+    a "O nome dessa coleção é \"Souvenirs de Prison\""
+    a "É sobre uma época sombria da minha vida, a qual superei recentemente"
+    menu:
+        "O que isso significa?":
+            a "Eu prefiro o nome em português mesmo, é \"Memórias do Cárcere\""
+            jump a3a14
+        "Entendi...":
+            jump a3a14
+
+label a3a14:
+    n "Você começa a perceber os detalhes dos designs de Alessandra, as manchas de sangue, os buracos de bala, os rasgos"
+    a "É... Não foi tão violento assim, tomei diversas liberdades artísticas no processo criativo dessa coleção."
+    a "O que me preocupa é que..."
+    a "Acho que alguns fantasmas insistem em me assombrar"
+    n "Você passa a perceber os detalhes de uma maneira diferente, os buracos de bala parecem mais realistas, o sangue mais real"
+    n "Uma das modelos desfilando cai no chão, \"Que atuação!\", você pensa, todas as angústias internas de Alessandra sendo representadas por roupas"
+    n "Quando você se liberta de seus pensamentos e olha para ela, você a vê aterrorizada"
+    show alessandra medo1
+    a "E-estão..."
+    n "Ela te agarra e se joga no chão contigo"
+    n "Um tiro, que deveria ter te acertado, passa por ti"
+    n "Pessoas vestindo roupas táticas começam a invadir o saguão, atirando em tudo que entre no caminho"
+    n "Eles estão indo diretamente até vocês."
+    show alessandra medo2
+    n "Você olha para Alessandra, ela está em choque"
+    n "Você percebe uma certa inconformidade no olhar assustado dela"
+    show alessandra assustada
+    a "I-isso não pode ficar assim, isso n-não pode ficar assim"
+    show alessandra seria
+    n "Alessandra parece acordar de um transe, ela procura por cobertura e te puxa para lá"
+    a "Toma."
+    n "Ela te dá uma espingarda, que de alguma forma estava anexada em algum módulo secreto de seu vestido"
+    a "A gente consegue."
+    show alessandra smirk
+    n "Ela te diz com confiança, enquanto tira duas pistolas de seu vestido e abre fogo contra os mercenários"
+    $ mercenariosShotgun = True
+    image mercenario = "mercenario.png"
+    image mercenario center = Image("mercenario.png")
+    show mercenario center
+    $ acaojogo = "atirar"
+    $ tirosNecessarios = 5
+    jump start_minigame
+
+label a3a14pontos:
+    hide mercenario
+    if fable_minigame_score == 6:
+        n "Você mira e acerta cada um dos mercenários como se o tempo não existisse, eles caem um por um"
+    if fable_minigame_score == 5:
+        n "Você se esforça e atira com precisão, acertando a maioria dos mercenários."
+        n "A espingarda que Alessandra te dá parece modificada, seus tiros arrancam pedaços violentamente desses assassinos, o que torna esse serviço muito mais fácil"
+        n "Mas que também tem um custo mental igualmente alto"
+    if fable_minigame_score > 0 and fable_minigame_score < 5:
+        n "Você atira contra os mercenários, eles são rápidos e habilidosos, mas você consegue acertar alguns deles, [int(fable_minigame_score/2)] tiro(s) pega(m) de raspão em ti"
+        n "A espingarda que Alessandra te dá parece modificada, seus tiros arrancam pedaços violentamente desses assassinos, o que torna esse serviço muito mais fácil"
+        n "Mas que também tem um custo mental igualmente alto"
+    if fable_minigame_score == 0:
+        n "Você está muito assustado com a situação, e não consegue acertar nenhum dos mercenários."
+        n "3 tiros de acertam de raspão, você está bastante machucado"
+        n "Alessandra te arrasta para uma cobertura melhor, alguns mercenários ainda estão vivos, e continuam atirando em vocês"
+        a "Meu Deus! Você está bem? Espera aí."
+        n "Ela tira um kit de primeiros socorros do vestido e começa a limpar suas veridas e a suturar seus machucado"
+        n "Dói, mas você se sente relativamente melhor"
+        n "Alessandra definitivamente é habilidosa com agulhas"
+        a "A gente precisa te tirar daqui"
+    n "Alessandra te puxa para uma cobertura mais segura"
+    a "São muitos, a gente tá quase conseguindo, fica firme."
+    jump a3m2
+
+label a3m2:
+    n "Danran aparece, ele acaba com os últimos mercenários que restavam"
+    d "Alê, você está bem?"
+    n "Ele corre até Alessandra e abraça ela"
+    a "Estou sim, eu sempre esperei por isso, mas nunca de fato acreditei que aconteceria."
+    a "Você voltou a falar, que aposta eu perdi?"
+    d "Que hoje não ia chover"
+    n "Dan aponta para a janela, está caindo um toró"
+    a "Ah, droga."
+    d "A polícia está vindo, a gente tem que ir"
+    d "Eu conheço uma saída que nos leva até o meu carro"
+    n "Vocês correm até o carro, e voltam para a cidade"
+    n "No caminho, silêncio. O clima é tenso, e ninguém diz uma palavra"
+    n "Eles te deixam na sua casa, Alessandra olha para você, e com um rosto abatido"
+    a "A gente se vê amanhã."
+
+    if jogador1:
+        $ jogador1Ale3 = True
+    else:       
+        $ jogador2Ale3 = True
+    jump finalale1 

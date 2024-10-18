@@ -11,8 +11,10 @@ default b8 = False
 default c8 = False
 default c8_2 = False
 default d8 = False
+default mercenariosCarro = False
 default mercenarioFogo = False
 default mercenarioFaca = False
+default mercenariosShotgun = False
 
 #Variáveis da investigação:
 #dia 1 Alessandra:
@@ -52,6 +54,9 @@ default jogador2Ale2 = False
 #dia3 Alessandra:
 default carrosSeparados = False
 default carrosJuntos = False
+default roubarCarro = False
+default jogador1Ale3 = False
+default jogador2Ale3 = False
 
 ## Variáveis dos dias ##
 default aleDay1 = True
@@ -75,3 +80,5 @@ default gamsoGamer = False
 ##Variaveis persistentes:
 default persistent.watch_Intro = False
 default persistent.credits_seen = False
+
+default acaojogo = "atirar"

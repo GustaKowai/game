@@ -217,6 +217,7 @@ label k3a8:
   image cervo = "cervo.png"
   image cervo center = Image("cervo.png")
   show cervo center
+  $ acaojogo = "atirar"
   $ tirosNecessarios = 0
   jump start_minigame
 
@@ -258,6 +259,7 @@ label k3b8:
   k "Desde então eu passei a vê-los de outra forma, a carne bem temperadinha é uma delícia, acredite em mim!"
   k "Bem, agora se concentra"
   hide katarina
+  $ acaojogo = "atirar"
   $ tirosNecessarios = 0
   image coelho = "coelho.png"
   image coelho center = Image("coelho.png", yalign=0.3, xalign=0.48)
@@ -304,6 +306,7 @@ label k3c8:
   k "Bem, agora se concentra"
   n "Você mira no urso"
   hide katarina
+  $ acaojogo = "atirar"
   $ tirosNecessarios = 0
   show urso default
   k "Esse pode ser difícil, não vacila!"
@@ -361,6 +364,7 @@ label k3d8:
   image pato = "pato.png"
   image pato center = Image("pato.png")
   show pato center
+  $ acaojogo = "atirar"
   $ tirosNecessarios = 3
   jump start_minigame
 

@@ -11,7 +11,7 @@ init:
 screen fable_2_minigame:
     # add "minigame/Fable_bar.png" align(0.5,0.5)
     add "minigame/Fable_point.png" at fable_point_move(fable_minigame_bar)
-    text "Pressione a barra de espaço para atirar" align(0.5,0.1)
+    text "Pressione a barra de espaço para [acaojogo]" align(0.5,0.1)
     text "[fable_minigame_score]" align(0.5,0.2)
     #text "[fable_minigame_bar]\nЗначение бара" align(0.5,0.2)
     #text "[fable_you_press_button]" align(0.5,0.3)
@@ -34,7 +34,7 @@ screen fable_timer_right:
     timer 0.0001 repeat True action [If(fable_minigame_bar <= 90, SetVariable("fable_minigame_bar", fable_minigame_bar + 1)),If(fable_minigame_bar == 90, Hide("fable_timer_right"), Show("fable_timer_left")), If(fable_minigame_bar == 90, SetVariable("fable_you_press_button", 0))]
 
 screen you_press_button_good:
-    text "{color=#1e8e00}Bom tiro!{/color}" at fable_move_good
+    text "{color=#1e8e00}Acertou!{/color}" at fable_move_good
     timer 1.0 action Hide("you_press_button_good")
     
 screen you_press_button_bad:
@@ -90,7 +90,9 @@ label acertou:
     if mercenariosCarro:
         $ mercenarioCarro = False
         jump a3a12pontos
-    
+    if mercenariosShotgun:
+        $ mercenariosShotgun = False
+        jump a3a14pontos
     
 
 label errou:
@@ -115,3 +117,6 @@ label errou:
     if mercenariosCarro:
         $ mercenarioCarro = False
         jump a3a12pontos
+    if mercenariosShotgun:
+        $ mercenariosShotgun = False
+        jump a3a14pontos
