@@ -163,11 +163,18 @@ Objetivos em andamento:
   - atendente do banco
   - padre
   - padre com o braço decepado
+  - Danran
+  - BG evento
+  - BG cozinha do evento
+  - BG desfile de moda
+  - BG Exibição de carros
+  - Mercenários
 - História
   - Finais diferentes
 - Programação:
   - Investigação na parte noturna dos dias 2 e 3
   - Cassino
+  
 - Sons e Música:
   - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
     - Sirene

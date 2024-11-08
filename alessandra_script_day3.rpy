@@ -188,6 +188,7 @@ label a3a7:
 label a3a7acertou:
     n "Você vira de costas e, antes que um deles consiga te acertar uma facada, você liga o lança chamas"
     n "O mercenário grita enquanto é queimado até a morte"
+    $ ajudou = True
     jump a3m2
 
 label a3a7errou:
@@ -222,10 +223,12 @@ label a3b7pontos:
     if fable_minigame_score == 3:
         n "Você arremessa suas facas, uma delas acerta uma granada de um dos mercenários, que explode, matando outros dois"
         n "Pedaços deles voam e caem perto de vocês, Alessandra da um jeito no outro que estava ali"
+        $ ajudou = True
     if fable_minigame_score == 4:
         n "Você aremessa suas facas magistralmente, todas elas acertam as cabeças dos mercenários que flanqueavam vocês"
         show alessandra assustada
         n "Eles caem mortos, Alessandra parece assustada com a sua habilidade"
+        $ ajudou = True
     if fable_minigame_score == 0:
         n "Você não acertou nenhuma faca, voce talvez não devesse ser permitido manusear nem mesmo uma faca de mantega"
         n "Felizmente a Alessandra consegue dar um jeito em todos os mercenários próximos"
@@ -339,7 +342,13 @@ label a3b11:
 
 label a3a12pontos:
     hide mercenario
-    n "Você acelera com o carro em direção aos mercenários e atropela [fable_minigame_score] deles."
+    if fable_minigame_score == 0:
+        n "Você acelera com o carro em direção aos mercenários mas não acerta nenhum."
+    else:
+        n "Você acelera com o carro em direção aos mercenários e atropela [fable_minigame_score] deles."
+        if fable_minigame_score > 4:
+            $ ajudou = True
+    
     if carrosSeparados:
         n "Alessandra parece gostar da sua ideia, ela fecha o teto solar e acelera em disparada com o carro"
         n "Ela atropela alguns dos mercenários que você deixou para trás"
@@ -421,10 +430,12 @@ label a3a14pontos:
     hide mercenario
     if fable_minigame_score == 6:
         n "Você mira e acerta cada um dos mercenários como se o tempo não existisse, eles caem um por um"
+        $ ajudou = True
     if fable_minigame_score == 5:
         n "Você se esforça e atira com precisão, acertando a maioria dos mercenários."
         n "A espingarda que Alessandra te dá parece modificada, seus tiros arrancam pedaços violentamente desses assassinos, o que torna esse serviço muito mais fácil"
         n "Mas que também tem um custo mental igualmente alto"
+        $ ajudou = True
     if fable_minigame_score > 0 and fable_minigame_score < 5:
         n "Você atira contra os mercenários, eles são rápidos e habilidosos, mas você consegue acertar alguns deles, [int(fable_minigame_score/2)] tiro(s) pega(m) de raspão em ti"
         n "A espingarda que Alessandra te dá parece modificada, seus tiros arrancam pedaços violentamente desses assassinos, o que torna esse serviço muito mais fácil"
@@ -462,4 +473,6 @@ label a3m2:
         $ jogador1Ale3 = True
     else:       
         $ jogador2Ale3 = True
+    if ajudou:
+        achieve atentado
     jump finalale1 

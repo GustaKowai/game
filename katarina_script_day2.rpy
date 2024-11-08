@@ -363,7 +363,7 @@ label km18:
             n "O seu telefone começa a tocar, é o gatovaldo."
             k "É o Gatovaldo? Precisa atender não, a gente vai pessoalmente avisar ele que deu tudo errado."
             k "Depois a gente pode ir tomar uma cachaça lá no meu escritório para afogar as mágoas."
-            n "Katarina pega o seu celular tocando e aremessa ele na parede."
+            n "Katarina pega o seu celular tocando e arremessa ele na parede."
             k "..."
             k "Eu te compro um novo."
             k "Vamos embora daqui..."
@@ -399,6 +399,7 @@ label km18:
                     rdj "Vamos esmagar este rato!"
                     k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
                     n "Vocês vão até o carro e partem para a base."
+                    achieve RDJ
                     jump finalkat1
                 "Pedir autógrafo" if revista:
                     n "Você tira uma revista do bolso, que você pegou de dentro da gaveta, e pede por um autógrafo."
@@ -407,6 +408,7 @@ label km18:
                     rdj "Tudo bem."
                     k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
                     n "Vocês vão até o carro e partem para a base."
+                    achieve RDJ
                     jump finalkat1
 
 
@@ -425,6 +427,7 @@ label km18:
             rdj "I want to meet the cat first."
             k "Tá bom então sr. Duolingo, primeiro gatovaldo, depois meu escritório!"
             n "Vocês três partem para a base."
+            achieve RDJ
             jump finalkat1
 
     
@@ -579,6 +582,7 @@ label rdjfloresfinal:
     k "Com certeza!"
     n "Os dois caminham para fora do banco, entram no carro e vão embora."
     n "Resta a você pedir um uber e voltar para a base."
+    achieve RDJ
     jump finalkat1
 
 
@@ -657,6 +661,7 @@ label k2b16:
                     rdj "Okay! Let's do it."
                     k "Fechou, sr. Duolingo, vamos ir conhecer o gato."
                     n "Vocês vão embora juntos."
+                    achieve RDJ
                     jump finalkat1
             
 
@@ -957,6 +962,7 @@ label k2m10:
 label k2m11:
     k "Que seja."
     n "Vocês voltam para a base"
+    achieve RDJ
     jump finalkat1
 
 label k2b10:

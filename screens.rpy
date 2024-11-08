@@ -256,6 +256,7 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -322,12 +323,16 @@ screen navigation():
         if main_menu:
 
             textbutton _("Extras") action ShowMenu("bobcachievements") alt "Extras"
+
+            textbutton _("Sobre") action ShowMenu("about")
         
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Ajuda") action ShowMenu("help")
+            if not main_menu:
+
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Ajuda") action ShowMenu("help")
 
         if renpy.variant("pc"):
 

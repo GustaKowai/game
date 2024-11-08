@@ -27,8 +27,16 @@ define BOBCACHIEVEMENT_LIST = (
     ("Arma_tofu", _("Arma tofuzadora"), _("Consiga a perigosa arma de tofu")),
     ("Comer_tofu", _("Canibal"), _("Era só um pedaço de tofu... certo?"),True),
     ("Rato_sorveteiro", _("O sorveteiro"), _("Descubra a verdade sobre o sorveteiro")),
-    ("dia1_ale_perfeito", _("Boa etiqueta"), _("Consiga pontuação máxima no primeito dia com a Alessandra"),True),
-    ("dia1_kat_perfeito", _("Encontro com sorvete"), _("Consiga pontuação máxima no primeito dia com a Katarina"),True),
+    ("dia1_ale_perfeito", _("Boa etiqueta"), _("Consiga pontuação máxima no primeiro dia com a Alessandra"),True),
+    ("dia1_kat_perfeito", _("Encontro com sorvete"), _("Consiga pontuação máxima no primeiro dia com a Katarina"),True),
+    ("O_culto", _("Intorelância religiosa"), _("Acabe com os planos da igreja")),
+    ("RDJ", _("Um ator famoso"), _("Consiga o apoio do RDJ")),
+    ("dia2_ale_perfeito", _("Dia de culto"), _("Consiga pontuação máxima no segundo dia com a Alessandra"),True),
+    ("dia2_kat_perfeito", _("Uma excelente visita ao banco"), _("Consiga pontuação máxima no segundo dia com a Katarina"),True),
+    ("atentado", _("Atraindo atenção de mais"), _("Ajude a Alessandra a escapar com vida do atentado")),
+    ("churrasco", _("O melhor churrasco"), _("Consiga um bom churrasco")),
+    ("dia3_ale_perfeito", _("Exposição "), _("Consiga pontuação máxima no terceiro dia com a Alessandra"),True),
+    ("dia3_kat_perfeito", _("Caçando o próprio alimento"), _("Consiga pontuação máxima no terceiro dia com a Katarina"),True),
     ("completionist", _("Completionist"), _("Read all of the game"), True),
     )
 

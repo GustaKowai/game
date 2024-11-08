@@ -44,6 +44,8 @@ default adm = False
 default revista = False
 default sucessoMissao2Kat = True
 
+#dia3 Katarina:
+
 #dia2 Alessandra:
 default telefonema = False
 default katana = False
@@ -57,6 +59,7 @@ default carrosJuntos = False
 default roubarCarro = False
 default jogador1Ale3 = False
 default jogador2Ale3 = False
+default ajudou = False
 
 ## Variáveis dos dias ##
 default aleDay1 = True

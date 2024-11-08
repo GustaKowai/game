@@ -330,8 +330,6 @@ screen extras_navigation():
 
         textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
 
-        textbutton _("Sobre") action ShowMenu("about")
-
         if persistent.game_clear:
 
             textbutton _("Notas dos devs") action ShowMenu("dev_notes") alt "Developer Notes"

@@ -365,6 +365,7 @@ label a2m12:
     show alessandra feliz with dissolve
     a "Mas acho que na real ele vai ficar feliz com isso, bora contar para ele"
     n "*Vocês voltam para a base*"
+    achieve O_culto
     jump finalale1
 
 label a2b9:
@@ -581,6 +582,7 @@ label a2m13:
     a "Provavelmente aquela frase confusa do caralho deu um pane no sistema deles"
     a "Vamos dar o fora daqui!"
     n "Vocês voltam para a base"
+    achieve O_culto
     jump finalale1
 
 label a2b18:
@@ -708,6 +710,7 @@ label a2m15:
     play music "audio/igreja.wav" volume 1.0 
     show bg igreja
     n "Vocês dois saem da igreja, montam na moto, e partem para a base"
+    achieve O_culto
     if jogador1:
         $ jogador1Ale2 = True
     else:       
