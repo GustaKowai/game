@@ -416,7 +416,7 @@ label k3a9:
   k "E viveria ele mais uma vez"
   show katarina smirk
   n  "Ela dá um sorriso, e parte para o escritório"
-  jump finalkat2
+  jump finalkat3
 
 label k3b9:
   k "É, acho que é o que a maioria das pessoas deve responder."
@@ -426,7 +426,7 @@ label k3b9:
   k "Mas com certeza seria para o passado que eu voltaria, de qualquer forma, eram tempos mais felizes"
   show katarina smirk
   n "Ela dá um sorriso, e parte para o escritório"
-  jump finalkat2
+  jump finalkat3
 
 label k3c9:
   k "Interessante, eu acho que nunca cogitei isso"
@@ -438,13 +438,13 @@ label k3c9:
   k "Eram tempos mais simples."
   show katarina smirk
   n "Ela dá um sorriso, e parte para o escritório"
-  jump finalkat2
+  jump finalkat3
 
-label finalkat2:  
+label finalkat3:  
   if jogador1:
-      $ jogador1Kat1 = True
+      $ jogador1Kat3 = True
   else:       
-      $ jogador2Kat1 = True
+      $ jogador2Kat3 = True
   jump finalkat1
   
 

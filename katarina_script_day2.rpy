@@ -1046,7 +1046,7 @@ label k2m14:
     jump finalkat2
 
 
-label finalkat2
+label finalkat2:    
     if jogador1:
         $ jogador1Kat2 = True
     else:       

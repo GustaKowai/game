@@ -723,7 +723,7 @@ label a2m15:
     jump finalale2
 
 
-label finalale2
+label finalale2:
     if jogador1:
         $ jogador1Ale2 = True
     else:       

@@ -34,7 +34,7 @@ label whereToGo:
         "Para o Ateliê da Alessandra" if aleDay3:
             jump d3ale1
     
-    # jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
+    jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
     jump changeDay                                    
 ####################################################################################################################### 
 ###################################-----------Troca de Dia-----------##################################################
@@ -66,7 +66,7 @@ label changeDay:
     #"katDay1[katDay1], katDay2[katDay2], katDay3[katDay3]"
     #"aleDay1[aleDay1], aleDay2[aleDay2], aleDay3[aleDay3]"
     #if day3:
-    jump demoFinal
+    #jump demoFinal
     jump whereToGo
 ####################################################################################################################### 
 ###################################----------Final da Demo-----------##################################################

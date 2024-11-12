@@ -24,10 +24,10 @@ screen energy_screen(message, jogador, okay=Return(True), cancel=Return(False)):
     if jogador1:
         vbox:
             style "char_name1_style"
-            xpos 1000
-            text "{color=#1338BE}Energy: [message]{/color}"
+            xpos 1500
+            text "{color=#1338BE}Energia: [message]{/color}"
     else:
         vbox:
             style "char_name2_style"
-            xpos 1000
-            text "{color=#f56300}Energy: [message]{/color}"
+            xpos 1500
+            text "{color=#f56300}Energia: [message]{/color}"

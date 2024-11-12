@@ -26,6 +26,7 @@ default usandoeVestido = False
 default jogador1Ale1 = False
 default jogador2Ale1 = False
 default sucessoMissao1Ale = False
+default vestidorosa = False
 #dia1 Katarina:
 default escopeta = False
 default rifle = False
@@ -77,8 +78,8 @@ default churrasco = False
 ## Variáveis dos dias ##
 default aleDay1 = True
 default katDay1 = True
-default aleDay1inv = True
-default katDay1inv = True
+default aleDayinv = True
+default katDayinv = True
 default aleDay2 = False
 default katDay2 = False
 default day1 = True
@@ -101,3 +102,6 @@ default acaojogo = "atirar"
 
 ##contador de sucessos:
 default sucesso = 0
+
+##bar:
+default trocaJogadorBar = False

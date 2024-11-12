@@ -16,7 +16,7 @@ init python:
             renpy.pause(0.2)
             renpy.hide("menos")
         return pontos
-
+    
 #Esse transform vai ficar aqui junto pois ele só é usado aqui.
 transform top_right:
     xalign 0.95

@@ -71,6 +71,10 @@ label desenvolvedoresChooseDay:
             jump d3ale1
         "Final da demo":
             jump demoFinal
+        "Investigação noturna":
+            jump investigacao
+        "Bar do zé":
+            jump barDoZe
         "Quero mudar mais variáveis":
             jump desenvolvedoresChooseThings
         "Quero mudar o player ativo":
