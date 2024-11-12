@@ -22,7 +22,6 @@ default xadrez = True
 default vestidotiedye = True
 default tofu = False
 default lenco = False
-default sucessoMissao1Ale = True
 default jogador1Ale1 = False
 default jogador2Ale1 = False
 default usandoeVestido = False
@@ -37,7 +36,9 @@ default garrafa = False
 default pinga = False
 default cabeca = False
 default papel = False
-default sucessoMissao1Kat = True
+default rato = False
+default queijo = False
+default sucessoMissao1Kat = False
 
 #dia2 Katarina:
 default adm = False
@@ -46,6 +47,9 @@ default sucessoMissao2Kat = True
 
 #dia3 Katarina:
 
+#dia 1 Alessandra:
+default sucessoMissao1Ale = False
+
 #dia2 Alessandra:
 default telefonema = False
 default katana = False
@@ -53,6 +57,7 @@ default catnip = False
 default mensagem = False
 default jogador1Ale2 = False
 default jogador2Ale2 = False
+default sucessoMissao2Ale = False
 #dia3 Alessandra:
 default carrosSeparados = False
 default carrosJuntos = False
@@ -85,3 +90,6 @@ default persistent.watch_Intro = False
 default persistent.credits_seen = False
 
 default acaojogo = "atirar"
+
+##contador de sucessos:
+default sucesso = 0

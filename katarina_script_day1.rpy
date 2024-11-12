@@ -574,7 +574,8 @@ label k1m5:
     show bg deserto
     with gatodissolve
     show katarina default with dissolve
-    k  "Olha, é o seguinte, eu sei que eu sou uma das financiadoras disso daqui, e que você provavelmente questiona muito as minhas decisões e não confia em mim, mas eu peço, deixa que eu lido com isso daqui, só siga o meu plano."
+    k  "Olha, é o seguinte, eu sei que eu sou uma das financiadoras disso daqui, e que você provavelmente questiona muito as minhas decisões e não confia em mim"
+    k "mas eu peço, deixa que eu lido com isso daqui, só siga o meu plano."
     n "Ela abre a mochila, e te dá uma garrafa de ketchup."
     show katarina smirk with dissolve
     k "Você sabe o que fazer."
@@ -692,6 +693,7 @@ label k1m6:
         k "Acabei de contatar uma equipe para lidar com esse caminhão explodido na estrada."
         k "Vamos voltar para a base, precisamos urgentemente mostrar isso ao gatovaldo."
         n "Vocês voltam até o carro, o ratinho parece ansioso, ele começa a correr pela roda giratória da gaiola."
+        $ rato = True
         show katarina feliz with dissolve
         k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
     
@@ -744,6 +746,37 @@ label k1a19:
     n "Você nunca mais irá tomar uma mini pinga"
     k "Irei lá conferir."
     n "Katarina abre a porta do caminhão, um ratinho sai correndo."
+    menu:
+        "Pegar o ratinho":
+            $ rato = True
+            k "Opa, parece que você pegou nosso amiguinho."
+            n "Katarina tira uma gaiola de hamster da mochila, e coloca o rato dentro dela."
+            k "Precisamos levar isso para o gatovaldo."
+            k "Espero que ele não esteja com fome..."
+            n "O rato começa a emitir guinchos agudos e a correr de um lado para o outro dentro da gaiola."
+            show katarina surpresa with dissolve
+            k "Ei! Calma aí! Eu estava brincando..."
+            n "Ele parece se acalmar, e dá um suspiro aliviado."
+            show katarina confusa with dissolve
+            k "Espera, você consegue me ouvir?"
+            n "Ele faz 'sim' com a cabeça."
+            show katarina surpresa with dissolve
+            k "Caramba!"
+            show katarina smirk with dissolve
+            k "Obrigado por se entregar ratinho, pode ter certeza que você vai passar por um questionamento"
+            n "O rato parece triste."
+            k "Faz uma pergunta para ele aí!"
+            menu:
+                "Qual é o seu nome?":
+                    n "O rato fica te encarando por um tempo."
+                    n "Ele faz sim com a cabeça"
+                "Você era pet do motorista?":
+                    n "O rato faz não com a cabeça."
+                    n "Ele olha para o corpo destruido, e parece triste com isso."
+                    n "Você não entende exatamente o porquê."
+
+        "Ir ver o caminhão com a Katarina":
+            k "Olha a bagunça que está isso aqui!"
     show katarina default with dissolve
     k "Que porco!"
     n "Ela começa a investigar."
@@ -775,6 +808,7 @@ label k1a19:
     k "A-ha! Aqui está!"
     n "Ela tira de dentro de um pote de sorvete um saquinho com um pequeno pedaço de queijo dentro."
     k "Esse queijo é faraônico."
+    $ queijo = True
     menu:
         "Parece perigoso.":
             show katarina irritada with dissolve
@@ -893,6 +927,37 @@ label k1b15:
                 show katarina surpresa with dissolve
                 k "Acho que ele vai precisar de uma ambulância..."
                 show katarina confusa with dissolve
+                menu:
+                    "Pegar o ratinho":
+                        $ rato = True
+                        k "Opa, parece que você pegou nosso amiguinho."
+                        n "Katarina tira uma gaiola de hamster da mochila, e coloca o rato dentro dela."
+                        k "Precisamos levar isso para o gatovaldo."
+                        k "Espero que ele não esteja com fome..."
+                        n "O rato começa a emitir guinchos agudos e a correr de um lado para o outro dentro da gaiola."
+                        show katarina surpresa with dissolve
+                        k "Ei! Calma aí! Eu estava brincando..."
+                        n "Ele parece se acalmar, e dá um suspiro aliviado."
+                        show katarina confusa with dissolve
+                        k "Espera, você consegue me ouvir?"
+                        n "Ele faz 'sim' com a cabeça."
+                        show katarina surpresa with dissolve
+                        k "Caramba!"
+                        show katarina smirk with dissolve
+                        k "Obrigado por se entregar ratinho, pode ter certeza que você vai passar por um questionamento"
+                        n "O rato parece triste."
+                        k "Faz uma pergunta para ele aí!"
+                        menu:
+                            "Qual é o seu nome?":
+                                n "O rato fica te encarando por um tempo."
+                                n "Ele faz sim com a cabeça"
+                            "Você era pet do motorista?":
+                                n "O rato faz não com a cabeça."
+                                n "Ele olha para o corpo destruido, e parece triste com isso."
+                                n "Você não entende exatamente o porquê."
+
+                    "Investigar o robô com a Katarina":
+                        k "Isso aqui está com um cheiro familiar..."
                 k "Espera aí..."
                 n "Ela coloca o dedo em uma poça daquele líquido e o experimenta."
                 show katarina smirk with dissolve
@@ -906,22 +971,22 @@ label k1b15:
                     "Ele pode só ter tomado muito leite no café da manhã...":
                         show katarina smirk with dissolve
                         k "Sim, e comeu um rato vivo pelo jeito também..."
-                        show katarina surpresa with dissolve
-                        k "Espera! Claro, ele se empolgou com o fato de que o salgadinho era de queijo..."
-                        k "Por que ele era o rato!"
-                        n "Katarina puxa o cabelo do corpo do vovô que está no chão."
-                        show katarina brava with dissolve
-                        k "Argh! É muito pesado!"
-                        n "Ela o solta, ele faz um som metálico ao cair no chão."
-                        show katarina smirk with dissolve
-                        k "Era um robô..."
-                        show katarina default with dissolve
-                        k "Certo, Gatovaldo vai gostar de saber disso."
-                        k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
-                        k "Agora a gente precisa dar o fora daqui."
-                        show katarina feliz with dissolve
-                        k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
-                        jump k1m8
+                show katarina surpresa with dissolve
+                k "Espera! Claro, ele se empolgou com o fato de que o salgadinho era de queijo..."
+                k "Por que ele era o rato!"
+                n "Katarina puxa o cabelo do corpo do vovô que está no chão."
+                show katarina brava with dissolve
+                k "Argh! É muito pesado!"
+                n "Ela o solta, ele faz um som metálico ao cair no chão."
+                show katarina smirk with dissolve
+                k "Era um robô..."
+                show katarina default with dissolve
+                k "Certo, Gatovaldo vai gostar de saber disso."
+                k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
+                k "Agora a gente precisa dar o fora daqui."
+                show katarina feliz with dissolve
+                k "Mas, já que ninguém está vendo, vai até o baú e pega uns sorvetes pra gente"
+                jump k1m11
             "Está vencido...":
                 vo "Ah... q-que pena..."
                 n "Katarina volta a procurar por dinheiro na mochila"
@@ -937,6 +1002,36 @@ label k1b15:
         show katarina confusa with dissolve
         k "Espera..."
         n "Um rato sai correndo de dentro da boca do idoso para o deserto."
+        menu:
+            "Pegar o ratinho":
+                $ rato = True
+                k "Opa, parece que você pegou nosso amiguinho."
+                n "Katarina tira uma gaiola de hamster da mochila, e coloca o rato dentro dela."
+                k "Precisamos levar isso para o gatovaldo."
+                k "Espero que ele não esteja com fome..."
+                n "O rato começa a emitir guinchos agudos e a correr de um lado para o outro dentro da gaiola."
+                show katarina surpresa with dissolve
+                k "Ei! Calma aí! Eu estava brincando..."
+                n "Ele parece se acalmar, e dá um suspiro aliviado."
+                show katarina confusa with dissolve
+                k "Espera, você consegue me ouvir?"
+                n "Ele faz 'sim' com a cabeça."
+                show katarina surpresa with dissolve
+                k "Caramba!"
+                show katarina smirk with dissolve
+                k "Obrigado por se entregar ratinho, pode ter certeza que você vai passar por um questionamento"
+                n "O rato parece triste."
+                k "Faz uma pergunta para ele aí!"
+                menu:
+                    "Qual é o seu nome?":
+                        n "O rato fica te encarando por um tempo."
+                        n "Ele faz sim com a cabeça"
+                    "Você era pet do motorista?":
+                        n "O rato faz não com a cabeça."
+                        n "Ele olha para o corpo decaptado, e parece triste com isso."
+                        n "Você não entende exatamente o porquê."
+            "Investigar o corpo com a Katarina":
+                k "Estranho, eu achei que jorraria muito sangue ao cortar uma cabeça assim."
         n "Vocês percebem que não há uma gota de sangue."
         k "Ele não era um vovozinho..."
         show katarina smirk with dissolve
@@ -955,19 +1050,20 @@ label k1b15:
             "Já sabe quais jóias vão substituir os olhos?":
                 show katarina confusa with dissolve
                 k "Jóias?"
-                show katarina default with dissolve
+                show katarina smirk with dissolve
                 k "Ah! Como os animais no meu escritório? Não! Essa vai para a minha parede de cabeças humanas!"
                 k "..."
                 n "..."
-                show katarina smirk with dissolve
+                show katarina default with dissolve
                 k "Brincadeira! Provavelmente esmeraldas."
+                $ muda_afeto(1)
         show katarina default with dissolve
         k "Certo, Gatovaldo vai gostar de saber disso."
         k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
         k "Agora a gente precisa dar o fora daqui."
         show katarina feliz with dissolve
-        k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
-        jump k1m8
+        k "Mas, já que ninguém está vendo,  vai até o baú e pega uns sorvetes pra gente"
+        jump k1m11
     n "Ela tira um maço de dinheiro da mochila."
     show katarina feliz with dissolve
     k "Me vê três picolés!"
@@ -1092,6 +1188,7 @@ label k1b18:
     menu:
         "Tem um queijo escondido no sorvete de queijo!":
             show katarina smirk with dissolve
+            $ queijo = True
             k "Aha! Sabia! Se explica agora, velhote."
             jump k1m9
 
@@ -1105,7 +1202,37 @@ label k1m9:
     n "O vovô cai, fazendo um grande barulho metálico com o impacto."
     hide vovo with moveoutbottom
     n "Um ratinho sai de sua boca e corre para o deserto."
-    k "..."
+    menu:
+        "Correr atrás do rato":
+            n "Você pega o rato"
+            $ rato = True
+            k "Opa, parece que você pegou nosso amiguinho."
+            n "Katarina tira uma gaiola de hamster da mochila, e coloca o rato dentro dela."
+            k "Precisamos levar isso para o gatovaldo."
+            k "Espero que ele não esteja com fome..."
+            n "O rato começa a emitir guinchos agudos e a correr de um lado para o outro dentro da gaiola."
+            show katarina surpresa with dissolve
+            k "Ei! Calma aí! Eu estava brincando..."
+            n "Ele parece se acalmar, e dá um suspiro aliviado."
+            show katarina confusa with dissolve
+            k "Espera, você consegue me ouvir?"
+            n "Ele faz 'sim' com a cabeça."
+            show katarina surpresa with dissolve
+            k "Caramba!"
+            show katarina smirk with dissolve
+            k "Obrigado por se entregar ratinho, pode ter certeza que você vai passar por um questionamento"
+            n "O rato parece triste."
+            k "Faz uma pergunta para ele aí!"
+            menu:
+                "Qual é o seu nome?":
+                    n "O rato fica te encarando por um tempo."
+                    n "Ele faz sim com a cabeça"
+                "Você era pet do motorista?":
+                    n "O rato faz não com a cabeça."
+                    n "Ele olha para o corpo destruido, e parece triste com isso."
+                    n "Você não entende exatamente o porquê."
+        "Investigar o 'cadáver'":
+            n "O cadáver deixado para trás é um robô"
     show katarina confusa at center with move
     k "Isso realmente acabou de acontecer?" 
     show katarina default with dissolve
@@ -1113,22 +1240,68 @@ label k1m9:
     k "Vou ligar para uma outra equipe vir aqui lidar com esse caminhão."
     k "Agora a gente precisa dar o fora daqui."
     show katarina feliz with dissolve
-    k "Mas, já que ninguém está vendo, vamos pegar alguns picolés para o pessoal!"
-    jump k1m8
+    k "Mas, já que ninguém está vendo, vai até o baú e pega uns sorvetes pra gente"
+    jump k1m11
+
+
+label k1m11:
+    n "Você prossegue para investigar o baú"
+    n "É um baú refrigerado, há várias caixas de sorvete."
+    show katarina default with dissolve
+    k "Vê se acha um sorvete bom pra gente"
+    menu:
+        "Procurar no forro":
+            jump k1a21
+        "Procurar na seção de sorvetes de queijo":
+            jump k1b21
+label k1a21:
+    n "Você procura por algo escondido no forro do baú."
+    n "Você encontra uma submetralhadora, uma máscara de gás e duas granadas de fumaça"
+    menu:
+        "Tem uma submetralhadora, uma máscara de gás, duas granadas de fumaça e um CD do Raça Negra":
+            show katarina surpresa with dissolve 
+            k "Nenhum queijo?"
+            show katarina irritada with dissolve
+            k "Que droga."
+            show katarina brava with dissolve
+            k "Espera, por que caralhos ele tinha um CD do Raça Negra escondido?"
+            k "Ah, deixa para lá, só pega os sorvetes pra gente e vamos voltar"
+            jump k1m8
+
+label k1b21:
+    n "Você procura por algo na seção de sorvetes de queijo."
+    n "Você sabe que ninguém nunca chegaria perto daí."
+    n "Você abre um dos potes, parece normal a princípio."
+    n "Você enfia a mão dentro dele, e tira um saco plástico de dentro dele."
+    n "Nele, há um exemplar de um queijo babilônico extremamente raro."
+    menu:
+        "Tem um queijo escondido no sorvete de queijo!":
+            show katarina smirk with dissolve
+            k "Boa! Encontramos o queijo traficado!"
+            $ queijo = True
+            k "Agora pega uns sorvetes pra gente e vamos dar o fora daqui."
+            jump k1m8
+
+
+
 
 
 label k1m8:
     n "Vocês voltam até o carro, os picolés já estão quase derretidos, o calor está insuportável."
     show katarina feliz with dissolve
+    if queijo and rato:
+        achieve Rato_sorveteiro
+        $ sucessoMissao1Kat = True
+        $ sucesso += 1
     k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
+    if JogadorAtivo == 12:
+        achieve dia1_kat_perfeito
     
     show katarina smirk with dissolve
 
     extend " Quem sabe eu não te conto mais sobre o meu pai, {w}eu sei que está curioso."
     n "Você tenta dar uma resposta, mas ela imediatamente liga o som do carro em um volume estrondoso, e começa a acelerar.{p} Vocês partem."
 
-    if JogadorAtivo == 12:
-        achieve dia1_kat_perfeito
 
     jump finalkat1
 

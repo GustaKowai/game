@@ -366,6 +366,8 @@ label a2m12:
     a "Mas acho que na real ele vai ficar feliz com isso, bora contar para ele"
     n "*Vocês voltam para a base*"
     achieve O_culto
+    $ sucessoMissao2Ale = True
+    $ sucesso += 1
     jump finalale1
 
 label a2b9:
@@ -583,6 +585,8 @@ label a2m13:
     a "Vamos dar o fora daqui!"
     n "Vocês voltam para a base"
     achieve O_culto
+    $ sucessoMissao2Ale = True
+    $ sucesso += 1
     jump finalale1
 
 label a2b18:
@@ -631,6 +635,9 @@ label a2m14:
     a "Provavelmente aquela frase confusa do caralho deu um pane no sistema deles"
     a "Vamos dar o fora daqui!"
     n "Vocês voltam para a base"
+    achieve O_culto
+    $ sucessoMissao2Ale = True
+    $ sucesso += 1
     jump finalale1
 
 label a2c18:
@@ -711,6 +718,8 @@ label a2m15:
     show bg igreja
     n "Vocês dois saem da igreja, montam na moto, e partem para a base"
     achieve O_culto
+    $ sucessoMissao2Ale = True
+    $ sucesso += 1
     if jogador1:
         $ jogador1Ale2 = True
     else:       

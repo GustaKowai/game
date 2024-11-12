@@ -817,6 +817,7 @@ label a1a10:
 
     n "Eles realizam a troca"
     achieve Arma_tofu
+    $ sucesso += 1
 
     traf "Magnífico! Bom, tchauzinho!"
 
@@ -994,6 +995,7 @@ label a1b10:
 
         n "O traficante troca a arma pelo diamante de Alessandra"
         achieve Arma_tofu
+        $ sucesso += 1
 
 
         traf "Esplêndido!{p} Foi um prazer realizar negócios com vocês. Agora, bye bye!"
@@ -1156,6 +1158,7 @@ label a1c10:
 
     n "Ele entrega a arma tofuzadora pra ela."
     achieve Arma_tofu
+    $ sucesso += 1
 
     show alessandra default with dissolve
 
@@ -1297,6 +1300,7 @@ label a1d10:
 
     n "Ele passa a arma por debaixo da mesa."
     achieve Arma_tofu
+    $ sucesso += 1
     show alessandra brava with dissolve
 
     a "Acho bom!"
