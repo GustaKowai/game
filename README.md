@@ -151,6 +151,15 @@ Objetivos concluidos na semana de 15/10-22/10:
 
 - Dia 3 da Alessandra implementado
 
+Objetivos concluidos em novembro:
+
+- Alteradas as formas de sucesso do dia 1
+- Música da porradaria na igreja adicionada
+- Arrumados os achievements
+- Arrumadas as músicas da sala de música
+- Arrumadas as sprites da sala de sprites
+- Arrumadas as CGs da sala de CGs
+
 Objetivos em andamento:
 
 - Arte:

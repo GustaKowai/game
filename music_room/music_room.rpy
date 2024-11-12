@@ -119,6 +119,13 @@ init python:
     )
 
     music_room.add(
+        name=_("Tema porrada da igreja"),
+        artist="",
+        path="audio/igrejaporrada.mp3",
+        #unlock_condition="True",
+    )
+
+    music_room.add(
         name=_("Tema beco"),
         artist="",
         path="audio/beco.wav",

@@ -300,6 +300,7 @@ init python:
     mr.add("audio/deserto.mp3")
     mr.add("audio/restaurante.wav")
     mr.add("audio/church.mp3")
+    mr.add("audio/igrejaporrada.mp3")
     mr.add("audio/beco.wav")
     mr.add("audio/cidade.wav")
     mr.add("audio/floresta.mp3")
@@ -326,9 +327,9 @@ screen extras_navigation():
 
         #textbutton _("Sala de musica") action ShowMenu("music_gallery") alt "Music Room"
 
-        textbutton _("Sala de musica extra") action ShowMenu("music_room3", mr=music_room) alt "Music Room"
+        textbutton _("Sala de musica") action ShowMenu("music_room3", mr=music_room) alt "Music Room"
 
-        textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
+        #textbutton _("Sala de replay") action ShowMenu("replay_gallery") alt "Replay Room"
 
         if persistent.game_clear:
 
@@ -430,9 +431,9 @@ screen sprite_gallery():
             #add g_sprite.make_button("gatovaldo serio", "gserio_button")
             #add g_sprite.make_button("gatovaldo withale", "gwithale_button")
             #add g_sprite.make_button("gatovaldo withkat", "gwithkat_button")
-            add g_sprite.make_button("eileen surprised", "esurprised_button")
-            add g_sprite.make_button("eileen upset", "eupset_button")
-            add g_sprite.make_button("eileen angry", "eangry_button")
+            #add g_sprite.make_button("eileen surprised", "esurprised_button")
+            #add g_sprite.make_button("eileen upset", "eupset_button")
+            #add g_sprite.make_button("eileen angry", "eangry_button")
 
 ## Background Gallery screen ############################################################
 ##
@@ -456,8 +457,8 @@ screen bg_gallery():
 
             add g_bg.make_button("splash", "splash_button", xalign=0.5, yalign=0.5)
             add g_bg.make_button("cgAle1", "cgAle1_button", xalign=0.5, yalign=0.5)
-            add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
-            add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
+            #add g_bg.make_button("office", "office_button", xalign=0.5, yalign=0.5)
+            #add g_bg.make_button("beach", "beach_button", xalign=0.5, yalign=0.5)
 
 ## Music Gallery screen ############################################################
 ##
@@ -482,6 +483,7 @@ screen music_gallery():
             textbutton "Tema do deserto" action mr.Play("audio/deserto.mp3")
             textbutton "Tema do restaurante" action mr.Play("audio/restaurante.wav")
             textbutton "Tema da igreja" action mr.Play("audio/church.mp3")
+            textbutton "Tema porradaria da igreja" action mr.Play("audio/igrejaporrada.mp3")
             textbutton "Tema do beco" action mr.Play("audio/beco.wav")
             textbutton "Tema da cidade" action mr.Play("audio/cidade.wav")
             textbutton "Tema da floresta" action mr.Play("audio/floresta.mp3")
