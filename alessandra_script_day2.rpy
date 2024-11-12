@@ -323,7 +323,7 @@ label a2a13:
     show alessandra default with dissolve
     a "Mas tudo bem, temos algo a contar para o Gatovaldo."
     n "Vocês voltam para a base."
-    jump finalale1
+    jump finalale2
 
 label a2b13:
     n "Alessandra acelera em direção à rampa"
@@ -341,7 +341,7 @@ label a2b13:
     n "Você olha para trás, a igreja está parada olhando para vocês de boca aberta, foi de fato impressionante"
     a "Ok, acho que eles pararam, bora voltar para a base, o Gatovaldo vai amar ouvir isso."
     n "Vocês voltam para a base"
-    jump finalale1
+    jump finalale2
 label a2c13:
     n "Alessandra vira para a esquerda"
     show alessandra smirk with dissolve
@@ -368,7 +368,7 @@ label a2m12:
     achieve O_culto
     $ sucessoMissao2Ale = True
     $ sucesso += 1
-    jump finalale1
+    jump finalale2
 
 label a2b9:
     padre "CORRETO!"
@@ -509,7 +509,7 @@ label a2a17:
     show alessandra feliz with dissolve
     a "Essa notícia será bombástica! Bora voltar!"
     n "Vocês voltam para a base"
-    jump finalale1
+    jump finalale2
 
 label a2b17:
     n "Você emite sons de gato bravo"
@@ -523,7 +523,7 @@ label a2b17:
     show alessandra feliz with dissolve
     a "Essa notícia será bombástica! Bora voltar!"
     n "Vocês voltam para a base"
-    jump finalale1
+    jump finalale2
 
 label a2a11:
     n "Você profere tais palavras incompreensiveis"
@@ -587,7 +587,7 @@ label a2m13:
     achieve O_culto
     $ sucessoMissao2Ale = True
     $ sucesso += 1
-    jump finalale1
+    jump finalale2
 
 label a2b18:
     n "Vocês correm até a porta dos fundos"
@@ -638,7 +638,7 @@ label a2m14:
     achieve O_culto
     $ sucessoMissao2Ale = True
     $ sucesso += 1
-    jump finalale1
+    jump finalale2
 
 label a2c18:
     show alessandra brava with dissolve
@@ -720,6 +720,10 @@ label a2m15:
     achieve O_culto
     $ sucessoMissao2Ale = True
     $ sucesso += 1
+    jump finalale2
+
+
+label finalale2
     if jogador1:
         $ jogador1Ale2 = True
     else:       

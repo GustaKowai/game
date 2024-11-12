@@ -705,6 +705,11 @@ label k1m6:
         if JogadorAtivo == 12:
             achieve dia1_ale_perfeito
 
+        if jogador1:
+            $ jogador1Kat1 = True
+        else:       
+            $ jogador2Kat1 = True
+
         jump finalkat1
     n "Ele para."
     n "Um senhorzinho muito fofo sai da cabine."
@@ -1296,6 +1301,10 @@ label k1m8:
     k "Hey, acho que a gente precisa se conhecer mais, você deve ter percebido que isso é importante para mim.{w} Tenho um problema em conviver com estranhos."
     if JogadorAtivo == 12:
         achieve dia1_kat_perfeito
+        if jogador1:
+            $ jogador1Kat1 = True
+        else:       
+            $ jogador2Kat1 = True
     
     show katarina smirk with dissolve
 

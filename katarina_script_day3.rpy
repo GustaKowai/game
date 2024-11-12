@@ -232,6 +232,7 @@ label k3a8acertou:
   n "Vocês vão até o corpo"
   k @surpresa "O pobrezinho nem sentiu, extremamente preciso, meus parabéns."
   k @default "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  achieve churrasco
   jump k3m6
 
 
@@ -277,6 +278,7 @@ label k3b8acertou:
   n "Você pega o seu"
   k @feliz "Foi um bom tiro, 4 coelhos deve ser suficiente."
   k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  achieve churrasco
   jump k3m6
 
 label k3b8errou:
@@ -330,7 +332,9 @@ label k3c8acertou2:
   k @triste "Pobrezinho, a gente acabou com ele"
   k "Olhando pelo lado bom, garantimos mais uns 4 churrascos!"
   n "Katarina finaliza ele, ela é bastante cuidadosa"
+  $ churrasco = True
   k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
+  achieve churrasco
   jump k3m6
 
 label k3c8errou:
@@ -383,8 +387,10 @@ label k3d8pontos:
     k @smirk "Nada mal!"
   if fable_minigame_score == 3:
     k @smirk "Você tem jeito nisso."
+    achieve churrasco
   if fable_minigame_score == 4:
     k @feliz "Uau! Mandamos bem!"
+    achieve churrasco
   k "Agora vamos levar isso aqui para a Cláudia, ela já deve ter assado uns 50 pães de alho."
   jump k3m6
 
@@ -410,7 +416,7 @@ label k3a9:
   k "E viveria ele mais uma vez"
   show katarina smirk
   n  "Ela dá um sorriso, e parte para o escritório"
-  jump finalkat1
+  jump finalkat2
 
 label k3b9:
   k "É, acho que é o que a maioria das pessoas deve responder."
@@ -420,7 +426,7 @@ label k3b9:
   k "Mas com certeza seria para o passado que eu voltaria, de qualquer forma, eram tempos mais felizes"
   show katarina smirk
   n "Ela dá um sorriso, e parte para o escritório"
-  jump finalkat1
+  jump finalkat2
 
 label k3c9:
   k "Interessante, eu acho que nunca cogitei isso"
@@ -432,6 +438,13 @@ label k3c9:
   k "Eram tempos mais simples."
   show katarina smirk
   n "Ela dá um sorriso, e parte para o escritório"
+  jump finalkat2
+
+label finalkat2:  
+  if jogador1:
+      $ jogador1Kat1 = True
+  else:       
+      $ jogador2Kat1 = True
   jump finalkat1
   
 

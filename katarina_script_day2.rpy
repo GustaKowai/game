@@ -367,7 +367,8 @@ label km18:
             k "..."
             k "Eu te compro um novo."
             k "Vamos embora daqui..."
-            jump finalkat1
+            $ sucessoMissao2Kat = False
+            jump finalkat2
         "Concordar com Katarina.":
             n "Você diz: 'Sim, Katarina, de fato somos pessoas extremamente divertidas!' de uma maneira que beira o robótico."
             n "Os dois te olham com uma cara esquisita."
@@ -390,7 +391,7 @@ label km18:
                     k "Vamos embora daqui..."
                     n "Vocês vão até o carro e partem para a base."
                     $ sucessoMissao2Kat = False
-                    jump finalkat1
+                    jump finalkat2
                     
                 "Se provar um verdadeiro fã." if adm:
                     n "Você se revela como admnistrador do perfil 'Mundinho RDJ' no Twitter."
@@ -400,7 +401,8 @@ label km18:
                     k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
                     n "Vocês vão até o carro e partem para a base."
                     achieve RDJ
-                    jump finalkat1
+                    $ sucesso += 1
+                    jump finalkat2
                 "Pedir autógrafo" if revista:
                     n "Você tira uma revista do bolso, que você pegou de dentro da gaveta, e pede por um autógrafo."
                     n "Robert parece confiar mais em vocês."
@@ -409,7 +411,8 @@ label km18:
                     k "Nossa, que fácil, beleza, vamos para a base fazer sua ficha então!"
                     n "Vocês vão até o carro e partem para a base."
                     achieve RDJ
-                    jump finalkat1
+                    $ sucesso += 1
+                    jump finalkat2
 
 
                 
@@ -428,7 +431,8 @@ label km18:
             k "Tá bom então sr. Duolingo, primeiro gatovaldo, depois meu escritório!"
             n "Vocês três partem para a base."
             achieve RDJ
-            jump finalkat1
+            $ sucesso += 1
+            jump finalkat2
 
     
 
@@ -583,7 +587,8 @@ label rdjfloresfinal:
     n "Os dois caminham para fora do banco, entram no carro e vão embora."
     n "Resta a você pedir um uber e voltar para a base."
     achieve RDJ
-    jump finalkat1
+    $ sucesso += 1
+    jump finalkat2
 
 
 
@@ -662,7 +667,8 @@ label k2b16:
                     k "Fechou, sr. Duolingo, vamos ir conhecer o gato."
                     n "Vocês vão embora juntos."
                     achieve RDJ
-                    jump finalkat1
+                    $ sucesso += 1
+                    jump finalkat2
             
 
         "Vamos aguardar.":
@@ -716,7 +722,8 @@ label k2m19:
             k "..."
             k "Eles vão ficar bem!"
             n "Katarina acelera, e vocês voltam para a base."
-            jump finalkat1
+            $ sucessoMissao2Kat = False
+            jump finalkat2
 
 
         "Vamos esperar para ver o que acontece!":
@@ -733,7 +740,8 @@ label k2m19:
             n "Vocês alcançam a saída, entram no carro e começam a ir embora."
             k "..."
             k "Pelo menos temos história para contar!"
-            jump finalkat1
+            $ sucessoMissao2Kat = False            
+            jump finalkat2
 
 label k2m18:
     n "Katarina tira um taser da mochila e eletrocuta Robert."
@@ -963,7 +971,8 @@ label k2m11:
     k "Que seja."
     n "Vocês voltam para a base"
     achieve RDJ
-    jump finalkat1
+    $ sucesso += 1
+    jump finalkat2
 
 label k2b10:
     k "É... Na verdade a gente já está de saída mesmo..."
@@ -1034,6 +1043,12 @@ label k2b15:
 label k2m14:
     k "Bem, acho que podemos ir."
     n "Vocês retornam para a base"
+    jump finalkat2
+
+
+label finalkat2
+    if jogador1:
+        $ jogador1Kat2 = True
+    else:       
+        $ jogador2Kat2 = True
     jump finalkat1
-
-
