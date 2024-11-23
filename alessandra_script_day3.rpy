@@ -46,6 +46,10 @@ label d3ale1:
     n "Alessandra assovia"
     n "Uma lamborghini vira a esquina cantando pneu"
     a "Quero passar uma boa impressão! Meu amigo vai dirigindo"
+    if medidasAlteradas:
+        a "Só espero que ele não se atrase novamente."
+        a "Da última vez deu uma desculpa falando que eu estava no lugar errado..."
+        a "Que absurdo, aposto que ficou horas arrumando o cabelo dele."
     menu:
         "Como você conseguiu uma fucking lamborghini?":
             a @smirk "É dele! Mas pode ser minha, a gente fez uma aposta, você vai descobrir no momento certo."

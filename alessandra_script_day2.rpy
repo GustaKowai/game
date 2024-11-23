@@ -175,7 +175,7 @@ label a2b5:
     a "Sim"
     n "Ela pega um capacete e coloca na cabeça"
     show alessandra capacete with dissolve
-    n "Aparentemente só ela tem um capacete"
+    a "Desculpe, tenho apenas um capacete. Mas não se preocupe, eu irei com calma, sou uma ótima motorista."
     jump a2m5
 label a2m5:
     n "Vocês montam na moto"

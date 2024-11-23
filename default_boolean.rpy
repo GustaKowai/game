@@ -18,16 +18,18 @@ default mercenariosShotgun = False
 
 #Variáveis da investigação:
 #dia 1 Alessandra:
-default xadrez = True
 default vestidotiedye = True
 default tofu = False
 default lenco = False
-default usandoeVestido = False
+default usandoVestido = False
 default jogador1Ale1 = False
 default jogador2Ale1 = False
 default sucessoMissao1Ale = False
 default vestidorosa = False
+default papelAmassado = False
+default medidasAlteradas = False
 #dia1 Katarina:
+default xadrez = True
 default escopeta = False
 default rifle = False
 default xmortadela = False
@@ -43,6 +45,7 @@ default queijo = False
 default jogador1Kat1 = False
 default jogador2Kat1 = False
 default sucessoMissao1Kat = False
+default cartaLida = False
 
 #dia2 Katarina:
 default adm = False
@@ -105,3 +108,7 @@ default sucesso = 0
 
 ##bar:
 default trocaJogadorBar = False
+default vodkanobar = False
+default salgadinhonobar = False
+default minipingabar = False
+default chavegotica = False

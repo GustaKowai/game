@@ -5,11 +5,29 @@ label lugar1k:
         "Pegar uma folha":
             n "Você pega uma folha da planta carnivora"
             n "Ela tenta te morder, parece que ela não ficou feliz com isso"
-            $ adicionarItem("plantaCarnivora")
+            $ adicionarItem("planta Carnivora")
+            n "Dentro da boca dela parece ter algo"
+            menu:
+                "Tentar pegar":
+                    n "Você pega rapidamente um papel dentro da boca da planta carnívora"
+                    n "No papel tem um texto"
+                    n "k4t4r1n4"
+                    n "Você sente que isso pode ser importante"
+                "Deixar ela em paz":
+                    n "Você acha melhor não mexer mais com a planta"
         "Cutucar a planta":
             n "Você cutuca a planta carnívora"
             n "Ela morde seu dedo"
             n "Você não esperava ser mordido por uma planta"
+            n "Dentro da boca dela parece ter algo"
+            menu:
+                "Tentar pegar":
+                    n "Você pega rapidamente um papel dentro da boca da planta carnívora"
+                    n "No papel tem um texto"
+                    n "k4t4r1n4"
+                    n "Você sente que isso pode ser importante"
+                "Deixar ela em paz":
+                    n "Você acha melhor não mexer mais com a planta"
         "Deixar de lado":
             n "Você sai de perto da planta carnívora"
     jump d1kat1inv
@@ -23,7 +41,7 @@ label lugar2k:
             n "Você se sente sendo julgado pela planta carnivora do outro lado da sala"
         "Pegar uma":
             n "Você pega uma das mini garragas de pinga e depois coloca o tabuleiro de xadrez de volta no lugar dele"
-            $ adicionarItem("miniPinga")
+            $ adicionarItem("mini Pinga")
         "Deixar de lado":
             n "Você guarda a mini pinga de volta e coloca o tabuleiro no lugar"
     n "agora o jogador azul tem [inventarioAzul] e o jogador laranja tem [inventarioLaranja]"
@@ -41,7 +59,7 @@ label lugar3k:
                 "Deixar ele no mesmo lugar":
                     n "Você devolve ele para o lugar dele"
                 "Levar ele com você":
-                    $ adicionarItem("palitoPicole")
+                    $ adicionarItem("palito de Picole")
                     n "Você acha melhor levar ele com você"
         "Quebrar o palito":
             n "Você escuta uns sons de faíscas ao quebrar o palito"
@@ -51,7 +69,7 @@ label lugar3k:
                 "Devolver para o mesmo lugar":
                     n "Você coloca o palito quebrado no mesmo lugar que encontrou ele"
                 "Levar com você":
-                    $ adicionarItem("palitoQuebrado")
+                    $ adicionarItem("palito Quebrado")
                     n "Você leva o palito quebrado com você"
     jump d1kat1inv
     
@@ -80,7 +98,7 @@ label lugar4k:
                 "Deixar a carta na revista":
                     n "Você devolve a carta para dentro da revista"
                 "Levar a carta com você":
-                    $ adicionarItem("cartaRevista")
+                    $ adicionarItem("carta encontrada na Revista")
                     n "Você dobra a carta e a coloca no bolso"
     jump d1kat1inv
 
@@ -91,6 +109,8 @@ label lugar5k:
             n "Você da um gole na vodka"
             n "A sensação é de que você bebeu fogo líquido"
             n "Você sente um pouco da sua sanidade morrer ali"
+            $ energia -= 1
+            show screen energy_screen([energia],[jogador1])
         "Ler o rótulo":
             n "O rótulo parece estar escrito em russo mas você não ter certeza"
             n "A única coisa que você consegue identificar é o símbolo de caveira típico de \"perigo\""
@@ -99,7 +119,7 @@ label lugar5k:
                 "Colocar ela de volta":
                     n "Você acha que a Katarina pode dar pela falta da vodka dela e resolve coloca-la de volta no lugar"
                 "Levar com você":
-                    $ adicionarItem("garrafaVodka")
+                    $ adicionarItem("garrafa de Vodka")
                     n "Você sente que pode precisar dessa garrafa mais tarde e resolve leva-la com você"
     jump d1kat1inv
 
@@ -125,6 +145,6 @@ label lugar7k:
         "Deixar de lado":
             n "Você acha melhor não comer isso."
         "Levar com você":
-            $ adicionarItem("salgadinhoArdido")
+            $ adicionarItem("salgadinho Ardido")
             n "Apesar dela falar que adora o salgadinho, você acha melhor leva-lo com você"
     jump d1kat1inv

@@ -357,6 +357,7 @@ label a1b5:
     a "Toma! Leva isso para ela."
 
     n "Você leva o papel para a mulher no palco. {w} Ela lê, fecha a cara, amassa o papel e joga em você."
+    $ papelAmassado = True
 
     show alessandra smirk with dissolve
 
@@ -810,7 +811,7 @@ label a1a10:
     with moveinleft
 
     traf "T-tudo bem, a arma é sua!{w} Mas eu preciso do diamante e do lenço agora!"
-
+    $ lenco = False
     show alessandra smirk with dissolve
 
     a "São todos seus!"

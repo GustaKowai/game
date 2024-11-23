@@ -12,16 +12,18 @@ init python:
     def adicionarItem(itemInvestigado):
         if jogador1:
             inventarioAzul.append(itemInvestigado)
+            renpy.notify("Adquirido: "+itemInvestigado)
         else:
             inventarioLaranja.append(itemInvestigado)
+            renpy.notify("Adquirido: "+itemInvestigado)
         itemInvestigado = ""
 
 label investigacao:
     play music "audio/abandoned.ogg" volume 2.0
     scene bg quartel
     with gatodissolve
-    default energia = 4
-    $ energia = 4
+    default energia = 6
+    $ energia = 6
     if day1 == True and katDayinv == True and aleDayinv == True:
         n "Agora durante a noite vocês terão a chance de investigar um pouco mais sobre nossas novatas."
         n "Para isso vocês terão um sistema de Energia, que é mostrado na parte superior direita da tela"
@@ -89,7 +91,7 @@ label investigacao:
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar4k
-                "Garrafa de vodka" if (garrafa):
+                "Garrafa de vodka" if not (garrafa):
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar5k
@@ -141,7 +143,7 @@ label investigacao:
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar3a
-                "Capacete de moto":
+                "Capacete de moto" if (day1):
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar4a
@@ -149,6 +151,19 @@ label investigacao:
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar5a
+                "Nota fiscal":
+                    $ energia -= 1
+                    show screen energy_screen([energia],[jogador1])
+                    jump lugar6a
+                "Papel amassado" if (papelAmassado):
+                    $ energia -= 1
+                    show screen energy_screen([energia],[jogador1])
+                    jump lugar7a
+                "Lenco" if (lenco):
+                    $ energia -= 1
+                    show screen energy_screen([energia],[jogador1])
+                    jump lugar8a
+
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
                     if jogador1:

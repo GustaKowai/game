@@ -37,6 +37,31 @@ label desenvolvedoresChooseThings:
         "Largar o tofu" if tofu: 
             $tofu = False
             jump .escolha1
+        "Largar a garrafa" if not garrafa:
+            $ garrafa = True
+            jump .escolha1
+        "Pegar a garrafa" if garrafa:
+            $ garrafa = False
+            jump .escolha1
+        "Pegar o salgadinho" if not salgadinho:
+            $ salgadinho = True
+            jump .escolha1
+        "Largar o salgadinho" if salgadinho:
+            $ salgadinho = False
+            jump .escolha1
+        "Pegar o papel amassado" if not papelAmassado:
+            $ papelAmassado = True
+            jump .escolha1
+        "Largar o papel amassado" if papelAmassado:
+            $ papelAmassado = False
+            jump .escolha1
+        "Pegar o Lenço" if not lenco:
+            $ lenco = True
+            jump .escolha1
+        "Largar o lenço" if lenco:
+            $ lenco = False
+            jump .escolha1
+        
         "Outras coisas":
             jump .escolha2
         "Escolher o dia":

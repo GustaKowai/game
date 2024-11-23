@@ -37,6 +37,7 @@ define BOBCACHIEVEMENT_LIST = (
     ("dia3_ale_perfeito", _("Exposição "), _("Consiga pontuação máxima no terceiro dia com a Alessandra"),True),
     ("churrasco", _("O melhor churrasco"), _("Consiga um bom churrasco")),
     ("dia3_kat_perfeito", _("Caçando o próprio alimento"), _("Consiga pontuação máxima no terceiro dia com a Katarina"),True),
+    ("estoque_bar", _("Bar abastecido"), _("Leve petiscos e drinks para o bar"),True),
     ("completionist", _("Completionist"), _("Read all of the game"), True),
     )
 
