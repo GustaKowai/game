@@ -527,10 +527,10 @@ label a2b17:
 
 label a2a11:
     n "Você profere tais palavras incompreensiveis"
+    play music "igrejaporrada.mp3" volume 1.0
     n "O padre te olha estarrecido"
     n "Uma fumaça começa a sair pelos seus ouvidos"
     n "De repente, ele abre a boca e um rato sai de dentro dela, ele corre sem pestanejar"
-    play music "igrejaporrada.mp3" volume 1.0
     hide padre
     n "Até que..."
     n "Todos na igreja começam a lutar contra si mesmos"

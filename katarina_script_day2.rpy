@@ -67,6 +67,7 @@ label k2m1:
 
     menu:
         "Vocês realmente acreditam que estamos perto do Halloween?":
+            $ muda_afeto(-1)
             jump k2a2
         "Partiu.":
             jump k2b2
@@ -164,12 +165,12 @@ label k2m15:
                     jump k2m3
                 "Vamos colocar uma arma na cabeça dela, porém furtivamente.":
                     k "Tudo bem..."
-                    jump k1m16
+                    jump k2m16
         "Vamos atacar furtivamente.":
             k "Ótima ideia!"
-            jump k1m16
+            jump k2m16
             
-label k1m16:
+label k2m16:
     n "Katarina se levanta e esgueira-se até a porta da recepção."
     k "Vem!"
     n "Você vai até ela, que abre sua mochila e começa a procurar por algo."
@@ -201,6 +202,7 @@ label k1m16:
             jump k2m20
         "Arrombar a tranca com o revólver.":
             k "É isso aí porra! Sabia que essa furtividade não iria durar."
+            $ muda_afeto(1)
             n "Katarina faz uma pose, mira e atira."
             n "BANG!"
             n "Ela chuta a porta."
@@ -954,6 +956,7 @@ label k2m10:
     n "Ela leva vocês até uma porta, digita uma senha em um dispositivo eletrônico e ela abre"
     n "Dentro, vocês veem uma sala, nela há um homem virado de costas"
     n "Ele se vira"
+    show rdj surpreso
     rdj "Hey!"
     k "Robert Downey Jr.? O que ele está fazendo aqui? Que droga, pensei que fosse ouro."
     ate "Ele não entende português, na real, ele nem sabe que está sendo sequestrado, pensa que está em um filme"
