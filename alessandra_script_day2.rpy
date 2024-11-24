@@ -249,6 +249,9 @@ label a2m11:
             jump a2b11
 label a2a9:
     n "Como um ninja, você rapidamente tira pega a katana e amputa o braço do padre"
+    play sound "audio/swordslash.ogg"
+    queue sound "audio/swordhit.wav"
+    show padre decepado with katanahit
     n "Você fecha o olho na expectativa de receber um jato de sangue na cara, mas não sente nada"
     n "Quando abre os olhos, você percebe que acabou de amputar o braço de um robô"
     n "A igreja inteira começa a emitir ruídos assustados que lembram..."
@@ -266,10 +269,9 @@ label a2a9:
     n "Vocês começam a correr, a igreja inteira começa a perseguir vocês"
     a "EU FALEI, AINDA BEM QUE A GENTE VEIO DE MOTO"
     show alessandra capacete with dissolve
+    show bg igrejamoto
     n "Vocês montam na moto"
     play sound "moto.mp3"
-    play music "dejavunointro.mp3" volume 1.0
-    show bg igrejamoto
     a "LIGA PRO DANRAN, O CELULAR TA NO MEU BOLSO"
     menu:
         "De novo essa piada?":
@@ -283,6 +285,7 @@ label a2b12:
     a "RÁPIDO!!"
     jump a2m6
 label a2m6:
+    play music "dejavunointro.mp3" volume 1.0
     n "Você pega o celular da alessandra em um bolso não euclidiano do vestido dela"
     n "Nos contatos, há um Danran, você liga para ele"
     n "Alô?"
@@ -291,7 +294,6 @@ label a2m6:
     n "Entendido."
     n "Danran desliga o microfone"
     n "Tem uma multidão correndo atrás de vocês pelas ruas"
-    show alessandra medo2 with dissolve
     a "FERROU FERROU FERROU"
     n "Vocês estão chegando perto de um cruzamento, há uma rampa na rua que segue, uma rua na direita e uma na esquerda"
     a "RÁPIDO, O QUE ELE DISSE PARA VOCÊ?"
@@ -304,19 +306,22 @@ label a2m6:
             jump a2c13
 label a2a13:
     n "Alessandra vira para a direita"
-    show alessandra brava with dissolve
     a "NÃO TEM NADA AQUI"
     n "As pessoas da igreja ainda estão atrás de vocês"
     n "O bairro está tão vazio que parece que ninguém está presenciando isso"
     a "DROGA!"
     n "Alessandra vira para um beco estreito"
     show bg beco
-    play music "audio/beco.wav" volume 1.0
-    show alessandra smirk with dissolve
+    play music "audio/beco.wav" volume 1.0 fadeout 2.0
     a "QUERO VER ELES PASSAREM AQUI"
+    n "O beco é escuro e apertado"
+    n "Vocês passam por algumas pessoas em altíssima velocidade"
+    n "Alessandra faz curvas sempre que vocês parecem estar chegando em um local sem saída"
     n "Ela acelera ainda mais, até que vocês chegam em uma área populada da cidade"
     show bg cidade
+    play sound "bikebreak.mp3"
     play music "audio/cidade.wav" volume 1.0
+    n "Ela freia bruscamente, rodando a moto e parando ela de lado, estilo Akira."
     a "Agora eles não chegam mais na gente"
     show alessandra brava with dissolve
     a "Bom, da próxima vez presta mais atenção no que falam para você, quase nos ferramos bonito."
@@ -326,13 +331,17 @@ label a2a13:
     jump finalale2
 
 label a2b13:
+    play sound "<from 4.0>acceleration.mp3"
     n "Alessandra acelera em direção à rampa"
-    show alessandra feliz with dissolve
     a "IHUUU!"
+    stop sound fadeout 3.0
     n "Você sente que talvez tenha sido uma má ideia subir nessa moto"
-    n "Vocês pousam em segurança"
+    n "Sua vida passa rapidamente na sua frente"
+    n "Aparentemente ela não é tão animada quanto você gostaria, rapidamente você se enjoa de rever suas falhas"
     show bg cidade
-    play music "audio/cidade.wav" volume 1.0
+    play sound "bikebreak.mp3"
+    play music "audio/cidade.wav" volume 1.0 fadeout 2.0 fadein 1.0
+    n "Vocês pousam em segurança"
     show alessandra confusa with dissolve
     a "Espera, não tem nada aqui!"
     show alessandra smirk with dissolve
@@ -344,7 +353,6 @@ label a2b13:
     jump finalale2
 label a2c13:
     n "Alessandra vira para a esquerda"
-    show alessandra smirk with dissolve
     a "HAHA, boa!"
     n "Ela acelera"
     a "Se prepara, vai exp-"
@@ -352,6 +360,7 @@ label a2c13:
     show bg fumaca
     with explosion
     n "Você olha para trás, há apenas fumaça"
+    show alessandra smirk with dissolve
     n "Aparentemente a igreja inteira foi dizimada"
     menu:
         "O que foi isso?":
@@ -527,7 +536,7 @@ label a2b17:
 
 label a2a11:
     n "Você profere tais palavras incompreensiveis"
-    play music "igrejaporrada.mp3" volume 1.0
+    play music "audio/igrejaporrada.mp3" volume 1.0
     n "O padre te olha estarrecido"
     n "Uma fumaça começa a sair pelos seus ouvidos"
     n "De repente, ele abre a boca e um rato sai de dentro dela, ele corre sem pestanejar"

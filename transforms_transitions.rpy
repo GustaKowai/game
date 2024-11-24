@@ -63,3 +63,4 @@ define fadeA = Fade(0.2,0.2,0.2,color="#1338BE") #Trasição para o início do j
 define fadeL = Fade(0.2,0.2,0.2,color="#f56300") #Trasição para o início do jogador laranja
 define flashbulb = Fade(0.1, 0.0, 0.5, color="#fff")
 define explosion = Fade(0.5, 0.5, 0.5, color="#fc0505")
+define katanahit = Fade(0.1, 0.0, 0.5, color="#fc0505")
