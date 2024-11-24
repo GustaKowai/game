@@ -611,30 +611,30 @@ define gui.dev_notes = _p("""Hello, this is BáiYù of tofurocks here. I want to
 ## Here's a blank one with common roles to fit your game.
 ## TODO: Adjust this to fit your project
 define credits_string = _p("""
-{size=+100}Credits{/size}
+{size=+100}Creditos{/size}
 \n
-VNM: Vendeta Noncomplience Murder
+VNM: {i}{color=#f00}V{/color}endetta, {color=#f00}N{/color}oncompliance, {color=#f00}M{/color}urder.{/i}
 \n\n
-{size=+75}Producer:{/size}
+{size=+75}Produção:{/size}
 \n
-GAMSo
+GAMSo, {color=#f00}G{/color}ame, {color=#f00}A{/color}rt, {color=#f00}M{/color}usic, {color=#f00}So{/color}ftware
 \n\n
 
-{size=+75}Writing:{/size}
+{size=+75}Roteiro:{/size}
 \n
 Nirto
 \n\n
-{size=+75}Art:{/size}
+{size=+75}Arte:{/size}
 \n
 Ayla
 \n\n
-{size=+75}Music and sound:{/size}
+{size=+75}Música e sons:{/size}
 \n
 R0n4n
 \n
 Leo Malin
 \n\n
-{size=+75}Programming:{/size}
+{size=+75}Programação:{/size}
 \n
 Kowai
 \n\n
@@ -642,12 +642,19 @@ Kowai
 \n
 ...
 \n\n
-{size=+75}Special Thanks:{/size}
+{size=+75}Agradecimentos especiais para:{/size}
+\n
+{size=+25}All-In-One GUI template:{/size}
+\n
+BáiYù of tofurocks
 \n
 {size=+25}Music room:{/size}
 \n
 Feniks (feniksdev.itch.io / feniksdev.com)
-\n\n
+\n
+{size=+25}BobCAchievements:{/size}
+\n
+Bob Conway (bobcgames.com)
 \n\n\n\n\n\n\n\n
 {size=+25}Made with Ren'Py [renpy.version_only].{/size}
 \n\n\n\n\n\n\n\n

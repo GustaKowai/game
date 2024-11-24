@@ -6,18 +6,6 @@ default itemInvestigado = ""
 default inventarioLaranja = []
 default inventarioAzul = []
 
-
-#Cria a função que adiciona os itens nos respectivos inventários
-init python:
-    def adicionarItem(itemInvestigado):
-        if jogador1:
-            inventarioAzul.append(itemInvestigado)
-            renpy.notify("Adquirido: "+itemInvestigado)
-        else:
-            inventarioLaranja.append(itemInvestigado)
-            renpy.notify("Adquirido: "+itemInvestigado)
-        itemInvestigado = ""
-
 label investigacao:
     play music "audio/abandoned.ogg" volume 2.0
     scene bg quartel

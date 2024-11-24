@@ -98,3 +98,14 @@ init python:
             
         if newChannel is not None:
             renpy.music.play(music, channel=newChannel, loop=None,fadein=fadeTime)
+
+#Cria a função que adiciona os itens nos respectivos inventários
+init python:
+    def adicionarItem(itemInvestigado):
+        if jogador1:
+            inventarioAzul.append(itemInvestigado)
+            renpy.notify("Adquirido: "+itemInvestigado)
+        else:
+            inventarioLaranja.append(itemInvestigado)
+            renpy.notify("Adquirido: "+itemInvestigado)
+        itemInvestigado = ""

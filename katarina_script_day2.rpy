@@ -20,7 +20,8 @@ label d2kat1:
 
     show claudia default
 
-    c "Pela última vez, eu te pedi aranhas {size=+10}VENENOSAS{/size}, com veneno de verdade, paralisante, agonizante, que seja! {w}Não quero essas Tarântulas que vocês insistem em trazer para cá pela {size=+20}QUARTA VEZ!{/size}"
+    c "Pela última vez, eu te pedi aranhas {size=+10}VENENOSAS{/size}, com veneno de verdade, paralisante, agonizante, que seja!"
+    c"Não quero essas Tarântulas que vocês insistem em trazer para cá pela {size=+20}QUARTA VEZ!{/size}"
 
     n "*Ela olha para você*"
 

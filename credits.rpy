@@ -10,7 +10,7 @@ label credits:
     scene black with fade
 
     ## Find "End Credits Scroll" in extras.rpy to change text.
-    call screen credits(15.0)
+    call screen credits(30.0)
 
     $ persistent.credits_seen = True
 
@@ -28,7 +28,7 @@ label credits:
 
     ## We display a screen that shows how much the player has seen and played of the game.
     show screen results
-    
+
     centered "Fim"
 
     hide screen results

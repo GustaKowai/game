@@ -14,6 +14,8 @@ label lugar1k:
                     n "Na parte de trás tem algo escrito:"
                     n "parece um código ou uma senha"
                     n "Você sente que isso pode ser importante"
+                    $ renpy.notify("Adquirido: Cartão de visitas com código")
+                    play sound "item importante adquirido.mp3"
                     $ cartaoVisita = True
                 "Deixar ela em paz":
                     n "Você acha melhor não mexer mais com a planta"

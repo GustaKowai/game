@@ -43,8 +43,10 @@ label lugar3a:
         n "Ela provavalmente trocou as capas para não deixar óbvio o gosto musical dela"
         n "Ao olhar na outra caixa de CDs você encontra uma chave com um estilo gótico"
         menu:
-          "Pegar a chave:":
+          "Pegar a chave":
             $ adicionarItem("chave gótica")
+            $ chavegotica = True
+            play sound "item importante adquirido.mp3"
             n "Você guarda a chave com você"
           "Deixar a chave ali":
             n "Você acha melhor deixar a chave ali"
@@ -54,9 +56,10 @@ label lugar3a:
         n "Você resolve pegar uma caixa de cds para guardar o cd que estava no rádio"
         n "Ao abrir a caixa de CDs você encontra uma chave com um estilo gótico"
         menu:
-          "Pegar a chave:":
+          "Pegar a chave":
             $ adicionarItem("chave gótica")
             $ chavegotica = True
+            play sound "item importante adquirido.mp3"
             n "Você guarda a chave com você"
           "Deixar a chave ali":
             n "Você acha melhor deixar a chave ali"
