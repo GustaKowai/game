@@ -85,11 +85,14 @@ default aleDayinv = True
 default katDayinv = True
 default aleDay2 = False
 default katDay2 = False
+default aleDay3 = False
+default katDay3 = False
+default aleDay4 = False
+default katDay4 = False
 default day1 = True
 default day2 = False
 default day3 = False
-default aleDay3 = False
-default katDay3 = False
+default day4 = False
 default pontosSucesso = 0
 
 ##Variáveis de achievements##
@@ -112,3 +115,4 @@ default vodkanobar = False
 default salgadinhonobar = False
 default minipingabar = False
 default chavegotica = False
+default cartaoVisita = False

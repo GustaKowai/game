@@ -49,18 +49,6 @@ label desenvolvedoresChooseThings:
         "Largar o salgadinho" if salgadinho:
             $ salgadinho = False
             jump .escolha1
-        "Pegar o papel amassado" if not papelAmassado:
-            $ papelAmassado = True
-            jump .escolha1
-        "Largar o papel amassado" if papelAmassado:
-            $ papelAmassado = False
-            jump .escolha1
-        "Pegar o Lenço" if not lenco:
-            $ lenco = True
-            jump .escolha1
-        "Largar o lenço" if lenco:
-            $ lenco = False
-            jump .escolha1
         
         "Outras coisas":
             jump .escolha2
@@ -68,9 +56,35 @@ label desenvolvedoresChooseThings:
             jump desenvolvedoresChooseDay
         "Quero mudar o player ativo":
             jump desenvolvedoresChoosePlayer
+        "Quero mudar a afinidade dos jogadores com as garotas":
+            jump desenvolvedoresAfinidade
 
     menu .escolha2:
         g "O que quer alterar?"
+        "Pegar o papel amassado" if not papelAmassado:
+            $ papelAmassado = True
+            jump .escolha1
+        "Largar o papel amassado" if papelAmassado:
+            $ papelAmassado = False
+            jump .escolha2
+        "Pegar o Lenço" if not lenco:
+            $ lenco = True
+            jump .escolha2
+        "Largar o lenço" if lenco:
+            $ lenco = False
+            jump .escolha2
+        "Pegar a chave" if not chavegotica:
+            $ chavegotica = True
+            jump .escolha2
+        "Largar a chave" if chavegotica:
+            $ chavegotica = False
+            jump .escolha2
+        "Pegar o cartão de visita" if not cartaoVisita:
+            $ cartaoVisita = True
+            jump .escolha2
+        "Largar o cartão de visita" if cartaoVisita:
+            $ cartaoVisita = False
+            jump .escolha2        
         "Quero ver as anteriores":
             jump .escolha1
         "Mais coisas":
@@ -94,6 +108,10 @@ label desenvolvedoresChooseDay:
             jump d3kat1
         "Dia 3 da Alessandra":
             jump d3ale1
+        "Dia 4 da Katarina":
+            jump d4kat1
+        "Dia 4 da Alessandra":
+            jump d4ale1
         "Final da demo":
             jump demoFinal
         "Investigação noturna":
@@ -105,3 +123,39 @@ label desenvolvedoresChooseDay:
         "Quero mudar o player ativo":
             jump desenvolvedoresChoosePlayer
                 
+label desenvolvedoresAfinidade:
+    menu:
+        "Aumentar a afinidade da Alessandra com o player azul":
+            $ a.azul += 1
+            "A afinidade entre eles agora é [a.azul]"
+            jump desenvolvedoresAfinidade
+        "Aumentar a afinidade da Katarina com o player azul":
+            $ k.azul += 1
+            "A afinidade entre eles agora é [k.azul]"
+            jump desenvolvedoresAfinidade
+        "Aumentar a afinidade da Alessandra com o player laranja":
+            $ k.laranja += 1
+            "A afinidade entre eles agora é [k.laranja]"
+            jump desenvolvedoresAfinidade
+        "Aumentar a afinidade da Katarina com o player laranja":
+            $ k.laranja += 1
+            "A afinidade entre eles agora é [k.laranja]"
+            jump desenvolvedoresAfinidade
+        "Diminuir a afinidade da Alessandra com o player azul":
+            $ a.azul -= 1
+            "A afinidade entre eles agora é [a.azul]"
+            jump desenvolvedoresAfinidade
+        "Diminuir a afinidade da Katarina com o player azul":
+            $ k.azul -= 1
+            "A afinidade entre eles agora é [k.azul]"
+            jump desenvolvedoresAfinidade
+        "Diminuir a afinidade da Alessandra com o player laranja":
+            $ k.laranja -= 1
+            "A afinidade entre eles agora é [k.laranja]"
+            jump desenvolvedoresAfinidade
+        "Diminuir a afinidade da Katarina com o player laranja":
+            $ k.laranja -= 1
+            "A afinidade entre eles agora é [k.laranja]"
+            jump desenvolvedoresAfinidade
+        "Pronto":
+            jump desenvolvedoresChooseThings

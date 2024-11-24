@@ -6,6 +6,12 @@ label whereToGo:
     play music "audio/quartel.wav" volume 2.0
     scene bg quartel
     with gatodissolve
+    if day4:
+        n "Hoje é o dia da grande missão."
+        n "Todos no quartel parecem animados para acabar com a ditadura roedora."
+        n "Há um sistema de rádio implementado no quartel, para que aqueles que ficarem possam se atualizar sobre o desenrolar da revolta"
+        n "Alessandra e Katarina já deveriam ter chegado, mas não há sinal de nenhuma das duas"
+        n "Vocês encontram uma carta assinado pelo Gatovaldo, mandando vocês procurarem por suas colegas para que possam organizar as estratégias do ataque."
     $ JogadorAtivo = 0
     if jogador1:
         $ jogador1 = False
@@ -33,6 +39,11 @@ label whereToGo:
             jump d3kat1
         "Para o Ateliê da Alessandra" if aleDay3:
             jump d3ale1
+
+        "Para o escritório da Katarina" if katDay4:
+            jump d4kat1
+        "Para o Ateliê da Alessandra" if aleDay4:
+            jump d4ale1
     
     jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
     jump changeDay                                    
@@ -51,6 +62,11 @@ label changeDay:
     if (k.azul+a.azul <= k.laranja+a.laranja):
         $ jogador1 = True
     #determina quem jogou melhor e coloca ele para jogar primeiro no dia seguinte
+    if day3:
+        $ day4 = True
+        $ katDay4 = True
+        $ aleDay4 = True
+        $ day3 = False
     if day2:
         $ day3 = True
         $ katDay3 = True

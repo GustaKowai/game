@@ -10,9 +10,11 @@ label lugar1k:
             menu:
                 "Tentar pegar":
                     n "Você pega rapidamente um papel dentro da boca da planta carnívora"
-                    n "No papel tem um texto"
-                    n "k4t4r1n4"
+                    n "É um cartão de visitas"
+                    n "Na parte de trás tem algo escrito:"
+                    n "parece um código ou uma senha"
                     n "Você sente que isso pode ser importante"
+                    $ cartaoVisita = True
                 "Deixar ela em paz":
                     n "Você acha melhor não mexer mais com a planta"
         "Cutucar a planta":
