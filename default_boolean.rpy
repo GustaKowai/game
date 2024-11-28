@@ -46,6 +46,7 @@ default jogador1Kat1 = False
 default jogador2Kat1 = False
 default sucessoMissao1Kat = False
 default cartaLida = False
+default papelLido = False
 
 #dia2 Katarina:
 default adm = False

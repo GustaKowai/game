@@ -73,6 +73,7 @@ label changeDay:
         $ aleDay3 = True
         $ day2 = False
     if day1:
+        jump demoFinal
         $ day2 = True
         $ katDay2 = True
         $ aleDay2 = True

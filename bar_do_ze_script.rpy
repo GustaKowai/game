@@ -80,6 +80,26 @@ label zeAjuda:
             $ energia -= 1
             show screen energy_screen([energia],[jogador1])
             jump barchave
+        "Mostrar o papel Amassado" if "papel Amassado" in inventarioAtual:
+            $ inventarioAtual.remove("papel Amassado")
+            $ energia -= 1
+            show screen energy_screen([energia],[jogador1])
+            jump barpapelamassado
+        "Mostrar o lenço" if "lenço" in inventarioAtual:
+            $ inventarioAtual.remove("lenço")
+            $ energia -= 1
+            show screen energy_screen([energia],[jogador1])
+            jump barlenco
+        "Mostrar a nota fiscal" if "nota Fiscal" in inventarioAtual:
+            $ inventarioAtual.remove("nota Fiscal")
+            $ energia -= 1
+            show screen energy_screen([energia],[jogador1])
+            jump barnotafiscal
+        "Mostrar o tofu" if "tofu" in inventarioAtual:
+            $ inventarioAtual.remove("tofu")
+            $ energia -= 1
+            show screen energy_screen([energia],[jogador1])
+            jump bartofu
         
         "Na verdade nada, só quero ir dormir.":
             if energia > 0:
@@ -246,4 +266,71 @@ label barchave:
     z "Bem, ela é bem diferente... Acho que seria interessante você guardar ela com você."
     z "Ela pode ser importante no futuro."
     jump conversaBar
+
+label barpapelamassado:
+    n "Ele pega o papel amassado e lê"
+    z "\"Ajeite essa coluna\""
+    z "Está querendo dizer algo para mim?"
+    z "..."
+    n "O clima fica um pouco pesado entre vocês"
+    n "Você percebe que ele tenta ajeitar um pouco mais a ja excelente postura dele"
+    n "Pela sua cara ele percebe que talvez tenha entendido algo errado."
+    z "Ah, você encontrou isso?"
+    $ papelLido = True
+    if cartaLida:
+        z "A letra disso me parece familiar... Eu lembro de ter visto algo parecido em algum lugar..."
+        z "É uma letra bem diferente mas não posso dar certeza."
+    else:
+        z "É uma letra bem estranha. Parece que a pessoa se esforçou para que não reconhecessem a letra dela"
+        z "Ou apenas tem uma letra muito feia"
+    z "O papel está bem amassado, parece que foi escrito com pressa."
+    jump conversaBar
+
+label barlenco:
+    n "Ele pega o lenço da sua mão"
+    z "Esse negócio... Ta usado, não ta não?"
+    z "Que tal lavar ele?"
+    z "Espera... Tem uma assinatura aqui"
+    z "Isso é um autógrafo... De alguém chamado Taylor Swift?"
+    z "Não conheço, mas você deve gostar bastante para guardar um lenço usado assim..."
+    jump conversaBar
+
+label barnotafiscal:
+    z "Hum... Isso é uma nota fiscar do Ardórsia"
+    z "Você deve estar nadando em dinheiro se foi comer lá."
+    z "Deveria jantar aqui, é bem mais barato."
+    z "Quero dizer, olha o preço disso! Daria para comprar um carro com o quanto gastou nessa noite..."
+    z "Talvez dois, se não fizer questão de ar condicionado..."
+    n "Ele fica pensativo por um tempo, como se estivesse calculando exatamente quantos adicionais poderia colocar em cada carro com o valor da conta"
+    z "Na verdade... Parece que não foi você que pagou né?"
+    z "Tem uma gorgeta adicionada paga em dinheiro pela Alessandra, mas a conta mesmo parece que foi paga por outra pessoa"
+    jump conversaBar
+
+label bartofu:
+    z "Um tofu?"
+    z "Isso daqui... Você não quer que eu sirva isso no meu bar, quer?"
+    z "As pessoas daqui não aceitariam isso. Isso aqui não é nem carne nem queijo"
+    z "Dizem que comidas só podem ser realmente saudáveis se alguém morreu para produzir ela."
+    z "O que pretende fazer com isso?"
+    menu:
+        "Eu vou comer.":
+            n "Você come o tofu antes que ele possa falar qualquer coisa"
+            achieve Comer_tofu
+            z "Er..."
+            z "Na verdade, eu sei o por que você trouxe esse tofu."
+            z "Estou ciente da missão da arma de tofu."
+            n "Um silêncio se firma entre vocês"
+            n "Vocês concordam com o olhar de nunca mais falar sobre isso"
+        "Na verdade... Isso não é exatamente um tofu":
+            n "Você explica para ele sobre a arma tofuzadora"
+            z "Ah sim, eu sei. Estava só tirando uma com a sua cara."
+            z "Estou ciente da missão."
+            z "Se você quer transformar ele de volta em gente..."
+            z "Talvez tenha algo que eu possa fazer."
+            z "Mas não tenho certeza, como ele estava no raio de 15 metros provavelmente não se lembrará quem é"
+            z "Lembra? Todo mundo esquece dele, inclusive ele."
+            n "Zé leva o tofu para uma geladeira nos fundos enquanto murmura algo para si mesmo"
+            z "....Será que tofus tem memória?...."
+    jump conversaBar
+
 

@@ -169,7 +169,7 @@ label lugar8a:
     "Guardar ele com você":
       n "Você decide levar ele com você"
       n "Por motivos puramente profissionais"
-      $ adicionarItem("lenco")
+      $ adicionarItem("lenço")
     "Deixar ele em cima da mesa":
       n "Você decide não mexer muito nele"
       n "Talvez ela esteja guardando ele assim por algum motivo"

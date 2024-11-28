@@ -8,12 +8,12 @@ init python:
         if pontos > 0:
             renpy.sound.play("certo.wav")
             renpy.show("mais",[top_right])
-            renpy.pause(0.2)
+            renpy.pause(0.5)
             renpy.hide("mais")
         if pontos < 0:
             renpy.sound.play("errado.wav", relative_volume=2.5)
             renpy.show("menos",[top_right])
-            renpy.pause(0.2)
+            renpy.pause(0.5)
             renpy.hide("menos")
         return pontos
     
