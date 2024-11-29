@@ -912,7 +912,7 @@ label k2b9:
 label k2m9:
     ate "Ei!"
     show katarina mascarada at right
-    show atendente at left
+    show atendente armada at left
     n "Chuk-Chuk"
     n "A recepcionista do banco está com uma espingarda apontada para vocês"
     ate "Vocês acham mesmo que eu não sei o motivo de vocês estarem aqui?"

@@ -48,7 +48,6 @@ label lugar2k:
             $ adicionarItem("mini Pinga")
         "Deixar de lado":
             n "Você guarda a mini pinga de volta e coloca o tabuleiro no lugar"
-    n "agora o jogador azul tem [inventarioAzul] e o jogador laranja tem [inventarioLaranja]"
             
     jump d1kat1inv
 

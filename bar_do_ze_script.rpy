@@ -33,7 +33,6 @@ label conversaBar:
 ##É aqui que vão as opções para a escolha
 label zeAjuda:
     z "Pois bem, o que pretende me mostrar hoje?"
-    z "[inventarioAtual]"
     menu:
         "Mostrar a folha da planta carnívora" if "planta Carnivora" in inventarioAtual:
             $ inventarioAtual.remove("planta Carnivora")

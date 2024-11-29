@@ -24,6 +24,11 @@ label whereToGo:
             "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"
         else:
             "E agora {color=#F56300}[nome2]{/color}, para onde vamos?"
+    else:
+        if jogador1:
+            "O dia amanhece e é hora de mais uma missão... {color=#1338BE}[nome1]{/color}, para onde vamos?"
+        else:
+            "O dia amanhece e é hora de mais uma missão... {color=#F56300}[nome1]{/color}, para onde vamos?"
     menu:
         "Para o escritório da Katarina" if katDay1:
             jump d1kat1
@@ -44,7 +49,10 @@ label whereToGo:
             jump d4kat1
         "Para o Ateliê da Alessandra" if aleDay4:
             jump d4ale1
-    
+    if day2:
+        jump dia2final
+
+
     jump investigacao #irei deixar comentado enquanto a parte noturna está em desenvolvimento.
     jump changeDay                                    
 ####################################################################################################################### 
@@ -90,9 +98,19 @@ label changeDay:
 #######################################################################################################################
 label demoFinal:
     show gatovaldo default
+    hide screen char_name_screen
     g "Vocês terminaram a demo! Espero que tenham se divertido."
     g "Para saberem, {color=#1338BE}[nome1]{/color} fez \n[k.azul] de 12 pontos disponíveis com a Katarina \ne [a.azul] de 12 pontos disponíveis com a Alessandra"
     
     g "E {color=#F56300}[nome2]{/color} fez \n[k.laranja] de 12 pontos disponíveis com a Katarina \ne [a.laranja] de 12 pontos disponíveis com a Alessandra"
     g "Espero que tenham se divertido, em breve teremos mais missões."
+    jump credits
+
+label dia2final:
+    show gatovaldo default
+    hide screen char_name_screen
+    g "Até o momento, isso é o que temos preparado para vocês"
+    g "Porém não fiquem tristes, ja temos a história completa e quase todas as artes"
+    g "Fiquem de olho por atualizações na nossa página do Itch.io"
+    g @feliz "Logo saberemos em quem podemos confiar."
     jump credits
