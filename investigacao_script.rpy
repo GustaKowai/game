@@ -154,6 +154,7 @@ label investigacao:
 
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
+                    $escolhido.remove("Já vi o suficiente")
                     if jogador1:
                         $ energiaAzul = energia
                     else:

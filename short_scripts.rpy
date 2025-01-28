@@ -24,11 +24,11 @@ label whereToGo:
             "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"
         else:
             "E agora {color=#F56300}[nome2]{/color}, para onde vamos?"
-    else:
-        if jogador1:
-            "O dia amanhece e é hora de mais uma missão... {color=#1338BE}[nome1]{/color}, para onde vamos?"
-        else:
-            "O dia amanhece e é hora de mais uma missão... {color=#F56300}[nome1]{/color}, para onde vamos?"
+    #else:
+        #if jogador1:
+            #"O dia amanhece e é hora de mais uma missão... {color=#1338BE}[nome1]{/color}, para onde vamos?"
+        #else:
+            #"O dia amanhece e é hora de mais uma missão... {color=#F56300}[nome1]{/color}, para onde vamos?"
     menu:
         "Para o escritório da Katarina" if katDay1:
             jump d1kat1
@@ -49,6 +49,9 @@ label whereToGo:
             jump d4kat1
         "Para o Ateliê da Alessandra" if aleDay4:
             jump d4ale1
+
+    if finalale and finalkat:
+        jump UltimoDia
     if day2:
         jump dia2final
 
@@ -81,7 +84,7 @@ label changeDay:
         $ aleDay3 = True
         $ day2 = False
     if day1:
-        jump demoFinal
+        #jump demoFinal
         $ day2 = True
         $ katDay2 = True
         $ aleDay2 = True

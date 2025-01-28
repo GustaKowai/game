@@ -1,10 +1,52 @@
 ﻿# The script of the game goes in this file.
 
 # The game starts here.
+init -1:
+    # FancyText: To use this say screen, you need to add the three parameters exactly as given!
+    screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
+        style_prefix "say"
+
+        window:
+            id "window"
+
+            if who is not None:
+
+                window:
+                    id "namebox"
+                    style "namebox"
+                    text who id "who"
+            
+            # FancyText: Here's where all the magic happens.
+            # Replace your usual "text" statement with "fancytext" to enable
+            # some fancy effects on text display.
+            fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
+
+
+
 
 label start:
 
-    
+    show text "Disclaimer" at truecenter
+    with dissolve
+    pause 1
+    hide text with dissolve
+
+    show text "Isso é um trabalho de ficção"
+    with dissolve
+    pause 1
+    hide text with dissolve
+
+    show text "Nomes, personagens, negócios, locais, eventos, incidentes e acontecimentos são produtos da imaginação do autor ou utilizados de maneira fictícia"
+    with dissolve
+    pause 3
+    hide text with dissolve
+
+    show text "Qualquer semelhança com pessoas reais, vivas ou mortas ou eventos reais é puramente coincidencia."
+    with dissolve
+    pause 2
+    hide text with dissolve
+
+
     play music "audio/quartel.wav"  volume 2.0
     scene bg quartel
 

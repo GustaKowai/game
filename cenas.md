@@ -49,8 +49,8 @@
   - Personagens:
     - Cláudia - ok
     - Katarina - ok
-    - Atendente do banco - NOT OK
-    - Robert D. Jr. - NOT OK
+    - Atendente do banco -ok
+    - Robert D. Jr. - ok
   - Música:
     - Tema do escritório - ok
     - Tema do banco - NOT OK
@@ -68,7 +68,7 @@
   - Música:
     - Tema do atelie - ok
     - Tema da igreja - ok
-    - Tema de luta da igreja - NOT OK
+    - Tema de luta da igreja - ok
     - Tema do beco -ok
     - Tema da cidade -ok
 
@@ -106,8 +106,8 @@
 ## Bar do zé
 
 - Cenas:
-  - Cassino (Bar) - NOT OK
+  - Cassino (Bar) - OK
 - Personagens:
-  - Zé - NOT OK
+  - Zé - kinda OK?
 - Música:
-  - Tema do cassino - NOT OK
+  - Tema do cassino - OK

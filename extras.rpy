@@ -742,3 +742,16 @@ screen results():
 #         d["playtime"] = renpy.store.playtime
 
     # config.save_json_callbacks = [total_playtime]
+
+screen disclaimer():
+    
+    zorder 200
+
+    vbox:
+        xalign .5
+        yalign .2
+        spacing 45
+
+        text _("Disclaimer:") color "#fff"
+
+        timer 10 action Return()

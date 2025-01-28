@@ -186,8 +186,6 @@ Objetivos em andamento:
   
 - Sons e Música:
   - Efeitos sonoros para os dias já feitos (ver os que estão e decidir sobre mudanças)
-    - Sirene
-    - Explosão
     - Sons da fala dos personagens (se possível mudar um pouco os sons para cada personagem ter um próprio)
     - Som de partida de moto (talvez)
   - Músicas de fundo:
@@ -196,6 +194,8 @@ Objetivos em andamento:
     - Missões Alessandra:
       - Obs: Na segunda missão da Alessandra tem duas partes com músicas fazendo referência ao que ocorre nessa parte (DejaVu tocando em um momento de fuga de moto e Free Bird tocando durante uma treta violenta em uma igreja).
       - Exibição de carros
+    - Dia final:
+      - Som de radio
 
 Em breve:
 

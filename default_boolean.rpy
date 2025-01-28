@@ -80,21 +80,23 @@ default churrasco = False
 
 
 ## Variáveis dos dias ##
-default aleDay1 = True
-default katDay1 = True
+default aleDay1 = False
+default katDay1 = False
 default aleDayinv = True
 default katDayinv = True
 default aleDay2 = False
 default katDay2 = False
 default aleDay3 = False
 default katDay3 = False
-default aleDay4 = False
-default katDay4 = False
+default aleDay4 = True
+default katDay4 = True
 default day1 = True
 default day2 = False
 default day3 = False
-default day4 = False
+default day4 = True
 default pontosSucesso = 0
+default finalale = False
+default finalkat = False
 
 ##Variáveis de achievements##
 

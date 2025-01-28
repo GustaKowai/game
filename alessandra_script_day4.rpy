@@ -10,6 +10,7 @@ label d4ale1:
     play music "atelie_intro.ogg" volume 1.0
     queue music "atelie_loop.ogg"
     $ aleDay4 = False
+    $ day4 = False
     scene bg atelie
     if jogador1:
         with fadeA
@@ -66,6 +67,7 @@ label a4b1:
 label a4m1:
     n "Seu telefone começa a tocar."
     n "É o Gatovaldo, ele exige que você volte imediatamente para a base."
+    $ finalale = True
     jump finalale4
 
 

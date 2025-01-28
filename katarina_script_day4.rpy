@@ -9,6 +9,7 @@
 label d4kat1:
     play music "audio/escritorio.wav" volume 1.0
     $ katDay4 = False
+    $ day4 = False
     scene bg recepcao
     if jogador1:
         with fadeA
@@ -85,6 +86,7 @@ label k4b2:
 label k4m1:
     n "Seu telefone começa a tocar."
     n "É o Gatovaldo, ele exige que você volte imediatamente para a base."
+    $ finalkat = True
     jump finalkat4
 
 label finalkat4:    
