@@ -19,6 +19,7 @@ label whereToGo:
     else:
         $ jogador1 = True
         show screen char_name_screen([nome1],[jogador1])
+    g "Chegou aqui [katDay1],[aleDay1]"
     if katDay1 or aleDay1:
         if jogador1:
             "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"

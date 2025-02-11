@@ -43,7 +43,7 @@ label start:
 
     show text "Qualquer semelhança com pessoas reais, vivas ou mortas ou eventos reais é puramente coincidencia."
     with dissolve
-    pause 2
+    pause 4
     hide text with dissolve
 
 
