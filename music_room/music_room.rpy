@@ -29,7 +29,7 @@ init python:
     ##                they are added to the music room in.
     music_room = ExtendedMusicRoom(channel='music', fadeout=0.0, fadein=0.0,
         loop=True, single_track=False, shuffle=False, stop_action=None,
-        alphabetical=True)
+        alphabetical=False)
 
     ## This sets up a default art image for all tracks in this room which aren't
     ## given a more specific one. This default art is 600x600, but several
@@ -66,7 +66,7 @@ init python:
         ## unlocked.
         unlock_condition="True",
     )
-
+#Dia 0
     music_room.add(
         name=_("Tema do quartel"),
         artist="",
@@ -78,67 +78,84 @@ init python:
 
     music_room.add(
         name=_("Tema atelie"),
-        artist="",
+        artist="Leo Malin",
         path="audio/atelie_loop.ogg",
         #unlock_condition="True",
     )
 
     music_room.add(
         name=_("Tema Escritório"),
-        artist="",
+        artist="R0n4n",
         path="audio/escritorio.wav",
         #unlock_condition="True",
     )
 
     music_room.add(
-        name=_("Tema floresta"),
-        artist="",
-        path="audio/floresta.mp3",
+        name=_("Tema do Bar"),
+        artist="Leo Malin",
+        path="audio/cassino.wav",
         #unlock_condition="True",
     )
 
+
+#Dia 1
     music_room.add(
         name=_("Tema deserto"),
-        artist="",
+        artist="R0n4n",
         path="audio/deserto.mp3",
         #unlock_condition="True",
     )
 
     music_room.add(
         name=_("Tema restaurante"),
-        artist="",
+        artist="Leo Malin",
         path="audio/restaurante.wav",
         #unlock_condition="True",
     )
 
+#Dia2
     music_room.add(
         name=_("Tema da igreja"),
-        artist="",
+        artist="Leo Malin",
         path="audio/church.mp3",
         #unlock_condition="True",
     )
 
     music_room.add(
         name=_("Tema porrada da igreja"),
-        artist="",
+        artist="R0n4n",
         path="audio/igrejaporrada.mp3",
         #unlock_condition="True",
     )
 
     music_room.add(
         name=_("Tema beco"),
-        artist="",
+        artist="Leo Malin",
         path="audio/beco.wav",
         #unlock_condition="True",
     )
 
     music_room.add(
         name=_("Tema cidade"),
-        artist="",
+        artist="Leo Malin",
         path="audio/cidade.wav",
         #unlock_condition="True",
     )
 
+    music_room.add(
+        name=_("Tema Banco"),
+        artist="R0n4n",
+        path="",
+        #unlock_condition="True",
+    )
+
+#Dia 3
+    music_room.add(
+        name=_("Tema floresta"),
+        artist="R0n4n",
+        path="audio/floresta.mp3",
+        #unlock_condition="True",
+    )
     
 ################################################################################
 ## CONFIGURATION VALUES

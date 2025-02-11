@@ -173,4 +173,5 @@ label lugar8a:
     "Deixar ele em cima da mesa":
       n "Você decide não mexer muito nele"
       n "Talvez ela esteja guardando ele assim por algum motivo"
+  jump d1ale1inv
       

@@ -17,7 +17,7 @@ label investigacao:
         n "Para isso vocês terão um sistema de Energia, que é mostrado na parte superior direita da tela"
         show screen energy_screen([energia],[jogador1]) with moveinbottom
         n "Cada ação feita consumirá um de energia, se a energia chegar a zero vocês não poderão mais investigar."
-        n "A energia de cada jogador é medida separadamente, porém os itens que são coletados são armazenados em conjunto."
+        n "A energia de cada jogador é medida separadamente, assim como os itens são coletados de maneira individual."
         n "A energia também é usada no Bar do Zé. Lá vocês poderão pedir mais informações sobre algo que encontraram de interessante."
         n "Lembrem-se de guardar um pouco de energia para conversar com o Zé, ele é uma pessoa difícil."
         n "Nos próximos dias eu {color=#ff0000}não explicarei novamente{/color}, portanto espero que tenham entendido."

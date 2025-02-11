@@ -2,7 +2,7 @@
 # name of the character.
 define pag = Character(' ', kind=nvl, color="#c8c8ff")
 define e = Character("Eileen", what_prefix='"', what_suffix='"')
-define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep, what_prefix='"', what_suffix='"')
+define g = Character("Gatovaldo", image="gatovaldo", callback = low_beep, what_prefix='"', what_suffix='"')#,namebox_background=Frame("gui/gatovaldo_namebox.png", 0,0))
 define n = Character("", callback = low_beep, what_prefix='{i}', what_suffix='{/i}')
 define c = Character("Claudia", image="claudia", callback = beep_2, what_prefix='"', what_suffix='"')
 define vo = Character("Vovô sorveteiro", image="vovo", callback = low_beep, what_prefix='"', what_suffix='"')
