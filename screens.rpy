@@ -225,6 +225,8 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    background Frame("gui/button/choice_[choice_button_color]_[prefix_]background.png")
+    
 
 style choice_button_text is default:
     properties gui.button_text_properties("choice_button")

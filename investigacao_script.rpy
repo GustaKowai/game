@@ -92,6 +92,9 @@ label investigacao:
                     show screen energy_screen([energia],[jogador1])
                     jump lugar7k
 
+                #dia 2:
+                
+
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"
                     $escolhido.remove("Já vi o suficiente")
@@ -119,7 +122,7 @@ label investigacao:
 
             menu:
                 set escolhido
-                "Carta":
+                "Carta" if not (day3):
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar1a
@@ -151,6 +154,9 @@ label investigacao:
                     $ energia -= 1
                     show screen energy_screen([energia],[jogador1])
                     jump lugar8a
+
+                #dia 2:
+
 
                 "Já vi o suficiente":
                     n "Você considera que já viu o suficiente"

@@ -1,5 +1,5 @@
 ﻿# The script of the game goes in this file.
-
+define choice_button_color = "red"
 # The game starts here.
 init -1:
     # FancyText: To use this say screen, you need to add the three parameters exactly as given!
@@ -91,13 +91,14 @@ label start:
         "[nome1] começa":
             $jogador1 = True
             show screen char_name_screen([nome1],[jogador1])
+            $ choice_button_color = "blue"
             jump jogadorAzul
         
         "[nome2] começa":
             $jogador1 = False
             show screen char_name_screen([nome2],[jogador1])
+            $ choice_button_color = "orange"
             jump jogadorLaranja
-
     
 
     

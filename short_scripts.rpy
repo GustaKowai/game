@@ -16,14 +16,16 @@ label whereToGo:
     if jogador1:
         $ jogador1 = False
         show screen char_name_screen([nome2],[jogador1])
+        $ choice_button_color = "orange"
     else:
         $ jogador1 = True
         show screen char_name_screen([nome1],[jogador1])
+        $ choice_button_color = "blue"
     if katDay1 or aleDay1:
         if jogador1:
-            "E agora {color=#1338BE}[nome1]{/color}, para onde vamos?"
+            "E agora {color=#1338BE}[nome1]{/color}, para onde vamos? [gui.choice_button_text_hover_color]"
         else:
-            "E agora {color=#F56300}[nome2]{/color}, para onde vamos?"
+            "E agora {color=#F56300}[nome2]{/color}, para onde vamos? [gui.choice_button_text_hover_color]"
     #else:
         #if jogador1:
             #"O dia amanhece e é hora de mais uma missão... {color=#1338BE}[nome1]{/color}, para onde vamos?"

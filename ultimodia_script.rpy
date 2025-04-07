@@ -26,9 +26,11 @@ label UltimoDia:
     "[nome1]":
       $ jogador1 = True
       show screen char_name_screen([nome1],[jogador1])
+      $ choice_button_color = "blue"
     "[nome2]":
       $ jogador1 = False
       show screen char_name_screen([nome2],[jogador1])
+      $ choice_button_color = "orange"
 
   menu:
     "Katarina, o que está acontecendo?":
@@ -82,9 +84,11 @@ label finalday2:
     "[nome1]":
       $ jogador1 = True
       show screen char_name_screen([nome1],[jogador1])
+      $ choice_button_color = "Blue"
     "[nome2]":
       $ jogador1 = False
       show screen char_name_screen([nome2],[jogador1])
+      $ choice_button_color = "orange"
 
   menu:
     "Questionar Katarina":
@@ -165,3 +169,82 @@ label finalday3:
     r "Recebemos informações de mais baixas dos rebeldes, as tropas parecem estar tomando controle das ruas, os militares informam que em breve tudo passará."
   else:
     r "Recebemos informações de mais baixas dos rebeldes, as tropas parecem estar tomando controle das ruas, os militares informam que em breve tudo passará."
+
+  menu:
+    "Quem irá perguntar agora?"
+    "[nome1]":
+      $ jogador1 = True
+      show screen char_name_screen([nome1],[jogador1])
+      $ choice_button_color = "Blue"
+    "[nome2]":
+      $ jogador1 = False
+      show screen char_name_screen([nome2],[jogador1])
+      $ choice_button_color = "orange"
+
+  menu:
+    "Tentar conseguir mais informações de Alessandra":
+      jump finalday3a
+    "Tentar conseguir mais informações de Katarina":
+      jump finalday3b
+
+label finalday3a:
+  n "Você insiste em perguntar mais sobre a situação, para obter mais informações."
+  if (jogador1 and a.azul>1) or (not jogador1 and a.laranja>1):
+    a "Hoje mais cedo eu procurei Katarina, ela estava em uma situação… complicada em seu escritório."
+    a "Eu levei ela ao meu ateliê, e mostrei tudo."
+    a "Gatovaldo era um mercenário na época, trabalhando a mando de um executivo rival do pai de Katarina."
+    a "Ele que causou o acidente."
+    g "Mas…"
+    k "SILÊNCIO!"
+  else:
+    a "O Gatovaldo matou o pai da Katarina."
+    a "Tudo isso é uma farsa."
+    a "Ele está com o governo."
+    g "É MENT-"
+    k "SILÊNCIO!"
+    n "Katarina bate em Gatovaldo."
+    a "Vocês precisam estar conosco nessa."
+  jump finalday4
+
+label finalday3b:
+  n "Você insiste em perguntar mais sobre a situação, para obter mais informações."
+  if (jogador1 and k.azul>1) or (not jogador1 and k.laranja>1):
+    k "A Alessandra me procurou hoje de manhã."
+    k "Ela me mostrou tudo."
+    k "Tudo fez sentido."
+    k "Eu fiquei descontrolada quando descobri, comecei a destruir tudo que via pela frente."
+    k "Alessandra é uma boa amiga, ela não me impediu."
+    k "Ele trabalhava como assassino de aluguel para um inimigo de papai."
+    k "Ele será o próximo."
+    n "Katarina segura a arma com força."
+    n "Gatovaldo fica em silêncio."
+  else:
+    k "Esse VERME não passa de um pau mandado."
+    k "Ele me enganou, ele enganou Alessandra, ele enganou vocês!"
+    k "A gente precisa terminar o serviço."
+  jump finalday4
+
+label finalday4:
+  if sucessoMissao2Kat:
+    r "Um homem em uma armadura de ferro está dizimando os soldados, armas anti-aéreas devem ser posicionadas logo, mas as baixas das forças governamentais sobem. Ratotávio se pronuncia: “Peguem esse pássaro maldito.”"
+  else:
+    r "Os rebeldes recuam, eles parecem enfraquecidos. Os militares avançam com as tropas. Em declarações, Ratotávio se pronuncia: “É uma questão de tempo até ganharmos.”"
+
+  menu:
+    "Quem irá perguntar agora?"
+    "[nome1]":
+      $ jogador1 = True
+      show screen char_name_screen([nome1],[jogador1])
+      $ choice_button_color = "Blue"
+    "[nome2]":
+      $ jogador1 = False
+      show screen char_name_screen([nome2],[jogador1])
+      $ choice_button_color = "orange"
+
+  menu:
+    "Tentar convencer Alessandra a parar":
+      jump finalday3a
+    "Tentar convencer Katarina a parar":
+      jump finalday3b
+
+  
